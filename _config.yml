@@ -1,32 +1,26 @@
-# ----------------------- #
-#      Main Configs       #
-# ----------------------- #
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
 
-url: http://yoursite.com
-title: Your Awesome Site
-email: your-email@domain.com
-author: Your Name
-description: > # "Write an awesome description for your new site here. 
-  You can edit this line in _config.yml. It will appear in your document 
-  head meta (for Google search results) and in your feed.xml site 
-  description."
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
 
-# ----------------------- #
-#    Jekyll & Plugins     #
-# ----------------------- #
+# Setup
+title:            Hyde
+tagline:          'A Jekyll theme'
+description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:              http://hyde.getpoole.com
+baseurl:          /
 
-# Build settings
-markdown: kramdown
-permalink: pretty
+author:
+  name:           'Mark Otto'
+  url:            https://twitter.com/mdo
 
-# ----------------------- #
-#   3rd Party Settings    #
-# ----------------------- #
+paginate:         5
 
-social:
-  - title: twitter
-    url: https://twitter.com/SBootstrap
-  - title: github
-    url: https://github.com/IronSummitMedia/startbootstrap
-  - title: linkedin
-    url: 
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/poole/hyde
