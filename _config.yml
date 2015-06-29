@@ -15,12 +15,16 @@ baseurl:          /
 
 author:
   name:           'Marquinhus Goncalves'
-  url:            https://twitter.com/marquinhusgonc
-
-paginate:         5
 
 # Custom vars
 version:          1.0
 
-github:
-  repo:           https://github.com/marquinhusgoncalves
+github:           https://github.com/marquinhusgoncalves
+twitter:          https://twitter.com/marquinhusgonc
+
+# google_analytics:
+account:          UA-XXXXX-X
+
+# disqus:
+id:               disqusid
+
