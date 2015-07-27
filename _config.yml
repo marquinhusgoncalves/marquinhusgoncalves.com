@@ -4,8 +4,8 @@ highlighter:      pygments
 
 # Setup
 title:            Marquinhus Goncalves
-tagline:          'blog sobre desenvolvimento'
-description:      'Desenvolvedor front end '
+tagline:          'Blog sobre desenvolvimento Front-End'
+description:      'Desenvolvedor Front-End'
 url:              http://marquinhusgoncalves.com.br
 baseurl:          /
 
@@ -14,7 +14,7 @@ author:
 
 # Custom vars
 version:          1.0
-paginate: 5
+paginate: 		  5
 
 github:           https://github.com/marquinhusgoncalves
 twitter:          https://twitter.com/marquinhusgonc
