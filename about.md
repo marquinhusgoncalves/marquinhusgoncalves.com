@@ -1,30 +1,20 @@
 ---
 layout: page
-title: About
+title: Sobre
 ---
 
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+  Bom meu nome é Marcus Vinicius Gonçalves sou nascido e criado em São Bernardo do Campo / SP sempre fui apaixonado por tecnologia, com 14 anos ganhei meu primeiro computador um 486 com o na época recente Windows 3.11 mas para utiliza-lo tinha que ter conhecimento de DOS foi onde me apaixonei mais ainda pelos computadores, a linha de comando foi amor a primeira vista ficava horas no computador, nem desligava, não existia internet existia BBS e o acesso era discado alguns meses depois me matriculei em um curso de informática na [S.O.S Computadores](www.sosocomputadores.com.br) onde tirei nota máxima em todos os cursos e ainda recebi o convite de dar aulas, a paixão só aumentou e meu conhecimento também, junto do ensino médio estudei técnico em Informática onde tive bastante contato com Hardware e então nem tinha dúvidas do que estudar na faculdade, de cara Ciência da Computação na [Universidade Metodista](www.metodista.br )passei entre os 20 primeiros e fui bolsista e ai que minha vida mudou totalmente mesmo amando o que estudava tive difuldades com algumas matérias acabei pegando DP´s perdendo a bolsa e e nesse tempo já procurava emprego mas a dificuldade de conseguir emprego e os salários de estágio eram baixos e não pagavam a mensalidade, acabei indo para o comércio e trancando meus estudos. Foram 10 anos totalmente fora, trabalhei muito na [Tent Beach](www.tentbeach.com.br) não vou comentar muito porque seria uma longa história, mas resumindo fui muito feliz tive diversas promoções, premiações, fiz muitas amizades e cresci muito como pessoa, mas chegou uma hora que não dava mais e resolvi voltar para área mas estava totalmente desatualizado, primeira coisa que fiz foi me matricular em uma outra faculdade dessa vez na [Anhembi Morumbi](www.anhembimorumbi.br) no curso de Análise e Desenvolvimento deSistemas. Hoje estou formado na área, estudando muito e fazendo muitos cursos, inclusive esse blog é um motivo para eu estudar mais e sempre estar buscando as novas tecnologias, novos métodos, testando o que há de novo no mercado ampliando meu network e me divertindo.
+
 </p>
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+* [LinkedIn](http://br.linkedin.com/in/marcusviniciusgoncalves/)
+* [About Me](http://about.me/marquinhusgoncalves)
+* [Github](https://github.com/marquinhusgoncalves)
+* [Twitter](https://twitter.com/marquinhusgonc)
+* [Facebook](https://facebook.com/marquinhus.goncalves)
 
-There are currently two themes built on Poole:
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
 
-Learn more and contribute on [GitHub](https://github.com/poole).
 
-## Setup
 
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
