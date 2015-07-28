@@ -1,8 +1,9 @@
 <div class="sidebar">
+
   <div class="container sidebar-sticky">
-    <img src="img/face.jpg" alt="Marquinhus Gonçalves">
-  </div>
-  <div class="container sidebar-sticky">
+    <div class="center">
+      <img class="face" src="public/img/face.jpg" alt="Marquinhus Gonçalves">
+    </div>
     <div class="sidebar-about">
       <h1>
         <a href="{{ site.baseurl }}">
@@ -16,24 +17,48 @@
       <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
 
       {% comment %}
-        The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
+      The code below dynamically generates a sidebar nav of pages with
+      `layout: page` in the front-matter. See readme for usage.
       {% endcomment %}
 
       {% assign pages_list = site.pages %}
       {% for node in pages_list %}
-        {% if node.title != null %}
-          {% if node.layout == "page" %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-          {% endif %}
-        {% endif %}
+      {% if node.title != null %}
+      {% if node.layout == "page" %}
+      <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+      {% endif %}
+      {% endif %}
       {% endfor %}
 
-      <!-- <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a> -->
+      <!-- <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
       <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
-      <!-- <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
+      <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
     </nav>
-
-    <p>&copy; {{ site.time | date: '%Y' }}. Feito com o <3 e Jekyll.</p>
+    <div class="center">
+    <a href="mailto:marquinhusgoncalves@hotmail.com"><span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-envelope-o fa-stack-1x"></i>
+    </span></a>
+    <a href="http://br.linkedin.com/in/marcusviniciusgoncalves"><span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-linkedin fa-stack-1x"></i>
+    </span></a>
+    <a href="https://facebook.com/marquinhus.goncalves"><span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-facebook fa-stack-1x"></i>
+    </span></a>
+     <a href="https://twitter.com/marquinhusgonc"><span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-twitter fa-stack-1x"></i>
+    </span></a>
+     <a href="https://github.com/marquinhusgoncalves"><span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-github fa-stack-1x"></i>
+     </span></a>
   </div>
+  <p class="text-sidebar">&copy; {{ site.time | date: '%Y' }}. Feito com Jekyll, <i class="fa fa-heart"></i> e sem <span class="fa-stack">
+  <i class="fa fa-coffee fa-stack-1x"></i>
+  <i class="fa fa-ban fa-stack-2x"></i> 
+</span>.</p>
+</div>
 </div>
