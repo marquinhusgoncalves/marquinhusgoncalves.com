@@ -1,6 +1,12 @@
 # Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+# markdown:         redcarpet
+# highlighter:      pygments
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+gems:             [jekyll-paginate, jekyll-gist]
 
 # Setup
 title:            Marquinhus Goncalves
@@ -12,7 +18,7 @@ author:           'Marquinhus Goncalves'
 
 # Custom vars
 version:          1.0
-paginate: 		  5
+paginate: 		    5
 
 email:            marquinhusgoncalves@hotmail.com
 github:           https://github.com/marquinhusgoncalves
