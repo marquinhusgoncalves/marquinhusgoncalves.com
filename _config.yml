@@ -12,7 +12,7 @@ gems:             [jekyll-paginate, jekyll-gist]
 title:            Marquinhus Goncalves
 tagline:          'Blog sobre desenvolvimento Front-End'
 description:      'Desenvolvedor Front-End'
-url:              http://marquinhusgoncalves.com.br
+url:              http://marquinhusgoncalves.com
 baseurl:          /
 author:           'Marquinhus Goncalves'
 
@@ -20,7 +20,7 @@ author:           'Marquinhus Goncalves'
 version:          1.0
 paginate: 		    5
 
-email:            marquinhusgoncalves@hotmail.com
+email:            eu@marquinhusgoncalves.com
 github:           https://github.com/marquinhusgoncalves
 twitter:          https://twitter.com/marquinhusgonc
 disqus_username:  marquinhusgoncalves
