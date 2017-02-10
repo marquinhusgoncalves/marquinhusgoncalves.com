@@ -1,82 +1,219 @@
 ---
 layout: post
-title: Front Week
+title: Quando, como e o que foi a Front Week 2016! #frontweek
 ---
 
-Bom a algum tempo, aliás a alguns anos (foda usar anos como referência, me sinto velho kkk) venho frequentando eventos de [front-end](https://pt.wikipedia.org/wiki/Front-end_e_back-end), que inclusive vêm crescendo e melhorando a cada edição, digo melhorar não porque eram ruins, pelo contrário, melhorando em visibilidade, atraindo empresas e pessoas referência de mercado.
+![Front in Sampa](/public/img/frontweek/frontinsampafinal.jpeg)
 
-Enfim, vamos ao que interessa! <span class="bold">Antes quero deixar um recado “venha para eventos” neles adquiri muitos conhecimentos, tive inspirações e motivações para muitos projetos, aumentei meu network e o melhor: FIZ AMIGOS.</span>
+**Antes de começar quero deixar 3 recados! Primeiro**, obrigado Julio Fontes [Twitter](https://twitter.com/coletividad), do [Coletividad](http://www.coletividad.org/) pelo convite, espaço [aqui na Publicação](https://medium.com/nossa-coletividad) e também pelas contribuições no texto, o **segundo:**
 
-Tudo começou quando o [Front in Sampa](http://frontinsampa.com.br/) começou a pingar sua divulgação nas redes sociais, após algum tempo, não lembro exatamente quando, anunciaram o [Code in the Dark](http://codeinthedark.com.br/) e foi aí com esses 2 gigantes que a coisa começou a ser planejada kkk, provavelmente os organizadores começaram a se falar sobre a ideia do [#frontweek](https://twitter.com/search?q=%23frontweek&src=typd), e não é que deu certo, mais 2 eventos gigantes, que estão no [Meetup](http://www.meetup.com/pt-BR/) também uniram-se, o [meetupCSS](http://www.meetup.com/pt-BR/CSS-SP/) e o [FrontUX](http://www.meetup.com/pt-BR/FrontUX/), então faltou só completar o time aliás a semana, fecharam com o [FEMUG-SP](https://sp.femug.com/) e com o [JavaScript SP](http://www.meetup.com/pt-BR/Javascript-SP/). Legal mas e como foi essa bagunça ai? Vou passar detalhes de cada um que fui…
+<h3>*PARTICIPE DE EVENTOS! PARTICIPE DE EVENTOS!*</h3>
 
-<h2>Enfim segunda</h2>
+E o **terceiro** é: use o Twitter e siga pessoas da área! Dou certeza absoluta que você ficará bem mais informado (por isso deixarei diversos links do Twitter nesse post).
 
-E a #frontweek começou com o [Javascript SP](http://www.meetup.com/pt-BR/Javascript-SP/) um evento que esta em sua segunda edição, mas já indica que será referência em encontros porque têm muitas pessoas tecnicamente muito boas e a galera está bem engajada. O [Javascript SP](http://www.meetup.com/pt-BR/Javascript-SP/) é organizado atualmente pelo Pedro Araújo e pelo [Fernando Fleury](https://twitter.com/fernando_fleury), o evento foi na [iMasters](https://twitter.com/iMasters), que sempre abre as portas para diversos eventos e encontros, inclusive tem o seu próprio [7master](http://setemasters.imasters.com.br/). Teve aproximadamente 20 pessoas, a talk foi sobre Conceito Paralelo em JavaScript do Renato Augusto Gama (BankFácil) a talk foi bem interessante, foi mostrado detalhadamente o que era falado, mostrou muitas coisas novas e onde o Javascript pretende chegar. Tivemos um super coffee e wi-fi !!!
+Em eventos, eu adquiri muitos conhecimentos, tive inspirações e motivações para muitos projetos, aumentei meu network e o melhor: **Fiz amigos.**
 
-<h2>Terça</h2>
+Já há algum tempo, aliás há alguns anos (foda usar anos como referência, me sinto velho kkk) venho frequentando eventos de front-end que, inclusive vêm crescendo e melhorando a cada edição.
 
-Tivemos um dos meus encontros preferidos: o [FEMUG-SP](https://sp.femug.com/) que esta em sua #33 edição e o local foi no [Lambda3](https://twitter.com/lambdatres), que estava em reforma, mas liberaram um espaço muito bacana, e a galera nos receberam MUUUUUITO bem. Quem não conhece, a ideia do [FEMUG] é sempre termos um bate papo, em que todos participem, passando sua experiência e sua opinião sobre o tema definido por votação antes do evento, vale lembrar que existem diversos FEMUG's espalhados pelo Brasil. Dentro de 5 possíveis temas os mais votados foram “Qual relação entre qualidade de código e qualidade do produto” e “Home-office no Brasil para empresas no exterior” como sempre o bate papo foi em alto nível, tiramos várias dúvidas e outros puderam ajudar inclusive estava presente o [Rafael França](https://twitter.com/rafaelfranca) para passar como é seu dia a dia e também a parte burocrática, mas sendo o FEMUG passa alguns minutos e o papo flui, muitas vezes mudando totalmente o tema original, mas sempre mantendo o foco na área, como se você estivesse em casa ou bar conversando com amigos, fora que rola altas brincadeiras e risadas. Tivemos um super café e wi-fi
+Digo melhorar não porque eram ruins, muito pelo contrário! Mas eles vêm melhorando em visibilidade, atraindo empresas e pessoas referência de mercado e oferecendo mais valor para a Comunidade.
 
-<h2>Quarta</h2>
+<h3>Tudo começou...</h3>
 
-Tenho certeza que a galera estava bem ansiosa, o dia era de [FrontUX](https://twitter.com/front_ux) no [Nubank](https://twitter.com/nubankbrasil), uns dias antes os organizadores do evento [Matheus Marsiglio](https://twitter.com/matmarsiglio) e [Guilherme Moura](https://twitter.com/ogmoura) anunciaram que o evento era um dos mais agitados no Meetup no PLANETA e que as vagas foram preenchidas em exatos 14 segundos, quero agradecer minha namorada que ficou dando reload na página e fez o cadastro pra mim #s2. A ideia do evento é aproximar mais designers e desenvolvedores e elevar o nível da galera em relação a UX, o tema foi sobre Métricas e foi muito foda porque como o bate papo é bem informal, mesmo quem é iniciante consegue absorver os assuntos nível hard porque a galera faz questão de dar detalhes maiores sobre o que esta falando para que haja compreensão de todos. O [Ricardo Sato](https://twitter.com/rseiji) fez toda a recepção na empresa que por sinal é linda, e quero dar um destaque para o [Marco Bruno](https://twitter.com/marcobrunobr) o cara é sensacional e foi o representante da [Caelum](https://www.caelum.com.br/), [Alura](https://www.alura.com.br/) e [Casa do Código](https://www.casadocodigo.com.br/) que patrocinou as brejas, isso mesmo teve breja, vários brindes e também foram sorteado brindes e ingressos para os eventos.
+![Front in Sampa](/public/img/frontweek/frontinsampa.png)
 
-<h2>Quinta-feira</h2>
+A história do #frontweek tem início quando [Front in Sampa](http://frontinsampa.com.br/) e o [Code in the Dark](http://codeinthedark.com.br/) começaram a pingar sua divulgação nas redes sociais, em datas próximas.
 
-O encontro era a união de 2 gigantes o [MeetupCSS](https://twitter.com/meetupcss) organizado pelo [Felipe Fialho](https://twitter.com/LFeh) e pelo [Raphael Fabeni](https://twitter.com/raphaelfabeni) no [Google](https://twitter.com/googlebrasil) organizado pelo [Ale Borba](https://twitter.com/ale_borba), o evento foi aberto para mais de 150 pessoas, o tema já era o esquenta do Front in Sampa, e para eventos desses porte não deixaram a desejar, pois tivemos 2 talks. A primeira talk foi do [Afonso Pacifer](https://twitter.com/afonsopacifer) sobre Desenhos com CSS além da parte técnica ele encorajou as pessoas a fazerem mais, aliás brincarem mais, por amor, a evolução dele foi demais e como o Willian Justen mesmo disse “Deixou ele mais tenso ainda” pois a talk foi excelente e logo após ele [William Justen](https://twitter.com/Willian_justen) se apresentaria aumentando ainda mais a “pressão” e para ele foi fácil, tirou de letra e veio com a talk CSS com Matemática que tenho certeza que fez com que, quem não gostasse de matemática, começasse a gostar, ele literalmente passeou, apresentando os pontos do CALC, mostrou muitas coisas que usamos mas nem pensamos direito o que podemos fazer de verdade, fez até um grid, “o louco meu é brincadeira”. Os 2 foram só amores no evento um trocando elogios ao outro, brincadeiras a parte por isso que digo que amizades são importantes um incentivando ao outro a se superarem. Tivemos uma recepção a "lá Google", muitas pessoas tirando selfiesss com o Android e fotos na empresa porque o local é lindo, ao final das apresentações tivemos MUITOS sorteios o [William sorteiou 5 cursos](https://willianjusten.com.br/cursos/), tivemos sorteio de brindes e ingressos para eventos como o Front in Sampa e o [Front in Vale](http://frontinvale.com.br/).
+Por conta disso, suponho que os organizadores começaram a se falar sobre a ideia do [#frontweek](https://twitter.com/search?q=%23frontweek&src=typd).
 
-<h2>Sexta</h2>
+Mais 2 eventos, o [meetupCSS](https://www.meetup.com/pt-BR/CSS-SP/) e o [FrontUX](https://www.meetup.com/pt-BR/FrontUX/), que estão no [Meetup](https://www.meetup.com/pt-BR/) somaram à agenda e então só faltava completar o time — aliás a semana — que aconteceu com o envolvimento do [FEMUG-SP](https://sp.femug.com/) e do [JavaScript SP](https://www.meetup.com/pt-BR/Javascript-SP/).
 
-Não pude ir no [Code in the Dark](http://codeinthedark.com.br/), porque senão perderia minha namorada, mesmo ela sendo super compreensiva, mas deixo os comentários com uma pessoa que tenho um carinho enorme e respeito demais como front porque manja demais, e educadamente me inseriu no mundo dos pré processadores usando apenas uma frase “Vai usar saporra”.
+Ufa, muito legal (e confuso)! Quer saber como foi essa bagunça?
+Senta aí que eu vou te contar os detalhes de cada encontro que participei…
 
-Com vocês [Andreia Zambrana](https://twitter.com/akfzambrana)...
+<h3>Segunda-feira</h3>
 
-Obrigada Marquinhus, acredito que a frase em questão foi ligeiramente mais rústica kkkk.
+![Javascript SP](/public/img/frontweek/javascriptsp.png)
 
-Vamos lá… vou resumir o [Code in the Dark](http://codeinthedark.com.br/) em uma exclamação apenas: “Evento nível foda!!!”. Eu assumo diante de vocês que sou suspeita para falar porque eu adorei tudo e estava tão ansiosa pelo evento que quase não consegui dormir de quinta pra sexta, tanto é que cheguei uma hora e meia adiantada :P
+A [#frontweek](https://twitter.com/search?src=typd&q=%23frontweek) começou com o [Javascript SP](https://www.meetup.com/pt-BR/Javascript-SP/), organizado atualmente pelo Pedro Araújo e pelo [Fernando Fleury](https://medium.com/@fernandofleury).
 
-O [Code in the Dark](http://codeinthedark.com.br/) foi no auditório do escritório do [Google](https://twitter.com/googlebrasil), meu agradecimento especial ao [Ale Borba](https://twitter.com/ale_borba) que apoia as comunidades e eventos. As portas foram abertas as 18:30 e na recepção do evento você tinha que escolher entre codar ou não. Se não me engano, das 150 pessoas que foram apenas quarenta e poucas se inscreveram pra codar, algumas de último momento.
+O encontro foi realizado na [iMasters](https://twitter.com/iMasters) e está em sua segunda edição, mas já indica que será referência em encontros porque tem muitas pessoas tecnicamente boas e o melhor: engajadas.
+
+O talk foi sobre **‘Conceito Paralelo’** em JavaScript, do [Renato Augusto Gama](https://medium.com/@renatoagds). O conteúdo foi bem interessante, explicando detalhadamente o que era falado, coisas novas e onde o Javascript pretende chegar.
+
+Tivemos um super coffee e wi-fi ¯\\\_(ツ)_/¯
+
+<h3>Terça-feira</h3>
+
+![Femug SP](/public/img/frontweek/femugsp.png)
+
+O [FEMUG-SP](https://sp.femug.com/), **um dos meus encontros preferidos** já na sua 33ª edição, ocorreu no [Lambda3](https://twitter.com/lambdatres), que apesar de estar em reforma, não só disponibilizaram um espaço muito bacana, como fomos MUUUUUITO bem recebidos pela galera! Valeu :*
+
+Quem não conhece, a ideia do FEMUG é sempre ter um bate papo em que todos participem, passando sua experiência e sua opinião sobre o tema, definido por votação antes do evento.
+
+Nessa edição, dentro de 5 possíveis temas os mais votados foram *1. “Qual relação entre qualidade de código e qualidade do produto” e 2. “Home-office no Brasil para empresas no exterior”.*
+
+**Vale lembrar que existem diversos [FEMUG’s](http://femug.com/) espalhados pelo Brasil.**
+
+Como sempre o bate papo foi em alto nível, tiramos várias dúvidas e outros puderam ajudar com suas experiências, inclusive estava presente o [Rafael França](https://twitter.com/rafaelfranca) para passar como é seu dia a dia e também a parte burocrática de trabalhar home office para uma empresa em outro país.
+
+O FEMUG sendo FEMUG, passa alguns minutos e o papo flui, muitas vezes mudando totalmente o tema original, mas sempre mantendo o foco na área, como se você estivesse em casa ou bar conversando com amigos, fora que rola altas brincadeiras e risadas.
+
+Tivemos um super café e wi-fi (2) ¯\\\_(ツ)_/¯
+
+<h3>Quarta-feira</h3>
+
+![Front UX](/public/img/frontweek/frontux.png)
+
+Tenho certeza absoluta que a galera estava bem ansiosa com o [FrontUX](https://medium.com/@frontux) [twitter](https://twitter.com/frontux_sp) no [Nubank](https://twitter.com/nubankbrasil), que tem a proposta de aproximar designers e desenvolvedores e elevar o nível da galera em relação a UX!
+
+Uns dias antes, os organizadores do evento [Matheus Marsiglio](https://medium.com/@matmarsiglio) [twitter](https://twitter.com/matmarsiglio) e [Guilherme Moura](https://medium.com/@gmoura) [twitter](https://twitter.com/ogmoura) anunciaram que o evento era um dos mais agitados no Meetup, em todo PLANETA e que **as vagas foram preenchidas em exatos 14 segundos!**
+
+![Surpresed](/public/img/frontweek/surpresed.gif)
+
+*Quero agradecer minha namorada que gentilmente, ficou dando reload na página e fez o cadastro pra mim #s2*
+
+O tema foi **“Métricas”** e foi muito foda porque como o bate-papo é bem informal e acessível quem é iniciante consegue absorver os assuntos nível hard, porque a galera faz questão de dar os detalhes sobre o que está falando, para que haja compreensão de todos.
+
+![Surpresed](/public/img/frontweek/frontux-nubank.jpeg)
+Foto do pessoal do FrontUX, retirada do rexto [‘FrontUX #13 — Métricas, no Nubank — Ata’](https://blog.frontux.com/frontux-13-m%C3%A9tricas-no-nubank-ata-cb887f88280b#.5wbtijydr)
+
+O [Ricardo Sato](https://medium.com/@rseiji) fez toda a recepção na empresa, que por sinal é linda, e quero dar um destaque para o [Marco Bruno](https://medium.com/@marcobrunobr) ! O cara é sensacional e foi o representante da [Caelum](https://www.caelum.com.br/), [Alura](https://www.alura.com.br/) e [Casa do Código](https://www.casadocodigo.com.br/) que patrocinou as brejas — isso mesmo, teve breja — vários brindes e também sorteios de ingressos para eventos.
+
+<h3>Quinta-feira</h3>
+
+![Meetup CSS](/public/img/frontweek/meetupcss.png)
+
+O encontro, resultado da união entre [Felipe Fialho](https://medium.com/@lfeh) e [Raphael Fabeni](https://twitter.com/raphaelfabeni), [MeetupCSS](https://twitter.com/meetupcss) & [Alê Borba](https://medium.com/@ale_borba), [Google](https://twitter.com/googlebrasil), foi aberto para mais de 150 pessoas!
+
+Tivemos 2 talks! A primeira foi do [Afonso Pacifer]() sobre **‘Desenhos com CSS’**. Além da parte técnica, ele encorajou as pessoas a fazerem e brincarem mais com CSS.
+
+![Google](/public/img/frontweek/google.jpeg)
+
+Como disse o [Willian Justen de Vasconcellos](https://twitter.com/Willian_justen), que falaria logo em seguida
+
+***“Fiquei ainda mais tenso”***
+
+O talk foi sobre **‘CSS com Matemática’,** que tenho certeza que fez com que quem não gostava de matemática passasse a gostar! Ele literalmente passeou, apresentando os pontos da função CALC e mostrou muitas coisas que usamos mas nem pensamos direito o que realmente podemos fazer com elas.
+
+A troca de elogios de um para o outro (Willian e Afonso) só mostra como as amizades e uma Comunidade são importantes para estimular e incentivar uns aos outros.
+
+Tivemos uma recepção "à la Google”, muitas pessoas tirando selfies com o Android e fotos na empresa — porque o local é lindo!
+
+Ao final das apresentações tivemos MUITOS sorteios. Só William [sorteou 5 cursos](https://willianjusten.com.br/cursos/), entre outros sorteios de brindes e ingressos para eventos como o Front in Sampa e o [Front in Vale](http://frontinvale.com.br/) o/
+
+<h3>Sexta-feira</h3>
+
+![Code in the Dark](/public/img/frontweek/codeinthedark.png)
+
+Infelizmente, com dor no coração, não pude ir no [Code in the Dark](http://codeinthedark.com.br/) (para não perder a namorada :P!
+
+Mas deixo o depoimento da [Andréa Zambrana](https://twitter.com/akfzambrana), uma pessoa que tenho respeito e um carinho enorme como front — porque manja demais — que educadamente me inseriu no mundo dos pré-processadores, usando apenas uma frase “Vai usar saporra”.
+
+**Segue o relato dela!**
+
+“Resumindo, o [Code in the Dark](http://codeinthedark.com.br/) em uma exclamação: *“Evento nível foda!!!”.*
+
+Eu assumo que sou suspeita para falar, porque eu adorei tudo e estava tão ansiosa pelo evento, que quase não consegui dormir de quinta pra sexta.
+
+O [Code in the Dark](http://codeinthedark.com.br/) foi no auditório do escritório do [Google](https://twitter.com/googlebrasil) e deixo aqui o meu agradecimento especial ao [Alê Borba](https://medium.com/@ale_borba), que apoia as comunidades e eventos.
+
+As portas foram abertas às 18:30 e na recepção do evento você tinha que escolher entre codar ou não. Se não me engano, das 150 pessoas que foram, apenas quarenta e poucas se inscreveram pra codar, algumas de última hora.
 
 Só entrar no auditório já foi mega impressionante, era como entrar em uma “danceteria” (sim, eu sou do tempo das danceterias) de filme, luzes coloridas, lasers fodas, quatro TVs mostrando uma lista dos inscritos, quatro mesas com mais quatro TV’s voltadas pro público e atrás um chrome book pra quem fosse codar.
 
-Além da estrutura estar super bem montada e organizada, tinha um DJ discotecando, as músicas, antes das batalhas foram muito boas, mas as músicas para as batalhas, mano, que espetáculo. Muito bem escolhidas, muito bem sincronizadas e o [Renan Bulgueroni](https://twitter.com/rbulgueroni) não sambou (entendedores entenderão) nenhuma vez, parabéns a ele pelas escolhas das músicas e a performance em geral. Por livre e espontânea pressão o Renan criou uma [playlist no Spotify](https://open.spotify.com/user/12144984142/playlist/1SWPwNb6fQ0CZD5STvQJZC), aproveitem sem moderação.
+![Code in the Dark - Panorâmica](/public/img/frontweek/codeinthedark-panoram.jpeg)
+Fotos ‘Code in the Dark’ por Leandro Godoi! Veja todas as [fotos aqui](https://www.facebook.com/pg/codeinthedarkbr/photos/?tab=album&album_id=1761565704086651).
+
+Além da estrutura estar super bem montada e organizada, tinha um DJ discotecando! As músicas antes das batalhas foram muito boas, mas as músicas para as batalhas, mano, que espetáculo. Muito bem escolhidas, muito bem sincronizadas e o [Renan Bulgueroni](https://twitter.com/rbulgueroni) não sambou (entendedores entenderão).
+
+Por livre e espontânea pressão o Renan criou uma [playlist no Spotify](https://play.spotify.com/user/12144984142/playlist/1SWPwNb6fQ0CZD5STvQJZC?play=true&utm_source=open.spotify.com&utm_medium=open), **aproveitem sem moderação.**
+
+![Code in the Dark](/public/img/frontweek/codeinthedark-dj.jpeg)
+Fotos ‘Code in the Dark’ por Leandro Godoi! Veja todas as [fotos aqui](https://www.facebook.com/pg/codeinthedarkbr/photos/?tab=album&album_id=1761565704086651).
 
 Tinha para comer uns sanduíches legais, uns canapés muito bons, docinhos, refri, água e Heineken na faixa.
+
+![Code in the Dark - Brejas](/public/img/frontweek/codeinthedark-brejas.jpeg)
+Fotos ‘Code in the Dark’ por Leandro Godoi! Veja todas as [fotos aqui](https://www.facebook.com/pg/codeinthedarkbr/photos/?tab=album&album_id=1761565704086651).
 
 No início teve um campeonato de jokenpô (pedra, papel e tesoura), muito engraçado e divertido, que culminou em uma final épica. Depois disso foram iniciadas as batalhas tão esperadas.
 
 Ah! sim, antes de iniciar as batalhas a galera teve oportunidade de se inscrever de última hora. Conheço alguém que se inscreveu aos quarenta e sete do segundo tempo e ainda foi sorteada hehehe.
 
-Para o primeiro round quatro seres humanos muito sortudos foram escolhidos, e pasmem, eu estava entre eles. Quase não acreditei quando vi minha foto na TV, minhas preces tinham sido ouvidas e o momento de brincar tava a apenas alguns minutos de distancia.
+Para o primeiro round, quatro seres humanos muito sortudos foram escolhidos, e pasmem, eu estava entre eles. Quase não acreditei quando vi minha foto na TV, minhas preces tinham sido ouvidas e o momento de brincar estava a apenas alguns minutos de distância.
 
-Honestamente falando, ser sorteado pro primeiro round foi muito top, mas foi meio agoniante, pois ninguém sabia muito bem como ia ser o rolê, só sabíamos que íamos ter que codar um layout em HTML e CSS, tudo em um único arquivo.
+Honestamente falando, ser sorteado pro primeiro round foi muito top, mas foi meio agoniante, pois ninguém sabia muito bem como ia ser o rolê, só sabíamos que teríamos ter que codar um layout em HTML e CSS, tudo em um único arquivo.
 
-Uma vez sorteado você ganhava uma camiseta muito top, com o logo do evento em tinta reflexiva (muito chique, eu amei e já usei a minha) e partia pra escolher a mesa pra codar. A mistura de emoção, adrenalina e vergonha estavam fora de controle, eu mesmo nem lembro do que foi falado, se alguém explicou como ia ser o critério pra escolher o ganhador do round, só lembro do chrome book (no momento achei ele mega pequeno kkkk) e todo mundo olhando pra TV na minha frente onde aparecia exatamente o que eu estava vendo. Ah sim, lembro que tocou “welcome to the jungle” no inicio do round, muito apropriado :D
+Uma vez sorteado você ganhava uma camiseta muito top, com o logo do evento em tinta reflexiva (muito chique, eu amei e já usei a minha) e partia pra escolher a mesa pra codar.
 
-Do nada iniciou à batalha, que emoção. Lembro que a música tava tão boa que eu não sabia se codava ou dançava, devo ter dado vários sorrisos psicoticos, pois eu estava completamente empolgada, nervosa, ansiosa e ligeiramente desesperada pois nunca tinha usado um chrome book e muito menos no escuro, com luzes piscando, musica rolando e fumaça.
+A mistura de emoção, adrenalina e vergonha estavam fora de controle, eu mesmo nem lembro do que foi falado, se alguém explicou como ia ser o critério pra escolher o ganhador do round, só lembro do chrome book (no momento achei ele mega pequeno kkkk) e todo mundo olhando pra TV na minha frente onde aparecia exatamente o que eu estava vendo. Ah sim, lembro que tocou “Welcome to the Jungle” no inicio do round, muito apropriado :D
 
-Ao fim dos quinze minutos tivemos que levantar os braços e foi apresentado o resultado do código e o público escolheu o melhor resultado. Eu fiquei muito pasma com meu resultado, minha tela tava em branco, só tinha os textos que tinha colocado nas tags e mais nada, meu CSS não funcionou por algum motivo. Honestamente, depois de muito pensar, acredito que tenha escrito mal a tag style, afinal, quem digita a tag style inteira no dia a dia? kkkk
+**Do nada iniciou a batalha, que emoção.** Lembro que a música estava tão boa que eu não sabia se codava ou dançava, devo ter dado vários sorrisos psicóticos, pois eu estava completamente empolgada, nervosa, ansiosa e ligeiramente desesperada pois nunca tinha usado um chrome book e muito menos no escuro, com luzes piscando, música rolando e fumaça. Olhem a foto kkkk
 
-A cada round, foram quatro, o processo se repetiu, quatro pessoas foram sorteadas, codaram e o publico escolheu os melhores resultados. No fim do quarto round os organizadores desafiaram quatro frontenders muito conhecidos para codar na frente da galera. Os desafiados foram [Bernard de Luna](https://twitter.com/bernarddeluna), [Matheus Marsiglio](https://twitter.com/matmarsiglio), [Almir Filho](https://twitter.com/almirfilho) e [Elvis Detona](https://twitter.com/elvisdetona). Foi muito legal ver palestrantes e caras muito conhecidos codando ao vivo. Destaque para o Matheus que codou com o notebook no colo e os pés em cima da mesa, com a maior calma do universo.
+![Code in the Dark - Andrea](/public/img/frontweek/codeinthedark-andrea.jpeg)
+Fotos ‘Code in the Dark’ por Leandro Godoi! Veja todas as [fotos aqui](https://www.facebook.com/pg/codeinthedarkbr/photos/?tab=album&album_id=1761565704086651).
 
-Bem, a final foi eletrizante, o ganhador [Bruno Costa Ramos](https://www.facebook.com/brunocostaramos), foi uma máquina de codar, completamente concentrado, sorria com as piadas e brincadeiras, e digitava constantemente, tão constantemente que bateu os 2mil pontos de HitCombo, até aquele momento somente tinham batido mil.
+Ao fim dos quinze minutos tivemos que levantar os braços e foi apresentado o resultado do código e o público escolheu o melhor resultado. Eu fiquei muito pasma com meu resultado, minha tela estava em branco, só tinha os textos que tinha colocado nas tags e mais nada, meu CSS não funcionou por algum motivo. Honestamente, depois de muito pensar, acredito que tenha escrito mal a tag style, afinal, quem digita a tag style inteira no dia a dia? kkkk
 
-Apesar de alguns probleminhas que algumas pessoas tiveram, os organizadores e idealizadores do evento estão de parabéns. A iniciativa foi genial e apesar de ser o primeiro evento do seu tipo no Brasil, foi muito bem arrumado, organizado e divertido bagarai. Na minha humilde opinião, o evento merece nota 9.5, facilmente.
+A cada round (foram quatro), o processo se repetiu, quatro pessoas foram sorteadas, codaram e o publico escolheu os melhores resultados. No fim do quarto round os organizadores desafiaram quatro frontenders muito conhecidos para codar na frente da galera.
 
-Pra vocês que estão lendo, vale muito a pena conferir as fotos na página do [Code in the Dark](https://www.facebook.com/codeinthedarkbr/) e fica a dica, se preparem para o próximo, pois tenho certeza que a concorrência sera enorme, tanto para ir no evento quanto para participar das batalhas. Eu só espero pelo próximo Code in the Dark, pois a experiencia foi magnifica. Ah! sim, obrigada pela oportunidade de contar um pouco pra vocês.
+Os desafiados foram [Bernard De Luna](https://medium.com/@bernarddeluna) [twitter]](https://twitter.com/bernarddeluna), [Matheus Marsiglio](https://twitter.com/matmarsiglio), [Almir Filho](https://medium.com/@almirfilho) [twitter](https://twitter.com/almirfilho) e [Elvis Detona](https://medium.com/@elvisdetona) [twitter](https://twitter.com/elvisdetona). Foi muito legal ver palestrantes e caras muito conhecidos codando ao vivo. Destaque para o Matheus que codou com o notebook no colo e os pés em cima da mesa, com a maior calma do universo.
 
-Valeu Andréa por me ajudar a completar esse artigo…
+![Code in the Dark - Code](/public/img/frontweek/codeinthedark-code.jpeg)
+Fotos ‘Code in the Dark’ por Leandro Godoi! Veja todas as [fotos aqui](https://www.facebook.com/pg/codeinthedarkbr/photos/?tab=album&album_id=1761565704086651).
 
-<h2>Sábadão</h2>
+Bem, a final foi eletrizante, o ganhador Bruno Costa Ramos, foi uma máquina de codar, completamente concentrado, sorria com as piadas e brincadeiras, e digitava constantemente, tão constantemente que bateu os 2mil pontos de HitCombo, até aquele momento somente tinham batido mil.
 
-Front in Sampa Staiway To Heaven… sábado foi foda, tomei umas a mais na sexta e mesmo ansioso, me atrasei um pouco e cheguei logo no começo do evento, não consegui ver a galera, mas fui super bem recepcionado já ganhando adesivos e crachá contendo todas palestras da trilha do evento. O evento foi realizado no Colégio Maria Imaculada, super fácil o acesso tanto de metro ou carro, local super limpo e organizado e um auditório de primeira. O Fron in Sampa foi apresentando pelo [Ale Borba](https://twitter.com/ale_borba) é organizado pelo [Elvis Detona](https://twitter.com/elvisdetona), [Keit Oliveira](https://twitter.com/seescrevekeit) e [Daivid Marques](https://twitter.com/deividmarques) . Não vou entrar detalhadamente nas talks mas o evento iniciou com o Edu Agni com a talk [DevUX](http://pt.slideshare.net/edu_agni/devux) já para acordar a galera, falou bastante o quão é importante o UX não sendo apenas o design. A segunda palestra foi com nossa conhecida [Talita Pagani](https://twitter.com/talitapagani) falando de Acessibilidade, já tinha encontrado com ela na terça no FEMUG, gostei muito dessa talk porque sempre deixamos de fazer algo em relação a acessibilidade alegando tempo e que nossos patrões nunca se importam com isso, mas a escolha de fazer isso esta nas nossas mãos, se for bem planejado e desenvolvido junto desde o começo não muda muito o escopo e você entrega o que hoje já não é um plus e sim uma obrigação, entregar seu conteúdo para um usuário que tenha limitações é obrigação sim. A terceira talk foi com Ivan Banov a talk foi do caralho, do desenvolvimento do Style Guide até Pre Processadores, Frameworks e ferramentas úteis para o uso no desenvolvimento, pude em uma das pausas falar com ele, pois já havia conhecido em outros eventos, inclusive na empresa onde ele trampa (BankFacil). A quarta talk foi do show man que não quis dançar kkk [Matheus Marsiglio](https://twitter.com/matmarsiglio) com a talk Jóta Éssi Funcional, encontrei com ele quarta quinta e sábado novamente, o cara começou pedindo para a galera levantar e dar uma espreguiçada porque o assunto “parecia” ser bem complexo, mas conseguiu passar bem o conteúdo e não focou apenas no Javascript abriu a cabeça da geral para estudar linguagem funcional e pelo feedback uma galera vai estudar pesado, fez live code e ainda falou de relacionamento kkk. Pausa para o almoço muitas opções de rango, bacana foi a descontração e risadas conforme enchíamos a pança, aproveitando a pausa quero comentar que teve venda de livros da [Casa do Código](https://www.casadocodigo.com.br/) e também de Camisetas e Canecas do [EuCompraria](https://eucompraria.com.br/). Voltandoooo do almoço iniciaram os trabalhos falando novamente de Acessibilidade, SEO, Semântica com [Reinaldo Ferraz](https://twitter.com/reinaldoferraz), eu admiro a facilidade com que ele apresenta e explica as coisas, vale a pena ler tudo que ele escreve. Em seguida ninguém esperava o que estava por vir, [Alda Rocha](https://twitter.com/mjcoffeeholick) com sua talk que foi mais um relato da realidade onde TODOS nós podemos melhorar, não só da inclusão da mulheres, e sim do preconceito no geral, temos que respeitar o próximo e desejar igualdade a todos, foi arrepiante e OVACIONADA DE PÉ, a mina é foda pude conhece-la em um evento que chama [WoMakersCode](http://www.womakerscode.org/) que eu fui para sentir na pele como seria um homem em um evento feminino (não é exclusivo de mulheres é aberto a todos, porém a grande maioria são mulheres) e o choque maior foi meu por me sentir como se fosse um estranho mas todas fizeram com que eu me sentisse bem e fui super bem recepcionado, eu acho que é isso que temos que levar em diante respeito e igualdade. Logo após tivemos o [William Justen](https://twitter.com/Willian_justen) esse mesmo que estava quinta no [meetupCSS](http://www.meetup.com/pt-BR/CSS-SP/) porém com talk diferente, falou de JS ❤ Music foi demais ele mostrando as mágicas que podem ser feitas com música e Javascript. Tivemos uma pausa para o coffee e que coffee, nessa hora pude, terminar de cumprimentar todos e bater mais papo, coisa que nem gosto de fazer kkk. Voltamos e iniciamos com o [Almir Filho](https://twitter.com/almirfilho) (globo.com) com The Creative Developer falando sobre Mitos, Dogmas, Preconceitos e limitações, achei muito interessante essa talk e achei sensacional a forma com que o Almir conduziu a palestra porque envolvia alguns assuntos polêmicos, eles expôs a sua opinião sem ao menos ofender o próximo e respeitando também caso alguém divergisse, achei fantástica vale a pena ver essa apresentação. A próxima talk foi do [Marco Bruno](https://twitter.com/marcobrunobr) que havia encontrado na quarta, esse cara é sensacional e tem o dom de passar algo, chegou dando brindes, fez a talk sem slides e mesmo assim foi foda o tema foi Progressive Enhancement e ele conduziu deixando mais aberto para questões durante a apresentação. E para finalizar [Bernard de Luna](https://twitter.com/bernarddeluna) com uma talk motivacional junto com o [Zeno Rocha](https://twitter.com/zenorocha), foi demais e não vou esticar porque essa também vale a pena você ver, para você refletir e que você pode sim mudar o mundo. Para fechar o evento tivemos uma review geral de perguntas com todos palestrantes (fiz pergunta e não ganhei camiseta #fica a dica kkk), muitos sorteios e brindes.
+![Code in the Dark - Digitar](/public/img/frontweek/codeinthedark-digi.gif)
 
-Bom galera foi isso… quero complementar que nessa bateria toda ainda teve no sábado anterior o [SampaJS](http://sampajs.com.br/) não pude ir mas tive um feedback muito bom e na segunda após a semana tivemos o [Front7](http://elo7.github.io/front7/) um evento dentro da Elo7 organizado pelo [Mizuta](https://twitter.com/williammizuta) e que esta em sua segunda edição.
+Apesar de alguns probleminhas que algumas pessoas tiveram, os organizadores e idealizadores do evento estão de parabéns. A iniciativa foi genial e apesar de ser o primeiro evento do seu tipo no Brasil, foi muito bem arrumado, organizado e divertido bagarai. **Na minha humilde opinião, o evento merece nota 9.5, facilmente.**
 
-<h2>Vou deixar umas dicas:</h2>
+Pra vocês que estão lendo, vale muito a pena conferir todas as fotos na página do Code in the Dark e fica a dica, se preparem para o próximo, pois tenho certeza que a concorrência sera enorme, tanto para ir no evento quanto para participar das batalhas.
 
-Vá em eventos, você só vai ganhar conhecimentos, aprendizagem e como eu disse amigos e o melhor com a mesma afinidade Code Code Code.
+Eu só espero pelo próximo Code in the Dark, pois a experiencia foi magnífica. Ah! sim, obrigada pela oportunidade de contar um pouco pra vocês.”
 
-Use o Twitter e siga pessoas da área, dou certeza absoluta ficará bem mais informado (deixei diversos links desse post direto para o Twitter).
+Valeu Andréa por me ajudar a completar esse artigo!
 
-E para finalizar quero pedir que respeitem o compromisso com os eventos, geralmente os eventos são limitados, caso você não tenha certeza ABSOLUTA nem confirme presença, não adianta cancelar horas dias ou semanas antes, só confirme com certeza, você tira a vaga de outra pessoa, e não é porque é gratuito que você não tenha que ter compromisso na verdade é ai que você tem que ter mais compromisso porque você as vezes esta tirando a vaga de uma pessoa que não tenha condições de ir em um evento pago. Como eu disse vou em eventos a muito tempo e a maioria sempre foram muito longe e mesmo assim nunca deixei de ir, porque sempre fiz o seguinte, quando é anunciado o evento eu já me organizo. Até a data de abertura das inscrições eu já me organizei com trabalho e vida pessoal, assim consigo saber se conseguirei ou não ir, peço que todos reflitam sobre isso. A galera faz com o maior carinho #s2.
+<h3>Sabadão</h3>
+
+![Front in Sampa](/public/img/frontweek/frontinsampa.png)
+
+Front in Sampa Stairway To Heaven…sábado foi foda! Confesso que tomei umas a mais na sexta e mesmo ansioso, me atrasei um pouco e cheguei logo no começo do evento.
+
+Não consegui ver a galera, mas fui super bem recepcionado já ganhando adesivos e crachá contendo todas palestras da trilha do evento. O evento foi realizado no Colégio Maria Imaculada, super fácil o acesso de metrô ou de carro, local super limpo e organizado e com auditório de primeira.
+
+O Front in Sampa foi apresentando pelo [Ale Borba](https://twitter.com/ale_borba) e é organizado pelo [Elvis Detona](https://twitter.com/elvisdetona), [Keit Oliveira](https://medium.com/@keitoliveira) [twitter](https://twitter.com/seescrevekeit) e [Deivid Marques](https://medium.com/@deividmarques) [twitter](https://twitter.com/deividmarques).
+
+Não vou entrar detalhadamente nas talks mas o evento iniciou com o [Edu Agni](https://medium.com/@eduagni) [twitter](https://twitter.com/eduagni) com o talk [DevUX](http://pt.slideshare.net/edu_agni/devux) já para acordar a galera, falando bastante o quão é importante o UX não sendo apenas o design.
+
+A segunda palestra foi com nossa conhecida [Talita Pagani](https://medium.com/@talitapagani) [twitter](https://twitter.com/talitapagani), que encontrei também na terça no FEMUG, falando de Acessibilidade, gostei muito dessa talk porque sempre deixamos de fazer algo em relação à acessibilidade alegando falta de tempo e que nossos patrões nunca se importam com isso, mas a escolha de fazer isso esta nas nossas mãos. Se for bem planejado e desenvolvido junto, desde o começo, não muda muito o escopo e você entrega o que hoje já não é um plus e sim uma obrigação, **entregar seu conteúdo para um usuário que tenha limitações é obrigação sim.**
+
+A terceira talk foi com Ivan Banov e foi do caralho, desde o desenvolvimento do **‘Style Guide’ até ‘Pré-processadores’, ‘Frameworks’** e ferramentas úteis para o uso no desenvolvimento. Pude em uma das pausas falar com ele, pois havia conhecido em outros eventos, inclusive na empresa onde ele trampa (BankFacil).
+
+A quarta talk foi do show man que não quis dançar kkk [Matheus Marsiglio](https://twitter.com/matmarsiglio) com a talk **‘Jóta Éssi Funcional’.** Encontrei com ele quarta, quinta e sábado novamente, o cara começou pedindo para a galera levantar e dar uma espreguiçada porque o assunto “parecia” ser bem complexo, mas conseguiu passar bem o conteúdo e não focou apenas no Javascript, também abriu a cabeça da geral para estudar linguagem funcional e pelo feedback uma galera vai estudar pesado, fez live code e ainda falou de relacionamento kkk.
+
+Pausa para o almoço muitas opções de rango, bacana foi a descontração e risadas conforme enchíamos a pança, aproveitando a pausa quero comentar que teve venda de livros da [Casa do Código](https://www.casadocodigo.com.br/) e também de Camisetas e Canecas do [EuCompraria](https://eucompraria.com.br/) (do [Guilherme Serrano](https://medium.com/@gserrano)).
+
+Voltandoooo do almoço iniciaram os trabalhos falando novamente de Acessibilidade, SEO, Semântica com [Reinaldo Ferraz](https://twitter.com/reinaldoferraz), eu admiro a facilidade com que ele apresenta e explica as coisas, vale a pena ler tudo o que ele escreve.
+
+Em seguida, ninguém esperava o que estava por vir, [Alda Rocha](https://twitter.com/mjcoffeeholick) com sua talk que foi mais um relato da realidade onde TODOS nós podemos melhorar, não só da inclusão da mulheres, e sim do preconceito no geral, temos que respeitar o próximo e desejar igualdade a todos, foi arrepiante e **OVACIONADA DE PÉ**. A mina é foda, pude conhece-la em um evento que chama [WoMakersCode](http://www.womakerscode.org/) que eu fui para sentir na pele como seria um homem em um evento feminino (não é exclusivo de mulheres é aberto a todos, porém a grande maioria são mulheres) e o choque maior foi meu por me sentir como se fosse um estranho mas todas fizeram com que eu me sentisse bem e fui super bem recepcionado, eu acho que é isso que temos que levar em diante: respeito e igualdade.
+
+Logo após tivemos o [William Justen](https://twitter.com/Willian_justen) esse mesmo que estava quinta no [meetupCSS](https://www.meetup.com/pt-BR/CSS-SP/), porém com talk diferente, falou de JS Music, foi demais ele mostrando as mágicas que podem ser feitas com música e Javascript.
+
+Tivemos uma pausa para o coffee (e que coffee), nessa hora pude terminar de cumprimentar todos e bater mais papo, coisa que nem gosto de fazer kkk.
+
+Voltamos e iniciamos com o [Almir Filho](https://twitter.com/almirfilho) com The Creative Developer falando sobre Mitos, Dogmas, Preconceitos e limitações, achei muito interessante essa talk e achei sensacional a forma com que o Almir conduziu a palestra, porque envolvia alguns assuntos polêmicos, eles expôs a sua opinião sem ofender o próximo e respeitando as divergências, achei fantástico vale a pena ver essa apresentação.
+
+A próxima talk foi do [Marco Bruno](https://twitter.com/marcobrunobr) que havia encontrado na quarta, esse cara é sensacional e tem o dom de passar algo, chegou dando brindes, fez a talk sem slides e mesmo assim foi foda. O tema foi Progressive Enhancement e ele conduziu deixando mais aberto para questões durante a apresentação.
+
+E para finalizar [Bernard de Luna](https://twitter.com/bernarddeluna) com uma talk motivacional junto com o [Zeno Rocha](https://twitter.com/zenorocha), foi demais e não vou esticar porque essa também vale a pena você ver, para refletir e perceber que você pode sim mudar o mundo. Para fechar o evento tivemos uma review geral de perguntas com todos palestrantes (fiz pergunta e não ganhei camiseta #fica a dica kkk), muitos sorteios e brindes.
+
+Bom galera foi isso… quero complementar que nessa bateria toda ainda teve no sábado anterior o [SampaJS](http://sampajs.com.br/), não pude ir mas tive um feedback muito bom e na segunda após a semana tivemos o [Front7](http://elo7.github.io/front7/), um evento dentro da Elo7 organizado pelo [Mizuta](https://twitter.com/williammizuta) e que está em sua segunda edição.
+
+<h3>Vou deixar mais 2 dicas:</h3>
+***Vá em eventos, você só vai ganhar conhecimentos, aprendizagem e, como eu disse, amigos — e o melhor com a mesma afinidade Code Code Code.***
+
+***Use o Twitter e siga pessoas da área, dou certeza absoluta que ficará bem mais informado (deixei diversos links neste post direto para o Twitter).***
+
+E para finalizar quero pedir que respeitem o compromisso com os eventos.
+Geralmente eles são limitados, caso você não tenha certeza ABSOLUTA nem confirme presença, não adianta cancelar horas, dias ou semanas antes, só confirme com certeza, você tira a vaga de outra pessoa, e não é porque é gratuito que você não tem que ter compromisso, na verdade é ai que você tem que ter mais compromisso, porque você as vezes esta tirando a vaga de uma pessoa que não tenha condições de ir em um evento pago.
