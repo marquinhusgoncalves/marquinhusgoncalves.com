@@ -1,25 +1,16 @@
-# Dependencies
-# markdown:         redcarpet
-# highlighter:      pygments
-
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
-gems:             [jekyll-paginate, jekyll-gist]
-
 # Setup
-title:            Marquinhus Goncalves
+title:            Marquinhus Gonçalves
 tagline:          'Blog sobre desenvolvimento Front-End'
 description:      'Desenvolvedor Front-End'
 url:              http://marquinhusgoncalves.com
-baseurl:          /
-author:           'Marquinhus Goncalves'
+baseurl:          
+author:           'Marquinhus Gonçalves'
 
 # Build settings
-markdown: kramdown
-highlighter: rouge
-permalink: /:title/
+markdown:       kramdown
+highlighter:    rouge
+permalink:        /:title
+gems:             [jekyll-paginate, jekyll-gist]
 
 # Custom vars
 version:          1.0
