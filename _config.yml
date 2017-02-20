@@ -9,14 +9,13 @@ author:           'Marquinhus Gonçalves'
 
 # Build Settings
 markdown: kramdown
+highlighter: rouge
 permalink: /:title
-gems:             [jekyll-paginate, jekyll-gist]
 
 # Custom vars
 version:          1.0
 paginate: 		    5
 
-# Social midia
 github:           https://github.com/marquinhusgoncalves
 twitter:          https://twitter.com/marquinhusgonc
 disqus_username:  marquinhusgoncalves
