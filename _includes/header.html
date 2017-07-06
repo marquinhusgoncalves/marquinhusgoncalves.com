@@ -1,0 +1,55 @@
+<header>
+  <h1 class="header-title">
+    <a href="{{ site.baseurl }}">
+      {{ site.title }}
+    </a>
+  </h1>
+  <nav>
+    <a class="nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+    {% comment %}
+    The code below dynamically generates a sidebar nav of pages with
+    `layout: page` in the front-matter. See readme for usage.
+    {% endcomment %}
+
+    {% assign pages_list = site.pages %}
+    {% for node in pages_list %}
+    {% if node.title != null %}
+    {% if node.layout == "page" %}
+    <a class="nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </nav>
+  <section class="header-contacts">
+    <span>
+      <a href="mailto:eu@marquinhusgoncalves.com">
+        <i class="fa fa-envelope-o"></i>
+      </a>
+    </span>
+    <span>
+      <a href="http://br.linkedin.com/in/marcusviniciusgoncalves" target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </span>
+    <span>
+      <a href="https://facebook.com/marquinhus.goncalves" target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </span>
+    <span>
+      <a href="https://twitter.com/marquinhusgonc" target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </span>
+    <span>
+      <a href="https://github.com/marquinhusgoncalves" target="_blank">
+        <i class="fa fa-github"></i>
+      </a>
+    </span>
+    <span>
+      <a href="https://medium.com/@marquinhusgonc" target="_blank">
+        <i class="fa fa-medium"></i>
+      </a>
+    </span>
+  </section class="header-contacts">
+</header>

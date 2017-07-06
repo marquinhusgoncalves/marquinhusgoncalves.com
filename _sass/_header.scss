@@ -1,0 +1,32 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 15px;
+  background-color: $color-blue;
+}
+
+.header-title {
+  // color: $color-white;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.nav-item {
+  padding: 15px;
+}
+.nav-item.active {
+  border-bottom: 1px solid black;
+}
+.header-contacts span {
+  border: 1px solid black;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+}
+
