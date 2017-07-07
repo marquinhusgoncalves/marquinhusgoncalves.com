@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-black;
+  height: 40px;
+  font-size: 30px;
+}
+
+.fa-heart {
+  color: $color-blue;
+}

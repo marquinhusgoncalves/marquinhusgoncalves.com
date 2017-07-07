@@ -1,0 +1,21 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.content-box-text {
+  width: 100%;
+  max-width: 770px;
+  font-family: 'Lobster','cursive';
+  font-size: 20px;
+  text-align: center;
+}
