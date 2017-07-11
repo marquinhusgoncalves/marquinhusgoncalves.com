@@ -15,7 +15,7 @@ title: Blog
   </div>
   {% endfor %}
 </div>
-<div class="pagination">
+<!--<div class="pagination">
   {% if paginator.next_page %}
     <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
   {% else %}
@@ -30,4 +30,4 @@ title: Blog
   {% else %}
     <span class="pagination-item newer">Próxima</span>
   {% endif %}
-</div>
+</div>-->

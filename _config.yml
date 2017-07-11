@@ -10,7 +10,6 @@ author:           'Marquinhus Gonçalves'
 markdown:       kramdown
 highlighter:    rouge
 permalink:        /:title
-gems:             [jekyll-paginate, jekyll-gist]
 
 # Custom vars
 version:          1.0
