@@ -7,7 +7,7 @@ title: Quando, como e o que foi a Front Week 2016! #frontweek
 
 **Antes de começar quero deixar 3 recados! Primeiro**, obrigado Julio Fontes [Twitter](https://twitter.com/coletividad), do [Coletividad](http://www.coletividad.org/) pelo convite, espaço [aqui na Publicação](https://medium.com/nossa-coletividad) e também pelas contribuições no texto, o **segundo:**
 
-<h3>*PARTICIPE DE EVENTOS! PARTICIPE DE EVENTOS!*</h3>
+<h2>*PARTICIPE DE EVENTOS! PARTICIPE DE EVENTOS!*</h2>
 
 E o **terceiro** é: use o Twitter e siga pessoas da área! Dou certeza absoluta que você ficará bem mais informado (por isso deixarei diversos links do Twitter nesse post).
 
@@ -17,7 +17,7 @@ Já há algum tempo, aliás há alguns anos (foda usar anos como referência, me
 
 Digo melhorar não porque eram ruins, muito pelo contrário! Mas eles vêm melhorando em visibilidade, atraindo empresas e pessoas referência de mercado e oferecendo mais valor para a Comunidade.
 
-<h3>Tudo começou...</h3>
+<h2>Tudo começou...</h2>
 
 ![Front in Sampa](/public/img/frontweek/frontinsampa.png)
 
@@ -30,7 +30,7 @@ Mais 2 eventos, o [meetupCSS](https://www.meetup.com/pt-BR/CSS-SP/) e o [FrontUX
 Ufa, muito legal (e confuso)! Quer saber como foi essa bagunça?
 Senta aí que eu vou te contar os detalhes de cada encontro que participei…
 
-<h3>Segunda-feira</h3>
+<h2>Segunda-feira</h2>
 
 ![Javascript SP](/public/img/frontweek/javascriptsp.png)
 
@@ -42,7 +42,7 @@ O talk foi sobre **‘Conceito Paralelo’** em JavaScript, do [Renato Augusto G
 
 Tivemos um super coffee e wi-fi ¯\\\_(ツ)_/¯
 
-<h3>Terça-feira</h3>
+<h2>Terça-feira</h2>
 
 ![Femug SP](/public/img/frontweek/femugsp.png)
 
@@ -60,7 +60,7 @@ O FEMUG sendo FEMUG, passa alguns minutos e o papo flui, muitas vezes mudando to
 
 Tivemos um super café e wi-fi (2) ¯\\\_(ツ)_/¯
 
-<h3>Quarta-feira</h3>
+<h2>Quarta-feira</h2>
 
 ![Front UX](/public/img/frontweek/frontux.png)
 
@@ -74,12 +74,13 @@ Uns dias antes, os organizadores do evento [Matheus Marsiglio](https://medium.co
 
 O tema foi **“Métricas”** e foi muito foda porque como o bate-papo é bem informal e acessível quem é iniciante consegue absorver os assuntos nível hard, porque a galera faz questão de dar os detalhes sobre o que está falando, para que haja compreensão de todos.
 
-![Surpresed](/public/img/frontweek/frontux-nubank.jpeg)
+![Nubank](/public/img/frontweek/frontux-nubank.jpeg)
+
 Foto do pessoal do FrontUX, retirada do rexto [‘FrontUX #13 — Métricas, no Nubank — Ata’](https://blog.frontux.com/frontux-13-m%C3%A9tricas-no-nubank-ata-cb887f88280b#.5wbtijydr)
 
 O [Ricardo Sato](https://medium.com/@rseiji) fez toda a recepção na empresa, que por sinal é linda, e quero dar um destaque para o [Marco Bruno](https://medium.com/@marcobrunobr) ! O cara é sensacional e foi o representante da [Caelum](https://www.caelum.com.br/), [Alura](https://www.alura.com.br/) e [Casa do Código](https://www.casadocodigo.com.br/) que patrocinou as brejas — isso mesmo, teve breja — vários brindes e também sorteios de ingressos para eventos.
 
-<h3>Quinta-feira</h3>
+<h2>Quinta-feira</h2>
 
 ![Meetup CSS](/public/img/frontweek/meetupcss.png)
 
@@ -101,7 +102,7 @@ Tivemos uma recepção "à la Google”, muitas pessoas tirando selfies com o An
 
 Ao final das apresentações tivemos MUITOS sorteios. Só William [sorteou 5 cursos](https://willianjusten.com.br/cursos/), entre outros sorteios de brindes e ingressos para eventos como o Front in Sampa e o [Front in Vale](http://frontinvale.com.br/) o/
 
-<h3>Sexta-feira</h3>
+<h2>Sexta-feira</h2>
 
 ![Code in the Dark](/public/img/frontweek/codeinthedark.png)
 
@@ -122,6 +123,7 @@ As portas foram abertas às 18:30 e na recepção do evento você tinha que esco
 Só entrar no auditório já foi mega impressionante, era como entrar em uma “danceteria” (sim, eu sou do tempo das danceterias) de filme, luzes coloridas, lasers fodas, quatro TVs mostrando uma lista dos inscritos, quatro mesas com mais quatro TV’s voltadas pro público e atrás um chrome book pra quem fosse codar.
 
 ![Code in the Dark - Panorâmica](/public/img/frontweek/codeinthedark-panoram.jpeg)
+
 Fotos ‘Code in the Dark’ por Leandro Godoi! Veja todas as [fotos aqui](https://www.facebook.com/pg/codeinthedarkbr/photos/?tab=album&album_id=1761565704086651).
 
 Além da estrutura estar super bem montada e organizada, tinha um DJ discotecando! As músicas antes das batalhas foram muito boas, mas as músicas para as batalhas, mano, que espetáculo. Muito bem escolhidas, muito bem sincronizadas e o [Renan Bulgueroni](https://twitter.com/rbulgueroni) não sambou (entendedores entenderão).
@@ -129,11 +131,13 @@ Além da estrutura estar super bem montada e organizada, tinha um DJ discotecand
 Por livre e espontânea pressão o Renan criou uma [playlist no Spotify](https://play.spotify.com/user/12144984142/playlist/1SWPwNb6fQ0CZD5STvQJZC?play=true&utm_source=open.spotify.com&utm_medium=open), **aproveitem sem moderação.**
 
 ![Code in the Dark](/public/img/frontweek/codeinthedark-dj.jpeg)
+
 Fotos ‘Code in the Dark’ por Leandro Godoi! Veja todas as [fotos aqui](https://www.facebook.com/pg/codeinthedarkbr/photos/?tab=album&album_id=1761565704086651).
 
 Tinha para comer uns sanduíches legais, uns canapés muito bons, docinhos, refri, água e Heineken na faixa.
 
 ![Code in the Dark - Brejas](/public/img/frontweek/codeinthedark-brejas.jpeg)
+
 Fotos ‘Code in the Dark’ por Leandro Godoi! Veja todas as [fotos aqui](https://www.facebook.com/pg/codeinthedarkbr/photos/?tab=album&album_id=1761565704086651).
 
 No início teve um campeonato de jokenpô (pedra, papel e tesoura), muito engraçado e divertido, que culminou em uma final épica. Depois disso foram iniciadas as batalhas tão esperadas.
@@ -151,6 +155,7 @@ A mistura de emoção, adrenalina e vergonha estavam fora de controle, eu mesmo 
 **Do nada iniciou a batalha, que emoção.** Lembro que a música estava tão boa que eu não sabia se codava ou dançava, devo ter dado vários sorrisos psicóticos, pois eu estava completamente empolgada, nervosa, ansiosa e ligeiramente desesperada pois nunca tinha usado um chrome book e muito menos no escuro, com luzes piscando, música rolando e fumaça. Olhem a foto kkkk
 
 ![Code in the Dark - Andrea](/public/img/frontweek/codeinthedark-andrea.jpeg)
+
 Fotos ‘Code in the Dark’ por Leandro Godoi! Veja todas as [fotos aqui](https://www.facebook.com/pg/codeinthedarkbr/photos/?tab=album&album_id=1761565704086651).
 
 Ao fim dos quinze minutos tivemos que levantar os braços e foi apresentado o resultado do código e o público escolheu o melhor resultado. Eu fiquei muito pasma com meu resultado, minha tela estava em branco, só tinha os textos que tinha colocado nas tags e mais nada, meu CSS não funcionou por algum motivo. Honestamente, depois de muito pensar, acredito que tenha escrito mal a tag style, afinal, quem digita a tag style inteira no dia a dia? kkkk
@@ -160,6 +165,7 @@ A cada round (foram quatro), o processo se repetiu, quatro pessoas foram sortead
 Os desafiados foram [Bernard De Luna](https://medium.com/@bernarddeluna) [twitter]](https://twitter.com/bernarddeluna), [Matheus Marsiglio](https://twitter.com/matmarsiglio), [Almir Filho](https://medium.com/@almirfilho) [twitter](https://twitter.com/almirfilho) e [Elvis Detona](https://medium.com/@elvisdetona) [twitter](https://twitter.com/elvisdetona). Foi muito legal ver palestrantes e caras muito conhecidos codando ao vivo. Destaque para o Matheus que codou com o notebook no colo e os pés em cima da mesa, com a maior calma do universo.
 
 ![Code in the Dark - Code](/public/img/frontweek/codeinthedark-code.jpeg)
+
 Fotos ‘Code in the Dark’ por Leandro Godoi! Veja todas as [fotos aqui](https://www.facebook.com/pg/codeinthedarkbr/photos/?tab=album&album_id=1761565704086651).
 
 Bem, a final foi eletrizante, o ganhador Bruno Costa Ramos, foi uma máquina de codar, completamente concentrado, sorria com as piadas e brincadeiras, e digitava constantemente, tão constantemente que bateu os 2mil pontos de HitCombo, até aquele momento somente tinham batido mil.
@@ -174,7 +180,7 @@ Eu só espero pelo próximo Code in the Dark, pois a experiencia foi magnífica.
 
 Valeu Andréa por me ajudar a completar esse artigo!
 
-<h3>Sabadão</h3>
+<h2>Sabadão</h2>
 
 ![Front in Sampa](/public/img/frontweek/frontinsampa.png)
 
@@ -210,7 +216,7 @@ E para finalizar [Bernard de Luna](https://twitter.com/bernarddeluna) com uma ta
 
 Bom galera foi isso… quero complementar que nessa bateria toda ainda teve no sábado anterior o [SampaJS](http://sampajs.com.br/), não pude ir mas tive um feedback muito bom e na segunda após a semana tivemos o [Front7](http://elo7.github.io/front7/), um evento dentro da Elo7 organizado pelo [Mizuta](https://twitter.com/williammizuta) e que está em sua segunda edição.
 
-<h3>Vou deixar mais 2 dicas:</h3>
+<h2>Vou deixar mais 2 dicas:</h2>
 ***Vá em eventos, você só vai ganhar conhecimentos, aprendizagem e, como eu disse, amigos — e o melhor com a mesma afinidade Code Code Code.***
 
 ***Use o Twitter e siga pessoas da área, dou certeza absoluta que ficará bem mais informado (deixei diversos links neste post direto para o Twitter).***
