@@ -2,6 +2,7 @@
 layout: page
 title: Projetos
 ---
+<!--
 <ul>
    <li><a href="http://www.lorenzzatomotor.com.br" target="_blank">Lorenzzato Motor</a></li>
    <p>Desenvolvido com HTML5, CSS3, Javascript, PHP, Responsivo, Foundation.</p>
@@ -26,3 +27,4 @@ title: Projetos
    <li><a href="http://mundosa.com.br/sites/crud/" target="_blank">Sistema CRUD</a></li>
    <p>Desenvolvido em PHP com Banco de Dados, HTML5, CSS3, Responsivo, Pure</p>
 </ul>
+  -->
