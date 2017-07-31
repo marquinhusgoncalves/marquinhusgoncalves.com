@@ -4,7 +4,26 @@
       {{ site.title }}
     </a>
   </h1>
-  <nav>
+
+   <div class="header-menu-mobile">
+    <div class="menu-toggle">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+    </div>
+    <nav>
+      <ul class="hidden">
+        <a class="nav-item{% if page.url == site.url %} active{% endif %}" href="{{ site.url }}">Home</a> {% comment %} The code
+        below dynamically generates a sidebar nav of pages with `layout: page` in the front-matter. See readme for usage. {%
+        endcomment %} {% assign pages_list = site.pages %} {% for node in pages_list %} {% if node.title != null %} {% if node.layout
+        == "page" %}
+        <a class="nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a> {% endif
+        %} {% endif %} {% endfor %}
+      </ul>
+    </nav>
+  </div>
+
+  <nav class="header-menu">
     <a class="nav-item{% if page.url == site.url %} active{% endif %}" href="{{ site.url }}">Home</a> {% comment %} The code
     below dynamically generates a sidebar nav of pages with `layout: page` in the front-matter. See readme for usage. {%
     endcomment %} {% assign pages_list = site.pages %} {% for node in pages_list %} {% if node.title != null %} {% if node.layout
@@ -12,6 +31,7 @@
     <a class="nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a> {% endif
     %} {% endif %} {% endfor %}
   </nav>
+
   <section class="header-contacts">
     <a class="header-contacts-link" href="mailto:eu@marquinhusgoncalves.com">
       <span class="header-contacts-circle">
@@ -50,3 +70,20 @@
     </a>
   </section class="header-contacts">
 </header>
+
+<script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+  // var $menuToggle = document.querySelector('.menu-toggle');
+  // $menuToggle.addEventListener('click', function() {
+  //   $(this).toggleClass("on");
+  //   $('.header-menu-mobile').toggleClass("on");
+  //   $("nav ul").toggleClass('hidden');
+  // })
+
+  $(".menu-toggle").on('click', function() {
+  $(this).toggleClass("on");
+  $('.header-menu-mobile').toggleClass("on");
+  $("nav ul").toggleClass('hidden');
+});
+</script>

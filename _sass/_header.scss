@@ -14,6 +14,7 @@ header {
 
 .nav-item {
   padding: 15px;
+  cursor: pointer;
 }
 
 .nav-item.active {
@@ -29,6 +30,7 @@ header {
   width: 2em;
   height: 2em;
   line-height: 2em;
+  cursor: pointer;
 }
 
 .header-contacts-link {
@@ -38,5 +40,93 @@ header {
     & .header-contacts-circle {
       border-color: white;
     }
+  }
+}
+
+.header-menu-mobile {
+  display: none;
+}
+
+.menu-toggle {
+  width: 30px;
+  cursor: pointer;
+
+  &.on {
+
+    .one {
+      transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .two {
+      opacity: 0;
+    }
+
+    .three {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+  }
+}
+
+.one,
+.two,
+.three{
+  height: 3px;
+  background: #000;
+  margin: 7px auto;
+  transition-duration: 0.3s;
+}
+
+nav ul{
+  &.hidden {
+    display: none;
+  }
+
+  a {
+  transition-duration: 0.5s;
+  color: white;
+  font-size: 40px;
+  display: block;
+  text-align: center;
+
+    &:hover {
+      background-color: rgba(0,0,0,0.5);
+    }
+  }
+}
+
+.header-menu-mobile {
+  &.on {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  }
+}
+
+@media (max-width: 780px) {
+  header {
+    flex-wrap: wrap;
+    height: 100px;
+  }
+
+  .header-title {
+    width: calc(100% - 30px);
+  }
+
+
+  .header-menu-mobile {
+    display: block;
+  }
+
+  .header-contacts {
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  .header-menu {
+    display: none;
   }
 }
