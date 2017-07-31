@@ -52,6 +52,10 @@ header {
   cursor: pointer;
 
   &.on {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
 
     .one {
       transform: rotate(45deg) translate(7px, 7px);
@@ -118,7 +122,9 @@ nav ul{
 
 
   .header-menu-mobile {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .header-contacts {
