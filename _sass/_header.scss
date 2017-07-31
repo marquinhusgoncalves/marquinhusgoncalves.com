@@ -8,7 +8,6 @@ header {
 }
 
 .header-title {
-  // color: $color-white;
   font-size: 18px;
   font-weight: 900;
 }
@@ -16,10 +15,12 @@ header {
 .nav-item {
   padding: 15px;
 }
+
 .nav-item.active {
   border-bottom: 1px solid black;
 }
-.header-contacts span {
+
+.header-contacts-circle {
   border: 1px solid black;
   border-radius: 50%;
   position: relative;
@@ -30,3 +31,12 @@ header {
   line-height: 2em;
 }
 
+.header-contacts-link {
+
+  &:hover {
+
+    & .header-contacts-circle {
+      border-color: white;
+    }
+  }
+}

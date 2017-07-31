@@ -5,56 +5,48 @@
     </a>
   </h1>
   <nav>
-    <a class="nav-item{% if page.url == site.url %} active{% endif %}" href="{{ site.url }}">Home</a>
-    {% comment %}
-    The code below dynamically generates a sidebar nav of pages with
-    `layout: page` in the front-matter. See readme for usage.
-    {% endcomment %}
-
-    {% assign pages_list = site.pages %}
-    {% for node in pages_list %}
-    {% if node.title != null %}
-    {% if node.layout == "page" %}
-    <a class="nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-    {% endif %}
-    {% endif %}
-    {% endfor %}
+    <a class="nav-item{% if page.url == site.url %} active{% endif %}" href="{{ site.url }}">Home</a> {% comment %} The code
+    below dynamically generates a sidebar nav of pages with `layout: page` in the front-matter. See readme for usage. {%
+    endcomment %} {% assign pages_list = site.pages %} {% for node in pages_list %} {% if node.title != null %} {% if node.layout
+    == "page" %}
+    <a class="nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a> {% endif
+    %} {% endif %} {% endfor %}
   </nav>
   <section class="header-contacts">
-    <span>
-      <a href="mailto:eu@marquinhusgoncalves.com">
+    <a class="header-contacts-link" href="mailto:eu@marquinhusgoncalves.com">
+      <span class="header-contacts-circle">
         <i class="icon-email"></i>
-      </a>
-    </span>
-    <span>
-      <a href="http://br.linkedin.com/in/marcusviniciusgoncalves" target="_blank">
+      </span>
+    </a>
+    <a class="header-contacts-link" href="http://br.linkedin.com/in/marcusviniciusgoncalves" target="_blank">
+      <span class="header-contacts-circle">
         <i class="icon-linkedin"></i>
-      </a>
-    </span>
-    <span>
-      <a href="https://facebook.com/marquinhus.goncalves" target="_blank">
+      </span>
+    </a>
+    <a class="header-contacts-link" href="https://facebook.com/marquinhus.goncalves" target="_blank">
+      <span class="header-contacts-circle">
         <i class="icon-facebook"></i>
-      </a>
-    </span>
-    <span>
-      <a href="https://twitter.com/marquinhusgonc" target="_blank">
+      </span>
+    </a>
+    <a class="header-contacts-link" href="https://twitter.com/marquinhusgonc" target="_blank">
+      <span class="header-contacts-circle">
         <i class="icon-twitter"></i>
-      </a>
-    </span>
-    <span>
-      <a href="https://github.com/marquinhusgoncalves" target="_blank">
+      </span>
+    </a>
+    <a class="header-contacts-link" href="https://github.com/marquinhusgoncalves" target="_blank">
+      <span class="header-contacts-circle">
         <i class="icon-github"></i>
-      </a>
-    </span>
-    <span>
-      <a href="https://medium.com/@marquinhusgonc" target="_blank">
+      </span>
+    </a>
+    <a class="header-contacts-link" href="https://medium.com/@marquinhusgonc" target="_blank">
+      <span class="header-contacts-circle">
         <i class="icon-medium"></i>
-      </a>
-    </span>
-    <span>
-      <a href="https://codepen.io/marquinhusgoncalves" target="_blank">
+      </span>
+    </a>
+    <a class="header-contacts-link" href="https://codepen.io/marquinhusgoncalves" target="_blank">
+      <span class="header-contacts-circle">
         <i class="icon-codepen"></i>
-      </a>
-    </span>
+      </span>
+    </a>
   </section class="header-contacts">
 </header>
