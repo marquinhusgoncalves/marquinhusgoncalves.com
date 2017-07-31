@@ -5,21 +5,19 @@
     </a>
   </h1>
 
-   <div class="header-menu-mobile">
+  <div class="header-menu-mobile">
     <div class="menu-toggle">
       <div class="one"></div>
       <div class="two"></div>
       <div class="three"></div>
     </div>
-    <nav>
-      <ul class="hidden">
-        <a class="nav-item{% if page.url == site.url %} active{% endif %}" href="{{ site.url }}">Home</a> {% comment %} The code
-        below dynamically generates a sidebar nav of pages with `layout: page` in the front-matter. See readme for usage. {%
-        endcomment %} {% assign pages_list = site.pages %} {% for node in pages_list %} {% if node.title != null %} {% if node.layout
-        == "page" %}
-        <a class="nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a> {% endif
-        %} {% endif %} {% endfor %}
-      </ul>
+    <nav class="header-menu-mobile-nav hidden">
+      <a class="nav-item{% if page.url == site.url %} active{% endif %}" href="{{ site.url }}">Home</a> {% comment %} The code
+      below dynamically generates a sidebar nav of pages with `layout: page` in the front-matter. See readme for usage. {%
+      endcomment %} {% assign pages_list = site.pages %} {% for node in pages_list %} {% if node.title != null %} {% if node.layout
+      == "page" %}
+      <a class="nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a> {% endif
+      %} {% endif %} {% endfor %}
     </nav>
   </div>
 
@@ -84,6 +82,6 @@
   $(".menu-toggle").on('click', function() {
   $(this).toggleClass("on");
   $('.header-menu-mobile').toggleClass("on");
-  $("nav ul").toggleClass('hidden');
+  $(".header-menu-mobile-nav").toggleClass('hidden');
 });
 </script>
