@@ -5,7 +5,7 @@ const prefix      = require('gulp-autoprefixer');
 const cssnano     = require('gulp-cssnano');
 const concat      = require('gulp-concat');
 const uglify      = require('gulp-uglify');
-const browserSync = require('browser-sync').create();''
+const browserSync = require('browser-sync').create();
 const child       = require('child_process');
 
 const siteRoot = '_site';
