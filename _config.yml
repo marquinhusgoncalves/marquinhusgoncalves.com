@@ -4,17 +4,6 @@ tagline:          'Blog sobre desenvolvimento Front-End'
 description:      'Desenvolvedor Front-End'
 url:              http://marquinhusgoncalves.com
 author:           'Marquinhus Gonçalves'
-
-# Build settings
-markdown:       kramdown
-highlighter:    rouge
-permalink:      /:title
-sass:
-  style:        compressed
-
-# Custom vars
-version:          1.0
-
 email:            eu@marquinhusgoncalves.com
 github:           https://github.com/marquinhusgoncalves
 twitter:          https://twitter.com/marquinhusgonc
@@ -22,3 +11,18 @@ disqus_username:  marquinhusgoncalves
 
 # google_analytics:
 account:          UA-103801239-1
+
+# Build settings
+markdown:       kramdown
+highlighter:    rouge
+permalink:      /:title
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']
