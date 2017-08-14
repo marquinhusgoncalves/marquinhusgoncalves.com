@@ -1,50 +1,5 @@
 <footer class="footer">
   <i class="icon-heart"></i>
 </footer>
-<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		ga('create', 'UA-103801239-1', 'auto');
-		ga('send', 'pageview');
-
-		var $menuToggle = document.querySelector('.menu-toggle');
-		var $menuMobile = document.querySelector('.header-menu-mobile');
-		var $menuMobileNav = document.querySelector('.header-menu-mobile-nav');
-
-		$menuToggle.addEventListener('click', function() {
-			this.classList.toggle('on');
-			$menuMobile.classList.toggle('on');
-			$menuMobileNav.classList.toggle('hidden');
-		})
-
-		window.addEventListener('scroll', function () {
-			if (this.scrollY >= 50) {
-				document.querySelector('#return-to-top').classList.add('visible');
-			} else {
-				document.querySelector('#return-to-top').classList.remove('visible');
-			}
-		});
-
-		function runScroll() {
-			scrollTo(document.body, 0, 600);
-		}
-		var scrollme = document.querySelector('#return-to-top');
-		scrollme.addEventListener('click', runScroll, false)
-
-		function scrollTo(element, to, duration) {
-			if (duration <= 0) return;
-			var difference = to - element.scrollTop;
-			var perTick = difference / duration * 10;
-
-			setTimeout(function() {
-				element.scrollTop = element.scrollTop + perTick;
-				if (element.scrollTop == to) return;
-				scrollTo(element, to, duration - 10);
-			}, 10);
-		}
-
-	</script>
-	<script id="dsq-count-scr" src="//marquinhusgoncalves.disqus.com/count.js" async></script>
+<script src="{{ site.baseurl }}assets/js/script.js"></script>
+<script id="dsq-count-scr" src="//marquinhusgoncalves.disqus.com/count.js" async></script>
