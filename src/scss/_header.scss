@@ -18,21 +18,20 @@ header {
 }
 
 .nav-item.active {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $color-black;
 }
 
 .header-contacts-link {
   &:hover {
     & .header-contacts-circle {
-      border-color: white;
+      border-color: $color-white;
     }
   }
 }
 
 .header-contacts-circle {
-  border: 1px solid black;
+  border: 1px solid $color-black;
   border-radius: 50%;
-  // position: relative;
   text-align: center;
   display: inline-block;
   width: 2em;
@@ -60,7 +59,7 @@ header {
 
   .nav-item {
     transition-duration: 0.5s;
-    color: white;
+    color: $color-white;
     font-size: 40px;
     display: block;
     text-align: center;
