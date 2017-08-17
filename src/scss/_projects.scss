@@ -1,0 +1,14 @@
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project {
+  width: 50%;
+  margin: 10px 0 10px;
+  padding-right: 10px;
+}
+
+.project-description {
+  font-size: 14px;
+}
