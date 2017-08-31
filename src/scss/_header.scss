@@ -23,6 +23,8 @@ header {
 
 .header-contacts-link {
   &:hover {
+    color: $color-white;
+
     & .header-contacts-circle {
       border-color: $color-white;
     }
