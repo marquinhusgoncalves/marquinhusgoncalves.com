@@ -15,6 +15,10 @@ header {
 .nav-item {
   padding: 15px;
   cursor: pointer;
+
+  &:hover {
+    color: $color-white;
+  }
 }
 
 .nav-item.active {

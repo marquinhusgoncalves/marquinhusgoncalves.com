@@ -2,9 +2,9 @@
 layout: page
 title: Blog
 ---
-<ul>
+<ul class="page-posts">
   {% for post in site.posts %}
-    <li>
+    <li class="page-post-item">
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
