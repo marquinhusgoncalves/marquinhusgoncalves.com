@@ -12,3 +12,16 @@ body {
   /* flex: 1; would be enough but it looks bad in IE */
   flex: 1 0 auto;
 }
+
+.page-title,
+.post-title {
+  font-size: 40px;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, $color-blue 50%, transparent);
+  }
+}
