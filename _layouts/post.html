@@ -6,6 +6,11 @@ layout: default
   <span class="post-date">{{ page.date | date_to_string }}</span>
   {{ content }}
 </div>
+    <span class="post-date">
+      {% assign m = page.date | date: "%-m" | minus: 1 %}
+      {{ site.months[m] }}
+      {{ page.date | date: "%Y" }}
+    </span>
 <div class="post-related">
   <h2 class="post-related-title">Posts Relacionados</h2>
   <ul class="post-related-posts">

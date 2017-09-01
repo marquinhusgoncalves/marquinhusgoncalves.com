@@ -27,3 +27,18 @@ compress_html:
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
+
+# Config date
+months:
+    - Janeiro
+    - Fevereiro
+    - Março
+    - Abril
+    - Maio
+    - Junho
+    - Julho
+    - Agosto
+    - Setembro
+    - Outubro
+    - Novembro
+    - Dezembro
