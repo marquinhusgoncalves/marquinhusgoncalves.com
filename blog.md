@@ -2,10 +2,16 @@
 layout: page
 title: Blog
 ---
-<ul class="page-posts">
+
+<section class="cards">
   {% for post in site.posts %}
-    <li class="page-post-item">
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
+    <a href="{{ post.url }}" class="card">
+      <article>
+        <header>
+          <h1 class="card-title">{{ post.title }}</h1>
+        </header>
+      </article>
+      <div class="card-plus"></div>
+    </a>
   {% endfor %}
-</ul>
+</section>
