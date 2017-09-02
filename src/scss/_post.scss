@@ -1,28 +1,12 @@
-.post {
-  font-size: 20px;
-  line-height: 1.58;
-  letter-spacing: .003em;
-  margin-bottom: 20px;
-
-  a {
-  color: $color-blue;
-
-    &:hover {
-      color: $color-blue-dark;
-    }
-  }
-}
-
-.post-header {
-  margin-bottom: 20px
-}
-
 .post-date {
   font-size: 12px;
   color: $color-blue;
 }
 
-.post-related,
-.post-related-title {
-  margin-bottom: 20px;
+@media (max-width: 500px) {
+  .post-related-title {
+    &.container {
+      margin-bottom: 10px;
+    }
+  }
 }

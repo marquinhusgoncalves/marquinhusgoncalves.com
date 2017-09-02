@@ -3,7 +3,18 @@
   max-width: 960px;
   margin: 30px auto;
   text-align: justify;
-  padding: 0 15px;
+	padding: 0 15px;
+	font-size: 20px;
+	line-height: 1.58;
+	letter-spacing: .003em;
+
+	a {
+		color: $color-blue;
+
+			&:hover {
+				color: $color-blue-dark;
+			}
+	}
 }
 
 #return-to-top {
@@ -33,4 +44,10 @@
 
 .visible {
   opacity: 1 !important;
+}
+
+@media (max-width: 500px) {
+	.main {
+		font-size: 18px;
+	}
 }
