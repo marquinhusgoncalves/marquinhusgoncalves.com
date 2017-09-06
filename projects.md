@@ -57,19 +57,19 @@ title: Projetos
     <div class="card-plus"></div>
   </a>
 
-  <a href="#" class="card" target="_blank">
+  <a href="http://upload.oceanoweb.com.br" class="card" target="_blank">
     <p class="card-title">Sistema de Upload</p>
     <p class="card-description">Desenvolvido em PHP com Banco de Dados, HTML5, CSS3, Responsivo, Bootstrap</p>
     <div class="card-plus"></div>
   </a>
 
-  <a href="#" class="card" target="_blank">
+  <a href="http://formulario.oceanoweb.com.br/" class="card" target="_blank">
     <p class="card-title">Sistema de Formulário</p>
     <p class="card-description">Desenvolvido em PHP com Banco de Dados, HTML5, CSS3, Javascript/jQuery, Responsivo, Pure</p>
     <div class="card-plus"></div>
   </a>
 
-  <a href="#" class="card" target="_blank">
+  <a href="http://crud.oceanoweb.com.br/" class="card" target="_blank">
     <p class="card-title">Sistema CRUD</p>
     <p class="card-description">Desenvolvido em PHP com Banco de Dados, HTML5, CSS3, Responsivo, Pure</p>
     <div class="card-plus"></div>
