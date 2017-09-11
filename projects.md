@@ -74,4 +74,10 @@ title: Projetos
     <p class="card-description">Desenvolvido em PHP com Banco de Dados, HTML5, CSS3, Responsivo, Pure</p>
     <div class="card-plus"></div>
   </a>
+
+  <a href="http://js30-drumkit.oceanoweb.com.br/" class="card" target="_blank">
+    <p class="card-title">Javascript30 - Project 01 Drum Kit</p>
+    <p class="card-description">Javascript, HTML5, CSS3. Wes Bos project's of the 30 days with Javascript Vanilla</p>
+    <div class="card-plus"></div>
+  </a>
 </section>
