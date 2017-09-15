@@ -46,3 +46,15 @@
     right: 7px;
   }
 }
+
+@include breakpoint (tablet) {
+  .card {
+    width: calc((100% - 40px) / 2) ;
+  }
+}
+
+@include breakpoint (mobile) {
+  .card {
+    width: 100%;
+  }
+}

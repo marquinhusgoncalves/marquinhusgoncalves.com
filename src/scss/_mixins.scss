@@ -1,0 +1,15 @@
+@mixin breakpoint($query-type) {
+  @if $query-type == tablet {
+    @media (max-width: #{$tablet-width} ) {
+      @content;
+    }
+  } @else if $query-type == mobile {
+    @media (max-width: #{$mobile-width}) {
+      @content;
+    }
+  } @else if $query-type == print {
+    @media print {
+      @content;
+    }
+  }
+}
