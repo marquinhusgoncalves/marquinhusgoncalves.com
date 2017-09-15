@@ -80,4 +80,10 @@ title: Projetos
     <p class="card-description">Javascript, HTML5, CSS3. Wes Bos project's of the 30 days with Javascript Vanilla</p>
     <div class="card-plus"></div>
   </a>
+
+  <a href="http://quote.oceanoweb.com.br/" class="card" target="_blank">
+    <p class="card-title">Project Quote - Frases and Cores Aleatórios</p>
+    <p class="card-description">Javascript, HTML5, CSS3.</p>
+    <div class="card-plus"></div>
+  </a>
 </section>
