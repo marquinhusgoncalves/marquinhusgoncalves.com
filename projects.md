@@ -86,4 +86,10 @@ title: Projetos
     <p class="card-description">Javascript, HTML5, CSS3.</p>
     <div class="card-plus"></div>
   </a>
+
+  <a href="http://angular.oceanoweb.com.br/" class="card" target="_blank">
+    <p class="card-title">Estudos Angular - Codecademy</p>
+    <p class="card-description">Javascript, Angular, HTML5, CSS3, Bootstrap, FontAwesome.</p>
+    <div class="card-plus"></div>
+  </a>
 </section>
