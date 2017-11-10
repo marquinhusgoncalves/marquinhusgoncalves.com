@@ -98,4 +98,10 @@ title: Projetos
     <p class="card-description">Javascript, HTML5, CSS3..</p>
     <div class="card-plus"></div>
   </a>
+
+  <a href="http://forronupelo.oceanoweb.com.br/" class="card" target="_blank">
+    <p class="card-title">Site de Banda</p>
+    <p class="card-description">Javascript, HTML5, CSS3..</p>
+    <div class="card-plus"></div>
+  </a>
 </section>
