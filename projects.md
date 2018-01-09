@@ -81,6 +81,30 @@ title: Projetos
     <div class="card-plus"></div>
   </a>
 
+  <a href="http://js30-css-js-clock.oceanoweb.com.br/" class="card" target="_blank">
+    <p class="card-title">Javascript30 - Project 02 CSS + JS CLock</p>
+    <p class="card-description">Javascript, HTML5, CSS3. Wes Bos project's of the 30 days with Javascript Vanilla</p>
+    <div class="card-plus"></div>
+  </a>
+
+  <a href="http://js30-playing-css-variables.oceanoweb.com.br/" class="card" target="_blank">
+    <p class="card-title">Javascript30 - Project 03 Playing CSS Variables</p>
+    <p class="card-description">Javascript, HTML5, CSS3. Wes Bos project's of the 30 days with Javascript Vanilla</p>
+    <div class="card-plus"></div>
+  </a>
+
+  <a href="http://js30-flex-panels.oceanoweb.com.br/" class="card" target="_blank">
+    <p class="card-title">Javascript30 - Project 05 Flex Panels</p>
+    <p class="card-description">Javascript, HTML5, CSS3. Wes Bos project's of the 30 days with Javascript Vanilla</p>
+    <div class="card-plus"></div>
+  </a>
+
+  <a href="http://js30-ajax-type-ahead.oceanoweb.com.br/" class="card" target="_blank">
+    <p class="card-title">Javascript30 - Project 06 Ajax Type Ahead</p>
+    <p class="card-description">Javascript, HTML5, CSS3. Wes Bos project's of the 30 days with Javascript Vanilla</p>
+    <div class="card-plus"></div>
+  </a>
+
   <a href="http://quote.oceanoweb.com.br/" class="card" target="_blank">
     <p class="card-title">Project Quote - Frases and Cores Aleatórios</p>
     <p class="card-description">Javascript, HTML5, CSS3.</p>
