@@ -31,6 +31,7 @@
 
     & .header-contacts-circle {
       border-color: $color-white;
+      transition: border .5s ease;
     }
   }
 }
