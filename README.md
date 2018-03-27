@@ -5,7 +5,7 @@
 Personal Blog hosted on [GitHub Pages](https://pages.github.com/) and generated with [Jekyll](http://jekyllrb.com/).
 
 ```
-[Marquinhus Gonçalves](http://marquinhusgoncalves.com)
+[Marquinhus Gonçalves](https://marquinhusgoncalves.com)
 ```
 
 ## Main Commands Jekyll
