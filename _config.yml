@@ -31,12 +31,12 @@ exclude: [
   'vendor/bundle/',
   'vendor/cache/',
   'vendor/gems/',
-  'vendor/ruby/'
+  'vendor/ruby/',
   'package.json',
   'src',
   'gulpfile.js',
   'testlinks.sh',
-  '.travis.yml',
+  '.travis.yml'
   ]
 
 # Config date
