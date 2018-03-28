@@ -27,13 +27,18 @@ compress_html:
 
 # exclude my node related stuff
 exclude: [
+  'Gemfile',
+  'Gemfile.lock',
+  'node_modules',
+  'vendor/bundle/',
+  'vendor/cache/',
+  'vendor/gems/',
+  'vendor/ruby/'
   'package.json',
   'src',
-  'node_modules',
   'gulpfile.js',
   'testlinks.sh',
   '.travis.yml',
-  'vendor'
   ]
 
 # Config date
