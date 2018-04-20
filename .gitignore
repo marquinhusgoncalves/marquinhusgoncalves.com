@@ -5,3 +5,4 @@ _draft
 raft
 .sass-cache
 .jekyll-metadata
+Gemfile.lock
