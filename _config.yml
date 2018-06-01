@@ -18,6 +18,10 @@ markdown:       kramdown
 highlighter:    rouge
 permalink:      /:title/
 
+# Collections
+collections:
+  projects:
+
 # html minify
 compress_html:
   clippings: all
