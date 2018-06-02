@@ -1,7 +1,7 @@
 ---
 layout: post
 category: project
-title: Javascript30 - Project 27 Click and Drag to Scroll
+title: Javascript30 - Project 15 Local Storage
 description: Javascript, HTML5, CSS3. Wes Bos project's of the 30 days with Javascript Vanilla.
-href: http://js30-click-and-drag.oceanoweb.com.br
+href: http://js30-local-storage.oceanoweb.com.br
 ---
