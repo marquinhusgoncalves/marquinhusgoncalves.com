@@ -8,6 +8,7 @@ function showButton() {
 
 function scrollTo(element, to, duration) {
   if (duration <= 0) return;
+  console.log(element, to, duration);
   const difference = to - element.scrollTop;
   const perTick = difference / duration * 10;
 
