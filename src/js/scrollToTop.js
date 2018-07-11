@@ -8,9 +8,9 @@ function showButton() {
 
 function scrollTo(element, to, duration) {
   if (duration <= 0) return;
-  console.log(element, to, duration);
   const difference = to - element.scrollTop;
   const perTick = difference / duration * 10;
+
 
   setTimeout(function () {
     element.scrollTop = element.scrollTop + perTick;
@@ -20,7 +20,7 @@ function scrollTo(element, to, duration) {
 }
 
 function runScroll() {
-  scrollTo(document.body, 0, 600);
+  scrollTo(document.documentElement, 0, 600);
 }
 const scrollme = document.querySelector('#return-to-top');
 scrollme.addEventListener('click', runScroll);
