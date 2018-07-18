@@ -1,17 +1,17 @@
-const gulp        = require('gulp');
-const plumber     = require('gulp-plumber');
-const gutil       = require('gulp-util');
-const sass        = require('gulp-sass');
-const prefix      = require('gulp-autoprefixer');
-const cssnano     = require('gulp-cssnano');
-const concat      = require('gulp-concat');
-const uglify      = require('gulp-uglify');
+const gulp = require('gulp');
+const plumber = require('gulp-plumber');
+const gutil = require('gulp-util');
+const sass = require('gulp-sass');
+const prefix = require('gulp-autoprefixer');
+const nano = require('gulp-cssnano');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify-es').default;
 const browserSync = require('browser-sync');
-const cp          = require('child_process');
-const sourcemaps  = require('gulp-sourcemaps');
-const imagemin    = require('gulp-imagemin');
+const cp = require('child_process');
+const sourcemaps = require('gulp-sourcemaps');
+const imagemin = require('gulp-imagemin');
 
-var messages = {
+const messages = {
   jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
 
@@ -25,7 +25,7 @@ gulp.task('css', () => {
     .on('error', sass.logError))
     .pipe(concat('style.css'))
     .pipe(sourcemaps.write())
-    .pipe(browserSync.reload({stream:true}))
+    .pipe(browserSync.reload({stream: true}))
     .pipe(gulp.dest('assets/css'));
 });
 
@@ -34,13 +34,13 @@ gulp.task('js', () => {
     .pipe(plumber())
     .pipe(concat('script.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('assets/js/'))
+    .pipe(gulp.dest('assets/js/'));
 });
 
 gulp.task('imagemin', () => {
   return gulp.src('src/img/**/*')
     .pipe(plumber())
-    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+    .pipe(imagemin({optimizationLevel: 3, progressive: true, interlaced: true}))
     .pipe(gulp.dest('assets/img/'));
 });
 
@@ -53,7 +53,7 @@ gulp.task('fonts', function() {
 /**
  * Monta o site do Jekyll
  */
-gulp.task('jekyll-build', function (done) {
+gulp.task('jekyll-build', function(done) {
   browserSync.notify(messages.jekyllBuild);
   return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
       .on('close', done);
@@ -62,7 +62,7 @@ gulp.task('jekyll-build', function (done) {
 /**
 * Refaz o site e atualiza a página
 */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
   browserSync.reload();
 });
 
@@ -72,9 +72,9 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 */
 gulp.task('browser-sync', ['jekyll-build'], function() {
   browserSync({
-      server: {
-          baseDir: '_site'
-      }
+    server: {
+      baseDir: '_site'
+    }
   });
 });
 
