@@ -19,7 +19,7 @@
   "homepage": "https://marquinhusgoncalves.com",
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^3.3.0",
     "gulp-plumber": "^1.2.0",

@@ -1,4 +1,4 @@
-const gulp = require('gulp');
+const { src, dest, parallel, series, watch } = require('gulp');
 const plumber = require('gulp-plumber');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
@@ -12,75 +12,80 @@ const messages = {
   jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
 
-gulp.task('css', () => {
-  gulp.src('src/scss/**/*.scss')
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(sass({
-      outputStyle: 'compressed'
-    })
-    .on('error', sass.logError))
-    .pipe(concat('style.css'))
-    .pipe(sourcemaps.write())
-    .pipe(browserSync.reload({stream: true}))
-    .pipe(gulp.dest('assets/css'));
-});
+function css() {
+  return src('src/scss/**/*.scss')
+  .pipe(plumber())
+  .pipe(sourcemaps.init())
+  .pipe(sass({
+    outputStyle: 'compressed'
+  })
+  .on('error', sass.logError))
+  .pipe(concat('style.css'))
+  .pipe(sourcemaps.write())
+  .pipe(browserSync.reload({stream: true}))
+  .pipe(dest('assets/css'));
+}
 
-gulp.task('js', () => {
-  return gulp.src('src/js/**/*.js')
+function js() {
+  return src('src/js/**/*.js')
     .pipe(plumber())
     .pipe(concat('script.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('assets/js/'));
-});
+    .pipe(dest('assets/js/'));
+};
 
-gulp.task('imagemin', () => {
-  return gulp.src('src/img/**/*')
+function imagens() {
+  return src('src/img/**/*')
     .pipe(plumber())
     .pipe(imagemin({optimizationLevel: 3, progressive: true, interlaced: true}))
-    .pipe(gulp.dest('assets/img/'));
-});
+    .pipe(dest('assets/img/'));
+};
 
-gulp.task('fonts', function() {
-  return gulp.src([
+function fonts() {
+  return src([
     'src/fonts/**'])
-    .pipe(gulp.dest('assets/fonts/'));
-});
+    .pipe(dest('assets/fonts/'));
+};
 
-/**
- * Monta o site do Jekyll
- */
-gulp.task('jekyll-build', function(done) {
+// Monta o site do Jekyll
+function jekyllBuild(done) {
   browserSync.notify(messages.jekyllBuild);
   return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
       .on('close', done);
-});
+};
 
-/**
-* Refaz o site e atualiza a página
-*/
-gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
-  browserSync.reload();
-});
+// Refaz o site e atualiza a página
+function jekyllRebuild() {
+  return browserSync.reload();
+};
 
 /**
 * Espera até que o jekyll-build seja executado e então levanta o
 * servidor utilizando o _site como pasta raiz
 */
-gulp.task('browser-sync', ['jekyll-build'], function() {
-  browserSync({
+function browserJekyllSync() {
+  return browserSync({
     server: {
       baseDir: '_site'
     }
   });
-});
+};
 
-gulp.task('watch', function () {
-  gulp.watch('src/scss/**/*.scss', ['css', 'jekyll-rebuild']);
-  gulp.watch('src/js/**/*.js', ['js', 'jekyll-rebuild']);
-  gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin', 'jekyll-rebuild']);
-  gulp.watch('src/fonts/**/*.{eot,svg,ttf, woff}', ['fonts', 'jekyll-rebuild']);
-  gulp.watch(['*.md', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
-});
+function watching() {
+  watch('src/scss/**/*.scss', parallel(css))
+  .on('change', series(jekyllBuild, jekyllRebuild()));
+  watch('src/js/**/*.js', parallel(js))
+  .on('change', series(jekyllBuild, jekyllRebuild()));
+  watch('src/img/**/*.{jpg,png,gif}', parallel(imagens))
+  .on('change', series(jekyllBuild, jekyllRebuild()));
+  watch('src/fonts/**/*.{eot,svg,ttf, woff}', parallel(fonts))
+  .on('change', series(jekyllBuild, jekyllRebuild()));
+  watch(['*.md', '_includes/*.html', '_layouts/*.html', '_posts/*'])
+  .on('change', series(jekyllBuild, jekyllRebuild()));
+};
 
-gulp.task('default', ['css', 'js', 'imagemin', 'fonts', 'browser-sync', 'watch']);
+exports.css = css;
+exports.js = js;
+exports.imagens = imagens;
+exports.fonts = fonts;
+exports.default = series(parallel(css, js, imagens, fonts), series(jekyllBuild, browserJekyllSync), watching);
