@@ -6,8 +6,7 @@ export const Footer = styled.footer`
   justify-content: center;
   align-items: center;
   background-color: var(--color-black);
-  height: 40px;
-  font-size: 30px;
+  height: 2.5rem;
 `
 
 export const HeartIcon = styled(FavoriteIcon)`

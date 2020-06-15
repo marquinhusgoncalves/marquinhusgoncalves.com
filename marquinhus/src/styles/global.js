@@ -52,8 +52,17 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
+    line-height: 1;
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
     --color-black: #000;
+    --color-white: #FFF;
     --color-blue: #25AAE1;
+  }
+  img {
+    display: block;
+  	width: 100%;
+  	height: auto;
   }
 `
 export default GlobalStyles
