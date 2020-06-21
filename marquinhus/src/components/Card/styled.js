@@ -1,10 +1,11 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-export const CardLink = styled(Link)`
+const Card = `
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  flex-direction: column;
   text-decoration: none;
   border: 1px solid var(--color-grey-light);
   padding: 0.6rem;
@@ -20,7 +21,16 @@ export const CardLink = styled(Link)`
   }
 `
 
-export const Card = styled.section``
+export const CardLink = styled(Link)`
+  ${Card};
+`
+
+export const CardLinkOut = styled.a`
+  ${Card};
+`
+
 export const CardTitle = styled.h1`
   font-weight: 900;
 `
+
+export const CardDescription = styled.p``

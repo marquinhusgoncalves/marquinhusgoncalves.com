@@ -10,7 +10,7 @@ const Blog = ({ data }) => {
   const postList = data.allMarkdownRemark.edges
   return (
     <Layout>
-      <SEO />
+      <SEO title="Blog" />
       <Titles title={"Blog"} />
       {postList.map(
         ({
@@ -19,7 +19,7 @@ const Blog = ({ data }) => {
             fields: { slug },
           },
         }) => (
-          <Card title={title} slug={slug} />
+          <Card key={title} title={title} slug={slug} />
         )
       )}
     </Layout>
@@ -28,7 +28,10 @@ const Blog = ({ data }) => {
 
 export const query = graphql`
   {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: { fields: { collection: { eq: "posts" } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           fields {

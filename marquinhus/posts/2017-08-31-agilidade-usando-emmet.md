@@ -1,6 +1,6 @@
 ---
-layout: post
 title: Escreva HTML com mais agilidade usando Emmet #frontend
+date: 2017-08-31 20:00:00
 ---
 
 E ai pessoal tudo bem?

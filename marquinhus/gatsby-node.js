@@ -6,18 +6,21 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   // Ensures we are processing only markdown files
   if (node.internal.type === "MarkdownRemark") {
-    // Use `createFilePath` to turn markdown files in our `data/faqs` directory into `/faqs/slug`
+    const collection = getNode(node.parent).sourceInstanceName
     const slug = createFilePath({
       node,
       getNode,
-      basePath: "pages",
+      basePath: `pages`,
     })
-
-    // Creates new query'able field with name of 'slug'
     createNodeField({
       node,
-      name: "slug",
-      value: `/${slug.slice(12)}`,
+      name: "collection",
+      value: collection,
+    })
+    createNodeField({
+      node,
+      name: `slug`,
+      value: `/${collection}${slug.slice(12)}`,
     })
   }
 }
