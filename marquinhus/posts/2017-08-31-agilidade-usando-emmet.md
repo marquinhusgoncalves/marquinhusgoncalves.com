@@ -5,12 +5,12 @@ title: Escreva HTML com mais agilidade usando Emmet #frontend
 
 E ai pessoal tudo bem?
 
-Neste post quero comentar sobre o plugin [Emmet](https://emmet.io/){:target="_blank"}.
+Neste post quero comentar sobre o plugin [Emmet](https://emmet.io/){:target="\_blank"}.
 
 Bom o Emmet é um plugin para HTML e CSS, que digitando menos você consegue escrever mais código, com pequenas sentenças você cria
 estruturas grandes, ganhando agilidade, produtividade e evitando ter que reescrever códigos.
 
-Bom em primeiro lugar é possível instalar o Emmet em diversos editores como [VSCode](https://code.visualstudio.com/), [Sublime](https://www.sublimetext.com/), [Atom](https://atom.io/), [Brackets](http://brackets.io/) e etc, você pode baixar e instalar [por aqui](https://emmet.io/download/){:target="_blank"} ou instalar diretamente no seu editor.
+Bom em primeiro lugar é possível instalar o Emmet em diversos editores como [VSCode](https://code.visualstudio.com/), [Sublime](https://www.sublimetext.com/), [Atom](https://atom.io/), [Brackets](http://brackets.io/) e etc, você pode baixar e instalar [por aqui](https://emmet.io/download/){:target="\_blank"} ou instalar diretamente no seu editor.
 
 Alguns serviços online como [JSFinddle](https://jsfiddle.net/) e [Codepen](https://codepen.io/) também são possíveis de utilizar.
 
@@ -20,42 +20,41 @@ A sintaxe é fácil ao final de cada sentença use o TAB.
 
 Usando apenas
 
-{% highlight html %}
+```html
 html:5 ou !
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body></body>
 </html>
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 script:src
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 <script src=""></script>
-{% endhighlight html %}
+```
 
 Com essa sentença
 
-{% highlight html %}
-header#header+(main.main>h1.title{Emmet}+section.container>ul>li>a{Item $}*5)+footer.footer
-{% endhighlight html %}
+```html
+header#header+(main.main>h1.title{Emmet}+section.container>ul>li>a{Item
+$}*5)+footer.footer
+```
 
 Olha que é gerado
 
-{% highlight html %}
+```html
 <header id="header"></header>
 <main class="main">
   <h1 class="title">Emmet</h1>
@@ -72,126 +71,122 @@ Olha que é gerado
   </section>
 </main>
 <footer class="footer"></footer>
-{% endhighlight html %}
+```
 
 Para qualquer tag HTML:
 
-{% highlight html %}
+```html
 div
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 <div></div>
-{% endhighlight html %}
+```
 
 Para uma tag com id:
 
-{% highlight html %}
+```html
 div#container
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 <div id="name-id"></div>
-{% endhighlight html %}
+```
 
 Para uma tag com class:
 
-{% highlight html %}
-div.class
+```html
+div.class div.class1.class2
+```
 
-div.class1.class2
-{% endhighlight html %}
-
-{% highlight html %}
+```html
 <div class="class"></div>
 
 <div class="class1 class2"></div>
-{% endhighlight html %}
+```
 
-Se caso for diitado apenas .class ou #id a TAG <div> é adicionada automáticamente.
+Se caso for digitado apenas `.class` ou `#id` a TAG `<div>` é adicionada automáticamente.
 
-{% highlight html %}
-#name-id
+```html
+#name-id .name-class
+```
 
-.name-class
-{% endhighlight html %}
-
-{% highlight html %}
+```html
 <div id="name-id"></div>
 
 <div class="name-class"></div>
-{% endhighlight html %}
+```
 
-Para criar uma árvore de elementos você utiliza ` > ` para que o próximo elemento fique dentro da TAG anterior (filho ) e ` + ` para ficar após a TAG anterior (irmão)
+Para criar uma árvore de elementos você utiliza `>` para que o próximo elemento fique dentro da TAG anterior (filho ) e `+` para ficar após a TAG anterior (irmão)
 
 Vamos aos exemplos:
 
-{% highlight html %}
+```html
 section>p
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 <section>
   <p></p>
 </section>
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 section+p
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 <section></section>
 <p></p>
-{% endhighlight html %}
+```
 
-O símbolo ` ^ ` faz com que os elementos fiquem irmãos da última sentença.
+O símbolo `^` faz com que os elementos fiquem irmãos da última sentença.
 
-{% highlight html %}
+```html
 section>p>a{link}^section
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 <section>
   <p><a href="">Link</a></p>
   <section></section>
 </section>
-{% endhighlight html %}
+```
 
-Obs.: O símbolo ` ^ ` pode ser útilizado mais de uma vez assim a cada vez usado sobe um nível na árvore
+Obs.: O símbolo `^` pode ser útilizado mais de uma vez assim a cada vez usado sobe um nível na árvore
 
-{% highlight html %}
+```html
 section>p>a{link}^^section
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 <section>
   <p><a href="">link</a></p>
 </section>
 <section></section>
-{% endhighlight html %}
+```
 
-O símbolo ` * ` multiplica o elemento declarado pelo n vezes.
+O símbolo `*` multiplica o elemento declarado pelo n vezes.
 
-{% highlight html %}
+```html
 ul>li*3
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 <ul>
   <li></li>
   <li></li>
   <li></li>
 </ul>
-{% endhighlight html %}
+```
 
-Os parenteses ` () `servem para agrupar um conjunto de sentença.
+Os parenteses `()`servem para agrupar um conjunto de sentença.
 
-{% highlight html %}
+```html
 header.header(article>p+span)+footer>p
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 <header class="header"></header>
 <article>
   <p></p>
@@ -200,16 +195,15 @@ header.header(article>p+span)+footer>p
 <footer>
   <p></p>
 </footer>
-{% endhighlight html %}
+```
 
 E pode melhorar adicionada
 
-
-{% highlight html %}
+```html
 (section>ul>(li>p+a)*3)+footer>p
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 <section>
   <ul>
     <li>
@@ -227,113 +221,129 @@ E pode melhorar adicionada
     <footer></footer>
   </ul>
 </section>
-{% endhighlight html %}
+```
 
-Com o ` $ ` você pode numerar elementos que oram criado com a repetição ` * `.
+Com o `$` você pode numerar elementos que oram criado com a repetição `*`.
 
-{% highlight html %}
+```html
 ul>li.item$*3
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 <ul>
   <li class="item1"></li>
   <li class="item2"></li>
   <li class="item3"></li>
 </ul>
-{% endhighlight html %}
+```
 
-Pode ser usado ` $ ` em sequência
+Pode ser usado `$` em sequência
 
-{% highlight html %}
+```html
 ul>li.item$$$*3
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 <ul>
   <li class="item001"></li>
   <li class="item002"></li>
   <li class="item003"></li>
 </ul>
-{% endhighlight html %}
+```
 
-Com o uso ` @- ` voc6e muda a ordenação, podendo ser crescente (default) e decrescente.
+Com o uso `@-` voc6e muda a ordenação, podendo ser crescente (default) e decrescente.
 
-{% highlight html %}
+```html
 ul>li.item$@-*3
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 <ul>
   <li class="item3"></li>
   <li class="item2"></li>
   <li class="item1"></li>
 </ul>
-{% endhighlight html %}
+```
 
-Para mudar o contador base use ` @N `
+Para mudar o contador base use `@N`
 
-{% highlight html %}
+```html
 ul>li.item$@3*3
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 <ul>
   <li class="item3"></li>
   <li class="item4"></li>
   <li class="item5"></li>
 </ul>
-{% endhighlight html %}
+```
 
 E também pode inverter
 
-{% highlight html %}
+```html
 ul>li.item$@-3*3
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 <ul>
   <li class="item5"></li>
   <li class="item4"></li>
   <li class="item3"></li>
 </ul>
-{% endhighlight html %}
+```
 
 Para adicionar texto use ` {} ``
 
-{% highlight html %}
+```html
 a{Clique aqui}
-{% endhighlight html %}
+```
 
-{% highlight html %}
+```html
 <a href="">Click me</a>
-{% endhighlight html %}
+```
 
 Também pode adicionar textos que fiquem dentro do elemento anterior ou após
-{% highlight html %}
-a{Clique}+b{aqui}
 
-a>{Clique}+b{aqui}
-{% endhighlight html %}
+```html
+a{Clique}+b{aqui} a>{Clique}+b{aqui}
+```
 
-{% highlight html %}
+```html
 <a href="">Clique</a><b>aqui</b>
 
 <a href="">Clique<b>aqui</b></a>
-{% endhighlight html %}
+```
 
 Pode ser gerado um [Lorem Ipsum](http://br.lipsum.com/) por default é gerado com 30 linhas mas é possível personalizar
 
-{% highlight html %}
+```html
 p*4>lorem
-{% endhighlight html %}
+```
 
-{% highlight html %}
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
-<p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
-<p>Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro quaerat autem ipsam odit quam beatae tempora quibusdam illum! Modi velit odio nam nulla unde amet odit pariatur at!</p>
-<p>Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil explicabo perferendis quos provident delectus ducimus necessitatibus reiciendis optio tempora unde earum doloremque commodi laudantium ad nulla vel odio?</p>
-{% endhighlight html %}
+```html
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus
+  molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias
+  officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!
+</p>
+<p>
+  Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore
+  recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at
+  neque quos facere sequi unde optio aliquam!
+</p>
+<p>
+  Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro
+  quaerat autem ipsam odit quam beatae tempora quibusdam illum! Modi velit odio
+  nam nulla unde amet odit pariatur at!
+</p>
+<p>
+  Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil
+  explicabo perferendis quos provident delectus ducimus necessitatibus
+  reiciendis optio tempora unde earum doloremque commodi laudantium ad nulla vel
+  odio?
+</p>
+```
 
 Alguns Lorem Ipsum online:
 
@@ -391,7 +401,6 @@ border: 5px #000 solid
 - #e0 → #e0e0e0
 - #fc0 → #ffcc00
 
-
 ## Recomendações finais
 
 Para o Emmet poder parsear não pode haver espaços nas sentenças.
@@ -404,7 +413,7 @@ Espero que tenham gostado e ajudado !!!
 
 De qualquer forma caso precisem de uma ajuda podem deixar um comentário ou me procurar nas redes sociais.
 
-## Referências:
+## Referências
 
 [Documentação Emmet](https://docs.emmet.io/abbreviations/syntax/)
 

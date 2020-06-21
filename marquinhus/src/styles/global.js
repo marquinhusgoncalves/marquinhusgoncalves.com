@@ -58,6 +58,7 @@ const GlobalStyles = createGlobalStyle`
     --color-black: #000;
     --color-white: #FFF;
     --color-blue: #25AAE1;
+    --color-grey-light: #F5F5F5;
   }
   img {
     display: block;

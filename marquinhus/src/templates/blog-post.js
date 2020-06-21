@@ -3,45 +3,32 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import Titles from "../components/Titles"
 
-import * as S from "../components/Post/styled"
-
-const BlogPost = () => {
+const BlogPost = ({ data }) => {
+  const post = data.markdownRemark
+  const title = data.markdownRemark.frontmatter.title
   return (
     <Layout>
       <SEO />
-      {/* <S.PostHeader>
-        <S.PostDate>
-          {post.frontmatter.date} • {post.timeToRead} min de leitura
-        </S.PostDate>
-        <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
-        <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
-      </S.PostHeader>
-      <S.MainContent> */}
+      <Titles title={title} />
       <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-      {/* </S.MainContent>
-      <RecommendedPost previous={previous} next={next} />
-      <Comments url={post.fields.slug} title={post.frontmatter.title} /> */}
     </Layout>
   )
 }
 
-// export const query = graphql`
-//   query Post($slug: String!) {
-//     markdownRemark(fields: { slug: { eq: $slug } }) {
-//       fields {
-//         slug
-//       }
-//       frontmatter {
-//         title
-//         description
-//         date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
-//         image
-//       }
-//       html
-//       timeToRead
-//     }
-//   }
-// `
+export const query = graphql`
+  query Post($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+      }
+      html
+    }
+  }
+`
 
 export default BlogPost
