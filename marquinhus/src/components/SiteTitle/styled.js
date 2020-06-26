@@ -8,6 +8,7 @@ export const SiteTitleWrapped = styled.h1`
 
   ${media.lessThan("medium")`
   font-size: 1.6rem;
+  margin-bottom: 0.5rem;
   `}
 `
 

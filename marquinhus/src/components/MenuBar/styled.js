@@ -6,19 +6,22 @@ export const MenuWrapped = styled.nav`
   display: block;
 
   ${media.lessThan("medium")`
-    display: none;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.9);
-    position: absolute;
-    top: 0;
-    left: 0; */
+    display: ${props => (props.isMenuOpen ? "flex" : "none")};
+
+    &.open-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   `}
 `
 export const MenuIconWrapped = styled.div`

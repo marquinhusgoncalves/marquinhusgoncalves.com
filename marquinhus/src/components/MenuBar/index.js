@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 import MenuIcon from "@material-ui/icons/Menu"
 import CloseIcon from "@material-ui/icons/Close"
@@ -24,25 +24,37 @@ const menuLinks = [
   },
 ]
 
-const MenuBar = () => (
-  <>
-    <S.MenuWrapped>
-      {menuLinks.map(menuLink => {
-        const { url, label } = menuLink
-        return (
-          <S.MenuLinks to={url} activeClassName="active">
-            {label}
-          </S.MenuLinks>
-        )
-      })}
-      <S.CloseIconWrapped>
-        <CloseIcon fontSize="large" />
-      </S.CloseIconWrapped>
-    </S.MenuWrapped>
-    <S.MenuIconWrapped>
-      <MenuIcon fontSize="large" />
-    </S.MenuIconWrapped>
-  </>
-)
+const MenuBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const openMenu = () => {
+    console.log(isMenuOpen)
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  return (
+    <>
+      <S.MenuWrapped
+        isMenuOpen={isMenuOpen}
+        className={isMenuOpen ? "open-menu" : ""}
+      >
+        {menuLinks.map(menuLink => {
+          const { url, label } = menuLink
+          return (
+            <S.MenuLinks to={url} activeClassName="active">
+              {label}
+            </S.MenuLinks>
+          )
+        })}
+        <S.CloseIconWrapped onClick={openMenu}>
+          <CloseIcon fontSize="large" />
+        </S.CloseIconWrapped>
+      </S.MenuWrapped>
+      <S.MenuIconWrapped onClick={openMenu}>
+        <MenuIcon fontSize="large" />
+      </S.MenuIconWrapped>
+    </>
+  )
+}
 
 export default MenuBar
