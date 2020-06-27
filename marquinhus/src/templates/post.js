@@ -2,16 +2,19 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import SEO from "../components/Seo"
 import Titles from "../components/Titles"
-import Comments from "../components/Comments"
 import PostInfo from "../components/PostInfo"
+import Comments from "../components/Comments"
+import RelatedPosts from "../components/RelatedPosts"
 
-const Post = ({ data }) => {
-  const post = data.markdownRemark
-  const title = data.markdownRemark.frontmatter.title
-  const date = data.markdownRemark.frontmatter.date
-  const timeToRead = data.markdownRemark.timeToRead
+const Post = props => {
+  const post = props.data.markdownRemark
+  const title = props.data.markdownRemark.frontmatter.title
+  const date = props.data.markdownRemark.frontmatter.date
+  const timeToRead = props.data.markdownRemark.timeToRead
+  const next = props.pageContext.next
+  const previous = props.pageContext.previous
 
   return (
     <Layout>
@@ -19,6 +22,7 @@ const Post = ({ data }) => {
       <Titles title={title} />
       <PostInfo date={date} timeToRead={timeToRead} />
       <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      <RelatedPosts next={next} previous={previous} />
       <Comments url={post.fields.slug} title={post.frontmatter.title} />
     </Layout>
   )

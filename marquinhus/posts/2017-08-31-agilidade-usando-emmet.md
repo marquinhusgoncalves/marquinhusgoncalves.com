@@ -355,31 +355,31 @@ Alguns Lorem Ipsum online:
 
 Bom acredito que para o CSS o Emmet não será muito útil porque os editores já oferecem um auxílio para a escrita sugerindo com o auto-complete.
 
-{% highlight css %}
+```css
 -display
-{% endhighlight css %}
+```
 
-{% highlight css %}
+```css
 -webkit-display: ;
 -moz-display: ;
 -ms-display: ;
 -o-display: ;
 display: ;
-{% endhighlight css %}
+```
 
 Também podemos passar valores.
 
-{% highlight css %}
--flex:10px
-{% endhighlight css %}
+```css
+-flex: 10px;
+```
 
-{% highlight css %}
+```css
 -webkit-flex: 10px;
 -moz-flex: 10px;
 -ms-flex: 10px;
 -o-flex: 10px;
 flex: 10px;
-{% endhighlight css %}
+```
 
 E a referência de valores fica
 
@@ -389,13 +389,13 @@ E a referência de valores fica
 
 Podemos usar com cores e abreviações
 
-{% highlight css %}
+```css
 bd5#0s
-{% endhighlight css %}
+```
 
-{% highlight css %}
-border: 5px #000 solid
-{% endhighlight css %}
+```css
+border: 5px #000 solid;
+```
 
 - #1 → #111111
 - #e0 → #e0e0e0

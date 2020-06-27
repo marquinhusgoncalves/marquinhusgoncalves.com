@@ -11,5 +11,3 @@ export const CommentsWrapper = styled.section`
     }
   }
 `
-
-export const CommentsTitle = styled.h2``

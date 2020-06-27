@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import SEO from "../components/Seo"
 import Titles from "../components/Titles"
 import Card from "../components/Card"
 
@@ -11,7 +11,7 @@ const Blog = ({ data }) => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <Titles title={"Blog"} />
+      <Titles title="Blog" />
       {postList.map(
         ({
           node: {

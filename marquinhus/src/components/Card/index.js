@@ -5,7 +5,7 @@ import * as S from "./styled"
 
 const CardLink = props => {
   return props.slug ? (
-    <S.CardLink to={`/${props.slug}`}>{props.children}</S.CardLink>
+    <S.CardLink to={`${props.slug}`}>{props.children}</S.CardLink>
   ) : (
     <S.CardLinkOut href={`${props.href}`} target="_blank">
       {props.children}
