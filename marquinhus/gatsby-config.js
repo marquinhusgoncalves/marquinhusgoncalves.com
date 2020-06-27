@@ -54,6 +54,7 @@ module.exports = {
             },
           },
           `gatsby-remark-lazy-load`,
+          `gatsby-remark-external-links`,
           `gatsby-remark-prismjs`,
         ],
       },

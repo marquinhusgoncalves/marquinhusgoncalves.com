@@ -28,7 +28,6 @@ const MenuBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const openMenu = () => {
-    console.log(isMenuOpen)
     setIsMenuOpen(!isMenuOpen)
   }
 
@@ -41,7 +40,7 @@ const MenuBar = () => {
         {menuLinks.map(menuLink => {
           const { url, label } = menuLink
           return (
-            <S.MenuLinks to={url} activeClassName="active">
+            <S.MenuLinks key={label} to={url} activeClassName="active">
               {label}
             </S.MenuLinks>
           )

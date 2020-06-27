@@ -1,19 +1,25 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import media from "styled-media-query"
 import { Link } from "gatsby"
 
-export const MenuWrapped = styled.nav`
-  display: block;
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
 
+export const MenuWrapped = styled.nav`
   ${media.lessThan("medium")`
     display: ${props => (props.isMenuOpen ? "flex" : "none")};
-
-    &.open-menu {
-      display: flex;
+  
+  &.open-menu {
+      animation: 1s ${fadeIn} ease-out;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      z-index: 10;
       z-index: 10;
       width: 100%;
       height: 100%;

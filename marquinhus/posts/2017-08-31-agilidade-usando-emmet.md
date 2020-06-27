@@ -1,16 +1,16 @@
 ---
-title: Escreva HTML com mais agilidade usando Emmet #frontend
+title: Escreva HTML com mais agilidade usando Emmet
 date: 2017-08-31 20:00:00
 ---
 
 E ai pessoal tudo bem?
 
-Neste post quero comentar sobre o plugin [Emmet](https://emmet.io/){:target="\_blank"}.
+Neste post quero comentar sobre o plugin [Emmet](https://emmet.io/).
 
 Bom o Emmet é um plugin para HTML e CSS, que digitando menos você consegue escrever mais código, com pequenas sentenças você cria
 estruturas grandes, ganhando agilidade, produtividade e evitando ter que reescrever códigos.
 
-Bom em primeiro lugar é possível instalar o Emmet em diversos editores como [VSCode](https://code.visualstudio.com/), [Sublime](https://www.sublimetext.com/), [Atom](https://atom.io/), [Brackets](http://brackets.io/) e etc, você pode baixar e instalar [por aqui](https://emmet.io/download/){:target="\_blank"} ou instalar diretamente no seu editor.
+Bom em primeiro lugar é possível instalar o Emmet em diversos editores como [VSCode](https://code.visualstudio.com/), [Sublime](https://www.sublimetext.com/), [Atom](https://atom.io/), [Brackets](http://brackets.io/) e etc, você pode baixar e instalar [por aqui](https://emmet.io/download/) ou instalar diretamente no seu editor.
 
 Alguns serviços online como [JSFinddle](https://jsfiddle.net/) e [Codepen](https://codepen.io/) também são possíveis de utilizar.
 

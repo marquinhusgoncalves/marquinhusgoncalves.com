@@ -20,7 +20,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: `/${collection}${slug.slice(12)}`,
+      value: `/${slug.slice(12)}`,
     })
   }
 }

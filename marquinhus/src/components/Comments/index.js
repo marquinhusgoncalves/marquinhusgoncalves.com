@@ -6,7 +6,6 @@ import * as S from "./styled"
 
 const Comments = ({ url, title }) => {
   const completeURL = `https://marquinhusgoncalves.com${url}`
-  console.log("completeURL", completeURL)
   return (
     <S.CommentsWrapper>
       <S.CommentsTitle>Comentários</S.CommentsTitle>

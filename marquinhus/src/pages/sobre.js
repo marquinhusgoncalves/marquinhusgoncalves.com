@@ -7,9 +7,9 @@ import Titles from "../components/Titles"
 
 const Sobre = () => (
   <Layout>
-    <SEO />
+    <SEO title="Sobre" />
     <Titles title={"Sobre"} />
-    <p class="about">
+    <p>
       Bom meu nome é Marcus Vinicius Gonçalves sou nascido e criado em São
       Bernardo do Campo / SP. Com 14 anos ganhei meu primeiro computador, um
       486, com o na época recente Windows 3.11, que ainda não era um sistema
