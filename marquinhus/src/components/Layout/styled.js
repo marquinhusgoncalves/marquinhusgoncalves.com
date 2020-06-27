@@ -7,6 +7,21 @@ export const LayoutWrapped = styled.section`
 `
 
 export const LayoutMainWrapped = styled.main`
-  padding: 2rem;
+  width: 100%;
+  max-width: 960px;
+  margin: 2rem auto;
+  text-align: justify;
+  padding: 0 1rem;
+  font-size: 1.25rem;
+  line-height: 1.58;
+  letter-spacing: 0.003em;
   flex-grow: 1;
+
+  a {
+    color: var(--color-blue);
+
+    &:hover {
+      color: var(--color-blue-dark);
+    }
+  }
 `

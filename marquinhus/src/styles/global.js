@@ -58,8 +58,14 @@ const GlobalStyles = createGlobalStyle`
     --color-black: #000;
     --color-white: #FFF;
     --color-blue: #25AAE1;
+    --color-blue-dark: #1d86af;
     --color-grey-light: #F5F5F5;
     --highlight: #1fa1f2;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.5s ease;
   }
   img {
     display: block;
