@@ -7,8 +7,12 @@ export const SiteTitleWrapped = styled.h1`
   font-weight: 900;
 
   ${media.lessThan("medium")`
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  `}
+
+  ${media.lessThan("small")`
+    margin-right: 3rem;
   `}
 `
 
