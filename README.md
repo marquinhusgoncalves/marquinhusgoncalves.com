@@ -58,7 +58,7 @@ branch: (master) git push
 
 ## Built With
 
-- [GitHub Pages](https://pages.github.com/) - Hosted
+- [Netlify](https://www.netlify.com/) - Hosted
 - [Gatsby](https://www.gatsbyjs.org/) - Generated
 
 ## Contributing
