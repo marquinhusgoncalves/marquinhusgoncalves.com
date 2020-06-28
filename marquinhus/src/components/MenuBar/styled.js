@@ -2,6 +2,9 @@ import styled, { keyframes } from "styled-components"
 import media from "styled-media-query"
 import { Link } from "gatsby"
 
+import { Menu } from "@styled-icons/entypo/Menu"
+import { CloseOutline } from "@styled-icons/evaicons-outline/CloseOutline"
+
 const fadeIn = keyframes`
   0% {
     opacity: 0;
@@ -37,9 +40,13 @@ export const MenuIconWrapped = styled.div`
     display: block;
     position: absolute;
     right: 1rem;
-    top: 0.7rem;
+    top: 0.5rem;
     cursor: pointer;
     `}
+`
+export const MenuIcon = styled(Menu)`
+  width: 2.5rem;
+  color: var(--color-black);
 `
 
 export const CloseIconWrapped = styled.div`
@@ -48,11 +55,15 @@ export const CloseIconWrapped = styled.div`
   ${media.lessThan("medium")`
     display: block;
     position: absolute;
-    top: 1rem;
+    top: 0.5rem;
     right: 1rem;
     cursor: pointer;
     color: var(--color-white);
   `}
+`
+export const CloseOutlineIcon = styled(CloseOutline)`
+  width: 2.5rem;
+  color: var(--color-white);
 `
 
 export const MenuLinks = styled(Link)`

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import FavoriteIcon from "@material-ui/icons/Favorite"
+import { Favorite } from "@styled-icons/material/Favorite"
 
 export const Footer = styled.footer`
   display: flex;
@@ -9,6 +9,7 @@ export const Footer = styled.footer`
   height: 2.5rem;
 `
 
-export const HeartIcon = styled(FavoriteIcon)`
+export const HeartIcon = styled(Favorite)`
+  width: 1.8rem;
   color: var(--color-blue);
 `

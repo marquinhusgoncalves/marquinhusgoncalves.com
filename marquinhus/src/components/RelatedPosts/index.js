@@ -4,11 +4,7 @@ import propTypes from "prop-types"
 import Titles from "../Titles"
 import Card from "../Card"
 
-// import * as S from "./styled"
-
 const RelatedPosts = ({ next, previous }) => {
-  console.log(next)
-  console.log(previous)
   return (
     <>
       <Titles title="Posts Relacionados" />

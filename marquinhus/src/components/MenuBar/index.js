@@ -1,8 +1,5 @@
 import React, { useState } from "react"
 
-import MenuIcon from "@material-ui/icons/Menu"
-import CloseIcon from "@material-ui/icons/Close"
-
 import * as S from "./styled"
 
 const menuLinks = [
@@ -46,11 +43,11 @@ const MenuBar = () => {
           )
         })}
         <S.CloseIconWrapped onClick={openMenu}>
-          <CloseIcon fontSize="large" />
+          <S.CloseOutlineIcon />
         </S.CloseIconWrapped>
       </S.MenuWrapped>
       <S.MenuIconWrapped onClick={openMenu}>
-        <MenuIcon fontSize="large" />
+        <S.MenuIcon />
       </S.MenuIconWrapped>
     </>
   )
