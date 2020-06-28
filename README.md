@@ -1,4 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/d8e55540-27bc-4252-80de-b2b4d3145a99/deploy-status)](https://app.netlify.com/sites/gatsby-marquinhus/deploys)
 
 # Project Marquinhus Blog
 
