@@ -1,5 +1,4 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://travis-ci.org/marquinhusgoncalves/marquinhusgoncalves.github.io.svg?branch=master)](https://travis-ci.org/marquinhusgoncalves/marquinhusgoncalves.github.io)
 
 # Project Marquinhus Blog
 
@@ -14,9 +13,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Ruby 2.4.2
-
-Gem 2.7.6
+Node < 10
 ```
 
 ### Installing
@@ -26,28 +23,30 @@ A step by step series of examples that tell you have to get a development env ru
 Say what the step will be
 
 ```
-gem install bundler
+npm install -g gatsby-cli
+
+clone repository
+
+npm i
 ```
 
 After
 
 ```
-bundle install
+gatsby develop
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Main Commands Jekyll
+## Main Commands Gatsby
 
-| Command | README |
-| ------ | ------ |
-| build, b | Build your site |
-| clean | Clean the site (removes site output and metadata file) without building. |
-| doctor, hyde | Search site and print specific deprecation warnings |
-| help | Show the help message |
-| new | Creates a new Jekyll site scaffold in PATH |
-| new-theme | Creates a new Jekyll theme scaffold |
-| serve, server, s | Serve your site locally |
+| Command | README                                                                   |
+| ------- | ------------------------------------------------------------------------ |
+| build   | Build your site                                                          |
+| clean   | Clean the site (removes site output and metadata file) without building. |
+| new     | Creates a new Gatsby site scaffold in PATH                               |
+| serve   | Serve your site locally                                                  |
+| develop | Serve your site locally                                                  |
 
 ## Deployment
 
@@ -59,8 +58,8 @@ branch: (master) git push
 
 ## Built With
 
-* [GitHub Pages](https://pages.github.com/) - Hosted
-* [Jekyll](http://jekyllrb.com/) - Generated
+- [GitHub Pages](https://pages.github.com/) - Hosted
+- [Gatsby](https://www.gatsbyjs.org/) - Generated
 
 ## Contributing
 
@@ -72,15 +71,10 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Marquinhus Gonçalves** - *Software Engineer* - [Marquinhus Gonçalves](https://github.com/marquinhusgoncalves)
+- **Marquinhus Gonçalves** - _Software Engineer_ - [Marquinhus Gonçalves](https://github.com/marquinhusgoncalves)
 
 See also the list of [contributors](https://github.com/marquinhusgoncalves/marquinhusgoncalves.github.io/graphs/contributors) who participated in this project.
 
 ## License
 
 This project is licensed under the MIT License - see the [License: MIT](https://opensource.org/licenses/MIT) file for details
-
-## Acknowledgments
-
-* [Jekyll Course - Willian Justen](https://www.udemy.com/criando-sites-estaticos-com-jekyll/learn/v4/overview)
-
