@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
     title: `Marquinhus Gonçalves`,
@@ -73,6 +75,12 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
     `gatsby-plugin-sitemap`,
