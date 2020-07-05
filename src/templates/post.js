@@ -8,6 +8,8 @@ import PostInfo from "../components/PostInfo"
 import Comments from "../components/Comments"
 import RelatedPosts from "../components/RelatedPosts"
 
+import { MainContent } from "../styles/base"
+
 const Post = props => {
   const post = props.data.markdownRemark
   const title = props.data.markdownRemark.frontmatter.title
@@ -21,7 +23,9 @@ const Post = props => {
       <SEO title={title} />
       <Titles title={title} />
       <PostInfo date={date} timeToRead={timeToRead} />
-      <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      <MainContent>
+        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      </MainContent>
       <RelatedPosts next={next} previous={previous} />
       <Comments url={post.fields.slug} title={post.frontmatter.title} />
     </Layout>

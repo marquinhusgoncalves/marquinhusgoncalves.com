@@ -397,9 +397,9 @@ bd5#0s
 border: 5px #000 solid;
 ```
 
-- #1 → #111111
-- #e0 → #e0e0e0
-- #fc0 → #ffcc00
+- \#1 → \#111111
+- \#e0 → \#e0e0e0
+- \#fc0 → \#ffcc00
 
 ## Recomendações finais
 
