@@ -10,7 +10,7 @@ const Profile = () => (
     <S.ProfileTextWrapper>
       <S.ProfileText>
         Oi !!! sou o Marquinhus Gonçalves, engenheiro de software, curto viajar,
-        escutar músicca, estudar, praticar esportes, tocar guitarra e violão.
+        escutar música, estudar, praticar esportes, tocar guitarra e violão.
       </S.ProfileText>
       <S.ProfileText>
         Apaixonado por tecnologia, gosto de solucionar problemas e para me
