@@ -14,7 +14,7 @@ const Profile = () => (
       </S.ProfileText>
       <S.ProfileText>
         Apaixonado por tecnologia, gosto de solucionar problemas e para me
-        manter atualizado na área, leio artigos, vou a eventos, conferências e
+        manter atualizado na área leio artigos, vou a eventos, conferências e
         meetups sobre temas relacionados.
       </S.ProfileText>
     </S.ProfileTextWrapper>
