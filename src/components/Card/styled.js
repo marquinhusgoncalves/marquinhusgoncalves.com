@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { Link } from "gatsby"
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const Card = `
   display: flex;
@@ -19,18 +19,18 @@ const Card = `
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
-`
+`;
 
 export const CardLink = styled(Link)`
   ${Card};
-`
+`;
 
 export const CardLinkOut = styled.a`
   ${Card};
-`
+`;
 
 export const CardTitle = styled.h1`
   font-weight: 900;
-`
+`;
 
-export const CardDescription = styled.p``
+export const CardDescription = styled.p``;

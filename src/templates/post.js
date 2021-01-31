@@ -1,22 +1,27 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from "../components/Layout"
-import SEO from "../components/Seo"
-import Titles from "../components/Titles"
-import PostInfo from "../components/PostInfo"
-import Comments from "../components/Comments"
-import RelatedPosts from "../components/RelatedPosts"
+import Layout from '../components/Layout';
+import SEO from '../components/Seo';
+import Titles from '../components/Titles';
+import PostInfo from '../components/PostInfo';
+import Comments from '../components/Comments';
+import RelatedPosts from '../components/RelatedPosts';
 
-import { MainContent } from "../styles/base"
+import { MainContent } from '../styles/base';
 
-const Post = props => {
-  const post = props.data.markdownRemark
-  const title = props.data.markdownRemark.frontmatter.title
-  const date = props.data.markdownRemark.frontmatter.date
-  const timeToRead = props.data.markdownRemark.timeToRead
-  const next = props.pageContext.next
-  const previous = props.pageContext.previous
+const Post = (props) => {
+  // const post = props.data.markdownRemark;
+
+  const {
+    data: { markdownRemark },
+    pageContext: { next, previous },
+  } = props;
+
+  const { timeToRead } = markdownRemark;
+  const {
+    frontmatter: { title, date },
+  } = markdownRemark;
 
   return (
     <Layout>
@@ -24,13 +29,17 @@ const Post = props => {
       <Titles title={title} />
       <PostInfo date={date} timeToRead={timeToRead} />
       <MainContent>
-        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+        {/* eslint-disable-next-line react/no-danger */}
+        <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
       </MainContent>
       <RelatedPosts next={next} previous={previous} />
-      <Comments url={post.fields.slug} title={post.frontmatter.title} />
+      <Comments
+        url={markdownRemark.fields.slug}
+        title={markdownRemark.frontmatter.title}
+      />
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query Post($slug: String!) {
@@ -46,6 +55,6 @@ export const query = graphql`
       html
     }
   }
-`
+`;
 
-export default Post
+export default Post;

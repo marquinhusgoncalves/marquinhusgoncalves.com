@@ -1,7 +1,7 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import * as S from "./styled"
+import * as S from './styled';
 
 const NotFound = () => {
   const { notFound } = useStaticQuery(graphql`
@@ -14,22 +14,22 @@ const NotFound = () => {
         }
       }
     }
-  `)
+  `);
   return (
     <>
       <S.NotFound fluid={notFound.childImageSharp.fluid} />
       <span>
-        Photo by{" "}
+        Photo by{' '}
         <a href="https://unsplash.com/@mili_vigerova?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
           Milada Vigerova
-        </a>{" "}
-        on{" "}
+        </a>{' '}
+        on{' '}
         <a href="/s/photos/cry?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
           Unsplash
         </a>
       </span>
     </>
-  )
-}
+  );
+};
 
-export default NotFound
+export default NotFound;

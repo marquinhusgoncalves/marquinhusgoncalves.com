@@ -1,13 +1,13 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from "../components/Layout"
-import SEO from "../components/Seo"
-import Titles from "../components/Titles"
-import Card from "../components/Card"
+import Layout from '../components/Layout';
+import SEO from '../components/Seo';
+import Titles from '../components/Titles';
+import Card from '../components/Card';
 
 const Projetos = ({ data }) => {
-  const projectsList = data.allMarkdownRemark.edges
+  const projectsList = data.allMarkdownRemark.edges;
   return (
     <Layout>
       <SEO title="Projetos" />
@@ -24,11 +24,11 @@ const Projetos = ({ data }) => {
             description={description}
             href={href}
           />
-        )
+        ),
       )}
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   {
@@ -50,6 +50,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default Projetos
+export default Projetos;

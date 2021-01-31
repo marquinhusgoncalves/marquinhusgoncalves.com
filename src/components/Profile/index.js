@@ -1,8 +1,8 @@
-import React from "react"
+import React from 'react';
 
-import Avatar from "../Avatar"
+import Avatar from '../Avatar';
 
-import * as S from "./styled"
+import * as S from './styled';
 
 const Profile = () => (
   <S.ProfileWrapper>
@@ -19,6 +19,6 @@ const Profile = () => (
       </S.ProfileText>
     </S.ProfileTextWrapper>
   </S.ProfileWrapper>
-)
+);
 
-export default Profile
+export default Profile;

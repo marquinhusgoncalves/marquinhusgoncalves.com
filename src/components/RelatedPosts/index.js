@@ -1,8 +1,8 @@
-import React from "react"
-import propTypes from "prop-types"
+import React from 'react';
+import propTypes from 'prop-types';
 
-import Titles from "../Titles"
-import Card from "../Card"
+import Titles from '../Titles';
+import Card from '../Card';
 
 const RelatedPosts = ({ next, previous }) => {
   return (
@@ -13,8 +13,8 @@ const RelatedPosts = ({ next, previous }) => {
         <Card title={previous.frontmatter.title} slug={previous.fields.slug} />
       )}
     </>
-  )
-}
+  );
+};
 
 RelatedPosts.propTypes = {
   next: propTypes.shape({
@@ -24,7 +24,7 @@ RelatedPosts.propTypes = {
     fields: propTypes.shape({
       slug: propTypes.string.isRequired,
     }),
-  }),
+  }).isRequired,
   previous: propTypes.shape({
     frontmatter: propTypes.shape({
       title: propTypes.string.isRequired,
@@ -32,7 +32,7 @@ RelatedPosts.propTypes = {
     fields: propTypes.shape({
       slug: propTypes.string.isRequired,
     }),
-  }),
-}
+  }).isRequired,
+};
 
-export default RelatedPosts
+export default RelatedPosts;

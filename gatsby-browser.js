@@ -1,2 +1,2 @@
-import "lazysizes"
-require("prismjs/themes/prism.css")
+import 'lazysizes';
+require('prismjs/themes/prism.css');

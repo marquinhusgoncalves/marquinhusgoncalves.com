@@ -1,4 +1,4 @@
-require("dotenv").config()
+require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
@@ -44,13 +44,13 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-relative-images",
+            resolve: 'gatsby-remark-relative-images',
             options: {
-              name: "uploads",
+              name: 'uploads',
             },
           },
           {
-            resolve: "gatsby-remark-images",
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 960,
               linkImagesToOriginal: false,
@@ -88,4 +88,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
   ],
-}
+};

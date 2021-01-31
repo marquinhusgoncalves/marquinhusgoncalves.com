@@ -7,12 +7,18 @@ E ai pessoal tudo bem?
 
 Neste post quero comentar sobre o plugin [Emmet](https://emmet.io/).
 
-Bom o Emmet é um plugin para HTML e CSS, que digitando menos você consegue escrever mais código, com pequenas sentenças você cria
-estruturas grandes, ganhando agilidade, produtividade e evitando ter que reescrever códigos.
+Bom o Emmet é um plugin para HTML e CSS, que digitando menos você consegue
+escrever mais código, com pequenas sentenças você cria estruturas grandes,
+ganhando agilidade, produtividade e evitando ter que reescrever códigos.
 
-Bom em primeiro lugar é possível instalar o Emmet em diversos editores como [VSCode](https://code.visualstudio.com/), [Sublime](https://www.sublimetext.com/), [Atom](https://atom.io/), [Brackets](http://brackets.io/) e etc, você pode baixar e instalar [por aqui](https://emmet.io/download/) ou instalar diretamente no seu editor.
+Bom em primeiro lugar é possível instalar o Emmet em diversos editores como
+[VSCode](https://code.visualstudio.com/),
+[Sublime](https://www.sublimetext.com/), [Atom](https://atom.io/),
+[Brackets](http://brackets.io/) e etc, você pode baixar e instalar
+[por aqui](https://emmet.io/download/) ou instalar diretamente no seu editor.
 
-Alguns serviços online como [JSFinddle](https://jsfiddle.net/) e [Codepen](https://codepen.io/) também são possíveis de utilizar.
+Alguns serviços online como [JSFinddle](https://jsfiddle.net/) e
+[Codepen](https://codepen.io/) também são possíveis de utilizar.
 
 Depois de instalado.... vamos aos exemplos para ficar mais claro.
 
@@ -105,7 +111,8 @@ div.class div.class1.class2
 <div class="class1 class2"></div>
 ```
 
-Se caso for digitado apenas `.class` ou `#id` a TAG `<div>` é adicionada automáticamente.
+Se caso for digitado apenas `.class` ou `#id` a TAG `<div>` é adicionada
+automáticamente.
 
 ```html
 #name-id .name-class
@@ -117,7 +124,9 @@ Se caso for digitado apenas `.class` ou `#id` a TAG `<div>` é adicionada autom�
 <div class="name-class"></div>
 ```
 
-Para criar uma árvore de elementos você utiliza `>` para que o próximo elemento fique dentro da TAG anterior (filho ) e `+` para ficar após a TAG anterior (irmão)
+Para criar uma árvore de elementos você utiliza `>` para que o próximo elemento
+fique dentro da TAG anterior (filho ) e `+` para ficar após a TAG anterior
+(irmão)
 
 Vamos aos exemplos:
 
@@ -153,7 +162,8 @@ section>p>a{link}^section
 </section>
 ```
 
-Obs.: O símbolo `^` pode ser útilizado mais de uma vez assim a cada vez usado sobe um nível na árvore
+Obs.: O símbolo `^` pode ser útilizado mais de uma vez assim a cada vez usado
+sobe um nível na árvore
 
 ```html
 section>p>a{link}^^section
@@ -251,7 +261,8 @@ ul>li.item$$$*3
 </ul>
 ```
 
-Com o uso `@-` voc6e muda a ordenação, podendo ser crescente (default) e decrescente.
+Com o uso `@-` voc6e muda a ordenação, podendo ser crescente (default) e
+decrescente.
 
 ```html
 ul>li.item$@-*3
@@ -315,7 +326,8 @@ a{Clique}+b{aqui} a>{Clique}+b{aqui}
 <a href="">Clique<b>aqui</b></a>
 ```
 
-Pode ser gerado um [Lorem Ipsum](http://br.lipsum.com/) por default é gerado com 30 linhas mas é possível personalizar
+Pode ser gerado um [Lorem Ipsum](http://br.lipsum.com/) por default é gerado com
+30 linhas mas é possível personalizar
 
 ```html
 p*4>lorem
@@ -353,7 +365,8 @@ Alguns Lorem Ipsum online:
 
 ## Emmet para CSS
 
-Bom acredito que para o CSS o Emmet não será muito útil porque os editores já oferecem um auxílio para a escrita sugerindo com o auto-complete.
+Bom acredito que para o CSS o Emmet não será muito útil porque os editores já
+oferecem um auxílio para a escrita sugerindo com o auto-complete.
 
 ```css
 -display
@@ -405,13 +418,19 @@ border: 5px #000 solid;
 
 Para o Emmet poder parsear não pode haver espaços nas sentenças.
 
-Esse é um overview básico porém essencial para poder usar o Emmet, a ideia é trazer praticidade e não complexividade por isso que o Emmet não é recomendado para estruturas complexas e grandes.
+Esse é um overview básico porém essencial para poder usar o Emmet, a ideia é
+trazer praticidade e não complexividade por isso que o Emmet não é recomendado
+para estruturas complexas e grandes.
 
-E por experiência própria aqui estão o que é mais usado no dia a dia porém [nessa documentação](https://docs.emmet.io/cheat-sheet/) você encotrará todas as abreviações e talvez alguma que não expliquei possa ser útil vale a pena dar uma olhada.
+E por experiência própria aqui estão o que é mais usado no dia a dia porém
+[nessa documentação](https://docs.emmet.io/cheat-sheet/) você encotrará todas as
+abreviações e talvez alguma que não expliquei possa ser útil vale a pena dar uma
+olhada.
 
 Espero que tenham gostado e ajudado !!!
 
-De qualquer forma caso precisem de uma ajuda podem deixar um comentário ou me procurar nas redes sociais.
+De qualquer forma caso precisem de uma ajuda podem deixar um comentário ou me
+procurar nas redes sociais.
 
 ## Referências
 

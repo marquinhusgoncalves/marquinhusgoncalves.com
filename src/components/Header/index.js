@@ -1,11 +1,11 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import SiteTitle from "../SiteTitle"
-import MenuBar from "../MenuBar"
-import SocialLinks from "../SocialLinks"
+import SiteTitle from '../SiteTitle';
+import MenuBar from '../MenuBar';
+import SocialLinks from '../SocialLinks';
 
-import * as S from "./styled"
+import * as S from './styled';
 
 const Header = () => {
   const { site } = useStaticQuery(graphql`
@@ -16,11 +16,11 @@ const Header = () => {
         }
       }
     }
-  `)
+  `);
 
   const {
     siteMetadata: { title },
-  } = site
+  } = site;
 
   return (
     <S.HeaderWrapped>
@@ -28,7 +28,7 @@ const Header = () => {
       <MenuBar />
       <SocialLinks />
     </S.HeaderWrapped>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

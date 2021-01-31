@@ -5,10 +5,10 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(
@@ -22,13 +22,13 @@ function SEO({ description, lang, meta, title, image }) {
           }
         }
       }
-    `
-  )
+    `,
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
 
   const ogImage =
-    image || "https://marquinhusgoncalves.com/assets/img/blog-image.jpg"
+    image || 'https://marquinhusgoncalves.com/assets/img/blog-image.jpg';
 
   return (
     <Helmet
@@ -40,7 +40,7 @@ function SEO({ description, lang, meta, title, image }) {
       meta={[
         {
           name: `aplication-name`,
-          content: "Marquinhus Gonçalves Blog",
+          content: 'Marquinhus Gonçalves Blog',
         },
         {
           name: `description`,
@@ -84,20 +84,20 @@ function SEO({ description, lang, meta, title, image }) {
         },
       ].concat(meta)}
     />
-  )
+  );
 }
 
 SEO.defaultProps = {
   lang: `pt-br`,
   meta: [],
   description: ``,
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-}
+};
 
-export default SEO
+export default SEO;

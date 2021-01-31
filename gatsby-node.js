@@ -1,32 +1,32 @@
-const path = require("path")
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const path = require('path');
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
 // To add the slug field to each post
 exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
+  const { createNodeField } = actions;
   // Ensures we are processing only markdown files
-  if (node.internal.type === "MarkdownRemark") {
-    const collection = getNode(node.parent).sourceInstanceName
+  if (node.internal.type === 'MarkdownRemark') {
+    const collection = getNode(node.parent).sourceInstanceName;
     const slug = createFilePath({
       node,
       getNode,
       basePath: `pages`,
-    })
+    });
     createNodeField({
       node,
-      name: "collection",
+      name: 'collection',
       value: collection,
-    })
+    });
     createNodeField({
       node,
       name: `slug`,
       value: `/${slug.slice(12)}`,
-    })
+    });
   }
-}
+};
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
   return graphql(`
     {
       allMarkdownRemark(filter: { fields: { collection: { eq: "posts" } } }) {
@@ -58,8 +58,8 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     }
-  `).then(result => {
-    const posts = result.data.allMarkdownRemark.edges
+  `).then((result) => {
+    const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach(({ node, next, previous }) => {
       createPage({
@@ -72,7 +72,7 @@ exports.createPages = ({ graphql, actions }) => {
           previous: next,
           next: previous,
         },
-      })
-    })
-  })
-}
+      });
+    });
+  });
+};

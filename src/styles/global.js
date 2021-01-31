@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/
@@ -72,5 +72,5 @@ const GlobalStyles = createGlobalStyle`
   	width: 100%;
   	height: auto;
   }
-`
-export default GlobalStyles
+`;
+export default GlobalStyles;

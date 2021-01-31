@@ -1,6 +1,7 @@
-import styled from "styled-components"
-import media from "styled-media-query"
+import styled from 'styled-components';
+import media from 'styled-media-query';
 
+// eslint-disable-next-line import/prefer-default-export
 export const MainContent = styled.section`
   p,
   h1,
@@ -16,7 +17,7 @@ export const MainContent = styled.section`
     line-height: 1.7;
     letter-spacing: 0.069rem;
 
-    ${media.lessThan("large")`
+    ${media.lessThan('large')`
       word-break: break-word;
     `}
   }
@@ -57,7 +58,7 @@ export const MainContent = styled.section`
     padding: 0 1.6rem 1.6rem;
     width: 100%;
 
-    ${media.lessThan("large")`
+    ${media.lessThan('large')`
       padding: 0 1rem;
     `}
   }
@@ -86,7 +87,7 @@ export const MainContent = styled.section`
   h1 {
     font-size: 2.8rem;
 
-    ${media.lessThan("large")`
+    ${media.lessThan('large')`
       font-size: 1.875rem;
     `}
   }
@@ -94,7 +95,7 @@ export const MainContent = styled.section`
   h2 {
     font-size: 2.1rem;
 
-    ${media.lessThan("large")`
+    ${media.lessThan('large')`
       font-size: 1.375rem;
     `}
   }
@@ -102,7 +103,7 @@ export const MainContent = styled.section`
   h3 {
     font-size: 1.6rem;
 
-    ${media.lessThan("large")`
+    ${media.lessThan('large')`
       font-size: 1.125rem;
     `}
   }
@@ -122,8 +123,8 @@ export const MainContent = styled.section`
   .gatsby-highlight {
     padding: 0 1.6rem 1.6rem;
 
-    ${media.lessThan("large")`
+    ${media.lessThan('large')`
       padding: 0;
     `}
   }
-`
+`;

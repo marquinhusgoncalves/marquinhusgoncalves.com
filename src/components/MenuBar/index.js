@@ -1,46 +1,46 @@
-import React, { useState } from "react"
+import React, { useState } from 'react';
 
-import * as S from "./styled"
+import * as S from './styled';
 
 const menuLinks = [
   {
-    label: "Home",
-    url: "/",
+    label: 'Home',
+    url: '/',
   },
   {
-    label: "Sobre",
-    url: "/sobre/",
+    label: 'Sobre',
+    url: '/sobre/',
   },
   {
-    label: "Blog",
-    url: "/blog/",
+    label: 'Blog',
+    url: '/blog/',
   },
   {
-    label: "Projetos",
-    url: "/projetos/",
+    label: 'Projetos',
+    url: '/projetos/',
   },
-]
+];
 
 const MenuBar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const openMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <>
       <S.MenuWrapped
         isMenuOpen={isMenuOpen}
-        className={isMenuOpen ? "open-menu" : ""}
+        className={isMenuOpen ? 'open-menu' : ''}
       >
-        {menuLinks.map(menuLink => {
-          const { url, label } = menuLink
+        {menuLinks.map((menuLink) => {
+          const { url, label } = menuLink;
           return (
             <S.MenuLinks key={label} to={url} activeClassName="active">
               {label}
             </S.MenuLinks>
-          )
+          );
         })}
         <S.CloseIconWrapped onClick={openMenu}>
           <S.CloseOutlineIcon />
@@ -50,7 +50,7 @@ const MenuBar = () => {
         <S.MenuIcon />
       </S.MenuIconWrapped>
     </>
-  )
-}
+  );
+};
 
-export default MenuBar
+export default MenuBar;

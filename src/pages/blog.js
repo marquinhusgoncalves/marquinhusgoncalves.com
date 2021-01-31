@@ -1,13 +1,13 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from "../components/Layout"
-import SEO from "../components/Seo"
-import Titles from "../components/Titles"
-import Card from "../components/Card"
+import Layout from '../components/Layout';
+import SEO from '../components/Seo';
+import Titles from '../components/Titles';
+import Card from '../components/Card';
 
 const Blog = ({ data }) => {
-  const postList = data.allMarkdownRemark.edges
+  const postList = data.allMarkdownRemark.edges;
   return (
     <Layout>
       <SEO title="Blog" />
@@ -20,11 +20,11 @@ const Blog = ({ data }) => {
           },
         }) => (
           <Card key={title} title={title} slug={slug} />
-        )
+        ),
       )}
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   {
@@ -44,6 +44,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default Blog
+export default Blog;

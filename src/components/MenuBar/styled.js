@@ -1,9 +1,9 @@
-import styled, { keyframes } from "styled-components"
-import media from "styled-media-query"
-import { Link } from "gatsby"
+import styled, { keyframes } from 'styled-components';
+import media from 'styled-media-query';
+import { Link } from 'gatsby';
 
-import { Menu } from "@styled-icons/entypo/Menu"
-import { CloseOutline } from "@styled-icons/evaicons-outline/CloseOutline"
+import { Menu } from '@styled-icons/entypo/Menu';
+import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline';
 
 const fadeIn = keyframes`
   0% {
@@ -12,11 +12,11 @@ const fadeIn = keyframes`
   100% {
     opacity: 1;
   }
-`
+`;
 
 export const MenuWrapped = styled.nav`
-  ${media.lessThan("medium")`
-    display: ${props => (props.isMenuOpen ? "flex" : "none")};
+  ${media.lessThan('medium')`
+    display: ${(props) => (props.isMenuOpen ? 'flex' : 'none')};
   
   &.open-menu {
       animation: 1s ${fadeIn} ease-out;
@@ -32,27 +32,27 @@ export const MenuWrapped = styled.nav`
       left: 0;
     }
   `}
-`
+`;
 export const MenuIconWrapped = styled.div`
   display: none;
 
-  ${media.lessThan("medium")`
+  ${media.lessThan('medium')`
     display: block;
     position: absolute;
     right: 1rem;
     top: 0.5rem;
     cursor: pointer;
     `}
-`
+`;
 export const MenuIcon = styled(Menu)`
   width: 2.5rem;
   color: var(--color-black);
-`
+`;
 
 export const CloseIconWrapped = styled.div`
   display: none;
 
-  ${media.lessThan("medium")`
+  ${media.lessThan('medium')`
     display: block;
     position: absolute;
     top: 0.5rem;
@@ -60,11 +60,11 @@ export const CloseIconWrapped = styled.div`
     cursor: pointer;
     color: var(--color-white);
   `}
-`
+`;
 export const CloseOutlineIcon = styled(CloseOutline)`
   width: 2.5rem;
   color: var(--color-white);
-`
+`;
 
 export const MenuLinks = styled(Link)`
   padding: 1rem;
@@ -81,7 +81,7 @@ export const MenuLinks = styled(Link)`
     border-bottom: 1px solid var(--color-black);
   }
 
-  ${media.lessThan("medium")`
+  ${media.lessThan('medium')`
     transition-duration: 0.5s;
     color: var(--color-white);
     font-size: 40px;
@@ -97,4 +97,4 @@ export const MenuLinks = styled(Link)`
       border-bottom: 1px solid var(--color-blue);
     }
   `}
-`
+`;

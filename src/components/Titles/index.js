@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react';
 
-import * as S from "./styled"
+import * as S from './styled';
 
-const Titles = ({ title }) => <S.Titles>{title}</S.Titles>
+const Titles = ({ title }) => <S.Titles>{title}</S.Titles>;
 
-export default Titles
+export default Titles;

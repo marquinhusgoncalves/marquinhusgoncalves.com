@@ -1,7 +1,8 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
+// eslint-disable-next-line import/prefer-default-export
 export const CommentsWrapper = styled.section`
-  iframe[src*="ads-iframe"] {
+  iframe[src*='ads-iframe'] {
     display: none;
   }
 
@@ -10,4 +11,4 @@ export const CommentsWrapper = styled.section`
       color: var(--highlight) !important;
     }
   }
-`
+`;

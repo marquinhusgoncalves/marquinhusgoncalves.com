@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react';
 
-import * as S from "./styled"
+import * as S from './styled';
 
 const SocialLinks = () => (
   <S.SocialLinksWrapped>
@@ -44,6 +44,6 @@ const SocialLinks = () => (
       </S.SocialLinksCircle>
     </S.SocialLink>
   </S.SocialLinksWrapped>
-)
+);
 
-export default SocialLinks
+export default SocialLinks;
