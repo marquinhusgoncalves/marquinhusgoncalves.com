@@ -13,7 +13,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Node < 10
+Node < 14
 ```
 
 ### Installing
@@ -26,6 +26,8 @@ Say what the step will be
 npm install -g gatsby-cli
 
 clone repository
+
+cd marquinhusgoncalves.com
 
 npm i
 ```
