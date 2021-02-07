@@ -4,6 +4,7 @@ backend:
   branch: master
   site_domain: marquinhusgoncalves.com
 
+publish_mode: editorial_workflow
 media_folder: static/assets/img
 public_folder: /assets/img
 
