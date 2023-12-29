@@ -1,11 +1,12 @@
-import React from 'react';
+import * as React from "react"
 
 import Avatar from '../Avatar';
 
 import * as S from './styled';
 
-const Profile = () => (
-  <S.ProfileWrapper>
+const Profile: React.FC = () => {
+  return (
+    <S.ProfileWrapper>
     <Avatar />
     <S.ProfileTextWrapper>
       <S.ProfileText>
@@ -19,6 +20,7 @@ const Profile = () => (
       </S.ProfileText>
     </S.ProfileTextWrapper>
   </S.ProfileWrapper>
-);
+  )
+}
 
-export default Profile;
+export default Profile

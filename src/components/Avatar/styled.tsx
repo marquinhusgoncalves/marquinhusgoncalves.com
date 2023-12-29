@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import { StaticImage } from "gatsby-plugin-image"
 
-const AvatarWrapped = styled(Img)`
+const AvatarWrapped = styled(StaticImage)`
   border-radius: 50%;
   height: 13rem;
   width: 13rem;

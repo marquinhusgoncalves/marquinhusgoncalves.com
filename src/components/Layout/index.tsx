@@ -7,11 +7,11 @@ import Footer from '../Footer';
 import GlobalStyles from '../../styles/global';
 import * as S from './styled';
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: {children: React.ReactNode}) => {
   const [isShowButtonScrollToTop, setIsShowButtonScrollToTop] = useState(false);
 
   useEffect(() => {
-    const listener = (e) => {
+    const listener = (e: any) => {
       const showButton = e.target.documentElement.scrollTop >= 100;
       setIsShowButtonScrollToTop(showButton);
     };

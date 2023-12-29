@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import { StaticImage } from "gatsby-plugin-image"
 
 // eslint-disable-next-line import/prefer-default-export
-export const NotFound = styled(Img)``;
+export const NotFound = styled(StaticImage)``;

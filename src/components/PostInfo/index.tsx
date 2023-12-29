@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import * as S from './styled';
 
-const PostInfo = ({ date, timeToRead }) => (
+const PostInfo = ({ date, timeToRead }: {date: string, timeToRead: string}) => (
   <S.PostInfo>
     {date} • {timeToRead} min de leitura
   </S.PostInfo>

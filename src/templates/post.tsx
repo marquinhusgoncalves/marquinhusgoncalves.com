@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
-import SEO from '../components/Seo';
+// import SEO from '../components/Seo';
 import Titles from '../components/Titles';
 import PostInfo from '../components/PostInfo';
 import Comments from '../components/Comments';
@@ -10,7 +10,7 @@ import RelatedPosts from '../components/RelatedPosts';
 
 import { MainContent } from '../styles/base';
 
-const Post = (props) => {
+const Post = (props: any) => {
   // const post = props.data.markdownRemark;
 
   const {
@@ -25,7 +25,7 @@ const Post = (props) => {
 
   return (
     <Layout>
-      <SEO title={title} />
+      {/* <SEO title={title} /> */}
       <Titles title={title} />
       <PostInfo date={date} timeToRead={timeToRead} />
       <MainContent>
