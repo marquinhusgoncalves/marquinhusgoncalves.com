@@ -1,22 +1,17 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-
-import AvatarWrapped from './styled';
+import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Avatar = () => {
-  const { avatarImage } = useStaticQuery(graphql`
-    query {
-      avatarImage: file(relativePath: { eq: "marquinhus-goncalves.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 200, maxHeight: 200) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-    }
-  `);
-
-  return <AvatarWrapped fluid={avatarImage.childImageSharp.fluid} />;
+  return (
+    <StaticImage
+      src="../../images/marquinhus-goncalves.jpg"
+      alt="Marquinhus Gonçalves"
+      placeholder="blurred"
+      width={200}
+      height={200}
+      style={{ borderRadius: "50%", marginBottom: "2em" }}
+    />
+  );
 };
 
 export default Avatar;

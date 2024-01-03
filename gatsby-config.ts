@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config();
 
 import type { GatsbyConfig } from "gatsby";
 
@@ -18,62 +18,69 @@ const config: GatsbyConfig = {
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-styled-components",
-  {
-    resolve: `gatsby-plugin-google-gtag`,
-    options: {
-      trackingIds: ['123'],
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["123"],
+      },
     },
-  },
-  {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      "icon": "src/images/icon.png"
-    }
-  },
-  "gatsby-plugin-mdx",
-  "gatsby-transformer-remark",
-  "gatsby-plugin-sharp",
-  "gatsby-transformer-sharp",
-  {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "Marquinhus Gonçalves",
+        short_name: "Marquinhus Gonçalves",
+        start_url: "/",
+        background_color: "#25AAE1",
+        theme_color: "#25AAE1",
+        display: "minimal-ui",
+        icon: "src/images/favicon.png", // This path is relative to the root of the site.
+      },
     },
-    __key: "pages"
-  },
-  {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "uploads",
-      "path": `${__dirname}/static/assets/img`,
+    "gatsby-plugin-mdx",
+    "gatsby-transformer-remark",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: "./src/pages/",
+      },
+      __key: "pages",
     },
-    __key: "uploads"
-  },
-  {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "images",
-      "path": `${__dirname}/src/images`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "uploads",
+        path: `${__dirname}/static/assets/img`,
+      },
+      __key: "uploads",
     },
-    __key: "images"
-  },
-  {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "posts",
-      "path": `${__dirname}/posts`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images`,
+      },
+      __key: "images",
     },
-    __key: "posts"
-  },
-  {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "projects",
-      "path": `${__dirname}/projects`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: `${__dirname}/posts`,
+      },
+      __key: "posts",
     },
-    __key: "projects"
-  }]
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "projects",
+        path: `${__dirname}/projects`,
+      },
+      __key: "projects",
+    },
+  ],
 };
 
 export default config;
