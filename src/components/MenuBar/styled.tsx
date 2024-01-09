@@ -16,7 +16,8 @@ const fadeIn = keyframes`
 
 export const MenuWrapped = styled.nav`
   ${media.lessThan('medium')`
-    display: ${(props : {isMenuOpen: boolean}) => (props.isMenuOpen ? 'flex' : 'none')};
+    display: ${(props: { isMenuOpen: boolean }) =>
+      props.isMenuOpen ? 'flex' : 'none'};
 
   &.open-menu {
       animation: 1s ${fadeIn} ease-out;

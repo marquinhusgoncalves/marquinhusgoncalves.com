@@ -9,21 +9,21 @@ media_folder: static/assets/img
 public_folder: /assets/img
 
 collections:
-  - name: "posts"
-    label: "posts"
-    folder: "posts"
+  - name: 'posts'
+    label: 'posts'
+    folder: 'posts'
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
 
-  - name: "projects"
-    label: "projects"
-    folder: "projects"
+  - name: 'projects'
+    label: 'projects'
+    folder: 'projects'
     create: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "description", name: "description", widget: "string" }
-      - { label: "href", name: "href", widget: "string" }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'description', name: 'description', widget: 'string' }
+      - { label: 'href', name: 'href', widget: 'string' }

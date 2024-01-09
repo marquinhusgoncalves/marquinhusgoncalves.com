@@ -1,10 +1,10 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from "../components/Layout";
+import Layout from '../components/Layout';
 // import SEO from '../../../src/components/Seo';
-import Titles from "../components/Titles";
-import Card from "../components/Card";
+import Titles from '../components/Titles';
+import Card from '../components/Card';
 
 const Blog = ({ data }: any) => {
   const postList = data.allMarkdownRemark.edges;
@@ -22,7 +22,7 @@ const Blog = ({ data }: any) => {
           node: { frontmatter: { title: string }; fields: { slug: string } };
         }) => (
           <Card key={title} title={title} slug={slug} />
-        )
+        ),
       )}
     </Layout>
   );

@@ -1,5 +1,5 @@
-import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Avatar = () => {
   return (
@@ -9,7 +9,7 @@ const Avatar = () => {
       placeholder="blurred"
       width={200}
       height={200}
-      style={{ borderRadius: "50%", marginBottom: "2em" }}
+      style={{ borderRadius: '50%', marginBottom: '2em' }}
     />
   );
 };

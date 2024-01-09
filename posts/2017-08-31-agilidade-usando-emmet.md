@@ -31,7 +31,7 @@ html:5 ou !
 ```
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -54,7 +54,8 @@ script:src
 Com essa sentença
 
 ```html
-header#header+(main.main>h1.title{Emmet}+section.container>ul>li>a{Item $}*5)+footer.footer
+header#header+(main.main>h1.title{Emmet}+section.container>ul>li>a{Item
+$}*5)+footer.footer
 ```
 
 Olha que é gerado
@@ -333,10 +334,27 @@ p*4>lorem
 ```
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
-<p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
-<p>Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro quaerat autem ipsam odit quam beatae tempora quibusdam illum! Modi velit odio nam nulla unde amet odit pariatur at!</p>
-<p>Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil explicabo perferendis quos provident delectus ducimus necessitatibus reiciendis optio tempora unde earum doloremque commodi laudantium ad nulla vel odio?</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus
+  molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias
+  officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!
+</p>
+<p>
+  Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore
+  recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at
+  neque quos facere sequi unde optio aliquam!
+</p>
+<p>
+  Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro
+  quaerat autem ipsam odit quam beatae tempora quibusdam illum! Modi velit odio
+  nam nulla unde amet odit pariatur at!
+</p>
+<p>
+  Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil
+  explicabo perferendis quos provident delectus ducimus necessitatibus
+  reiciendis optio tempora unde earum doloremque commodi laudantium ad nulla vel
+  odio?
+</p>
 ```
 
 Alguns Lorem Ipsum online:
@@ -355,11 +373,11 @@ oferecem um auxílio para a escrita sugerindo com o auto-complete.
 ```
 
 ```css
--webkit-display: ;
--moz-display: ;
--ms-display: ;
--o-display: ;
-display: ;
+-webkit-display:;
+-moz-display:;
+-ms-display:;
+-o-display:;
+display:;
 ```
 
 Também podemos passar valores.

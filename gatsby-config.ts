@@ -1,6 +1,6 @@
-require("dotenv").config();
+require('dotenv').config();
 
-import type { GatsbyConfig } from "gatsby";
+import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -14,76 +14,76 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    "gatsby-plugin-netlify-cms",
-    "gatsby-plugin-image",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-styled-components",
+    'gatsby-plugin-netlify-cms',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-styled-components',
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: ["123"],
+        trackingIds: ['123'],
       },
     },
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: "Marquinhus Gonçalves",
-        short_name: "Marquinhus Gonçalves",
-        start_url: "/",
-        background_color: "#25AAE1",
-        theme_color: "#25AAE1",
-        display: "minimal-ui",
-        icon: "src/images/favicon.png", // This path is relative to the root of the site.
+        name: 'Marquinhus Gonçalves',
+        short_name: 'Marquinhus Gonçalves',
+        start_url: '/',
+        background_color: '#25AAE1',
+        theme_color: '#25AAE1',
+        display: 'minimal-ui',
+        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
     },
-    "gatsby-plugin-mdx",
+    'gatsby-plugin-mdx',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [`gatsby-remark-prismjs`],
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: 'pages',
+        path: './src/pages/',
       },
-      __key: "pages",
+      __key: 'pages',
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "uploads",
+        name: 'uploads',
         path: `${__dirname}/static/assets/img`,
       },
-      __key: "uploads",
+      __key: 'uploads',
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
+        name: 'images',
         path: `${__dirname}/src/images`,
       },
-      __key: "images",
+      __key: 'images',
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "posts",
+        name: 'posts',
         path: `${__dirname}/posts`,
       },
-      __key: "posts",
+      __key: 'posts',
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "projects",
+        name: 'projects',
         path: `${__dirname}/projects`,
       },
-      __key: "projects",
+      __key: 'projects',
     },
   ],
 };

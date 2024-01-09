@@ -1,5 +1,5 @@
-import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const NotFound = () => {
   return (
@@ -8,15 +8,15 @@ const NotFound = () => {
         src="../../images/not-found.jpg"
         alt="Not Found image"
         placeholder="blurred"
-        style={{ display: "block" }}
+        style={{ display: 'block' }}
       />
 
       <span>
-        Photo by{" "}
+        Photo by{' '}
         <a href="https://unsplash.com/@mili_vigerova?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
           Milada Vigerova
-        </a>{" "}
-        on{" "}
+        </a>{' '}
+        on{' '}
         <a href="/s/photos/cry?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
           Unsplash
         </a>

@@ -6,7 +6,7 @@ import Titles from '../Titles';
 
 import * as S from './styled';
 
-const Comments = ({ url, title }: {url: string, title: string}) => {
+const Comments = ({ url, title }: { url: string; title: string }) => {
   const completeURL = `https://marquinhusgoncalves.com${url}`;
   return (
     <S.CommentsWrapper>

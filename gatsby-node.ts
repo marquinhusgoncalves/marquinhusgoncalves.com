@@ -1,25 +1,25 @@
-const path = require("path");
+const path = require('path');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 // To add the slug field to each post
 exports.onCreateNode = ({ node, getNode, actions }: any) => {
   const { createNodeField } = actions;
   // Ensures we are processing only markdown files
-  if (node.internal.type === "MarkdownRemark") {
+  if (node.internal.type === 'MarkdownRemark') {
     const collection = getNode(node.parent).sourceInstanceName;
     const slug = createFilePath({
       node,
       getNode,
-      basePath: "pages",
+      basePath: 'pages',
     });
     createNodeField({
       node,
-      name: "collection",
+      name: 'collection',
       value: collection,
     });
     createNodeField({
       node,
-      name: "slug",
+      name: 'slug',
       value: slug,
     });
   }
@@ -64,7 +64,7 @@ exports.createPages = ({ graphql, actions }: any) => {
     posts.forEach(({ node, next, previous }: any) => {
       createPage({
         path: node.fields.slug,
-        component: path.resolve("./src/templates/post.tsx"),
+        component: path.resolve('./src/templates/post.tsx'),
         context: {
           // Data passed to context is available
           // in page queries as GraphQL variables.
