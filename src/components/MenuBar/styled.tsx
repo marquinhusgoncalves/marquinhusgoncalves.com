@@ -14,7 +14,11 @@ const fadeIn = keyframes`
   }
 `;
 
-export const MenuWrapped = styled.nav`
+interface CustomStyleProps {
+  isMenuOpen: boolean;
+}
+
+export const MenuWrapped = styled.nav<CustomStyleProps>`
   ${media.lessThan('medium')`
     display: ${(props: { isMenuOpen: boolean }) =>
       props.isMenuOpen ? 'flex' : 'none'};

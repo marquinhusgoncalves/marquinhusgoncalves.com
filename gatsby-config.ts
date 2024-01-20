@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 require('dotenv').config();
 
 import type { GatsbyConfig } from 'gatsby';
@@ -21,7 +22,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: ['123'],
+        trackingIds: [process.env.GOOGLE_ANALYTICS_ID],
       },
     },
     {
