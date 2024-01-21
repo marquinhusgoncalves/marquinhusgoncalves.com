@@ -10,7 +10,7 @@ const SocialLinks = () => (
       </S.SocialLinksCircle>
     </S.SocialLink>
     <S.SocialLink
-      href="www.linkedin.com/in/marcusviniciusgoncalves"
+      href="https://www.linkedin.com/in/marcusviniciusgoncalves"
       target="_blank"
     >
       <S.SocialLinksCircle className="social-links-circle">
