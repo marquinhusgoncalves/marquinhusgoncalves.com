@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 // To add the slug field to each post
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.onCreateNode = ({ node, getNode, actions }: any) => {
   const { createNodeField } = actions;
   // Ensures we are processing only markdown files
   if (node.internal.type === 'MarkdownRemark') {
@@ -10,7 +12,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const slug = createFilePath({
       node,
       getNode,
-      basePath: `pages`,
+      basePath: 'pages',
     });
     createNodeField({
       node,
@@ -19,13 +21,13 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     });
     createNodeField({
       node,
-      name: `slug`,
-      value: `/${slug.slice(12)}`,
+      name: 'slug',
+      value: slug,
     });
   }
 };
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = ({ graphql, actions }: any) => {
   const { createPage } = actions;
   return graphql(`
     {
@@ -58,13 +60,13 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     }
-  `).then((result) => {
+  `).then((result: any) => {
     const posts = result.data.allMarkdownRemark.edges;
 
-    posts.forEach(({ node, next, previous }) => {
+    posts.forEach(({ node, next, previous }: any) => {
       createPage({
         path: node.fields.slug,
-        component: path.resolve(`./src/templates/post.js`),
+        component: path.resolve('./src/templates/post.tsx'),
         context: {
           // Data passed to context is available
           // in page queries as GraphQL variables.

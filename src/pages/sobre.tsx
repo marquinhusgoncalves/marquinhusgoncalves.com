@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Layout from '../components/Layout';
-import SEO from '../components/Seo';
+// import SEO from '../../../src/components/Seo';
 import Titles from '../components/Titles';
 
 const Sobre = () => (
   <Layout>
-    <SEO title="Sobre" />
+    {/* <SEO title="Sobre" /> */}
     <Titles title="Sobre" />
     <p>
       Bom meu nome é Marcus Vinicius Gonçalves sou nascido e criado em São

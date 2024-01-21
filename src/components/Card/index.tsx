@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 
 import * as S from './styled';
 
-const CardLink = (props) => {
+const CardLink = (props: {
+  slug: string;
+  children: React.ReactNode;
+  href: string;
+}) => {
   const { slug, children, href } = props;
   return slug ? (
     <S.CardLink to={`${slug}`}>{children}</S.CardLink>
@@ -14,7 +18,17 @@ const CardLink = (props) => {
   );
 };
 
-const Card = ({ title, slug, description, href }) => (
+const Card = ({
+  title,
+  slug,
+  description,
+  href,
+}: {
+  title: string;
+  slug: string;
+  description: string;
+  href: string;
+}) => (
   <CardLink slug={slug} href={href}>
     <S.CardTitle>{title}</S.CardTitle>
     {description && <S.CardDescription>{description}</S.CardDescription>}

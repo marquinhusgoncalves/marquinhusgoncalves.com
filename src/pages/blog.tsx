@@ -2,15 +2,15 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
-import SEO from '../components/Seo';
+// import SEO from '../../../src/components/Seo';
 import Titles from '../components/Titles';
 import Card from '../components/Card';
 
-const Blog = ({ data }) => {
+const Blog = ({ data }: any) => {
   const postList = data.allMarkdownRemark.edges;
   return (
     <Layout>
-      <SEO title="Blog" />
+      {/* <SEO title="Blog" /> */}
       <Titles title="Blog" />
       {postList.map(
         ({
@@ -18,6 +18,8 @@ const Blog = ({ data }) => {
             frontmatter: { title },
             fields: { slug },
           },
+        }: {
+          node: { frontmatter: { title: string }; fields: { slug: string } };
         }) => (
           <Card key={title} title={title} slug={slug} />
         ),
@@ -30,7 +32,7 @@ export const query = graphql`
   {
     allMarkdownRemark(
       filter: { fields: { collection: { eq: "posts" } } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       edges {
         node {

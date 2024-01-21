@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 import Titles from '../Titles';
 import Card from '../Card';
 
-const RelatedPosts = ({ next, previous }) => {
+const RelatedPosts = ({ next, previous }: any) => {
   return (
     <>
       <Titles title="Posts Relacionados" />

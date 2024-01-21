@@ -31,7 +31,7 @@ html:5 ou !
 ```
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -361,7 +361,7 @@ Alguns Lorem Ipsum online:
 
 [Bacon](https://baconipsum.com/)
 
-[Mussum](hhttp://mussumipsum.com/)
+[Mussum](https://mussumipsum.com/)
 
 ## Emmet para CSS
 
@@ -373,11 +373,11 @@ oferecem um auxílio para a escrita sugerindo com o auto-complete.
 ```
 
 ```css
--webkit-display: ;
--moz-display: ;
--ms-display: ;
--o-display: ;
-display: ;
+-webkit-display:;
+-moz-display:;
+-ms-display:;
+-o-display:;
+display:;
 ```
 
 Também podemos passar valores.

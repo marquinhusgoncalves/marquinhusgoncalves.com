@@ -14,10 +14,15 @@ const fadeIn = keyframes`
   }
 `;
 
-export const MenuWrapped = styled.nav`
+interface CustomStyleProps {
+  isMenuOpen: boolean;
+}
+
+export const MenuWrapped = styled.nav<CustomStyleProps>`
   ${media.lessThan('medium')`
-    display: ${(props) => (props.isMenuOpen ? 'flex' : 'none')};
-  
+    display: ${(props: { isMenuOpen: boolean }) =>
+      props.isMenuOpen ? 'flex' : 'none'};
+
   &.open-menu {
       animation: 1s ${fadeIn} ease-out;
       flex-direction: column;
