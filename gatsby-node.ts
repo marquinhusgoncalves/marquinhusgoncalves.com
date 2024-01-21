@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
@@ -22,9 +24,6 @@ exports.onCreateNode = ({ node, getNode, actions }: any) => {
       name: 'slug',
       value: slug,
     });
-    console.log('---------------------');
-    console.log(collection);
-    console.log(slug);
   }
 };
 
@@ -65,10 +64,6 @@ exports.createPages = ({ graphql, actions }: any) => {
     const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach(({ node, next, previous }: any) => {
-      console.log('---------------------');
-      console.log(node);
-      console.log(next);
-      console.log(previous);
       createPage({
         path: node.fields.slug,
         component: path.resolve('./src/templates/post.tsx'),
