@@ -19,6 +19,14 @@ const menuLinks = [
     label: 'Projetos',
     url: '/projetos/',
   },
+  {
+    label: 'Dicas',
+    url: '/dicas/',
+  },
+  {
+    label: 'Viagens',
+    url: '/viagens/',
+  },
 ];
 
 const MenuBar = () => {
