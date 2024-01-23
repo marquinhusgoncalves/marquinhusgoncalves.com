@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { graphql } from 'gatsby';
 
@@ -8,6 +9,7 @@ import Card from '../components/Card';
 
 const Blog = ({ data }: any) => {
   const postList = data.allMarkdownRemark.edges;
+  console.log(postList);
   return (
     <Layout>
       {/* <SEO title="Blog" /> */}
@@ -15,11 +17,10 @@ const Blog = ({ data }: any) => {
       {postList.map(
         ({
           node: {
-            frontmatter: { title },
-            fields: { slug },
+            frontmatter: { title, slug },
           },
         }: {
-          node: { frontmatter: { title: string }; fields: { slug: string } };
+          node: { frontmatter: { title: string; slug: string } };
         }) => (
           <Card key={title} title={title} slug={slug} />
         ),
@@ -36,11 +37,9 @@ export const query = graphql`
     ) {
       edges {
         node {
-          fields {
-            slug
-          }
           frontmatter {
             title
+            slug
           }
         }
       }

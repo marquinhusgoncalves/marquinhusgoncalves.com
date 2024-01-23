@@ -8,12 +8,12 @@ import Titles from '../components/Titles';
 import Card from '../components/Card';
 
 const Projetos = ({ data }: any) => {
-  const projectsList = data.allMarkdownRemark.edges;
+  const dicasList = data.allMarkdownRemark.edges;
   return (
     <Layout>
       {/* <SEO title="Dicas" /> */}
       <Titles title="Dicas" />
-      {projectsList.map(
+      {dicasList.map(
         ({
           node: {
             frontmatter: { title, description, href },
@@ -43,9 +43,6 @@ export const query = graphql`
     ) {
       edges {
         node {
-          fields {
-            slug
-          }
           frontmatter {
             title
             description
