@@ -9,7 +9,7 @@ import Card from '../components/Card';
 
 const Blog = ({ data }: any) => {
   const postList = data.allMarkdownRemark.edges;
-  console.log(postList);
+
   return (
     <Layout>
       {/* <SEO title="Blog" /> */}

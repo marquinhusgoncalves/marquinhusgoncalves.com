@@ -7,8 +7,9 @@ import Layout from '../components/Layout';
 import Titles from '../components/Titles';
 import Card from '../components/Card';
 
-const Projetos = ({ data }: any) => {
+const Dicas = ({ data }: any) => {
   const dicasList = data.allMarkdownRemark.edges;
+
   return (
     <Layout>
       {/* <SEO title="Dicas" /> */}
@@ -16,19 +17,12 @@ const Projetos = ({ data }: any) => {
       {dicasList.map(
         ({
           node: {
-            frontmatter: { title, description, href },
+            frontmatter: { title, slug },
           },
         }: {
-          node: {
-            frontmatter: { title: string; description: string; href: string };
-          };
+          node: { frontmatter: { title: string; slug: string } };
         }) => (
-          <Card
-            key={title}
-            title={title}
-            description={description}
-            href={href}
-          />
+          <Card key={title} title={title} slug={slug} />
         ),
       )}
     </Layout>
@@ -45,8 +39,7 @@ export const query = graphql`
         node {
           frontmatter {
             title
-            description
-            href
+            slug
           }
         }
       }
@@ -54,4 +47,4 @@ export const query = graphql`
   }
 `;
 
-export default Projetos;
+export default Dicas;

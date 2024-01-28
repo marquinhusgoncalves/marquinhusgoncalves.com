@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import propTypes from 'prop-types';
 
@@ -18,21 +19,21 @@ const RelatedPosts = ({ next, previous }: any) => {
 
 RelatedPosts.propTypes = {
   next: propTypes.shape({
+    Fields: propTypes.shape({
+      slug: propTypes.string.isRequired,
+    }),
     frontmatter: propTypes.shape({
       title: propTypes.string.isRequired,
     }),
-    fields: propTypes.shape({
-      slug: propTypes.string.isRequired,
-    }),
-  }).isRequired,
+  }),
   previous: propTypes.shape({
+    Fields: propTypes.shape({
+      slug: propTypes.string.isRequired,
+    }),
     frontmatter: propTypes.shape({
       title: propTypes.string.isRequired,
     }),
-    fields: propTypes.shape({
-      slug: propTypes.string.isRequired,
-    }),
-  }).isRequired,
+  }),
 };
 
 export default RelatedPosts;

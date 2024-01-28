@@ -36,9 +36,9 @@ const Card = ({
 );
 
 Card.defaultProps = {
-  slug: ``,
-  description: ``,
-  href: ``,
+  slug: '',
+  description: '',
+  href: '',
 };
 
 Card.propTypes = {
