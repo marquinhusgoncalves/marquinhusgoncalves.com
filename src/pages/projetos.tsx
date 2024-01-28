@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { graphql } from 'gatsby';
 
@@ -42,9 +43,6 @@ export const query = graphql`
     ) {
       edges {
         node {
-          fields {
-            slug
-          }
           frontmatter {
             title
             description

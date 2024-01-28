@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { graphql } from 'gatsby';
 
@@ -11,17 +12,34 @@ import RelatedPosts from '../components/RelatedPosts';
 import { MainContent } from '../styles/base';
 
 const Post = (props: any) => {
-  // const post = props.data.markdownRemark;
-
   const {
     data: { markdownRemark },
-    pageContext: { next, previous },
+    pageContext: { slug, next, previous },
   } = props;
 
-  const { timeToRead } = markdownRemark;
   const {
     frontmatter: { title, date },
+    timeToRead,
+    html,
   } = markdownRemark;
+
+  const nextPost = next && {
+    fields: {
+      slug: `/blog${next.fields.slug}`,
+    },
+    frontmatter: {
+      title: next.frontmatter.title,
+    },
+  };
+
+  const previousPost = previous && {
+    fields: {
+      slug: `/blog${previous.fields.slug}`,
+    },
+    frontmatter: {
+      title: previous.frontmatter.title,
+    },
+  };
 
   return (
     <Layout>
@@ -30,25 +48,20 @@ const Post = (props: any) => {
       <PostInfo date={date} timeToRead={timeToRead} />
       <MainContent>
         {/* eslint-disable-next-line react/no-danger */}
-        <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </MainContent>
-      <RelatedPosts next={next} previous={previous} />
-      <Comments
-        url={markdownRemark.fields.slug}
-        title={markdownRemark.frontmatter.title}
-      />
+      <RelatedPosts next={nextPost} previous={previousPost} />
+      <Comments url={`/blog${slug}`} title={title} />
     </Layout>
   );
 };
 
 export const query = graphql`
-  query Post($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      fields {
-        slug
-      }
+  query Post($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
+        slug
         date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
       }
       timeToRead

@@ -1,24 +1,26 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-var-requires */
+import type { GatsbyNode } from 'gatsby';
 const path = require('path');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-// To add the slug field to each post
 exports.onCreateNode = ({ node, getNode, actions }: any) => {
   const { createNodeField } = actions;
-  // Ensures we are processing only markdown files
   if (node.internal.type === 'MarkdownRemark') {
     const collection = getNode(node.parent).sourceInstanceName;
+
     const slug = createFilePath({
       node,
       getNode,
-      basePath: 'pages',
+      basePath: 'content/posts',
     });
+
     createNodeField({
       node,
       name: 'collection',
       value: collection,
     });
+
     createNodeField({
       node,
       name: 'slug',
@@ -27,13 +29,17 @@ exports.onCreateNode = ({ node, getNode, actions }: any) => {
   }
 };
 
-exports.createPages = ({ graphql, actions }: any) => {
+export const createPages: GatsbyNode['createPages'] = async ({
+  graphql,
+  actions,
+}) => {
   const { createPage } = actions;
-  return graphql(`
+  const request = await graphql<Queries.Query>(`
     {
       allMarkdownRemark(filter: { fields: { collection: { eq: "posts" } } }) {
         edges {
           node {
+            id
             fields {
               slug
             }
@@ -60,21 +66,21 @@ exports.createPages = ({ graphql, actions }: any) => {
         }
       }
     }
-  `).then((result: any) => {
-    const posts = result.data.allMarkdownRemark.edges;
+  `);
 
-    posts.forEach(({ node, next, previous }: any) => {
-      createPage({
-        path: node.fields.slug,
-        component: path.resolve('./src/templates/post.tsx'),
-        context: {
-          // Data passed to context is available
-          // in page queries as GraphQL variables.
-          slug: node.fields.slug,
-          previous: next,
-          next: previous,
-        },
-      });
+  const blogTemplate = path.resolve('./src/templates/post.tsx');
+  const posts = request?.data?.allMarkdownRemark.edges;
+  posts?.forEach(({ node, next, previous }) => {
+    createPage({
+      path: `/blog${node?.fields?.slug}`,
+      component: blogTemplate,
+      ownerNodeId: node.id,
+      context: {
+        id: node.id,
+        slug: node?.fields?.slug,
+        previous: next,
+        next: previous,
+      },
     });
   });
 };
