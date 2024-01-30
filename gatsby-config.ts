@@ -5,10 +5,10 @@ import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Marquinhus Gonçalves`,
-    description: `Blog pessoal`,
-    author: `@gmarquinhusgonc`,
-    siteUrl: `https://marquinhusgoncalves.com`,
+    title: 'Marquinhus Gonçalves',
+    description: 'Marquinhus Gonçalves Website',
+    author: '@marquinhusgonc',
+    siteUrl: 'https://www.marquinhusgoncalves.com',
   },
   graphqlTypegen: true,
   plugins: [
@@ -17,7 +17,7 @@ const config: GatsbyConfig = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-styled-components',
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
         trackingIds: [process.env.GOOGLE_ANALYTICS_ID],
       },
@@ -36,9 +36,9 @@ const config: GatsbyConfig = {
     },
     'gatsby-plugin-mdx',
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [`gatsby-remark-prismjs`],
+        plugins: ['gatsby-remark-prismjs'],
       },
     },
     'gatsby-plugin-sharp',

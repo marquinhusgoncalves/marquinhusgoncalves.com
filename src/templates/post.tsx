@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import { graphql } from 'gatsby';
+import { HeadFC, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
-// import SEO from '../components/Seo';
+import SEO from '../components/Seo';
 import Titles from '../components/Titles';
 import PostInfo from '../components/PostInfo';
 import Comments from '../components/Comments';
@@ -43,7 +43,6 @@ const Post = (props: any) => {
 
   return (
     <Layout>
-      {/* <SEO title={title} /> */}
       <Titles title={title} />
       <PostInfo date={date} timeToRead={timeToRead} />
       <MainContent>
@@ -71,3 +70,13 @@ export const query = graphql`
 `;
 
 export default Post;
+
+export const Head: HeadFC = ({
+  data: {
+    markdownRemark: {
+      frontmatter: { title },
+    },
+  },
+}) => {
+  return <SEO title={title} />;
+};

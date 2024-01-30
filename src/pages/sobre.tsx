@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Layout from '../components/Layout';
-// import SEO from '../../../src/components/Seo';
+import SEO from '../components/Seo';
 import Titles from '../components/Titles';
+import { HeadFC } from 'gatsby';
 
 const Sobre = () => (
   <Layout>
-    {/* <SEO title="Sobre" /> */}
     <Titles title="Sobre" />
     <p>
       Bom meu nome é Marcus Vinicius Gonçalves sou nascido e criado em São
@@ -76,3 +76,7 @@ const Sobre = () => (
 );
 
 export default Sobre;
+
+export const Head: HeadFC = () => {
+  return <SEO title="Sobre" />;
+};

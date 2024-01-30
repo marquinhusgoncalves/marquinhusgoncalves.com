@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import { graphql } from 'gatsby';
+import { HeadFC, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
-// import SEO from '../../../src/components/Seo';
+import SEO from '../components/Seo';
 import Titles from '../components/Titles';
 import Card from '../components/Card';
 
@@ -12,7 +12,6 @@ const Dicas = ({ data }: any) => {
 
   return (
     <Layout>
-      {/* <SEO title="Dicas" /> */}
       <Titles title="Dicas" />
       {dicasList.map(
         ({
@@ -48,3 +47,7 @@ export const query = graphql`
 `;
 
 export default Dicas;
+
+export const Head: HeadFC = () => {
+  return <SEO title="Dicas" />;
+};
