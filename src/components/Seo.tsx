@@ -46,6 +46,10 @@ function SEO({
       <meta name="twitter:creator" content={site.siteMetadata.author} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
+      <meta
+        name="google-adsense-account"
+        content="ca-pub-8901672052848512"
+      ></meta>
     </>
   );
 }
