@@ -39,7 +39,7 @@ const MenuBar = () => {
   return (
     <>
       <S.MenuWrapped
-        isMenuOpen={isMenuOpen}
+        $isMenuOpen={isMenuOpen}
         className={isMenuOpen ? 'open-menu' : ''}
       >
         {menuLinks.map((menuLink) => {

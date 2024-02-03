@@ -15,13 +15,13 @@ const fadeIn = keyframes`
 `;
 
 interface CustomStyleProps {
-  isMenuOpen: boolean;
+  $isMenuOpen: boolean;
 }
 
 export const MenuWrapped = styled.nav<CustomStyleProps>`
   ${media.lessThan('medium')`
-    display: ${(props: { isMenuOpen: boolean }) =>
-      props.isMenuOpen ? 'flex' : 'none'};
+    display: ${(props: { $isMenuOpen: boolean }) =>
+      props.$isMenuOpen ? 'flex' : 'none'};
 
   &.open-menu {
       animation: 1s ${fadeIn} ease-out;
