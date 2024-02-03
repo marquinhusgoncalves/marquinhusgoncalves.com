@@ -98,5 +98,6 @@
     "./gatsby-node.ts",
     "./gatsby-config.ts",
     "./plugins/**/*",
+    "gatsby-ssr.tsx",
   ],
 }
