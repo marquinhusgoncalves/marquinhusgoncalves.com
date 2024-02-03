@@ -1,9 +1,10 @@
 import React from 'react';
+import { HeadFC } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Titles from '../components/Titles';
-import { HeadFC } from 'gatsby';
+import AdsenseDisplay from '../components/GoogleAdsense/display';
 
 const Sobre = () => (
   <Layout>
@@ -72,6 +73,7 @@ const Sobre = () => (
       academia, surf, skate, patins e sou fascinado por esportes radicais.
       Leitura, filmes e séries sempre que sobra um tempo.
     </p>
+    <AdsenseDisplay />
   </Layout>
 );
 

@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Titles from '../components/Titles';
 import Card from '../components/Card';
+import AdsenseDisplay from '../components/GoogleAdsense/display';
 
 const Viagens = ({ data }: any) => {
   const viagensList = data.allMarkdownRemark.edges;
@@ -24,6 +25,7 @@ const Viagens = ({ data }: any) => {
           <Card key={title} title={title} slug={slug} />
         ),
       )}
+      <AdsenseDisplay />
     </Layout>
   );
 };

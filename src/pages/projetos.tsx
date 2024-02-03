@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Titles from '../components/Titles';
 import Card from '../components/Card';
+import AdsenseDisplay from '../components/GoogleAdsense/display';
 
 const Projetos = ({ data }: any) => {
   const projectsList = data.allMarkdownRemark.edges;
@@ -30,6 +31,7 @@ const Projetos = ({ data }: any) => {
           />
         ),
       )}
+      <AdsenseDisplay />
     </Layout>
   );
 };

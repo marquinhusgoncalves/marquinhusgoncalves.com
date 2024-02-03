@@ -8,6 +8,7 @@ import Titles from '../components/Titles';
 import PostInfo from '../components/PostInfo';
 import Comments from '../components/Comments';
 import RelatedPosts from '../components/RelatedPosts';
+import AdsenseArticle from '../components/GoogleAdsense/article';
 
 import { MainContent } from '../styles/base';
 
@@ -49,6 +50,7 @@ const Post = (props: any) => {
         {/* eslint-disable-next-line react/no-danger */}
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </MainContent>
+      <AdsenseArticle />
       <RelatedPosts next={nextPost} previous={previousPost} />
       <Comments url={`/blog${slug}`} title={title} />
     </Layout>
