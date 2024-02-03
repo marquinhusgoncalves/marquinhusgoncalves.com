@@ -4,10 +4,14 @@ import type { GatsbyNode } from 'gatsby';
 const path = require('path');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-exports.onCreateNode = ({ node, getNode, actions }: any) => {
+export const onCreateNode: GatsbyNode['onCreateNode'] = ({
+  node,
+  getNode,
+  actions,
+}) => {
   const { createNodeField } = actions;
   if (node.internal.type === 'MarkdownRemark') {
-    const collection = getNode(node.parent).sourceInstanceName;
+    const collection = getNode(node.parent!)?.sourceInstanceName;
 
     const slug = createFilePath({
       node,
