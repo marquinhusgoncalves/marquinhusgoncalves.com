@@ -39,7 +39,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
 }) => {
   const { createPage } = actions;
   const request = await graphql<Queries.Query>(`
-    {
+    query GetAllPosts {
       allMarkdownRemark(filter: { fields: { collection: { eq: "posts" } } }) {
         edges {
           node {
@@ -75,13 +75,14 @@ export const createPages: GatsbyNode['createPages'] = async ({
   const blogTemplate = path.resolve('./src/templates/post.tsx');
   const posts = request?.data?.allMarkdownRemark.edges;
   posts?.forEach(({ node, next, previous }) => {
+    const slug = (node?.fields as any)?.slug;
     createPage({
-      path: `/blog${node?.fields?.slug}`,
+      path: `/blog${slug}`,
       component: blogTemplate,
       ownerNodeId: node.id,
       context: {
         id: node.id,
-        slug: node?.fields?.slug,
+        slug,
         previous: next,
         next: previous,
       },

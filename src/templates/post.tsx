@@ -73,12 +73,7 @@ export const query = graphql`
 
 export default Post;
 
-export const Head: HeadFC = ({
-  data: {
-    markdownRemark: {
-      frontmatter: { title },
-    },
-  },
-}) => {
+export const Head: HeadFC = ({ data }: any) => {
+  const title = data?.markdownRemark?.frontmatter?.title || 'Post';
   return <SEO title={title} />;
 };

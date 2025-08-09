@@ -15,7 +15,7 @@ function SEO({
   image?: string;
 }) {
   const { site } = useStaticQuery(graphql`
-    query {
+    query SeoQuery {
       site {
         siteMetadata {
           title

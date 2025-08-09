@@ -31,13 +31,13 @@ const Projetos = ({ data }: any) => {
           />
         ),
       )}
-      <AdsenseDisplay />
+      {projectsList.length > 0 && <AdsenseDisplay />}
     </Layout>
   );
 };
 
 export const query = graphql`
-  {
+  query ProjetosQuery {
     allMarkdownRemark(
       filter: { fields: { collection: { eq: "projects" } } }
       sort: { frontmatter: { date: DESC } }
