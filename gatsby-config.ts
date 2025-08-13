@@ -85,6 +85,65 @@ const config: GatsbyConfig = {
       },
       __key: 'projects',
     },
+    {
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }: any) => {
+              return allMarkdownRemark.edges.map((edge: any) => {
+                const url =
+                  site.siteMetadata.siteUrl + '/blog' + edge.node.fields.slug;
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: url,
+                  guid: url,
+                });
+              });
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  filter: { fields: { collection: { eq: "posts" } } }
+                  sort: { frontmatter: { date: DESC } }
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: 'Marquinhus Gonçalves - RSS Feed',
+            description:
+              'Blog pessoal sobre desenvolvimento web, tecnologia e experiências.',
+          },
+        ],
+      },
+    },
   ],
 };
 

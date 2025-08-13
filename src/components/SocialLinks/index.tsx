@@ -58,6 +58,11 @@ const SocialLinks = () => (
         <S.InstagramIcon />
       </S.SocialLinksCircle>
     </S.SocialLink>
+    <S.SocialLink href="/rss.xml" target="_blank" aria-label="RSS Feed">
+      <S.SocialLinksCircle className="social-links-circle">
+        <S.RssIcon />
+      </S.SocialLinksCircle>
+    </S.SocialLink>
   </S.SocialLinksWrapped>
 );
 
