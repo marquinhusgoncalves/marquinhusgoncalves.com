@@ -16,7 +16,7 @@ how to deploy the project on a live system.
 What things you need to install the software and how to install them
 
 ```
-Node < 14
+Node < 20
 ```
 
 ### Installing
@@ -47,13 +47,14 @@ little demo
 
 ## Main Commands Gatsby
 
-| Command | README                                                                   |
-| ------- | ------------------------------------------------------------------------ |
-| build   | Build your site                                                          |
-| clean   | Clean the site (removes site output and metadata file) without building. |
-| new     | Creates a new Gatsby site scaffold in PATH                               |
-| serve   | Serve your site locally                                                  |
-| develop | Serve your site locally                                                  |
+| Command   | README                  |
+| --------- | ----------------------- |
+| develop   | Serve your site locally |
+| start     | Serve your site locally |
+| build     | Build your site         |
+| serve     | Serve your site locally |
+| typecheck | Type Check              |
+| format    | Prettier format         |
 
 ## Deployment
 

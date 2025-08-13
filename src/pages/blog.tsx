@@ -25,13 +25,13 @@ const Blog = ({ data }: any) => {
           <Card key={title} title={title} slug={slug} />
         ),
       )}
-      <AdsenseDisplay />
+      {postList.length > 0 && <AdsenseDisplay />}
     </Layout>
   );
 };
 
 export const query = graphql`
-  {
+  query BlogQuery {
     allMarkdownRemark(
       filter: { fields: { collection: { eq: "posts" } } }
       sort: { frontmatter: { date: DESC } }

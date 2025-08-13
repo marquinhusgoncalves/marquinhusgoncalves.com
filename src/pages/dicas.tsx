@@ -25,13 +25,13 @@ const Dicas = ({ data }: any) => {
           <Card key={title} title={title} slug={slug} />
         ),
       )}
-      <AdsenseDisplay />
+      {dicasList.length > 0 && <AdsenseDisplay />}
     </Layout>
   );
 };
 
 export const query = graphql`
-  {
+  query DicasQuery {
     allMarkdownRemark(
       filter: { fields: { collection: { eq: "dicas" } } }
       sort: { frontmatter: { date: DESC } }

@@ -25,13 +25,13 @@ const Viagens = ({ data }: any) => {
           <Card key={title} title={title} slug={slug} />
         ),
       )}
-      <AdsenseDisplay />
+      {viagensList.length > 0 && <AdsenseDisplay />}
     </Layout>
   );
 };
 
 export const query = graphql`
-  {
+  query ViagensQuery {
     allMarkdownRemark(
       filter: { fields: { collection: { eq: "viagens" } } }
       sort: { frontmatter: { date: DESC } }

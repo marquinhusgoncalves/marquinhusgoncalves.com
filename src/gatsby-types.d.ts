@@ -1399,18 +1399,22 @@ type MarkdownRemarkFieldSelector = {
 
 type MarkdownRemarkFields = {
   readonly collection: Maybe<Scalars['String']>;
+  readonly slug: Maybe<Scalars['String']>;
 };
 
 type MarkdownRemarkFieldsFieldSelector = {
   readonly collection: InputMaybe<FieldSelectorEnum>;
+  readonly slug: InputMaybe<FieldSelectorEnum>;
 };
 
 type MarkdownRemarkFieldsFilterInput = {
   readonly collection: InputMaybe<StringQueryOperatorInput>;
+  readonly slug: InputMaybe<StringQueryOperatorInput>;
 };
 
 type MarkdownRemarkFieldsSortInput = {
   readonly collection: InputMaybe<SortOrderEnum>;
+  readonly slug: InputMaybe<SortOrderEnum>;
 };
 
 type MarkdownRemarkFilterInput = {
@@ -2860,6 +2864,16 @@ type WebPOptions = {
   readonly quality: InputMaybe<Scalars['Int']>;
 };
 
+type BlogQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type BlogQueryQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: { readonly title: string | null, readonly slug: string | null } | null } }> } };
+
+type DicasQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type DicasQueryQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: { readonly title: string | null, readonly slug: string | null } | null } }> } };
+
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 
 type GatsbyImageSharpFixed_noBase64Fragment = { readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
@@ -2893,10 +2907,30 @@ type PostQueryVariables = Exact<{
 
 type PostQuery = { readonly markdownRemark: { readonly timeToRead: number | null, readonly html: string | null, readonly frontmatter: { readonly title: string | null, readonly slug: string | null, readonly date: string | null } | null } | null };
 
+type ProjetosQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type ProjetosQueryQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: { readonly title: string | null, readonly description: string | null, readonly href: string | null } | null } }> } };
+
+type SeoQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type SeoQueryQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null, readonly description: string | null, readonly author: string | null } | null } | null };
+
 type SiteTitleQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type SiteTitleQueryQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null } | null } | null };
+
+type ViagensQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type ViagensQueryQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: { readonly title: string | null, readonly slug: string | null } | null } }> } };
+
+type GetAllPostsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type GetAllPostsQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null } | null }, readonly next: { readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null } | null } | null, readonly previous: { readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null } | null } | null }> } };
 
 
 }
