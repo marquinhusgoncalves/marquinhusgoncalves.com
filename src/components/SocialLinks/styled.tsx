@@ -6,6 +6,7 @@ import { Facebook } from '@styled-icons/boxicons-logos/Facebook';
 import { Linkedin } from '@styled-icons/boxicons-logos/Linkedin';
 import { Instagram } from '@styled-icons/boxicons-logos/Instagram';
 import { EmailOutline } from '@styled-icons/evaicons-outline/EmailOutline';
+import { Rss } from '@styled-icons/boxicons-regular/Rss';
 
 export const SocialLinksWrapped = styled.section`
   display: flex;
@@ -65,6 +66,11 @@ export const InstagramIcon = styled(Instagram)`
   transition: 0.5s ease;
 `;
 export const EmailOutlineIcon = styled(EmailOutline)`
+  width: 1.2rem;
+  color: var(--color-black);
+  transition: 0.5s ease;
+`;
+export const RssIcon = styled(Rss)`
   width: 1.2rem;
   color: var(--color-black);
   transition: 0.5s ease;
