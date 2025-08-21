@@ -1,1 +1,23 @@
 User-agent: *
+Allow: /
+
+# Block administrative areas
+Disallow: /admin/
+Disallow: /static/admin/
+
+# Block system files
+Disallow: /404.html
+Disallow: /404/
+
+# Allow all main pages
+Allow: /blog/
+Allow: /projetos/
+Allow: /dicas/
+Allow: /viagens/
+Allow: /sobre/
+
+# Sitemap
+Sitemap: https://www.marquinhusgoncalves.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
