@@ -2,6 +2,7 @@
 title: Quando, como e o que foi a Front Week 2016!
 date: 2016-07-19 20:00:00
 slug: quando-como-e-o-que-foi-a-front-week-2016
+tags: [front-week, frontend, javascript, css, meetup, eventos, comunidade, front-in-sampa, code-in-the-dark, femug, javascript-sp, frontux, meetupcss, network, desenvolvimento-web]
 ---
 
 ![Front in Sampa](/assets/img/frontweek/frontinsampafinal.jpeg)

@@ -7,6 +7,7 @@ import SEO from '../components/Seo';
 import Titles from '../components/Titles';
 import Card from '../components/Card';
 import AdsenseDisplay from '../components/GoogleAdsense/display';
+import TagCloud from '../components/TagCloud';
 
 const Blog = ({ data }: any) => {
   const postList = data.allMarkdownRemark.edges;
@@ -26,6 +27,7 @@ const Blog = ({ data }: any) => {
         ),
       )}
       {postList.length > 0 && <AdsenseDisplay />}
+      <TagCloud collection="posts" />
     </Layout>
   );
 };

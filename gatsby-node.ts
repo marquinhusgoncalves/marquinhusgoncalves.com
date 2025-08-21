@@ -38,7 +38,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
   actions,
 }) => {
   const { createPage } = actions;
-  const request = await graphql<Queries.Query>(`
+  const postsRequest = await graphql<Queries.Query>(`
     query GetAllPosts {
       allMarkdownRemark(filter: { fields: { collection: { eq: "posts" } } }) {
         edges {
@@ -49,6 +49,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
             }
             frontmatter {
               title
+              tags
             }
           }
           next {
@@ -72,8 +73,29 @@ export const createPages: GatsbyNode['createPages'] = async ({
     }
   `);
 
+  const projectsRequest = await graphql<Queries.Query>(`
+    query GetAllProjects {
+      allMarkdownRemark(
+        filter: { fields: { collection: { eq: "projects" } } }
+      ) {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              tags
+            }
+          }
+        }
+      }
+    }
+  `);
+
   const blogTemplate = path.resolve('./src/templates/post.tsx');
-  const posts = request?.data?.allMarkdownRemark.edges;
+  const posts = postsRequest?.data?.allMarkdownRemark.edges;
   posts?.forEach(({ node, next, previous }) => {
     const slug = (node?.fields as any)?.slug;
     createPage({
@@ -88,4 +110,42 @@ export const createPages: GatsbyNode['createPages'] = async ({
       },
     });
   });
+
+  const tagTemplate = path.resolve('./src/templates/tag.tsx');
+
+  const createTagPagesForCollection = (
+    posts: readonly any[],
+    collectionName: string,
+  ) => {
+    const tagSet = new Set<string>();
+
+    posts.forEach(({ node }) => {
+      const tags = (node?.frontmatter as any)?.tags || [];
+      tags.forEach((tag: string) => tagSet.add(tag));
+    });
+
+    tagSet.forEach((tag) => {
+      const postsWithTag = posts.filter(({ node }) => {
+        const tags = (node?.frontmatter as any)?.tags || [];
+        return tags.includes(tag);
+      });
+
+      createPage({
+        path: `/${collectionName}/tags/${tag}`,
+        component: tagTemplate,
+        context: {
+          tag,
+          posts: postsWithTag,
+          collection: collectionName,
+        },
+      });
+    });
+  };
+
+  createTagPagesForCollection(posts || [], 'blog');
+
+  createTagPagesForCollection(
+    projectsRequest?.data?.allMarkdownRemark.edges || [],
+    'projetos',
+  );
 };

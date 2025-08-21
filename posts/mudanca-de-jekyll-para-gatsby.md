@@ -2,6 +2,7 @@
 title: Mudança de Jekyll para Gatsby
 date: 2020-07-05 20:00:00
 slug: mudanca-de-jekyll-para-gatsby
+tags: [gatsby, jekyll, gatsbyjs, static-site-generator, react, javascript, web-development, blog, netlify, netlify-cms]
 ---
 
 ![Mudanças](/assets/img/jekyllparagatsby/change.jpg) Photo by

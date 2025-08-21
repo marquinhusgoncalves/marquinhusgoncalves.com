@@ -4,4 +4,17 @@ description:
   Javascript, HTML5, CSS3. Wes Bos project's of the 30 days with Javascript
   Vanilla.
 href: http://js30-custom-html5-video-player.oceanoweb.com.br
+tags:
+  [
+    javascript,
+    js30,
+    html5,
+    css3,
+    video-player,
+    html5-video,
+    media-controls,
+    vanilla-js,
+    frontend,
+    multimedia,
+  ]
 ---
