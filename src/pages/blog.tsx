@@ -51,5 +51,12 @@ export const query = graphql`
 export default Blog;
 
 export const Head: HeadFC = () => {
-  return <SEO title="Blog" />;
+  return (
+    <SEO
+      title="Blog - Marquinhus Gonçalves"
+      description="Artigos sobre desenvolvimento web, tecnologia e experiências pessoais. Compartilhando conhecimento e aprendizado na área de software."
+      type="website"
+      url="https://www.marquinhusgoncalves.com/blog"
+    />
+  );
 };

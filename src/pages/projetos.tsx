@@ -58,5 +58,12 @@ export const query = graphql`
 export default Projetos;
 
 export const Head: HeadFC = () => {
-  return <SEO title="Projetos" />;
+  return (
+    <SEO
+      title="Projetos - Marquinhus Gonçalves"
+      description="Portfólio de projetos desenvolvidos por Marquinhus Gonçalves."
+      type="organization"
+      url="https://www.marquinhusgoncalves.com/projetos"
+    />
+  );
 };

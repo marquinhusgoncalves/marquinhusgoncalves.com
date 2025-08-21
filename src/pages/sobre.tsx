@@ -80,5 +80,12 @@ const Sobre = () => (
 export default Sobre;
 
 export const Head: HeadFC = () => {
-  return <SEO title="Sobre" />;
+  return (
+    <SEO
+      title="Sobre - Marquinhus Gonçalves"
+      description="Conheça mais sobre Marquinhus Gonçalves, engenheiro de software."
+      type="person"
+      url="https://www.marquinhusgoncalves.com/sobre"
+    />
+  );
 };

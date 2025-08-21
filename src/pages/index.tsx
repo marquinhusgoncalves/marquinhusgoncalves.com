@@ -16,5 +16,12 @@ const IndexPage: React.FC<PageProps> = () => {
 export default IndexPage;
 
 export const Head: HeadFC = () => {
-  return <SEO title="Home" />;
+  return (
+    <SEO
+      title="Marquinhus Gonçalves - Software Engineer"
+      description="Oi! Sou o Marquinhus Gonçalves, engenheiro de software."
+      type="person"
+      url="https://www.marquinhusgoncalves.com"
+    />
+  );
 };

@@ -75,5 +75,18 @@ export default Post;
 
 export const Head: HeadFC = ({ data }: any) => {
   const title = data?.markdownRemark?.frontmatter?.title || 'Post';
-  return <SEO title={title} />;
+  const date = data?.markdownRemark?.frontmatter?.date;
+  const slug = data?.markdownRemark?.frontmatter?.slug;
+
+  return (
+    <SEO
+      title={title}
+      type="article"
+      url={`https://www.marquinhusgoncalves.com/blog${slug}`}
+      author="Marquinhus Gonçalves"
+      datePublished={date}
+      dateModified={date}
+      tags={['blog', 'desenvolvimento', 'tecnologia']}
+    />
+  );
 };

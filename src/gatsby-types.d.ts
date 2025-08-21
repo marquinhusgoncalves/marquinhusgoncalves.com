@@ -2915,7 +2915,7 @@ type ProjetosQueryQuery = { readonly allMarkdownRemark: { readonly edges: Readon
 type SeoQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type SeoQueryQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null, readonly description: string | null, readonly author: string | null } | null } | null };
+type SeoQueryQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null, readonly description: string | null, readonly author: string | null, readonly siteUrl: string | null } | null } | null };
 
 type SiteTitleQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
