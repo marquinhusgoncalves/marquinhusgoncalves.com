@@ -6,7 +6,8 @@ export const HeaderWrapped = styled.header`
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background-color: var(--color-blue);
+  background-color: var(--color-primary);
+  color: var(--color-white);
 `;
 
 export const HeaderTop = styled.div`
@@ -52,7 +53,7 @@ export const HeaderBottom = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 0.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-overlay);
 `;
 
 export const UtilityIconsContainer = styled.div`
@@ -62,8 +63,8 @@ export const UtilityIconsContainer = styled.div`
 `;
 
 export const UtilityButton = styled.button`
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--color-overlay);
+  border: 1px solid var(--color-overlay);
   cursor: pointer;
   padding: 8px;
   border-radius: 50%;
@@ -71,7 +72,7 @@ export const UtilityButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--color-white);
   opacity: 0.8;
   min-width: 36px;
   min-height: 36px;
@@ -80,12 +81,12 @@ export const UtilityButton = styled.button`
   &:hover {
     opacity: 1;
     transform: scale(1.05);
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.4);
+    background-color: var(--color-overlay-heavy);
+    border-color: var(--color-overlay-heavy);
   }
 
   &:focus {
-    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline: 2px solid var(--color-overlay-heavy);
     outline-offset: 2px;
   }
 `;

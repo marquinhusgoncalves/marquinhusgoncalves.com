@@ -5,6 +5,8 @@ export const LayoutWrapped = styled.section`
   flex-direction: column;
   display: flex;
   min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-text);
 `;
 
 export const LayoutMainWrapped = styled.main`
@@ -19,10 +21,10 @@ export const LayoutMainWrapped = styled.main`
   flex-grow: 1;
 
   a {
-    color: var(--color-blue);
+    color: var(--color-primary);
 
     &:hover {
-      color: var(--color-blue-dark);
+      color: var(--color-primary-dark);
     }
   }
 `;
@@ -43,5 +45,5 @@ export const UpArrowCircleWraped = styled.div`
 `;
 
 export const UpArrowCircleIcon = styled(UpArrowCircle)`
-  color: var(--color-blue);
+  color: var(--color-primary);
 `;

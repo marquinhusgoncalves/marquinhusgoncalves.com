@@ -116,7 +116,6 @@ const Search: React.FC = () => {
   };
 
   const handleToggleSearch = () => {
-    console.log('Toggle search clicked, current state:', isOpen);
     setIsOpen(!isOpen);
   };
 
@@ -165,7 +164,7 @@ const Search: React.FC = () => {
         type="button"
         className={isOpen ? 'active' : ''}
       >
-        <S.SearchIcon>🔍</S.SearchIcon>
+        <S.SearchIcon />
       </S.SearchButton>
 
       {isOpen && (

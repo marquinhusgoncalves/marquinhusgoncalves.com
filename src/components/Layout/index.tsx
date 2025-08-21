@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import Header from '../Header';
 import Footer from '../Footer';
+import { ThemeProvider } from '../../contexts/ThemeContext';
 
 import GlobalStyles from '../../styles/global';
 import * as S from './styled';
@@ -23,20 +24,22 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   });
 
   return (
-    <S.LayoutWrapped>
-      <GlobalStyles />
-      <Header />
-      <S.LayoutMainWrapped>{children}</S.LayoutMainWrapped>
-      <S.UpArrowCircleWraped
-        onClick={() => {
-          window.scroll({ top: 0, behavior: 'smooth' });
-        }}
-        className={isShowButtonScrollToTop ? 'visible' : ''}
-      >
-        <S.UpArrowCircleIcon />
-      </S.UpArrowCircleWraped>
-      <Footer />
-    </S.LayoutWrapped>
+    <ThemeProvider>
+      <S.LayoutWrapped>
+        <GlobalStyles />
+        <Header />
+        <S.LayoutMainWrapped>{children}</S.LayoutMainWrapped>
+        <S.UpArrowCircleWraped
+          onClick={() => {
+            window.scroll({ top: 0, behavior: 'smooth' });
+          }}
+          className={isShowButtonScrollToTop ? 'visible' : ''}
+        >
+          <S.UpArrowCircleIcon />
+        </S.UpArrowCircleWraped>
+        <Footer />
+      </S.LayoutWrapped>
+    </ThemeProvider>
   );
 };
 

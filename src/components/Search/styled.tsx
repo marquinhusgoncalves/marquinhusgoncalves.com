@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Search as SearchIconSvg } from '@styled-icons/boxicons-regular/Search';
 
 export const SearchContainer = styled.div`
   position: relative;
@@ -6,8 +7,8 @@ export const SearchContainer = styled.div`
 `;
 
 export const SearchButton = styled.button`
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--color-overlay);
+  border: 1px solid var(--color-overlay);
   cursor: pointer;
   padding: 8px;
   border-radius: 50%;
@@ -15,7 +16,7 @@ export const SearchButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--color-white);
   opacity: 0.8;
   min-width: 36px;
   min-height: 36px;
@@ -23,24 +24,25 @@ export const SearchButton = styled.button`
   &:hover {
     opacity: 1;
     transform: scale(1.05);
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.4);
+    background-color: var(--color-overlay-heavy);
+    border-color: var(--color-overlay-heavy);
   }
 
   &:focus {
-    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline: 2px solid var(--color-overlay-heavy);
     outline-offset: 2px;
   }
 
   &.active {
     opacity: 1;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.6);
+    background-color: var(--color-overlay-heavy);
+    border-color: var(--color-overlay-heavy);
   }
 `;
 
-export const SearchIcon = styled.span`
-  font-size: 16px;
+export const SearchIcon = styled(SearchIconSvg)`
+  width: 16px;
+  height: 16px;
   color: inherit;
   line-height: 1;
 `;
@@ -51,7 +53,7 @@ export const SearchOverlay = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: var(--color-overlay-heavy);
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -75,10 +77,11 @@ export const SearchBar = styled.div`
   align-items: center;
   gap: 15px;
   margin-bottom: 30px;
-  background: white;
+  background: var(--color-background);
   border-radius: 50px;
   padding: 5px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-heavy);
+  border: 1px solid var(--color-border);
 `;
 
 export const SearchHeader = styled.div`
@@ -96,23 +99,24 @@ export const SearchInput = styled.input`
   font-size: 18px;
   border: none;
   border-radius: 45px;
-  background: white;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: var(--color-background);
+  color: var(--color-text);
+  box-shadow: var(--shadow-medium);
   outline: none;
   transition: box-shadow 0.3s ease;
 
   &::placeholder {
-    color: #999;
+    color: var(--color-text-muted);
   }
 
   &:focus {
-    box-shadow: 0 4px 25px rgba(37, 170, 225, 0.3);
+    box-shadow: 0 4px 25px var(--color-primary);
   }
 `;
 
 export const CloseButton = styled.button`
-  background: #ff4757;
-  color: white;
+  background: var(--color-danger);
+  color: var(--color-white);
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -125,11 +129,12 @@ export const CloseButton = styled.button`
   transition: background-color 0.2s ease;
 
   &:hover {
-    background: #ff3742;
+    background: var(--color-danger);
+    filter: brightness(0.9);
   }
 
   &:focus {
-    outline: 2px solid #ff4757;
+    outline: 2px solid var(--color-danger);
     outline-offset: 2px;
   }
 `;
@@ -144,9 +149,13 @@ export const CollectionFilters = styled.div`
 
 export const FilterButton = styled.button<{ active: boolean }>`
   padding: 8px 16px;
-  border: 2px solid ${(props) => (props.active ? '#25AAE1' : '#ddd')};
-  background: ${(props) => (props.active ? '#25AAE1' : 'white')};
-  color: ${(props) => (props.active ? 'white' : '#333')};
+  border: 2px solid
+    ${(props) =>
+      props.active ? 'var(--color-primary)' : 'var(--color-border)'};
+  background: ${(props) =>
+    props.active ? 'var(--color-primary)' : 'var(--color-background)'};
+  color: ${(props) =>
+    props.active ? 'var(--color-white)' : 'var(--color-text)'};
   border-radius: 25px;
   cursor: pointer;
   font-size: 14px;
@@ -154,12 +163,15 @@ export const FilterButton = styled.button<{ active: boolean }>`
   transition: all 0.2s ease;
 
   &:hover {
-    border-color: #25aae1;
-    background: ${(props) => (props.active ? '#1e8bc3' : '#f8f9fa')};
+    border-color: var(--color-primary);
+    background: ${(props) =>
+      props.active
+        ? 'var(--color-primary-dark)'
+        : 'var(--color-background-secondary)'};
   }
 
   &:focus {
-    outline: 2px solid #25aae1;
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
   }
 `;
@@ -169,37 +181,38 @@ export const SearchResults = styled.div`
   max-width: 800px;
   max-height: 60vh;
   overflow-y: auto;
-  background: white;
+  background: var(--color-background);
   border-radius: 15px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-heavy);
   padding: 20px;
+  border: 1px solid var(--color-border);
 `;
 
 export const EmptyState = styled.div`
   text-align: center;
   padding: 40px 20px;
-  color: #666;
+  color: var(--color-text-secondary);
   font-size: 16px;
 `;
 
 export const ResultsCount = styled.div`
   font-size: 14px;
-  color: #666;
+  color: var(--color-text-secondary);
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-border);
 `;
 
 export const ResultItem = styled.div`
   padding: 20px;
-  border: 1px solid #eee;
+  border: 1px solid var(--color-border);
   border-radius: 10px;
   margin-bottom: 15px;
   transition: all 0.2s ease;
 
   &:hover {
-    border-color: #25aae1;
-    box-shadow: 0 4px 15px rgba(37, 170, 225, 0.1);
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 15px var(--color-primary);
     transform: translateY(-2px);
   }
 
@@ -216,20 +229,21 @@ export const ResultTitle = styled.h3`
   margin: 0 0 8px 0;
   font-size: 18px;
   font-weight: 600;
+  color: var(--color-text);
 
   a {
-    color: #25aae1;
+    color: var(--color-primary);
     text-decoration: none;
     transition: color 0.2s ease;
 
     &:hover {
-      color: #1e8bc3;
+      color: var(--color-primary-dark);
     }
   }
 
   mark {
-    background: #fff3cd;
-    color: #856404;
+    background: var(--color-accent);
+    color: var(--color-text);
     padding: 2px 4px;
     border-radius: 3px;
   }
@@ -253,48 +267,35 @@ export const CollectionTag = styled.span<{ collection: string }>`
   background: ${(props) => {
     switch (props.collection) {
       case 'posts':
-        return '#e3f2fd';
+        return 'var(--color-info)';
       case 'projects':
-        return '#e8f5e8';
+        return 'var(--color-success)';
       case 'dicas':
-        return '#fff3e0';
+        return 'var(--color-warning)';
       case 'viagens':
-        return '#f3e5f5';
+        return 'var(--color-accent)';
       default:
-        return '#f5f5f5';
+        return 'var(--color-background-secondary)';
     }
   }};
 
-  color: ${(props) => {
-    switch (props.collection) {
-      case 'posts':
-        return '#1976d2';
-      case 'projects':
-        return '#388e3c';
-      case 'dicas':
-        return '#f57c00';
-      case 'viagens':
-        return '#7b1fa2';
-      default:
-        return '#666';
-    }
-  }};
+  color: var(--color-white);
 `;
 
 export const ResultDate = styled.span`
   font-size: 12px;
-  color: #999;
+  color: var(--color-text-muted);
 `;
 
 export const ResultDescription = styled.p`
   margin: 10px 0;
-  color: #555;
+  color: var(--color-text-secondary);
   line-height: 1.5;
   font-size: 14px;
 
   mark {
-    background: #fff3cd;
-    color: #856404;
+    background: var(--color-accent);
+    color: var(--color-text);
     padding: 2px 4px;
     border-radius: 3px;
   }
@@ -311,8 +312,8 @@ export const Tag = styled.span`
   a {
     display: inline-block;
     padding: 4px 8px;
-    background: #f8f9fa;
-    color: #25aae1;
+    background: var(--color-background-secondary);
+    color: var(--color-primary);
     text-decoration: none;
     border-radius: 12px;
     font-size: 11px;
@@ -320,8 +321,8 @@ export const Tag = styled.span`
     transition: all 0.2s ease;
 
     &:hover {
-      background: #25aae1;
-      color: white;
+      background: var(--color-primary);
+      color: var(--color-white);
       transform: translateY(-1px);
     }
   }
@@ -329,8 +330,8 @@ export const Tag = styled.span`
 
 export const MoreTags = styled.span`
   padding: 4px 8px;
-  background: #f8f9fa;
-  color: #999;
+  background: var(--color-background-secondary);
+  color: var(--color-text-muted);
   border-radius: 12px;
   font-size: 11px;
   font-weight: 500;
