@@ -25,7 +25,7 @@ const Blog = ({ data }: any) => {
           }: {
             node: { frontmatter: { title: string; slug: string } };
           }) => (
-            <Card key={title} title={title} slug={slug} />
+            <Card key={title} title={title} slug={`/blog/${slug}`} />
           ),
         )}
         {postList.length > 0 && <AdsenseDisplay />}

@@ -2,6 +2,12 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import media from 'styled-media-query';
 
+export const CardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`;
+
 const Card = `
   display: flex;
   justify-content: space-around;

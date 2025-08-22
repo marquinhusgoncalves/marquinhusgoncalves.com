@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import * as S from './styled';
+import ShareButton from '../ShareButton';
 
 const CardLink = (props: {
   slug: string;
@@ -29,10 +30,20 @@ const Card = ({
   description: string;
   href: string;
 }) => (
-  <CardLink slug={slug} href={href}>
-    <S.CardTitle>{title}</S.CardTitle>
-    {description && <S.CardDescription>{description}</S.CardDescription>}
-  </CardLink>
+  <S.CardWrapper>
+    <CardLink slug={slug} href={href}>
+      <S.CardTitle>{title}</S.CardTitle>
+      {description && <S.CardDescription>{description}</S.CardDescription>}
+    </CardLink>
+
+    <ShareButton
+      url={slug || href}
+      title={title}
+      description={description}
+      hashtags={[]}
+      size="small"
+    />
+  </S.CardWrapper>
 );
 
 Card.defaultProps = {

@@ -8,6 +8,7 @@ import PostInfo from '../components/PostInfo';
 import Comments from '../components/Comments';
 import RelatedPosts from '../components/RelatedPosts';
 import AdsenseArticle from '../components/GoogleAdsense/article';
+import ShareButtons from '../components/ShareButtons';
 
 import { MainContent } from '../styles/base';
 import * as S from './post.styled';
@@ -51,6 +52,15 @@ const Post = (props: any) => {
           {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </MainContent>
+
+        <ShareButtons
+          url={`/blog${slug}`}
+          title={title}
+          description={`Post sobre ${title} - Blog de Marquinhus Gonçalves`}
+          hashtags={[]}
+          via="marquinhusgonc"
+        />
+
         <AdsenseArticle />
         <RelatedPosts next={nextPost} previous={previousPost} />
         <Comments url={`/blog${slug}`} title={title} />
