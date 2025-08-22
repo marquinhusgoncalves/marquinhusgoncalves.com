@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { UpArrowCircle } from '@styled-icons/boxicons-regular/UpArrowCircle';
+import media from 'styled-media-query';
 
 export const LayoutWrapped = styled.section`
   flex-direction: column;
@@ -27,6 +28,20 @@ export const LayoutMainWrapped = styled.main`
       color: var(--color-primary-dark);
     }
   }
+
+  ${media.lessThan('medium')`
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  `}
+
+  ${media.lessThan('small')`
+    margin: 1rem auto;
+    padding: 0 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  `}
 `;
 
 export const UpArrowCircleWraped = styled.div`
@@ -42,6 +57,18 @@ export const UpArrowCircleWraped = styled.div`
   &.visible {
     opacity: 1 !important;
   }
+
+  ${media.lessThan('medium')`
+    bottom: 2rem;
+    right: 0.75rem;
+    width: 2.5rem;
+  `}
+
+  ${media.lessThan('small')`
+    bottom: 1.5rem;
+    right: 0.5rem;
+    width: 2rem;
+  `}
 `;
 
 export const UpArrowCircleIcon = styled(UpArrowCircle)`

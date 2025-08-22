@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { HeadFC, graphql } from 'gatsby';
-
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Titles from '../components/Titles';
@@ -11,6 +10,7 @@ import RelatedPosts from '../components/RelatedPosts';
 import AdsenseArticle from '../components/GoogleAdsense/article';
 
 import { MainContent } from '../styles/base';
+import * as S from './post.styled';
 
 const Post = (props: any) => {
   const {
@@ -44,15 +44,17 @@ const Post = (props: any) => {
 
   return (
     <Layout>
-      <Titles title={title} />
-      <PostInfo date={date} timeToRead={timeToRead} />
-      <MainContent>
-        {/* eslint-disable-next-line react/no-danger */}
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </MainContent>
-      <AdsenseArticle />
-      <RelatedPosts next={nextPost} previous={previousPost} />
-      <Comments url={`/blog${slug}`} title={title} />
+      <S.PostContainer>
+        <Titles title={title} />
+        <PostInfo date={date} timeToRead={timeToRead} />
+        <MainContent>
+          {/* eslint-disable-next-line react/no-danger */}
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </MainContent>
+        <AdsenseArticle />
+        <RelatedPosts next={nextPost} previous={previousPost} />
+        <Comments url={`/blog${slug}`} title={title} />
+      </S.PostContainer>
     </Layout>
   );
 };

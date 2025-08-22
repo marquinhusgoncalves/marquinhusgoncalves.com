@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { HeadFC, graphql } from 'gatsby';
-
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Titles from '../components/Titles';
@@ -9,31 +8,35 @@ import Card from '../components/Card';
 import AdsenseDisplay from '../components/GoogleAdsense/display';
 import TagCloud from '../components/TagCloud';
 
+import * as S from './projetos.styled';
+
 const Projetos = ({ data }: any) => {
   const projectsList = data.allMarkdownRemark.edges;
   return (
     <Layout>
-      <Titles title="Projetos" />
-      {projectsList.map(
-        ({
-          node: {
-            frontmatter: { title, description, href },
-          },
-        }: {
-          node: {
-            frontmatter: { title: string; description: string; href: string };
-          };
-        }) => (
-          <Card
-            key={title}
-            title={title}
-            description={description}
-            href={href}
-          />
-        ),
-      )}
-      {projectsList.length > 0 && <AdsenseDisplay />}
-      <TagCloud collection="projects" />
+      <S.ProjetosContainer>
+        <Titles title="Projetos" />
+        {projectsList.map(
+          ({
+            node: {
+              frontmatter: { title, description, href },
+            },
+          }: {
+            node: {
+              frontmatter: { title: string; description: string; href: string };
+            };
+          }) => (
+            <Card
+              key={title}
+              title={title}
+              description={description}
+              href={href}
+            />
+          ),
+        )}
+        {projectsList.length > 0 && <AdsenseDisplay />}
+        <TagCloud collection="projects" />
+      </S.ProjetosContainer>
     </Layout>
   );
 };

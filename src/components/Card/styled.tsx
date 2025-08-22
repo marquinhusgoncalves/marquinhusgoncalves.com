@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import media from 'styled-media-query';
 
 const Card = `
   display: flex;
@@ -21,6 +22,19 @@ const Card = `
     box-shadow: var(--shadow-medium);
     transform: translateY(-2px);
   }
+
+  ${media.lessThan('medium')`
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    min-height: 6rem;
+  `}
+
+  ${media.lessThan('small')`
+    padding: 0.75rem;
+    margin: 0.25rem 0;
+    min-height: 5rem;
+  `}
 `;
 
 export const CardLink = styled(Link)`
@@ -34,8 +48,26 @@ export const CardLinkOut = styled.a`
 export const CardTitle = styled.h1`
   font-weight: 900;
   color: var(--color-text);
+
+  ${media.lessThan('medium')`
+    font-size: 1.1rem;
+    text-align: center;
+  `}
+
+  ${media.lessThan('small')`
+    font-size: 1rem;
+  `}
 `;
 
 export const CardDescription = styled.p`
   color: var(--color-text-secondary);
+
+  ${media.lessThan('medium')`
+    font-size: 0.9rem;
+    text-align: center;
+  `}
+
+  ${media.lessThan('small')`
+    font-size: 0.85rem;
+  `}
 `;

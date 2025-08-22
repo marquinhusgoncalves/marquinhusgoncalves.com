@@ -6,6 +6,8 @@ import Titles from '../components/Titles';
 import Card from '../components/Card';
 import { getCollectionConfig, getFullSlug } from '../utils/collections';
 
+import * as S from './tag.styled';
+
 interface TagPageProps extends PageProps {
   pageContext: {
     tag: string;
@@ -34,23 +36,14 @@ const TagPage: React.FC<TagPageProps> = ({ pageContext }) => {
       <Titles
         title={`${getCollectionConfig(collection).name} com tag: ${tag}`}
       />
-      <div style={{ padding: '2rem 0' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>
+      <S.TagContainer>
+        <S.TagTitle>
           {posts.length} {getCollectionConfig(collection).singular}
           {posts.length !== 1 ? 's' : ''} encontrado
           {posts.length !== 1 ? 's' : ''} com a tag "{tag}"
-        </h2>
+        </S.TagTitle>
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '2rem',
-            maxWidth: '1200px',
-            margin: '0 auto',
-            padding: '0 1rem',
-          }}
-        >
+        <S.TagGrid>
           {posts.map(({ node }) => (
             <Card
               key={node.id}
@@ -60,14 +53,14 @@ const TagPage: React.FC<TagPageProps> = ({ pageContext }) => {
               href=""
             />
           ))}
-        </div>
+        </S.TagGrid>
 
         {posts.length === 0 && (
-          <div style={{ textAlign: 'center', padding: '3rem 0' }}>
+          <S.NoPostsMessage>
             <p>Nenhum post encontrado com esta tag.</p>
-          </div>
+          </S.NoPostsMessage>
         )}
-      </div>
+      </S.TagContainer>
     </Layout>
   );
 };

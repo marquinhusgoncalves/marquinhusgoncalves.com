@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { HeadFC, graphql } from 'gatsby';
-
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Titles from '../components/Titles';
@@ -9,25 +8,29 @@ import Card from '../components/Card';
 import AdsenseDisplay from '../components/GoogleAdsense/display';
 import TagCloud from '../components/TagCloud';
 
+import * as S from './blog.styled';
+
 const Blog = ({ data }: any) => {
   const postList = data.allMarkdownRemark.edges;
 
   return (
     <Layout>
-      <Titles title="Blog" />
-      {postList.map(
-        ({
-          node: {
-            frontmatter: { title, slug },
-          },
-        }: {
-          node: { frontmatter: { title: string; slug: string } };
-        }) => (
-          <Card key={title} title={title} slug={slug} />
-        ),
-      )}
-      {postList.length > 0 && <AdsenseDisplay />}
-      <TagCloud collection="posts" />
+      <S.BlogContainer>
+        <Titles title="Blog" />
+        {postList.map(
+          ({
+            node: {
+              frontmatter: { title, slug },
+            },
+          }: {
+            node: { frontmatter: { title: string; slug: string } };
+          }) => (
+            <Card key={title} title={title} slug={slug} />
+          ),
+        )}
+        {postList.length > 0 && <AdsenseDisplay />}
+        <TagCloud collection="posts" />
+      </S.BlogContainer>
     </Layout>
   );
 };

@@ -1,31 +1,34 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { HeadFC, graphql } from 'gatsby';
-
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Titles from '../components/Titles';
 import Card from '../components/Card';
 import AdsenseDisplay from '../components/GoogleAdsense/display';
 
+import * as S from './viagens.styled';
+
 const Viagens = ({ data }: any) => {
   const viagensList = data.allMarkdownRemark.edges;
 
   return (
     <Layout>
-      <Titles title="Viagens" />
-      {viagensList.map(
-        ({
-          node: {
-            frontmatter: { title, slug },
-          },
-        }: {
-          node: { frontmatter: { title: string; slug: string } };
-        }) => (
-          <Card key={title} title={title} slug={slug} />
-        ),
-      )}
-      {viagensList.length > 0 && <AdsenseDisplay />}
+      <S.ViagensContainer>
+        <Titles title="Viagens" />
+        {viagensList.map(
+          ({
+            node: {
+              frontmatter: { title, slug },
+            },
+          }: {
+            node: { frontmatter: { title: string; slug: string } };
+          }) => (
+            <Card key={title} title={title} slug={slug} />
+          ),
+        )}
+        {viagensList.length > 0 && <AdsenseDisplay />}
+      </S.ViagensContainer>
     </Layout>
   );
 };
