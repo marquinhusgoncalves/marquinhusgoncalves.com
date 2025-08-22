@@ -7,7 +7,7 @@ import Titles from '../components/Titles';
 import Card from '../components/Card';
 import AdsenseDisplay from '../components/GoogleAdsense/display';
 
-import * as S from './viagens.styled';
+import * as S from '../styles/pages/viagens.styled';
 
 const Viagens = ({ data }: any) => {
   const viagensList = data.allMarkdownRemark.edges;

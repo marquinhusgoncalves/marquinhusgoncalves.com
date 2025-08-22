@@ -8,7 +8,7 @@ import Card from '../components/Card';
 import AdsenseDisplay from '../components/GoogleAdsense/display';
 import TagCloud from '../components/TagCloud';
 
-import * as S from './blog.styled';
+import * as S from '../styles/pages/blog.styled';
 
 const Blog = ({ data }: any) => {
   const postList = data.allMarkdownRemark.edges;

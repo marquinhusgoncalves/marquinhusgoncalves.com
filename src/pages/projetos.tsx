@@ -8,7 +8,7 @@ import Card from '../components/Card';
 import AdsenseDisplay from '../components/GoogleAdsense/display';
 import TagCloud from '../components/TagCloud';
 
-import * as S from './projetos.styled';
+import * as S from '../styles/pages/projetos.styled';
 
 const Projetos = ({ data }: any) => {
   const projectsList = data.allMarkdownRemark.edges;

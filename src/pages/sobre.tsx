@@ -5,7 +5,7 @@ import SEO from '../components/Seo';
 import Titles from '../components/Titles';
 import AdsenseDisplay from '../components/GoogleAdsense/display';
 
-import * as S from './sobre.styled';
+import * as S from '../styles/pages/sobre.styled';
 
 const Sobre = () => (
   <Layout>

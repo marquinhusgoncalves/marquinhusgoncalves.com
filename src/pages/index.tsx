@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Profile from '../components/Profile';
 
-import * as S from './index.styled';
+import * as S from '../styles/pages/index.styled';
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
