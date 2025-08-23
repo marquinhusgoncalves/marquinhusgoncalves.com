@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-import media from 'styled-media-query';
 import { Link } from 'gatsby';
 
 import { Menu } from '@styled-icons/entypo/Menu';
@@ -19,35 +18,35 @@ interface CustomStyleProps {
 }
 
 export const MenuWrapped = styled.nav<CustomStyleProps>`
-  ${media.lessThan('medium')`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
     display: ${(props: { $isMenuOpen: boolean }) =>
       props.$isMenuOpen ? 'flex' : 'none'};
-
-  &.open-menu {
-      animation: 1s ${fadeIn} ease-out;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 10;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.9);
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  `}
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 `;
 export const MenuIconWrapped = styled.div`
   display: none;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     display: block;
     position: absolute;
     right: 1rem;
     top: 0.5rem;
     cursor: pointer;
-    `}
+  }
 `;
 export const MenuIcon = styled(Menu)`
   width: 2.5rem;
@@ -57,14 +56,14 @@ export const MenuIcon = styled(Menu)`
 export const CloseIconWrapped = styled.div`
   display: none;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     display: block;
     position: absolute;
     top: 0.5rem;
     right: 1rem;
     cursor: pointer;
     color: var(--color-white);
-  `}
+  }
 `;
 export const CloseOutlineIcon = styled(CloseOutline)`
   width: 2.5rem;
@@ -86,7 +85,7 @@ export const MenuLinks = styled(Link)`
     border-bottom: 1px solid var(--color-black);
   }
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     transition-duration: 0.5s;
     color: var(--color-white);
     font-size: 40px;
@@ -101,5 +100,5 @@ export const MenuLinks = styled(Link)`
       color: var(--color-blue);
       border-bottom: 1px solid var(--color-blue);
     }
-  `}
+  }
 `;

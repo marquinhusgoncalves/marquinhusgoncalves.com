@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import media from 'styled-media-query';
 
 export const SobreContainer = styled.div`
   display: flex;
@@ -11,7 +10,7 @@ export const SobreContainer = styled.div`
     line-height: 1.7;
   }
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     gap: 1rem;
     padding: 0 0.5rem;
 
@@ -19,9 +18,9 @@ export const SobreContainer = styled.div`
       font-size: 1.1rem;
       line-height: 1.6;
     }
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     gap: 0.75rem;
     padding: 0 0.25rem;
 
@@ -29,5 +28,5 @@ export const SobreContainer = styled.div`
       font-size: 1rem;
       line-height: 1.5;
     }
-  `}
+  }
 `;

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import media from 'styled-media-query';
 
 export const ProfileWrapper = styled.section`
   display: flex;
@@ -8,15 +7,15 @@ export const ProfileWrapper = styled.section`
   flex-direction: column;
   gap: 1.5rem;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     gap: 1rem;
     padding: 0 1rem;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     gap: 0.75rem;
     padding: 0 0.5rem;
-  `}
+  }
 `;
 
 export const ProfileTextWrapper = styled.div`
@@ -32,13 +31,13 @@ export const ProfileText = styled.p`
   letter-spacing: 0.003em;
   font-weight: 700;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     font-size: 1.1rem;
     line-height: 1.5;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     font-size: 1rem;
     line-height: 1.4;
-  `}
+  }
 `;

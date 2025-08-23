@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import media from 'styled-media-query';
 
 export const TagCloudContainer = styled.div`
   margin: 2rem 0;
@@ -9,15 +8,15 @@ export const TagCloudContainer = styled.div`
   border-radius: 8px;
   text-align: center;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     margin: 1.5rem 0;
     padding: 1.5rem;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     margin: 1rem 0;
     padding: 1rem;
-  `}
+  }
 `;
 
 export const TagCloudTitle = styled.h3`
@@ -25,15 +24,15 @@ export const TagCloudTitle = styled.h3`
   color: var(--color-text);
   font-size: 1.5rem;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     font-size: 1.1rem;
     margin-bottom: 0.75rem;
-  `}
+  }
 `;
 
 export const TagList = styled.div`
@@ -42,16 +41,16 @@ export const TagList = styled.div`
   justify-content: center;
   gap: 0.5rem;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     flex-wrap: wrap;
     gap: 0.5rem;
     justify-content: center;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     gap: 0.25rem;
     justify-content: center;
-  `}
+  }
 `;
 
 export const TagItem = styled.span`
@@ -80,15 +79,15 @@ export const TagLink = styled(Link)`
     color: var(--color-white) !important;
   }
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     padding: 0.4rem 0.8rem;
     font-size: 0.85rem;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     padding: 0.35rem 0.7rem;
     font-size: 0.8rem;
-  `}
+  }
 `;
 
 export const TagCount = styled.span`

@@ -1,5 +1,6 @@
 import React from 'react';
 import { HeadFC, graphql, PageProps } from 'gatsby';
+import { useTranslation } from 'react-i18next';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Titles from '../components/Titles';
@@ -29,6 +30,7 @@ interface TagPageProps extends PageProps {
 }
 
 const TagPage: React.FC<TagPageProps> = ({ pageContext }) => {
+  const { t } = useTranslation();
   const { tag, posts, collection } = pageContext;
 
   return (
@@ -39,8 +41,11 @@ const TagPage: React.FC<TagPageProps> = ({ pageContext }) => {
       <S.TagContainer>
         <S.TagTitle>
           {posts.length} {getCollectionConfig(collection).singular}
-          {posts.length !== 1 ? 's' : ''} encontrado
-          {posts.length !== 1 ? 's' : ''} com a tag "{tag}"
+          {posts.length !== 1 ? 's' : ''}{' '}
+          {posts.length !== 1
+            ? t('components.tag.foundWithTagPlural')
+            : t('components.tag.foundWithTag')}{' '}
+          "{tag}"
         </S.TagTitle>
 
         <S.TagGrid>
@@ -57,7 +62,7 @@ const TagPage: React.FC<TagPageProps> = ({ pageContext }) => {
 
         {posts.length === 0 && (
           <S.NoPostsMessage>
-            <p>Nenhum post encontrado com esta tag.</p>
+            <p>{t('components.tag.noPostsFound')}</p>
           </S.NoPostsMessage>
         )}
       </S.TagContainer>

@@ -28,11 +28,6 @@ export const SearchButton = styled.button`
     border-color: var(--color-overlay-heavy);
   }
 
-  &:focus {
-    outline: 2px solid var(--color-overlay-heavy);
-    outline-offset: 2px;
-  }
-
   &.active {
     opacity: 1;
     background-color: var(--color-overlay-heavy);
@@ -132,11 +127,6 @@ export const CloseButton = styled.button`
     background: var(--color-danger);
     filter: brightness(0.9);
   }
-
-  &:focus {
-    outline: 2px solid var(--color-danger);
-    outline-offset: 2px;
-  }
 `;
 
 export const CollectionFilters = styled.div`
@@ -168,11 +158,6 @@ export const FilterButton = styled.button<{ active: boolean }>`
       props.active
         ? 'var(--color-primary-dark)'
         : 'var(--color-background-secondary)'};
-  }
-
-  &:focus {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
   }
 `;
 

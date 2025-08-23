@@ -1,36 +1,45 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import * as S from './styled';
 
-const menuLinks = [
-  {
-    label: 'Home',
-    url: '/',
-  },
-  {
-    label: 'Sobre',
-    url: '/sobre/',
-  },
-  {
-    label: 'Blog',
-    url: '/blog/',
-  },
-  {
-    label: 'Projetos',
-    url: '/projetos/',
-  },
-  {
-    label: 'Dicas',
-    url: '/dicas/',
-  },
-  {
-    label: 'Viagens',
-    url: '/viagens/',
-  },
-];
-
 const MenuBar = () => {
+  const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const getLocalizedUrl = (url: string) => {
+    if (i18n.language === 'en' && url !== '/') {
+      return `/en${url}`;
+    }
+    return url;
+  };
+
+  const menuLinks = [
+    {
+      label: t('menu.home'),
+      url: '/',
+    },
+    {
+      label: t('menu.about'),
+      url: '/sobre',
+    },
+    {
+      label: t('menu.blog'),
+      url: '/blog',
+    },
+    {
+      label: t('menu.projects'),
+      url: '/projetos',
+    },
+    {
+      label: t('menu.tips'),
+      url: '/dicas',
+    },
+    {
+      label: t('menu.travels'),
+      url: '/viagens',
+    },
+  ];
 
   const openMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -44,8 +53,9 @@ const MenuBar = () => {
       >
         {menuLinks.map((menuLink) => {
           const { url, label } = menuLink;
+          const localizedUrl = getLocalizedUrl(url);
           return (
-            <S.MenuLinks key={label} to={url} activeClassName="active">
+            <S.MenuLinks key={label} to={localizedUrl} activeClassName="active">
               {label}
             </S.MenuLinks>
           );

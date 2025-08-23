@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import media from 'styled-media-query';
 
 // eslint-disable-next-line import/prefer-default-export
 export const CommentsWrapper = styled.section`
@@ -13,13 +12,13 @@ export const CommentsWrapper = styled.section`
     }
   }
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     padding: 1rem;
     margin: 1rem 0;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     padding: 0.75rem;
     margin: 0.75rem 0;
-  `}
+  }
 `;

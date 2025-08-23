@@ -1,31 +1,30 @@
 import styled from 'styled-components';
-import media from 'styled-media-query';
 
 export const TagContainer = styled.div`
   padding: 2rem 0;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     padding: 1.5rem 0;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     padding: 1rem 0;
-  `}
+  }
 `;
 
 export const TagTitle = styled.h2`
   text-align: center;
   margin-bottom: 2rem;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     font-size: 1.1rem;
     margin-bottom: 1rem;
-  `}
+  }
 `;
 
 export const TagGrid = styled.div`
@@ -36,27 +35,27 @@ export const TagGrid = styled.div`
   margin: 0 auto;
   padding: 0 1rem;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 0 0.75rem;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     gap: 1rem;
     padding: 0 0.5rem;
-  `}
+  }
 `;
 
 export const NoPostsMessage = styled.div`
   text-align: center;
   padding: 3rem 0;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     padding: 2rem 0;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     padding: 1.5rem 0;
-  `}
+  }
 `;

@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import { HeadFC, graphql } from 'gatsby';
+import { HeadFC, PageProps, graphql } from 'gatsby';
+import { useTranslation } from 'react-i18next';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Titles from '../components/Titles';
@@ -9,13 +10,40 @@ import AdsenseDisplay from '../components/GoogleAdsense/display';
 
 import * as S from '../styles/pages/dicas.styled';
 
-const Dicas = ({ data }: any) => {
+interface DicasPageContext {
+  language: string;
+}
+
+interface DicasData {
+  allMarkdownRemark: {
+    edges: Array<{
+      node: {
+        frontmatter: {
+          title: string;
+          slug: string;
+        };
+      };
+    }>;
+  };
+}
+
+const Dicas: React.FC<PageProps<DicasData, DicasPageContext>> = ({
+  data,
+  pageContext,
+}) => {
+  const { t, i18n } = useTranslation();
   const dicasList = data.allMarkdownRemark.edges;
+
+  React.useEffect(() => {
+    if (pageContext?.language && i18n.language !== pageContext.language) {
+      i18n.changeLanguage(pageContext.language);
+    }
+  }, [pageContext?.language, i18n]);
 
   return (
     <Layout>
       <S.DicasContainer>
-        <Titles title="Dicas" />
+        <Titles title={t('pages.tips.title')} />
         {dicasList.map(
           ({
             node: {
@@ -53,6 +81,21 @@ export const query = graphql`
 
 export default Dicas;
 
-export const Head: HeadFC = () => {
-  return <SEO title="Dicas" />;
+export const Head: HeadFC<DicasData, DicasPageContext> = ({ pageContext }) => {
+  const { t, i18n } = useTranslation();
+
+  React.useEffect(() => {
+    if (pageContext?.language && i18n.language !== pageContext.language) {
+      i18n.changeLanguage(pageContext.language);
+    }
+  }, [pageContext?.language, i18n]);
+
+  return (
+    <SEO
+      title={t('pages.tips.title')}
+      description={t('pages.tips.content')}
+      type="website"
+      url={`https://www.marquinhusgoncalves.com${pageContext?.language === 'en' ? '/en' : ''}/dicas`}
+    />
+  );
 };

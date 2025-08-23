@@ -1,0 +1,320 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+const resources = {
+  pt: {
+    translation: {
+      // Menu
+      'menu.home': 'Início',
+      'menu.about': 'Sobre',
+      'menu.blog': 'Blog',
+      'menu.projects': 'Projetos',
+      'menu.tips': 'Dicas',
+      'menu.travels': 'Viagens',
+
+      // Nomes das páginas
+      'pages.home.name': 'Início',
+      'pages.about.name': 'Sobre',
+      'pages.blog.name': 'Blog',
+      'pages.projects.name': 'Projetos',
+      'pages.tips.name': 'Dicas',
+      'pages.travels.name': 'Viagens',
+
+      // Páginas
+      'pages.home.title': 'Marquinhus Gonçalves - Software Engineer',
+      'pages.home.description':
+        'Oi! Sou o Marquinhus Gonçalves, engenheiro de software.',
+      'pages.home.profile.text1':
+        'Oi !!! sou o Marquinhus Gonçalves, engenheiro de software, curto viajar, escutar música, estudar, praticar esportes, tocar guitarra e violão.',
+      'pages.home.profile.text2':
+        'Apaixonado por tecnologia, gosto de solucionar problemas e para me manter atualizado na área leio artigos, vou a eventos, conferências e meetups sobre temas relacionados.',
+
+      'pages.about.title': 'Sobre Mim',
+      'pages.about.content':
+        'Bom meu nome é Marcus Vinicius Gonçalves sou nascido e criado em São Bernardo do Campo / SP. Com 14 anos ganhei meu primeiro computador, um 486, com o na época recente Windows 3.11, que ainda não era um sistema operacional e rodava no DOS. A tela preta e a linha de comando linha de comando faziam eu ficar horas no computador, nem desligava. A internet ainda não tinha chego porém tinha <a href="https://pt.wikipedia.org/wiki/Bulletin_board_system" rel="noreferrer" target="_blank">BBS</a> e o acesso era discado como seria a internet. Alguns meses depois comecei o curso de informática na <a href="http://www.sos.com.br" rel="noreferrer" target="_blank">S.O.S Computadores</a> onde tirei nota máxima em todos os cursos e ainda recebi o convite de dar aulas, a paixão só aumentou e meu conhecimento também. Junto ao ensino médio estudei técnico em Informática no <a href="http://www.portalanchieta.com.br" rel="noreferrer" target="_blank">Colégio Anchieta</a> fui bolsista integral, onde tive bastante contato com Hardware e Programação, então nem tive dúvidas do que estudar na faculdade, Ciência da Computação na <a href="http://portal.metodista.br" rel="noreferrer" target="_blank">Universidade Metodista</a> passei entre os 20 primeiros e fui bolsista. E como a vida são cheias de surpresas, minha minha vida mudou totalmente mesmo amando o que estudava tive difuldades com algumas matérias acabei pegando DP´s, perdendo a bolsa e nesse tempo já procurava emprego mas a dificuldade de conseguir emprego na área e os salários de estágio eram baixos e não pagavam a mensalidade, acabei indo para o comércio e trancando meus estudos. Foram mais de 10 anos totalmente fora da área. Nesse período trabalhei na <a href="http://www.tentbeach.com.br" rel="noreferrer" target="_blank">Tent Beach</a> (não vou comentar toda história porque seria muito longa), mas resumindo fui muito feliz tive diversas promoções, premiações, fiz muitas amizades e cresci muito como pessoa, mas chegou uma hora que eu queria crescer mais profissionalmente, foi então que resolvi voltar para área porém estava totalmente desatualizado. Primeira coisa que fiz foi, matricular na faculdade, dessa vez na <a href="http://www.anhembi.br" rel="noreferrer" target="_blank">Anhembi Morumbi</a> no curso de Análise e Desenvolvimento de Sistemas. Hoje sou formado e atuando como engenheiro de software, estudando muito, fazendo muitos cursos e participando de vários eventos da área, inclusive esse blog é um motivo para eu estudar mais e sempre estar buscando as novas tecnologias, novos métodos, testando o que há de novo no mercado ampliando meu network e me divertindo. Curto música pra c... toco violão, guitarra e percurssão. Curto muito praticar esportes correr, nadar, pedalar, bate uma bola, academia, surf, skate, patins e sou fascinado por esportes radicais. Leitura, filmes e séries sempre que sobra um tempo.',
+
+      'pages.blog.title': 'Blog',
+      'pages.blog.description':
+        'Artigos sobre desenvolvimento web, tecnologia e experiências pessoais. Compartilhando conhecimento e aprendizado na área de software.',
+
+      'pages.projects.title': 'Projetos',
+      'pages.projects.description':
+        'Portfólio de projetos desenvolvidos por Marquinhus Gonçalves.',
+
+      'pages.tips.title': 'Dicas',
+      'pages.tips.content': 'Aqui você encontrará dicas valiosas gerais.',
+
+      'pages.travels.title': 'Viagens e Experiências',
+      'pages.travels.content':
+        'Compartilho aqui minhas experiências de viagem e as lições que aprendi pelo caminho.',
+
+      // Componentes
+      'components.comments.title': 'Comentários',
+      'components.relatedPosts.title': 'Posts Relacionados',
+
+      // Páginas de erro
+      'pages.notFound.title': '404 - Página não encontrada',
+      'pages.notFound.seoTitle': 'Página não encontrada',
+      'pages.notFound.photoBy': 'Foto por',
+      'pages.notFound.on': 'em',
+
+      // Componentes de post
+      'components.postInfo.readingTime': 'min de leitura',
+      'components.postInfo.publishedOn': 'Publicado em',
+      'components.postInfo.updatedOn': 'Atualizado em',
+      'components.postInfo.author': 'Por',
+      'components.postInfo.readMore': 'Ler mais',
+      'components.postInfo.backToList': 'Voltar à lista',
+
+      // Componentes de compartilhamento
+      'components.shareButton.linkCopied': 'Link copiado!',
+      'components.shareButton.shareOnFacebook': 'Compartilhar no Facebook',
+      'components.shareButton.shareOnTwitter': 'Compartilhar no Twitter',
+      'components.shareButton.shareOnLinkedIn': 'Compartilhar no LinkedIn',
+      'components.shareButton.shareOnReddit': 'Compartilhar no Reddit',
+      'components.shareButton.shareOnTelegram': 'Compartilhar no Telegram',
+      'components.shareButton.copyLink': 'Copiar link',
+
+      // Componentes de compartilhamento (ShareButtons)
+      'components.shareButtons.title': 'Compartilhe este conteúdo:',
+      'components.shareButtons.facebook': 'Facebook',
+      'components.shareButtons.twitter': 'Twitter',
+      'components.shareButtons.linkedin': 'LinkedIn',
+      'components.shareButtons.whatsapp': 'WhatsApp',
+      'components.shareButtons.email': 'Email',
+      'components.shareButtons.reddit': 'Reddit',
+      'components.shareButtons.telegram': 'Telegram',
+      'components.shareButtons.copyLink': 'Copiar Link',
+      'components.shareButtons.copied': 'Copiado!',
+      'components.shareButtons.linkCopiedMessage':
+        'Link copiado para a área de transferência!',
+
+      // Textos de email
+      'components.shareButtons.emailSubject': 'Confira:',
+      'components.shareButtons.emailBody': 'Leia mais em:',
+
+      // Componente de busca
+      'components.search.openSearch': 'Abrir busca',
+      'components.search.closeSearch': 'Fechar busca',
+      'components.search.placeholder': 'Buscar posts, projetos, dicas...',
+      'components.search.filters.all': 'Todos',
+      'components.search.filters.blog': 'Blog',
+      'components.search.filters.projects': 'Projetos',
+      'components.search.filters.tips': 'Dicas',
+      'components.search.filters.travels': 'Viagens',
+
+      // Nomes das coleções
+      'collections.blog': 'Blog',
+      'collections.projects': 'Projetos',
+      'collections.tips': 'Dicas',
+      'collections.travels': 'Viagens',
+      'components.search.emptyState.minChars':
+        'Digite pelo menos 2 caracteres para buscar...',
+      'components.search.emptyState.noResults':
+        'Nenhum resultado encontrado para',
+      'components.search.resultsCount.singular': 'resultado encontrado',
+      'components.search.resultsCount.plural': 'resultados encontrados',
+
+      // Componente de links sociais
+      'components.socialLinks.email': 'E-mail',
+      'components.socialLinks.linkedin': 'LinkedIn',
+      'components.socialLinks.twitter': 'Twitter',
+      'components.socialLinks.github': 'GitHub',
+      'components.socialLinks.facebook': 'Facebook',
+      'components.socialLinks.instagram': 'Instagram',
+      'components.socialLinks.rssFeed': 'RSS Feed',
+
+      // Componente Avatar
+      'components.avatar.alt': 'Marquinhus Gonçalves',
+
+      // Template de tag
+      'components.tag.foundWithTag': 'encontrado com a tag',
+      'components.tag.foundWithTagPlural': 'encontrados com a tag',
+      'components.tag.noPostsFound': 'Nenhum post encontrado com esta tag.',
+
+      // Componente TagCloud
+      'components.tagCloud.popularTags': 'Tags populares',
+      'components.tagCloud.popularBlogTags': 'Tags populares do blog',
+      'components.tagCloud.popularProjectTags': 'Tags populares dos projetos',
+
+      // Navegação entre posts
+      'components.postNavigation.previous': 'Post anterior',
+      'components.postNavigation.next': 'Próximo post',
+      'components.postNavigation.backToBlog': 'Voltar ao blog',
+      'components.postNavigation.backToProjects': 'Voltar aos projetos',
+
+      // SEO
+      'seo.about.title': 'Sobre - Marquinhus Gonçalves',
+      'seo.about.description':
+        'Conheça mais sobre Marquinhus Gonçalves, engenheiro de software.',
+      'seo.blog.title': 'Blog - Marquinhus Gonçalves',
+      'seo.blog.description':
+        'Artigos sobre desenvolvimento web, tecnologia e experiências pessoais. Compartilhando conhecimento e aprendizado na área de software.',
+      'seo.projects.title': 'Projetos - Marquinhus Gonçalves',
+      'seo.projects.description':
+        'Portfólio de projetos desenvolvidos por Marquinhus Gonçalves.',
+    },
+  },
+  en: {
+    translation: {
+      // Menu
+      'menu.home': 'Home',
+      'menu.about': 'About',
+      'menu.blog': 'Blog',
+      'menu.projects': 'Projects',
+      'menu.tips': 'Tips',
+      'menu.travels': 'Travels',
+
+      // Nomes das páginas
+      'pages.home.name': 'Home',
+      'pages.about.name': 'About',
+      'pages.blog.name': 'Blog',
+      'pages.projects.name': 'Projects',
+      'pages.tips.name': 'Tips',
+      'pages.travels.name': 'Travels',
+
+      // Páginas
+      'pages.home.title': 'Marquinhus Gonçalves - Software Engineer',
+      'pages.home.description':
+        "Hi! I'm Marquinhus Gonçalves, a software engineer.",
+      'pages.home.profile.text1':
+        "Hi!!! I'm Marquinhus Gonçalves, a software engineer, I love traveling, listening to music, studying, practicing sports, playing guitar and acoustic guitar .",
+      'pages.home.profile.text2':
+        'Passionate about technology, I like solving problems and to keep myself updated in the area I read articles, go to events, conferences and meetups on related topics.',
+
+      'pages.about.title': 'About Me',
+      'pages.about.content':
+        'Hello! My name is Marcus Vinicius Gonçalves, I was born and raised in São Bernardo do Campo / SP. At 14 years old I got my first computer, a 486, with the then recent Windows 3.11, which was not yet an operating system and ran on DOS. The black screen and command line made me spend hours on the computer, I wouldn\'t even turn it off. The internet hadn\'t arrived yet but there were <a href="https://pt.wikipedia.org/wiki/Bulletin_board_system" rel="noreferrer" target="_blank">BBS</a> and access was dial-up like the internet would be. A few months later I started the computer course at <a href="http://www.sos.com.br" rel="noreferrer" target="_blank">S.O.S Computadores</a> where I got top grades in all courses and even received an invitation to teach, the passion only increased and so did my knowledge. Along with high school I studied Computer Technician at <a href="http://www.portalanchieta.com.br" rel="noreferrer" target="_blank">Colégio Anchieta</a> where I was a full scholarship student, where I had a lot of contact with Hardware and Programming, so I had no doubts about what to study in college, Computer Science at <a href="http://portal.metodista.br" rel="noreferrer" target="_blank">Universidade Metodista</a> where I was among the top 20 and was a scholarship student. And as life is full of surprises, my life changed completely even though I loved what I was studying I had difficulties with some subjects and ended up getting failing grades, losing the scholarship and at that time I was already looking for a job but the difficulty of getting a job in the area and the internship salaries were low and didn\'t pay the tuition, I ended up going into commerce and putting my studies on hold. It was more than 10 years completely out of the field. During this period I worked at <a href="http://www.tentbeach.com.br" rel="noreferrer" target="_blank">Tent Beach</a> (I won\'t comment on the whole story because it would be too long), but in summary I was very happy, had several promotions, awards, made many friends and grew a lot as a person, but there came a time when I wanted to grow more professionally, so I decided to return to the field but I was completely outdated. The first thing I did was enroll in college, this time at <a href="http://www.anhembi.br" rel="noreferrer" target="_blank">Anhembi Morumbi</a> in the Systems Analysis and Development course. Today I am graduated and working as a software engineer, studying a lot, taking many courses and participating in several events in the area, including this blog is a reason for me to study more and always be seeking new technologies, new methods, testing what\'s new in the market expanding my network and having fun. I love music, I play guitar, guitar and percussion. I really like practicing sports running, swimming, cycling, playing ball, gym, surfing, skating, rollerblading and I\'m fascinated by extreme sports. Reading, movies and series whenever there\'s time left.',
+
+      'pages.blog.title': 'Blog',
+      'pages.blog.description':
+        'Articles about web development, technology and personal experiences. Sharing knowledge and learning in the software area.',
+
+      'pages.projects.title': 'Projects',
+      'pages.projects.description':
+        'Portfolio of projects developed by Marquinhus Gonçalves.',
+
+      'pages.tips.title': 'Tips',
+      'pages.tips.content': 'Here you will find valuable general tips.',
+
+      'pages.travels.title': 'Travels and Experiences',
+      'pages.travels.content':
+        'I share here my travel experiences and the lessons I learned along the way.',
+
+      // Componentes
+      'components.comments.title': 'Comments',
+      'components.relatedPosts.title': 'Related Posts',
+
+      // Páginas de erro
+      'pages.notFound.title': '404 - Page not found',
+      'pages.notFound.seoTitle': 'Page not found',
+      'pages.notFound.photoBy': 'Photo by',
+      'pages.notFound.on': 'on',
+
+      // Componentes de post
+      'components.postInfo.readingTime': 'min read',
+      'components.postInfo.publishedOn': 'Published on',
+      'components.postInfo.updatedOn': 'Updated on',
+      'components.postInfo.author': 'By',
+      'components.postInfo.readMore': 'Read more',
+      'components.postInfo.backToList': 'Back to list',
+
+      // Componentes de compartilhamento
+      'components.shareButton.linkCopied': 'Link copied!',
+      'components.shareButton.shareOnFacebook': 'Share on Facebook',
+      'components.shareButton.shareOnTwitter': 'Share on Twitter',
+      'components.shareButton.shareOnLinkedIn': 'Share on LinkedIn',
+      'components.shareButton.shareOnReddit': 'Share on Reddit',
+      'components.shareButton.shareOnTelegram': 'Share on Telegram',
+      'components.shareButton.copyLink': 'Copy link',
+
+      // Componentes de compartilhamento (ShareButtons)
+      'components.shareButtons.title': 'Share this content:',
+      'components.shareButtons.facebook': 'Facebook',
+      'components.shareButtons.twitter': 'Twitter',
+      'components.shareButtons.linkedin': 'LinkedIn',
+      'components.shareButtons.whatsapp': 'WhatsApp',
+      'components.shareButtons.email': 'Email',
+      'components.shareButtons.reddit': 'Reddit',
+      'components.shareButtons.telegram': 'Telegram',
+      'components.shareButtons.copyLink': 'Copy Link',
+      'components.shareButtons.copied': 'Copied!',
+      'components.shareButtons.linkCopiedMessage': 'Link copied to clipboard!',
+
+      // Textos de email
+      'components.shareButtons.emailSubject': 'Check out:',
+      'components.shareButtons.emailBody': 'Read more at:',
+
+      // Componente de busca
+      'components.search.openSearch': 'Open search',
+      'components.search.closeSearch': 'Close search',
+      'components.search.placeholder': 'Search posts, projects, tips...',
+      'components.search.filters.all': 'All',
+      'components.search.filters.blog': 'Blog',
+      'components.search.filters.projects': 'Projects',
+      'components.search.filters.tips': 'Tips',
+      'components.search.filters.travels': 'Travels',
+
+      // Nomes das coleções
+      'collections.blog': 'Blog',
+      'collections.projects': 'Projects',
+      'collections.tips': 'Tips',
+      'collections.travels': 'Travels',
+      'components.search.emptyState.minChars':
+        'Type at least 2 characters to search...',
+      'components.search.emptyState.noResults': 'No results found for',
+      'components.search.resultsCount.singular': 'result found',
+      'components.search.resultsCount.plural': 'results found',
+
+      // Componente de links sociais
+      'components.socialLinks.email': 'Email',
+      'components.socialLinks.linkedin': 'LinkedIn',
+      'components.socialLinks.twitter': 'Twitter',
+      'components.socialLinks.github': 'GitHub',
+      'components.socialLinks.facebook': 'Facebook',
+      'components.socialLinks.instagram': 'Instagram',
+      'components.socialLinks.rssFeed': 'RSS Feed',
+
+      // Componente Avatar
+      'components.avatar.alt': 'Marquinhus Gonçalves',
+
+      // Template de tag
+      'components.tag.foundWithTag': 'found with tag',
+      'components.tag.foundWithTagPlural': 'found with tag',
+      'components.tag.noPostsFound': 'No posts found with this tag.',
+
+      // Componente TagCloud
+      'components.tagCloud.popularTags': 'Popular tags',
+      'components.tagCloud.popularBlogTags': 'Popular blog tags',
+      'components.tagCloud.popularProjectTags': 'Popular project tags',
+
+      // Navegação entre posts
+      'components.postNavigation.previous': 'Previous post',
+      'components.postNavigation.next': 'Next post',
+      'components.postNavigation.backToBlog': 'Back to blog',
+      'components.postNavigation.backToProjects': 'Back to projects',
+
+      // SEO
+      'seo.about.title': 'About - Marquinhus Gonçalves',
+      'seo.about.description':
+        'Learn more about Marquinhus Gonçalves, software engineer.',
+      'seo.blog.title': 'Blog - Marquinhus Gonçalves',
+      'seo.blog.description':
+        'Articles about web development, technology and personal experiences. Sharing knowledge and learning in the software area.',
+      'seo.projects.title': 'Projects - Marquinhus Gonçalves',
+      'seo.projects.description':
+        'Portfolio of projects developed by Marquinhus Gonçalves.',
+    },
+  },
+};
+
+i18n.use(initReactI18next).init({
+  resources,
+  lng: 'pt',
+  fallbackLng: 'pt',
+  interpolation: {
+    escapeValue: false,
+  },
+});
+
+export default i18n;

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Favorite } from '@styled-icons/material/Favorite';
-import media from 'styled-media-query';
 
 export const Footer = styled.footer`
   display: flex;
@@ -11,16 +10,16 @@ export const Footer = styled.footer`
   height: 2.5rem;
   border-top: 1px solid var(--color-border);
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     padding: 1rem;
     text-align: center;
     height: auto;
     min-height: 2.5rem;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     padding: 0.75rem;
-  `}
+  }
 `;
 
 export const HeartIcon = styled(Favorite)`

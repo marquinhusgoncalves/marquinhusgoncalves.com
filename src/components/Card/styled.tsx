@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import media from 'styled-media-query';
 
 export const CardWrapper = styled.div`
   display: flex;
@@ -29,18 +28,18 @@ const Card = `
     transform: translateY(-2px);
   }
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     flex-direction: column;
     padding: 1rem;
     margin: 0.5rem 0;
     min-height: 6rem;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     padding: 0.75rem;
     margin: 0.25rem 0;
     min-height: 5rem;
-  `}
+  }
 `;
 
 export const CardLink = styled(Link)`
@@ -55,25 +54,25 @@ export const CardTitle = styled.h1`
   font-weight: 900;
   color: var(--color-text);
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     font-size: 1.1rem;
     text-align: center;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     font-size: 1rem;
-  `}
+  }
 `;
 
 export const CardDescription = styled.p`
   color: var(--color-text-secondary);
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     font-size: 0.9rem;
     text-align: center;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     font-size: 0.85rem;
-  `}
+  }
 `;

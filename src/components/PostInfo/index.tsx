@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 import * as S from './styled';
 
@@ -9,11 +10,15 @@ const PostInfo = ({
 }: {
   date: string;
   timeToRead: string;
-}) => (
-  <S.PostInfo>
-    {date} • {timeToRead} min de leitura
-  </S.PostInfo>
-);
+}) => {
+  const { t } = useTranslation();
+
+  return (
+    <S.PostInfo>
+      {date} • {timeToRead} {t('components.postInfo.readingTime')}
+    </S.PostInfo>
+  );
+};
 
 PostInfo.propTypes = {
   date: PropTypes.string.isRequired,

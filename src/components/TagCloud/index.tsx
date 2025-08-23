@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
+import { useTranslation } from 'react-i18next';
 import * as S from './styled';
 
 interface TagCloudProps {
@@ -7,6 +8,7 @@ interface TagCloudProps {
 }
 
 const TagCloud: React.FC<TagCloudProps> = ({ collection = 'all' }) => {
+  const { t } = useTranslation();
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query GetAllTags {
       allMarkdownRemark {
@@ -55,10 +57,10 @@ const TagCloud: React.FC<TagCloudProps> = ({ collection = 'all' }) => {
     <S.TagCloudContainer>
       <S.TagCloudTitle>
         {collection === 'all'
-          ? 'Tags populares'
+          ? t('components.tagCloud.popularTags')
           : collection === 'posts'
-            ? 'Tags populares do blog'
-            : 'Tags populares dos projetos'}
+            ? t('components.tagCloud.popularBlogTags')
+            : t('components.tagCloud.popularProjectTags')}
       </S.TagCloudTitle>
       <S.TagList>
         {sortedTags.map(([tag, count]) => (

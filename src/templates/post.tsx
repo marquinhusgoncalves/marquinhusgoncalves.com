@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import { HeadFC, graphql } from 'gatsby';
+import { HeadFC, PageProps, graphql } from 'gatsby';
+import { useTranslation } from 'react-i18next';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Titles from '../components/Titles';
@@ -13,11 +14,37 @@ import ShareButtons from '../components/ShareButtons';
 import { MainContent } from '../styles/base';
 import * as S from './post.styled';
 
-const Post = (props: any) => {
+interface PostContext {
+  slug: string;
+  next: any;
+  previous: any;
+  language: string;
+}
+
+interface PostData {
+  markdownRemark: {
+    frontmatter: {
+      title: string;
+      date: string;
+      slug: string;
+    };
+    timeToRead: number;
+    html: string;
+  };
+}
+
+const Post: React.FC<PageProps<PostData, PostContext>> = (props) => {
+  const { t, i18n } = useTranslation();
   const {
     data: { markdownRemark },
-    pageContext: { slug, next, previous },
+    pageContext: { slug, next, previous, language },
   } = props;
+
+  React.useEffect(() => {
+    if (language && i18n.language !== language) {
+      i18n.changeLanguage(language);
+    }
+  }, [language, i18n]);
 
   const {
     frontmatter: { title, date },
@@ -27,7 +54,7 @@ const Post = (props: any) => {
 
   const nextPost = next && {
     fields: {
-      slug: `/blog${next.fields.slug}`,
+      slug: `${language === 'en' ? '/en' : ''}/blog${next.fields.slug}`,
     },
     frontmatter: {
       title: next.frontmatter.title,
@@ -36,7 +63,7 @@ const Post = (props: any) => {
 
   const previousPost = previous && {
     fields: {
-      slug: `/blog${previous.fields.slug}`,
+      slug: `${language === 'en' ? '/en' : ''}/blog${previous.fields.slug}`,
     },
     frontmatter: {
       title: previous.frontmatter.title,
@@ -47,14 +74,14 @@ const Post = (props: any) => {
     <Layout>
       <S.PostContainer>
         <Titles title={title} />
-        <PostInfo date={date} timeToRead={timeToRead} />
+        <PostInfo date={date} timeToRead={timeToRead.toString()} />
         <MainContent>
           {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </MainContent>
 
         <ShareButtons
-          url={`/blog${slug}`}
+          url={`${language === 'en' ? '/en' : ''}/blog${slug}`}
           title={title}
           description={`Post sobre ${title} - Blog de Marquinhus Gonçalves`}
           hashtags={[]}
@@ -63,7 +90,10 @@ const Post = (props: any) => {
 
         <AdsenseArticle />
         <RelatedPosts next={nextPost} previous={previousPost} />
-        <Comments url={`/blog${slug}`} title={title} />
+        <Comments
+          url={`${language === 'en' ? '/en' : ''}/blog${slug}`}
+          title={title}
+        />
       </S.PostContainer>
     </Layout>
   );
@@ -85,16 +115,17 @@ export const query = graphql`
 
 export default Post;
 
-export const Head: HeadFC = ({ data }: any) => {
+export const Head: HeadFC<PostData, PostContext> = ({ data, pageContext }) => {
   const title = data?.markdownRemark?.frontmatter?.title || 'Post';
   const date = data?.markdownRemark?.frontmatter?.date;
   const slug = data?.markdownRemark?.frontmatter?.slug;
+  const { language } = pageContext;
 
   return (
     <SEO
       title={title}
       type="article"
-      url={`https://www.marquinhusgoncalves.com/blog${slug}`}
+      url={`https://www.marquinhusgoncalves.com${language === 'en' ? '/en' : ''}/blog${slug}`}
       author="Marquinhus Gonçalves"
       datePublished={date}
       dateModified={date}

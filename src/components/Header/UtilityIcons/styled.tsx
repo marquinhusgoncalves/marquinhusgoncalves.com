@@ -30,11 +30,6 @@ export const UtilityButton = styled.button`
     background-color: var(--color-overlay-heavy);
     border-color: var(--color-overlay-heavy);
   }
-
-  &:focus {
-    outline: 2px solid var(--color-overlay-heavy);
-    outline-offset: 2px;
-  }
 `;
 
 export const MoonIcon = styled(Moon)`

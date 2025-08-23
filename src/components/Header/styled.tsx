@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import media from 'styled-media-query';
 
 // eslint-disable-next-line import/prefer-default-export
 export const HeaderWrapped = styled.header`
@@ -16,10 +15,10 @@ export const HeaderTop = styled.div`
   justify-content: space-between;
   margin-bottom: 1rem;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     flex-direction: column;
     gap: 1rem;
-  `}
+  }
 `;
 
 export const HeaderLeft = styled.div`
@@ -32,20 +31,20 @@ export const HeaderCenter = styled.div`
   align-items: center;
   gap: 1rem;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     flex-direction: column;
     gap: 0.5rem;
-  `}
+  }
 `;
 
 export const HeaderRight = styled.div`
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     gap: 0.5rem;
-  `}
+  }
 `;
 
 export const HeaderBottom = styled.div`
@@ -83,10 +82,5 @@ export const UtilityButton = styled.button`
     transform: scale(1.05);
     background-color: var(--color-overlay-heavy);
     border-color: var(--color-overlay-heavy);
-  }
-
-  &:focus {
-    outline: 2px solid var(--color-overlay-heavy);
-    outline-offset: 2px;
   }
 `;

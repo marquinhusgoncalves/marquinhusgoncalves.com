@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import { HeadFC, graphql } from 'gatsby';
+import { HeadFC, PageProps, graphql } from 'gatsby';
+import { useTranslation } from 'react-i18next';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Titles from '../components/Titles';
@@ -10,13 +11,40 @@ import TagCloud from '../components/TagCloud';
 
 import * as S from '../styles/pages/blog.styled';
 
-const Blog = ({ data }: any) => {
+interface BlogPageContext {
+  language: string;
+}
+
+interface BlogData {
+  allMarkdownRemark: {
+    edges: Array<{
+      node: {
+        frontmatter: {
+          title: string;
+          slug: string;
+        };
+      };
+    }>;
+  };
+}
+
+const Blog: React.FC<PageProps<BlogData, BlogPageContext>> = ({
+  data,
+  pageContext,
+}) => {
+  const { t, i18n } = useTranslation();
   const postList = data.allMarkdownRemark.edges;
+
+  React.useEffect(() => {
+    if (pageContext?.language && i18n.language !== pageContext.language) {
+      i18n.changeLanguage(pageContext.language);
+    }
+  }, [pageContext?.language, i18n]);
 
   return (
     <Layout>
       <S.BlogContainer>
-        <Titles title="Blog" />
+        <Titles title={t('pages.blog.title')} />
         {postList.map(
           ({
             node: {
@@ -55,13 +83,21 @@ export const query = graphql`
 
 export default Blog;
 
-export const Head: HeadFC = () => {
+export const Head: HeadFC<BlogData, BlogPageContext> = ({ pageContext }) => {
+  const { t, i18n } = useTranslation();
+
+  React.useEffect(() => {
+    if (pageContext?.language && i18n.language !== pageContext.language) {
+      i18n.changeLanguage(pageContext.language);
+    }
+  }, [pageContext?.language, i18n]);
+
   return (
     <SEO
-      title="Blog - Marquinhus Gonçalves"
-      description="Artigos sobre desenvolvimento web, tecnologia e experiências pessoais. Compartilhando conhecimento e aprendizado na área de software."
+      title={t('seo.blog.title')}
+      description={t('seo.blog.description')}
       type="website"
-      url="https://www.marquinhusgoncalves.com/blog"
+      url={`https://www.marquinhusgoncalves.com${pageContext?.language === 'en' ? '/en' : ''}/blog`}
     />
   );
 };

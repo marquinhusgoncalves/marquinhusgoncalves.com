@@ -1,23 +1,22 @@
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Avatar from '../Avatar';
 
 import * as S from './styled';
 
 const Profile: React.FC = () => {
+  const { t } = useTranslation();
+  
   return (
     <S.ProfileWrapper>
       <Avatar />
       <S.ProfileTextWrapper>
         <S.ProfileText>
-          Oi !!! sou o Marquinhus Gonçalves, engenheiro de software, curto
-          viajar, escutar música, estudar, praticar esportes, tocar guitarra e
-          violão.
+          {t('pages.home.profile.text1')}
         </S.ProfileText>
         <S.ProfileText>
-          Apaixonado por tecnologia, gosto de solucionar problemas e para me
-          manter atualizado na área leio artigos, vou a eventos, conferências e
-          meetups sobre temas relacionados.
+          {t('pages.home.profile.text2')}
         </S.ProfileText>
       </S.ProfileTextWrapper>
     </S.ProfileWrapper>

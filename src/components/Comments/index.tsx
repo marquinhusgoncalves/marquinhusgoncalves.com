@@ -1,5 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 import ReactDisqusComments from 'react-disqus-comments';
 
 import Titles from '../Titles';
@@ -7,10 +8,11 @@ import Titles from '../Titles';
 import * as S from './styled';
 
 const Comments = ({ url, title }: { url: string; title: string }) => {
+  const { t } = useTranslation();
   const completeURL = `https://marquinhusgoncalves.com${url}`;
   return (
     <S.CommentsWrapper>
-      <Titles title="Comentários" />
+      <Titles title={t('components.comments.title')} />
       <ReactDisqusComments
         shortname="marquinhusgoncalves"
         identifier={completeURL}

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import media from 'styled-media-query';
 
 // eslint-disable-next-line import/prefer-default-export
 export const Titles = styled.h1`
@@ -15,13 +14,13 @@ export const Titles = styled.h1`
     margin-top: 1rem;
   }
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     font-size: 2rem;
     margin-bottom: 1rem;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     font-size: 1.75rem;
     margin-bottom: 0.75rem;
-  `}
+  }
 `;

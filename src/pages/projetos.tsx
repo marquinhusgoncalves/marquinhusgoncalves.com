@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import { HeadFC, graphql } from 'gatsby';
+import { HeadFC, PageProps, graphql } from 'gatsby';
+import { useTranslation } from 'react-i18next';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Titles from '../components/Titles';
@@ -10,12 +11,40 @@ import TagCloud from '../components/TagCloud';
 
 import * as S from '../styles/pages/projetos.styled';
 
-const Projetos = ({ data }: any) => {
+interface ProjetosPageContext {
+  language: string;
+}
+
+interface ProjetosData {
+  allMarkdownRemark: {
+    edges: Array<{
+      node: {
+        frontmatter: {
+          title: string;
+          description: string;
+          href: string;
+        };
+      };
+    }>;
+  };
+}
+
+const Projetos: React.FC<PageProps<ProjetosData, ProjetosPageContext>> = ({
+  data,
+  pageContext,
+}) => {
+  const { t, i18n } = useTranslation();
   const projectsList = data.allMarkdownRemark.edges;
+
+  React.useEffect(() => {
+    if (pageContext?.language && i18n.language !== pageContext.language) {
+      i18n.changeLanguage(pageContext.language);
+    }
+  }, [pageContext?.language, i18n]);
   return (
     <Layout>
       <S.ProjetosContainer>
-        <Titles title="Projetos" />
+        <Titles title={t('pages.projects.title')} />
         {projectsList.map(
           ({
             node: {
@@ -62,13 +91,23 @@ export const query = graphql`
 
 export default Projetos;
 
-export const Head: HeadFC = () => {
+export const Head: HeadFC<ProjetosData, ProjetosPageContext> = ({
+  pageContext,
+}) => {
+  const { t, i18n } = useTranslation();
+
+  React.useEffect(() => {
+    if (pageContext?.language && i18n.language !== pageContext.language) {
+      i18n.changeLanguage(pageContext.language);
+    }
+  }, [pageContext?.language, i18n]);
+
   return (
     <SEO
-      title="Projetos - Marquinhus Gonçalves"
-      description="Portfólio de projetos desenvolvidos por Marquinhus Gonçalves."
+      title={t('seo.projects.title')}
+      description={t('seo.projects.description')}
       type="organization"
-      url="https://www.marquinhusgoncalves.com/projetos"
+      url={`https://www.marquinhusgoncalves.com${pageContext?.language === 'en' ? '/en' : ''}/projetos`}
     />
   );
 };

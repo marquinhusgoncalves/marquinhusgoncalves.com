@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import Fuse from 'fuse.js';
+import { useTranslation } from 'react-i18next';
 import * as S from './styled';
 
 interface SearchResult {
@@ -16,6 +17,7 @@ interface SearchResult {
 }
 
 const Search: React.FC = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [selectedCollection, setSelectedCollection] = useState<string>('all');
@@ -121,10 +123,10 @@ const Search: React.FC = () => {
 
   const getCollectionName = (collection: string) => {
     const collectionNames: Record<string, string> = {
-      posts: 'Blog',
-      projects: 'Projetos',
-      dicas: 'Dicas',
-      viagens: 'Viagens',
+      posts: t('collections.blog'),
+      projects: t('collections.projects'),
+      dicas: t('collections.tips'),
+      viagens: t('collections.travels'),
     };
     return collectionNames[collection] || collection;
   };
@@ -160,7 +162,7 @@ const Search: React.FC = () => {
     <S.SearchContainer ref={searchRef}>
       <S.SearchButton
         onClick={handleToggleSearch}
-        aria-label="Abrir busca"
+        aria-label={t('components.search.openSearch')}
         type="button"
         className={isOpen ? 'active' : ''}
       >
@@ -172,14 +174,14 @@ const Search: React.FC = () => {
           <S.SearchBar>
             <S.SearchInput
               type="text"
-              placeholder="Buscar posts, projetos, dicas..."
+              placeholder={t('components.search.placeholder')}
               value={query}
               onChange={(e) => handleSearch(e.target.value)}
               autoFocus
             />
             <S.CloseButton
               onClick={() => setIsOpen(false)}
-              aria-label="Fechar busca"
+              aria-label={t('components.search.closeSearch')}
               type="button"
             >
               ✕
@@ -191,48 +193,50 @@ const Search: React.FC = () => {
               active={selectedCollection === 'all'}
               onClick={() => setSelectedCollection('all')}
             >
-              Todos
+              {t('components.search.filters.all')}
             </S.FilterButton>
             <S.FilterButton
               active={selectedCollection === 'posts'}
               onClick={() => setSelectedCollection('posts')}
             >
-              Blog
+              {t('components.search.filters.blog')}
             </S.FilterButton>
             <S.FilterButton
               active={selectedCollection === 'projects'}
               onClick={() => setSelectedCollection('projects')}
             >
-              Projetos
+              {t('components.search.filters.projects')}
             </S.FilterButton>
             <S.FilterButton
               active={selectedCollection === 'dicas'}
               onClick={() => setSelectedCollection('dicas')}
             >
-              Dicas
+              {t('components.search.filters.tips')}
             </S.FilterButton>
             <S.FilterButton
               active={selectedCollection === 'viagens'}
               onClick={() => setSelectedCollection('viagens')}
             >
-              Viagens
+              {t('components.search.filters.travels')}
             </S.FilterButton>
           </S.CollectionFilters>
 
           <S.SearchResults>
             {query.trim().length < 2 ? (
               <S.EmptyState>
-                Digite pelo menos 2 caracteres para buscar...
+                {t('components.search.emptyState.minChars')}
               </S.EmptyState>
             ) : results.length === 0 ? (
               <S.EmptyState>
-                Nenhum resultado encontrado para "{query}"
+                {t('components.search.emptyState.noResults')} "{query}"
               </S.EmptyState>
             ) : (
               <>
                 <S.ResultsCount>
-                  {results.length} resultado{results.length !== 1 ? 's' : ''}{' '}
-                  encontrado{results.length !== 1 ? 's' : ''}
+                  {results.length}{' '}
+                  {results.length !== 1
+                    ? t('components.search.resultsCount.plural')
+                    : t('components.search.resultsCount.singular')}
                 </S.ResultsCount>
                 {results.map((result) => (
                   <S.ResultItem key={result.id}>

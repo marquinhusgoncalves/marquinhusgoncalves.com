@@ -7,6 +7,7 @@ import {
 } from 'react-share';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import * as S from './styled';
 
@@ -27,6 +28,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({
   via,
   size = 'medium',
 }) => {
+  const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
 
   const fullUrl = url.startsWith('http')
@@ -91,7 +93,9 @@ const ShareButton: React.FC<ShareButtonProps> = ({
         </S.IconButton>
       </CopyToClipboard>
 
-      {copied && <S.CopyTooltip>Link copiado!</S.CopyTooltip>}
+      {copied && (
+        <S.CopyTooltip>{t('components.shareButton.linkCopied')}</S.CopyTooltip>
+      )}
     </S.ShareButtonContainer>
   );
 };

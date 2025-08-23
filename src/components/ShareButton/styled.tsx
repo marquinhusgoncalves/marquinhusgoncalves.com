@@ -72,11 +72,6 @@ export const IconButton = styled.button<IconButtonProps>`
   &:active {
     transform: scale(0.95);
   }
-
-  &:focus {
-    outline: 2px solid var(--color-overlay-heavy);
-    outline-offset: 2px;
-  }
 `;
 
 // Ícones das redes sociais

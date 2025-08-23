@@ -1,19 +1,18 @@
 import styled from 'styled-components';
-import media from 'styled-media-query';
 import { Link } from 'gatsby';
 
 export const SiteTitleWrapped = styled.h1`
   font-size: 1.2rem;
   font-weight: 900;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     font-size: 1.6rem;
     margin-bottom: 0.5rem;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     margin-right: 3rem;
-  `}
+  }
 `;
 
 export const SiteTitleLink = styled(Link)`

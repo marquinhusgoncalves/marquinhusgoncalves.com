@@ -38,6 +38,41 @@ export const createPages: GatsbyNode['createPages'] = async ({
   actions,
 }) => {
   const { createPage } = actions;
+
+  const staticPages = [
+    { path: '/', template: path.resolve('./src/pages/index.tsx') },
+    { path: '/sobre', template: path.resolve('./src/pages/sobre.tsx') },
+    { path: '/blog', template: path.resolve('./src/pages/blog.tsx') },
+    { path: '/projetos', template: path.resolve('./src/pages/projetos.tsx') },
+    { path: '/dicas', template: path.resolve('./src/pages/dicas.tsx') },
+    { path: '/viagens', template: path.resolve('./src/pages/viagens.tsx') },
+  ];
+
+  staticPages.forEach(({ path, template }) => {
+    createPage({
+      path,
+      component: template,
+      context: { language: 'pt' },
+    });
+  });
+
+  staticPages.forEach(({ path, template }) => {
+    if (path !== '/') {
+      const enPath = `/en${path}`;
+      createPage({
+        path: enPath,
+        component: template,
+        context: { language: 'en' },
+      });
+    } else {
+      createPage({
+        path: '/en',
+        component: template,
+        context: { language: 'en' },
+      });
+    }
+  });
+
   const postsRequest = await graphql<Queries.Query>(`
     query GetAllPosts {
       allMarkdownRemark(filter: { fields: { collection: { eq: "posts" } } }) {
@@ -94,10 +129,39 @@ export const createPages: GatsbyNode['createPages'] = async ({
     }
   `);
 
+  const projectTemplate = path.resolve('./src/templates/post.tsx');
+  const projects = projectsRequest?.data?.allMarkdownRemark.edges;
+  projects?.forEach(({ node }) => {
+    const slug = (node?.fields as any)?.slug;
+
+    createPage({
+      path: `/projetos${slug}`,
+      component: projectTemplate,
+      ownerNodeId: node.id,
+      context: {
+        id: node.id,
+        slug,
+        language: 'pt',
+      },
+    });
+
+    createPage({
+      path: `/en/projetos${slug}`,
+      component: projectTemplate,
+      ownerNodeId: node.id,
+      context: {
+        id: node.id,
+        slug,
+        language: 'en',
+      },
+    });
+  });
+
   const blogTemplate = path.resolve('./src/templates/post.tsx');
   const posts = postsRequest?.data?.allMarkdownRemark.edges;
   posts?.forEach(({ node, next, previous }) => {
     const slug = (node?.fields as any)?.slug;
+
     createPage({
       path: `/blog${slug}`,
       component: blogTemplate,
@@ -107,6 +171,20 @@ export const createPages: GatsbyNode['createPages'] = async ({
         slug,
         previous: next,
         next: previous,
+        language: 'pt',
+      },
+    });
+
+    createPage({
+      path: `/en/blog${slug}`,
+      component: blogTemplate,
+      ownerNodeId: node.id,
+      context: {
+        id: node.id,
+        slug,
+        previous: next,
+        next: previous,
+        language: 'en',
       },
     });
   });

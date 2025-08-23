@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import media from 'styled-media-query';
 import {
   Facebook,
   Twitter,
@@ -18,15 +17,15 @@ export const ShareButtonsContainer = styled.div`
   border: 1px solid var(--color-border);
   text-align: center;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     margin: 1.5rem 0;
     padding: 1rem;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     margin: 1rem 0;
     padding: 0.75rem;
-  `}
+  }
 `;
 
 export const ShareTitle = styled.h3`
@@ -35,15 +34,15 @@ export const ShareTitle = styled.h3`
   font-size: 1.2rem;
   font-weight: 600;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     font-size: 1.1rem;
     margin-bottom: 1rem;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     font-size: 1rem;
     margin-bottom: 0.75rem;
-  `}
+  }
 `;
 
 export const ShareButtonsList = styled.div`
@@ -54,21 +53,21 @@ export const ShareButtonsList = styled.div`
   overflow-x: auto;
   padding: 0.5rem 0;
 
-  ${media.lessThan('large')`
+  @media (max-width: 1024px) {
     gap: 0.6rem;
-  `}
+  }
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     gap: 0.5rem;
     flex-wrap: nowrap;
     justify-content: center;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     gap: 0.4rem;
     flex-wrap: nowrap;
     justify-content: center;
-  `}
+  }
 `;
 
 interface ShareButtonProps {
@@ -131,34 +130,29 @@ export const ShareButton = styled.button<ShareButtonProps>`
     transform: translateY(0);
   }
 
-  &:focus {
-    outline: 2px solid var(--color-overlay-heavy);
-    outline-offset: 2px;
-  }
-
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     padding: 0.6rem;
     min-width: 48px;
     width: 48px;
     height: 48px;
     border-radius: 50%;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     padding: 0.5rem;
     min-width: 44px;
     width: 44px;
     height: 44px;
-  `}
+  }
 `;
 
 export const ShareButtonText = styled.span`
   font-weight: 500;
   color: inherit;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     display: none;
-  `}
+  }
 `;
 
 // Ícones das redes sociais
@@ -167,10 +161,10 @@ export const FacebookIcon = styled(Facebook)`
   height: 18px;
   color: inherit;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     width: 20px;
     height: 20px;
-  `}
+  }
 `;
 
 export const TwitterIcon = styled(Twitter)`
@@ -178,10 +172,10 @@ export const TwitterIcon = styled(Twitter)`
   height: 18px;
   color: inherit;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     width: 20px;
     height: 20px;
-  `}
+  }
 `;
 
 export const LinkedinIcon = styled(Linkedin)`
@@ -189,10 +183,10 @@ export const LinkedinIcon = styled(Linkedin)`
   height: 18px;
   color: inherit;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     width: 20px;
     height: 20px;
-  `}
+  }
 `;
 
 export const WhatsappIcon = styled(Whatsapp)`
@@ -200,10 +194,10 @@ export const WhatsappIcon = styled(Whatsapp)`
   height: 18px;
   color: inherit;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     width: 20px;
     height: 20px;
-  `}
+  }
 `;
 
 export const EmailIcon = styled(EmailOutline)`
@@ -211,10 +205,10 @@ export const EmailIcon = styled(EmailOutline)`
   height: 18px;
   color: inherit;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     width: 20px;
     height: 20px;
-  `}
+  }
 `;
 
 export const CopyIcon = styled(Copy)`
@@ -222,10 +216,10 @@ export const CopyIcon = styled(Copy)`
   height: 18px;
   color: inherit;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     width: 20px;
     height: 20px;
-  `}
+  }
 `;
 
 export const RedditIcon = styled(Reddit)`
@@ -233,10 +227,10 @@ export const RedditIcon = styled(Reddit)`
   height: 18px;
   color: inherit;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     width: 20px;
     height: 20px;
-  `}
+  }
 `;
 
 export const TelegramIcon = styled(Telegram)`
@@ -244,10 +238,10 @@ export const TelegramIcon = styled(Telegram)`
   height: 18px;
   color: inherit;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     width: 20px;
     height: 20px;
-  `}
+  }
 `;
 
 export const CopyMessage = styled.div<{ copied: boolean }>`
@@ -265,15 +259,15 @@ export const CopyMessage = styled.div<{ copied: boolean }>`
   opacity: ${({ copied }) => (copied ? 1 : 0.8)};
   transition: all 0.3s ease;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     margin-top: 0.75rem;
     padding: 0.6rem;
     font-size: 0.85rem;
-  `}
+  }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     margin-top: 0.5rem;
     padding: 0.5rem;
     font-size: 0.8rem;
-  `}
+  }
 `;
