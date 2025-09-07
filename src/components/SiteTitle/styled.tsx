@@ -5,7 +5,7 @@ export const SiteTitleWrapped = styled.h1`
   font-size: 1.2rem;
   font-weight: 900;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     font-size: 1.6rem;
     margin-bottom: 0.5rem;
   }

@@ -8,6 +8,7 @@ import Titles from '../components/Titles';
 import Card from '../components/Card';
 import AdsenseDisplay from '../components/GoogleAdsense/display';
 import TagCloud from '../components/TagCloud';
+import NewsletterSignup from '../components/NewsletterSignup';
 
 import * as S from '../styles/pages/blog.styled';
 
@@ -57,6 +58,7 @@ const Blog: React.FC<PageProps<BlogData, BlogPageContext>> = ({
           ),
         )}
         {postList.length > 0 && <AdsenseDisplay />}
+        <NewsletterSignup variant="list-end" />
         <TagCloud collection="posts" />
       </S.BlogContainer>
     </Layout>

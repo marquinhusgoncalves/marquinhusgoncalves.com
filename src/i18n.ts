@@ -11,6 +11,7 @@ const resources = {
       'menu.projects': 'Projetos',
       'menu.tips': 'Dicas',
       'menu.travels': 'Viagens',
+      'menu.newsletter': 'Newsletter',
 
       // Nomes das páginas
       'pages.home.name': 'Início',
@@ -19,6 +20,7 @@ const resources = {
       'pages.projects.name': 'Projetos',
       'pages.tips.name': 'Dicas',
       'pages.travels.name': 'Viagens',
+      'pages.newsletter.name': 'Newsletter',
 
       // Páginas
       'pages.home.title': 'Marquinhus Gonçalves - Software Engineer',
@@ -47,6 +49,24 @@ const resources = {
       'pages.travels.title': 'Viagens e Experiências',
       'pages.travels.content':
         'Compartilho aqui minhas experiências de viagem e as lições que aprendi pelo caminho.',
+
+      'pages.newsletter.title': 'Newsletter',
+      'pages.newsletter.description':
+        'Inscreva-se na minha newsletter e receba as melhores dicas sobre tecnologia, desenvolvimento e viagens diretamente no seu email.',
+      'pages.newsletter.content.intro':
+        'Oi! 👋 Quer ficar por dentro das últimas novidades sobre tecnologia, desenvolvimento web e minhas aventuras pelo mundo?',
+      'pages.newsletter.content.benefits': 'O que você vai receber:',
+      'pages.newsletter.content.benefit1':
+        '📚 Artigos exclusivos sobre desenvolvimento',
+      'pages.newsletter.content.benefit2':
+        '🛠️ Dicas práticas e ferramentas úteis',
+      'pages.newsletter.content.benefit3':
+        '🌍 Histórias de viagens e experiências',
+      'pages.newsletter.content.benefit4': '🎯 Conteúdo selecionado e sem spam',
+      'pages.newsletter.content.frequency':
+        'Frequência: Envios quinzenais (ou quando tiver algo realmente interessante para compartilhar)',
+      'pages.newsletter.content.privacy':
+        'Seus dados estão seguros e você pode cancelar a inscrição a qualquer momento.',
 
       // Componentes
       'components.comments.title': 'Comentários',
@@ -143,6 +163,38 @@ const resources = {
       'components.postNavigation.backToBlog': 'Voltar ao blog',
       'components.postNavigation.backToProjects': 'Voltar aos projetos',
 
+      // Newsletter
+      'components.newsletter.variants.home.title': 'Fique por dentro!',
+      'components.newsletter.variants.home.description':
+        'Receba as melhores dicas sobre tecnologia e viagens',
+      'components.newsletter.variants.compact.title': 'Newsletter',
+      'components.newsletter.variants.compact.description':
+        'Receba atualizações por email',
+      'components.newsletter.variants.postEnd.title': 'Gostou do conteúdo?',
+      'components.newsletter.variants.postEnd.description':
+        'Inscreva-se para receber mais posts como este',
+      'components.newsletter.variants.listEnd.title':
+        'Não perca nenhuma novidade!',
+      'components.newsletter.variants.listEnd.description':
+        'Receba os últimos posts e projetos no seu email',
+      'components.newsletter.form.emailPlaceholder': 'Seu melhor email',
+      'components.newsletter.form.submitButton': 'Inscrever',
+      'components.newsletter.form.submittingButton': 'Inscrevendo...',
+      'components.newsletter.form.termsText': 'Aceito os',
+      'components.newsletter.form.termsLink': 'termos e condições',
+      'components.newsletter.form.and': 'e',
+      'components.newsletter.form.privacyLink': 'política de privacidade',
+      'components.newsletter.messages.emailRequired':
+        'Por favor, insira um email',
+      'components.newsletter.messages.emailInvalid':
+        'Por favor, insira um email válido',
+      'components.newsletter.messages.termsRequired':
+        'Você deve aceitar os termos e condições',
+      'components.newsletter.messages.error':
+        'Erro ao inscrever. Tente novamente.',
+      'components.newsletter.messages.success':
+        '✅ Inscrição realizada com sucesso! Verifique seu email para confirmar.',
+
       // SEO
       'seo.about.title': 'Sobre - Marquinhus Gonçalves',
       'seo.about.description':
@@ -153,6 +205,9 @@ const resources = {
       'seo.projects.title': 'Projetos - Marquinhus Gonçalves',
       'seo.projects.description':
         'Portfólio de projetos desenvolvidos por Marquinhus Gonçalves.',
+      'seo.newsletter.title': 'Newsletter - Marquinhus Gonçalves',
+      'seo.newsletter.description':
+        'Inscreva-se na newsletter e receba as melhores dicas sobre tecnologia, desenvolvimento e viagens.',
     },
   },
   en: {
@@ -164,6 +219,7 @@ const resources = {
       'menu.projects': 'Projects',
       'menu.tips': 'Tips',
       'menu.travels': 'Travels',
+      'menu.newsletter': 'Newsletter',
 
       // Nomes das páginas
       'pages.home.name': 'Home',
@@ -172,6 +228,7 @@ const resources = {
       'pages.projects.name': 'Projects',
       'pages.tips.name': 'Tips',
       'pages.travels.name': 'Travels',
+      'pages.newsletter.name': 'Newsletter',
 
       // Páginas
       'pages.home.title': 'Marquinhus Gonçalves - Software Engineer',
@@ -200,6 +257,22 @@ const resources = {
       'pages.travels.title': 'Travels and Experiences',
       'pages.travels.content':
         'I share here my travel experiences and the lessons I learned along the way.',
+
+      'pages.newsletter.title': 'Newsletter',
+      'pages.newsletter.description':
+        'Subscribe to my newsletter and receive the best tips about technology, development and travels directly in your email.',
+      'pages.newsletter.content.intro':
+        'Hi! 👋 Want to stay up to date with the latest news about technology, web development and my adventures around the world?',
+      'pages.newsletter.content.benefits': 'What you will receive:',
+      'pages.newsletter.content.benefit1':
+        '📚 Exclusive articles about development',
+      'pages.newsletter.content.benefit2': '🛠️ Practical tips and useful tools',
+      'pages.newsletter.content.benefit3': '🌍 Travel stories and experiences',
+      'pages.newsletter.content.benefit4': '🎯 Curated content and no spam',
+      'pages.newsletter.content.frequency':
+        'Frequency: Biweekly sends (or when I have something really interesting to share)',
+      'pages.newsletter.content.privacy':
+        'Your data is safe and you can unsubscribe at any time.',
 
       // Componentes
       'components.comments.title': 'Comments',
@@ -294,6 +367,35 @@ const resources = {
       'components.postNavigation.backToBlog': 'Back to blog',
       'components.postNavigation.backToProjects': 'Back to projects',
 
+      // Newsletter
+      'components.newsletter.variants.home.title': 'Stay in the loop!',
+      'components.newsletter.variants.home.description':
+        'Get the best tips about technology and travels',
+      'components.newsletter.variants.compact.title': 'Newsletter',
+      'components.newsletter.variants.compact.description': 'Get email updates',
+      'components.newsletter.variants.postEnd.title': 'Liked the content?',
+      'components.newsletter.variants.postEnd.description':
+        'Subscribe to receive more posts like this',
+      'components.newsletter.variants.listEnd.title': "Don't miss any updates!",
+      'components.newsletter.variants.listEnd.description':
+        'Get the latest posts and projects in your email',
+      'components.newsletter.form.emailPlaceholder': 'Your best email',
+      'components.newsletter.form.submitButton': 'Subscribe',
+      'components.newsletter.form.submittingButton': 'Subscribing...',
+      'components.newsletter.form.termsText': 'I accept the',
+      'components.newsletter.form.termsLink': 'terms and conditions',
+      'components.newsletter.form.and': 'and',
+      'components.newsletter.form.privacyLink': 'privacy policy',
+      'components.newsletter.messages.emailRequired': 'Please enter an email',
+      'components.newsletter.messages.emailInvalid':
+        'Please enter a valid email',
+      'components.newsletter.messages.termsRequired':
+        'You must accept the terms and conditions',
+      'components.newsletter.messages.error':
+        'Error subscribing. Please try again.',
+      'components.newsletter.messages.success':
+        '✅ Successfully subscribed! Check your email to confirm.',
+
       // SEO
       'seo.about.title': 'About - Marquinhus Gonçalves',
       'seo.about.description':
@@ -304,6 +406,9 @@ const resources = {
       'seo.projects.title': 'Projects - Marquinhus Gonçalves',
       'seo.projects.description':
         'Portfolio of projects developed by Marquinhus Gonçalves.',
+      'seo.newsletter.title': 'Newsletter - Marquinhus Gonçalves',
+      'seo.newsletter.description':
+        'Subscribe to the newsletter and get the best tips about technology, development and travels.',
     },
   },
 };

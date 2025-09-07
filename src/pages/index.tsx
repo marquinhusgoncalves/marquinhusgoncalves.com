@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Profile from '../components/Profile';
+import NewsletterSignup from '../components/NewsletterSignup';
 
 import * as S from '../styles/pages/index.styled';
 
@@ -26,6 +27,9 @@ const IndexPage: React.FC<PageProps<{}, IndexPageContext>> = ({
     <Layout>
       <S.IndexContainer>
         <Profile />
+        <S.NewsletterSection>
+          <NewsletterSignup variant="home" />
+        </S.NewsletterSection>
       </S.IndexContainer>
     </Layout>
   );

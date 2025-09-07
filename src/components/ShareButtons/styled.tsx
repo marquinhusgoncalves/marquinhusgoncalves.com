@@ -53,20 +53,17 @@ export const ShareButtonsList = styled.div`
   overflow-x: auto;
   padding: 0.5rem 0;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 930px) {
     gap: 0.6rem;
   }
 
-  @media (max-width: 768px) {
-    gap: 0.5rem;
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
-
-  @media (max-width: 450px) {
+  @media (max-width: 520px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.4rem;
-    flex-wrap: nowrap;
-    justify-content: center;
+    justify-items: center;
+    overflow-x: visible;
+    padding: 0.5rem;
   }
 `;
 
@@ -130,7 +127,7 @@ export const ShareButton = styled.button<ShareButtonProps>`
     transform: translateY(0);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 930px) {
     padding: 0.6rem;
     min-width: 48px;
     width: 48px;
@@ -138,7 +135,7 @@ export const ShareButton = styled.button<ShareButtonProps>`
     border-radius: 50%;
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 520px) {
     padding: 0.5rem;
     min-width: 44px;
     width: 44px;
@@ -150,7 +147,7 @@ export const ShareButtonText = styled.span`
   font-weight: 500;
   color: inherit;
 
-  @media (max-width: 768px) {
+  @media (max-width: 930px) {
     display: none;
   }
 `;

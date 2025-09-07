@@ -8,6 +8,7 @@ import Titles from '../components/Titles';
 import Card from '../components/Card';
 import AdsenseDisplay from '../components/GoogleAdsense/display';
 import TagCloud from '../components/TagCloud';
+import NewsletterSignup from '../components/NewsletterSignup';
 
 import * as S from '../styles/pages/projetos.styled';
 
@@ -64,6 +65,7 @@ const Projetos: React.FC<PageProps<ProjetosData, ProjetosPageContext>> = ({
           ),
         )}
         {projectsList.length > 0 && <AdsenseDisplay />}
+        <NewsletterSignup variant="list-end" />
         <TagCloud collection="projects" />
       </S.ProjetosContainer>
     </Layout>

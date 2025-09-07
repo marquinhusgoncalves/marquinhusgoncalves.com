@@ -7,6 +7,7 @@ import SEO from '../components/Seo';
 import Titles from '../components/Titles';
 import Card from '../components/Card';
 import AdsenseDisplay from '../components/GoogleAdsense/display';
+import NewsletterSignup from '../components/NewsletterSignup';
 
 import * as S from '../styles/pages/viagens.styled';
 
@@ -56,6 +57,7 @@ const Viagens: React.FC<PageProps<ViagensData, ViagensPageContext>> = ({
           ),
         )}
         {viagensList.length > 0 && <AdsenseDisplay />}
+        <NewsletterSignup variant="list-end" />
       </S.ViagensContainer>
     </Layout>
   );
