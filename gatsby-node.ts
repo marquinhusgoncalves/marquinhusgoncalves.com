@@ -46,6 +46,10 @@ export const createPages: GatsbyNode['createPages'] = async ({
     { path: '/projetos', template: path.resolve('./src/pages/projetos.tsx') },
     { path: '/dicas', template: path.resolve('./src/pages/dicas.tsx') },
     { path: '/viagens', template: path.resolve('./src/pages/viagens.tsx') },
+    {
+      path: '/newsletter',
+      template: path.resolve('./src/pages/newsletter.tsx'),
+    },
   ];
 
   staticPages.forEach(({ path, template }) => {

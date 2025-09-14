@@ -10,6 +10,7 @@ import Comments from '../components/Comments';
 import RelatedPosts from '../components/RelatedPosts';
 import AdsenseArticle from '../components/GoogleAdsense/article';
 import ShareButtons from '../components/ShareButtons';
+import NewsletterSignup from '../components/NewsletterSignup';
 
 import { MainContent } from '../styles/base';
 import * as S from './post.styled';
@@ -88,6 +89,7 @@ const Post: React.FC<PageProps<PostData, PostContext>> = (props) => {
           via="marquinhusgonc"
         />
 
+        <NewsletterSignup variant="post-end" />
         <AdsenseArticle />
         <RelatedPosts next={nextPost} previous={previousPost} />
         <Comments

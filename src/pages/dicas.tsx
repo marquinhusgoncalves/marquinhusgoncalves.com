@@ -7,6 +7,7 @@ import SEO from '../components/Seo';
 import Titles from '../components/Titles';
 import Card from '../components/Card';
 import AdsenseDisplay from '../components/GoogleAdsense/display';
+import NewsletterSignup from '../components/NewsletterSignup';
 
 import * as S from '../styles/pages/dicas.styled';
 
@@ -56,6 +57,7 @@ const Dicas: React.FC<PageProps<DicasData, DicasPageContext>> = ({
           ),
         )}
         {dicasList.length > 0 && <AdsenseDisplay />}
+        <NewsletterSignup variant="list-end" />
       </S.DicasContainer>
     </Layout>
   );

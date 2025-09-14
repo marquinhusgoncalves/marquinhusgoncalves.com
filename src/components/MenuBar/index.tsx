@@ -39,6 +39,10 @@ const MenuBar = () => {
       label: t('menu.travels'),
       url: '/viagens',
     },
+    {
+      label: t('menu.newsletter'),
+      url: '/newsletter',
+    },
   ];
 
   const openMenu = () => {
@@ -64,7 +68,7 @@ const MenuBar = () => {
           <S.CloseOutlineIcon />
         </S.CloseIconWrapped>
       </S.MenuWrapped>
-      <S.MenuIconWrapped onClick={openMenu}>
+      <S.MenuIconWrapped $isMenuOpen={isMenuOpen} onClick={openMenu}>
         <S.MenuIcon />
       </S.MenuIconWrapped>
     </>

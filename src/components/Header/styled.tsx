@@ -15,9 +15,9 @@ export const HeaderTop = styled.div`
   justify-content: space-between;
   margin-bottom: 1rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.2rem;
   }
 `;
 

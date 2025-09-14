@@ -11,6 +11,7 @@ const resources = {
       'menu.projects': 'Projetos',
       'menu.tips': 'Dicas',
       'menu.travels': 'Viagens',
+      'menu.newsletter': 'Newsletter',
 
       // Nomes das páginas
       'pages.home.name': 'Início',
@@ -19,6 +20,7 @@ const resources = {
       'pages.projects.name': 'Projetos',
       'pages.tips.name': 'Dicas',
       'pages.travels.name': 'Viagens',
+      'pages.newsletter.name': 'Newsletter',
 
       // Páginas
       'pages.home.title': 'Marquinhus Gonçalves - Software Engineer',
@@ -47,6 +49,24 @@ const resources = {
       'pages.travels.title': 'Viagens e Experiências',
       'pages.travels.content':
         'Compartilho aqui minhas experiências de viagem e as lições que aprendi pelo caminho.',
+
+      'pages.newsletter.title': 'Newsletter',
+      'pages.newsletter.description':
+        'Inscreva-se na minha newsletter e receba as melhores dicas sobre tecnologia, desenvolvimento e viagens diretamente no seu email.',
+      'pages.newsletter.content.intro':
+        'Oi! 👋 Quer ficar por dentro das últimas novidades sobre tecnologia, desenvolvimento web e minhas aventuras pelo mundo?',
+      'pages.newsletter.content.benefits': 'O que você vai receber:',
+      'pages.newsletter.content.benefit1':
+        '📚 Artigos exclusivos sobre desenvolvimento',
+      'pages.newsletter.content.benefit2':
+        '🛠️ Dicas práticas e ferramentas úteis',
+      'pages.newsletter.content.benefit3':
+        '🌍 Histórias de viagens e experiências',
+      'pages.newsletter.content.benefit4': '🎯 Conteúdo selecionado e sem spam',
+      'pages.newsletter.content.frequency':
+        'Frequência: Envios quinzenais (ou quando tiver algo realmente interessante para compartilhar)',
+      'pages.newsletter.content.privacy':
+        'Seus dados estão seguros e você pode cancelar a inscrição a qualquer momento.',
 
       // Componentes
       'components.comments.title': 'Comentários',
@@ -143,6 +163,50 @@ const resources = {
       'components.postNavigation.backToBlog': 'Voltar ao blog',
       'components.postNavigation.backToProjects': 'Voltar aos projetos',
 
+      // Newsletter
+      'components.newsletter.variants.home.title': 'Fique por dentro!',
+      'components.newsletter.variants.home.description':
+        'Receba as melhores dicas sobre tecnologia e viagens',
+      'components.newsletter.variants.compact.title': 'Newsletter',
+      'components.newsletter.variants.compact.description':
+        'Receba atualizações por email',
+      'components.newsletter.variants.postEnd.title': 'Gostou do conteúdo?',
+      'components.newsletter.variants.postEnd.description':
+        'Inscreva-se para receber mais posts como este',
+      'components.newsletter.variants.listEnd.title':
+        'Não perca nenhuma novidade!',
+      'components.newsletter.variants.listEnd.description':
+        'Receba os últimos posts e projetos no seu email',
+      'components.newsletter.form.emailPlaceholder': 'Seu melhor email',
+      'components.newsletter.form.submitButton': 'Inscrever',
+      'components.newsletter.form.submittingButton': 'Inscrevendo...',
+      'components.newsletter.form.termsText': 'Aceito os',
+      'components.newsletter.form.termsLink': 'termos e condições',
+      'components.newsletter.form.and': 'e',
+      'components.newsletter.form.privacyLink': 'política de privacidade',
+      'components.newsletter.messages.emailRequired':
+        'Por favor, insira um email',
+      'components.newsletter.messages.emailInvalid':
+        'Por favor, insira um email válido',
+      'components.newsletter.messages.termsRequired':
+        'Você deve aceitar os termos e condições',
+      'components.newsletter.messages.error':
+        'Erro ao inscrever. Tente novamente.',
+      'components.newsletter.messages.alreadySubscribed':
+        'Este email já está inscrito na newsletter.',
+      'components.newsletter.messages.timeoutError':
+        'Tempo limite excedido. Verifique sua conexão e tente novamente.',
+      'components.newsletter.messages.networkError':
+        'Erro de conexão. Verifique sua internet e tente novamente.',
+      'components.newsletter.messages.rateLimited':
+        'Muitas tentativas. Aguarde alguns minutos antes de tentar novamente.',
+      'components.newsletter.messages.serverError':
+        'Servidor temporariamente indisponível. Tente novamente em alguns minutos.',
+      'components.newsletter.messages.invalidResponse':
+        'Resposta inválida do servidor. Tente novamente.',
+      'components.newsletter.messages.success':
+        '✅ Inscrição realizada com sucesso! Verifique seu email para confirmar.',
+
       // SEO
       'seo.about.title': 'Sobre - Marquinhus Gonçalves',
       'seo.about.description':
@@ -153,6 +217,70 @@ const resources = {
       'seo.projects.title': 'Projetos - Marquinhus Gonçalves',
       'seo.projects.description':
         'Portfólio de projetos desenvolvidos por Marquinhus Gonçalves.',
+      'seo.newsletter.title': 'Newsletter - Marquinhus Gonçalves',
+      'seo.newsletter.description':
+        'Inscreva-se na newsletter e receba as melhores dicas sobre tecnologia, desenvolvimento e viagens.',
+      'seo.terms.title': 'Termos e Condições - Marquinhus Gonçalves',
+      'seo.terms.description':
+        'Termos e condições para uso da newsletter e serviços do site.',
+      'seo.privacy.title': 'Política de Privacidade - Marquinhus Gonçalves',
+      'seo.privacy.description':
+        'Política de privacidade e proteção de dados pessoais.',
+
+      // Terms and Conditions
+      'pages.terms.title': 'Termos e Condições',
+      'pages.terms.description': 'Termos e condições para uso da newsletter',
+      'pages.terms.lastUpdated': 'Última atualização',
+      'pages.terms.date': '14 de setembro de 2025',
+      'pages.terms.section1.title': '1. Aceitação dos Termos',
+      'pages.terms.section1.content':
+        'Ao se inscrever na newsletter do Marquinhus Gonçalves, você concorda em cumprir e estar vinculado a estes Termos e Condições. Se você não concordar com qualquer parte destes termos, não deve se inscrever na newsletter.',
+      'pages.terms.section2.title': '2. Descrição do Serviço',
+      'pages.terms.section2.content':
+        'A newsletter é um serviço gratuito que fornece conteúdo sobre desenvolvimento web, tecnologia, viagens e experiências pessoais. O conteúdo é fornecido "como está" e pode ser alterado ou descontinuado a qualquer momento.',
+      'pages.terms.section3.title': '3. Uso Aceitável',
+      'pages.terms.section3.content':
+        'Você concorda em usar a newsletter apenas para fins legais e de acordo com estes termos. É proibido usar o serviço para qualquer atividade ilegal, abusiva ou que viole os direitos de terceiros.',
+      'pages.terms.section4.title': '4. Cancelamento',
+      'pages.terms.section4.content':
+        'Você pode cancelar sua inscrição na newsletter a qualquer momento usando o link de cancelamento fornecido nos emails ou entrando em contato conosco. O cancelamento será efetivado imediatamente.',
+      'pages.terms.section5.title': '5. Modificações',
+      'pages.terms.section5.content':
+        'Reservamo-nos o direito de modificar estes termos a qualquer momento. As modificações entrarão em vigor imediatamente após a publicação. O uso continuado da newsletter após as modificações constitui aceitação dos novos termos.',
+      'pages.terms.section6.title': '6. Limitação de Responsabilidade',
+      'pages.terms.section6.content':
+        'O Marquinhus Gonçalves não será responsável por quaisquer danos diretos, indiretos, incidentais ou consequenciais resultantes do uso ou incapacidade de usar a newsletter.',
+      'pages.terms.contact.title': 'Contato',
+      'pages.terms.contact.content':
+        'Se você tiver dúvidas sobre estes Termos e Condições, entre em contato conosco através do email eu@marquinhusgoncalves.com.',
+
+      // Privacy Policy
+      'pages.privacy.title': 'Política de Privacidade',
+      'pages.privacy.description':
+        'Política de privacidade e proteção de dados',
+      'pages.privacy.lastUpdated': 'Última atualização',
+      'pages.privacy.date': '14 de setembro de 2025',
+      'pages.privacy.section1.title': '1. Informações Coletadas',
+      'pages.privacy.section1.content':
+        'Coletamos apenas o endereço de email fornecido voluntariamente por você ao se inscrever na newsletter. Também coletamos informações técnicas básicas como endereço IP e user agent para fins de segurança e análise.',
+      'pages.privacy.section2.title': '2. Uso das Informações',
+      'pages.privacy.section2.content':
+        'Seu email será usado exclusivamente para enviar a newsletter e comunicações relacionadas ao serviço. Não compartilhamos, vendemos ou alugamos suas informações pessoais para terceiros.',
+      'pages.privacy.section3.title': '3. Armazenamento de Dados',
+      'pages.privacy.section3.content':
+        'Seus dados são armazenados de forma segura usando serviços confiáveis (Supabase e MailerLite) que implementam medidas de segurança adequadas para proteger suas informações.',
+      'pages.privacy.section4.title': '4. Cookies e Tecnologias Similares',
+      'pages.privacy.section4.content':
+        'Este site pode usar cookies para melhorar sua experiência. Você pode configurar seu navegador para recusar cookies, mas isso pode afetar a funcionalidade do site.',
+      'pages.privacy.section5.title': '5. Seus Direitos',
+      'pages.privacy.section5.content':
+        'Você tem o direito de acessar, corrigir, atualizar ou excluir suas informações pessoais a qualquer momento. Você também pode cancelar sua inscrição na newsletter usando o link fornecido nos emails.',
+      'pages.privacy.section6.title': '6. Alterações na Política',
+      'pages.privacy.section6.content':
+        'Podemos atualizar esta Política de Privacidade periodicamente. Notificaremos sobre mudanças significativas através da newsletter ou por email.',
+      'pages.privacy.contact.title': 'Contato',
+      'pages.privacy.contact.content':
+        'Para questões sobre privacidade ou para exercer seus direitos, entre em contato conosco através do email eu@marquinhusgoncalves.com.',
     },
   },
   en: {
@@ -164,6 +292,7 @@ const resources = {
       'menu.projects': 'Projects',
       'menu.tips': 'Tips',
       'menu.travels': 'Travels',
+      'menu.newsletter': 'Newsletter',
 
       // Nomes das páginas
       'pages.home.name': 'Home',
@@ -172,6 +301,7 @@ const resources = {
       'pages.projects.name': 'Projects',
       'pages.tips.name': 'Tips',
       'pages.travels.name': 'Travels',
+      'pages.newsletter.name': 'Newsletter',
 
       // Páginas
       'pages.home.title': 'Marquinhus Gonçalves - Software Engineer',
@@ -200,6 +330,22 @@ const resources = {
       'pages.travels.title': 'Travels and Experiences',
       'pages.travels.content':
         'I share here my travel experiences and the lessons I learned along the way.',
+
+      'pages.newsletter.title': 'Newsletter',
+      'pages.newsletter.description':
+        'Subscribe to my newsletter and receive the best tips about technology, development and travels directly in your email.',
+      'pages.newsletter.content.intro':
+        'Hi! 👋 Want to stay up to date with the latest news about technology, web development and my adventures around the world?',
+      'pages.newsletter.content.benefits': 'What you will receive:',
+      'pages.newsletter.content.benefit1':
+        '📚 Exclusive articles about development',
+      'pages.newsletter.content.benefit2': '🛠️ Practical tips and useful tools',
+      'pages.newsletter.content.benefit3': '🌍 Travel stories and experiences',
+      'pages.newsletter.content.benefit4': '🎯 Curated content and no spam',
+      'pages.newsletter.content.frequency':
+        'Frequency: Biweekly sends (or when I have something really interesting to share)',
+      'pages.newsletter.content.privacy':
+        'Your data is safe and you can unsubscribe at any time.',
 
       // Componentes
       'components.comments.title': 'Comments',
@@ -294,6 +440,47 @@ const resources = {
       'components.postNavigation.backToBlog': 'Back to blog',
       'components.postNavigation.backToProjects': 'Back to projects',
 
+      // Newsletter
+      'components.newsletter.variants.home.title': 'Stay in the loop!',
+      'components.newsletter.variants.home.description':
+        'Get the best tips about technology and travels',
+      'components.newsletter.variants.compact.title': 'Newsletter',
+      'components.newsletter.variants.compact.description': 'Get email updates',
+      'components.newsletter.variants.postEnd.title': 'Liked the content?',
+      'components.newsletter.variants.postEnd.description':
+        'Subscribe to receive more posts like this',
+      'components.newsletter.variants.listEnd.title': "Don't miss any updates!",
+      'components.newsletter.variants.listEnd.description':
+        'Get the latest posts and projects in your email',
+      'components.newsletter.form.emailPlaceholder': 'Your best email',
+      'components.newsletter.form.submitButton': 'Subscribe',
+      'components.newsletter.form.submittingButton': 'Subscribing...',
+      'components.newsletter.form.termsText': 'I accept the',
+      'components.newsletter.form.termsLink': 'terms and conditions',
+      'components.newsletter.form.and': 'and',
+      'components.newsletter.form.privacyLink': 'privacy policy',
+      'components.newsletter.messages.emailRequired': 'Please enter an email',
+      'components.newsletter.messages.emailInvalid':
+        'Please enter a valid email',
+      'components.newsletter.messages.termsRequired':
+        'You must accept the terms and conditions',
+      'components.newsletter.messages.error':
+        'Error subscribing. Please try again.',
+      'components.newsletter.messages.alreadySubscribed':
+        'This email is already subscribed to the newsletter.',
+      'components.newsletter.messages.timeoutError':
+        'Request timeout. Please check your connection and try again.',
+      'components.newsletter.messages.networkError':
+        'Network error. Please check your internet connection and try again.',
+      'components.newsletter.messages.rateLimited':
+        'Too many attempts. Please wait a few minutes before trying again.',
+      'components.newsletter.messages.serverError':
+        'Server temporarily unavailable. Please try again in a few minutes.',
+      'components.newsletter.messages.invalidResponse':
+        'Invalid server response. Please try again.',
+      'components.newsletter.messages.success':
+        '✅ Successfully subscribed! Check your email to confirm.',
+
       // SEO
       'seo.about.title': 'About - Marquinhus Gonçalves',
       'seo.about.description':
@@ -304,6 +491,68 @@ const resources = {
       'seo.projects.title': 'Projects - Marquinhus Gonçalves',
       'seo.projects.description':
         'Portfolio of projects developed by Marquinhus Gonçalves.',
+      'seo.newsletter.title': 'Newsletter - Marquinhus Gonçalves',
+      'seo.newsletter.description':
+        'Subscribe to the newsletter and get the best tips about technology, development and travels.',
+      'seo.terms.title': 'Terms and Conditions - Marquinhus Gonçalves',
+      'seo.terms.description':
+        'Terms and conditions for newsletter and website services.',
+      'seo.privacy.title': 'Privacy Policy - Marquinhus Gonçalves',
+      'seo.privacy.description': 'Privacy policy and personal data protection.',
+
+      // Terms and Conditions
+      'pages.terms.title': 'Terms and Conditions',
+      'pages.terms.description': 'Terms and conditions for newsletter use',
+      'pages.terms.lastUpdated': 'Last updated',
+      'pages.terms.date': 'September 14, 2025',
+      'pages.terms.section1.title': '1. Acceptance of Terms',
+      'pages.terms.section1.content':
+        'By subscribing to Marquinhus Gonçalves newsletter, you agree to comply with and be bound by these Terms and Conditions. If you do not agree to any part of these terms, you should not subscribe to the newsletter.',
+      'pages.terms.section2.title': '2. Service Description',
+      'pages.terms.section2.content':
+        'The newsletter is a free service that provides content about web development, technology, travel, and personal experiences. Content is provided "as is" and may be changed or discontinued at any time.',
+      'pages.terms.section3.title': '3. Acceptable Use',
+      'pages.terms.section3.content':
+        'You agree to use the newsletter only for lawful purposes and in accordance with these terms. It is prohibited to use the service for any illegal, abusive activity or that violates third-party rights.',
+      'pages.terms.section4.title': '4. Cancellation',
+      'pages.terms.section4.content':
+        'You may cancel your newsletter subscription at any time using the cancellation link provided in emails or by contacting us. Cancellation will be effective immediately.',
+      'pages.terms.section5.title': '5. Modifications',
+      'pages.terms.section5.content':
+        'We reserve the right to modify these terms at any time. Modifications will take effect immediately upon publication. Continued use of the newsletter after modifications constitutes acceptance of the new terms.',
+      'pages.terms.section6.title': '6. Limitation of Liability',
+      'pages.terms.section6.content':
+        'Marquinhus Gonçalves will not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the newsletter.',
+      'pages.terms.contact.title': 'Contact',
+      'pages.terms.contact.content':
+        'If you have questions about these Terms and Conditions, contact us at eu@marquinhusgoncalves.com.',
+
+      // Privacy Policy
+      'pages.privacy.title': 'Privacy Policy',
+      'pages.privacy.description': 'Privacy policy and data protection',
+      'pages.privacy.lastUpdated': 'Last updated',
+      'pages.privacy.date': 'September 14, 2025',
+      'pages.privacy.section1.title': '1. Information Collected',
+      'pages.privacy.section1.content':
+        'We only collect the email address voluntarily provided by you when subscribing to the newsletter. We also collect basic technical information such as IP address and user agent for security and analysis purposes.',
+      'pages.privacy.section2.title': '2. Use of Information',
+      'pages.privacy.section2.content':
+        'Your email will be used exclusively to send the newsletter and service-related communications. We do not share, sell, or rent your personal information to third parties.',
+      'pages.privacy.section3.title': '3. Data Storage',
+      'pages.privacy.section3.content':
+        'Your data is stored securely using trusted services (Supabase and MailerLite) that implement adequate security measures to protect your information.',
+      'pages.privacy.section4.title': '4. Cookies and Similar Technologies',
+      'pages.privacy.section4.content':
+        'This site may use cookies to improve your experience. You can configure your browser to refuse cookies, but this may affect site functionality.',
+      'pages.privacy.section5.title': '5. Your Rights',
+      'pages.privacy.section5.content':
+        'You have the right to access, correct, update, or delete your personal information at any time. You can also cancel your newsletter subscription using the link provided in emails.',
+      'pages.privacy.section6.title': '6. Policy Changes',
+      'pages.privacy.section6.content':
+        'We may update this Privacy Policy periodically. We will notify about significant changes through the newsletter or by email.',
+      'pages.privacy.contact.title': 'Contact',
+      'pages.privacy.contact.content':
+        'For privacy questions or to exercise your rights, contact us at eu@marquinhusgoncalves.com.',
     },
   },
 };

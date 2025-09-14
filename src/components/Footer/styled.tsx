@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import { Favorite } from '@styled-icons/material/Favorite';
 
 export const Footer = styled.footer`
@@ -19,6 +20,37 @@ export const Footer = styled.footer`
 
   @media (max-width: 450px) {
     padding: 0.75rem;
+  }
+`;
+
+export const FooterContent = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  @media (max-width: 450px) {
+    gap: 1rem;
+    flex-direction: column;
+  }
+`;
+
+export const NewsletterLink = styled(Link)`
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  &:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 0.85rem;
   }
 `;
 
