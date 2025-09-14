@@ -208,6 +208,67 @@ const resources = {
       'seo.newsletter.title': 'Newsletter - Marquinhus Gonçalves',
       'seo.newsletter.description':
         'Inscreva-se na newsletter e receba as melhores dicas sobre tecnologia, desenvolvimento e viagens.',
+      'seo.terms.title': 'Termos e Condições - Marquinhus Gonçalves',
+      'seo.terms.description':
+        'Termos e condições para uso da newsletter e serviços do site.',
+      'seo.privacy.title': 'Política de Privacidade - Marquinhus Gonçalves',
+      'seo.privacy.description':
+        'Política de privacidade e proteção de dados pessoais.',
+
+      // Terms and Conditions
+      'pages.terms.title': 'Termos e Condições',
+      'pages.terms.description': 'Termos e condições para uso da newsletter',
+      'pages.terms.lastUpdated': 'Última atualização',
+      'pages.terms.date': '14 de setembro de 2025',
+      'pages.terms.section1.title': '1. Aceitação dos Termos',
+      'pages.terms.section1.content':
+        'Ao se inscrever na newsletter do Marquinhus Gonçalves, você concorda em cumprir e estar vinculado a estes Termos e Condições. Se você não concordar com qualquer parte destes termos, não deve se inscrever na newsletter.',
+      'pages.terms.section2.title': '2. Descrição do Serviço',
+      'pages.terms.section2.content':
+        'A newsletter é um serviço gratuito que fornece conteúdo sobre desenvolvimento web, tecnologia, viagens e experiências pessoais. O conteúdo é fornecido "como está" e pode ser alterado ou descontinuado a qualquer momento.',
+      'pages.terms.section3.title': '3. Uso Aceitável',
+      'pages.terms.section3.content':
+        'Você concorda em usar a newsletter apenas para fins legais e de acordo com estes termos. É proibido usar o serviço para qualquer atividade ilegal, abusiva ou que viole os direitos de terceiros.',
+      'pages.terms.section4.title': '4. Cancelamento',
+      'pages.terms.section4.content':
+        'Você pode cancelar sua inscrição na newsletter a qualquer momento usando o link de cancelamento fornecido nos emails ou entrando em contato conosco. O cancelamento será efetivado imediatamente.',
+      'pages.terms.section5.title': '5. Modificações',
+      'pages.terms.section5.content':
+        'Reservamo-nos o direito de modificar estes termos a qualquer momento. As modificações entrarão em vigor imediatamente após a publicação. O uso continuado da newsletter após as modificações constitui aceitação dos novos termos.',
+      'pages.terms.section6.title': '6. Limitação de Responsabilidade',
+      'pages.terms.section6.content':
+        'O Marquinhus Gonçalves não será responsável por quaisquer danos diretos, indiretos, incidentais ou consequenciais resultantes do uso ou incapacidade de usar a newsletter.',
+      'pages.terms.contact.title': 'Contato',
+      'pages.terms.contact.content':
+        'Se você tiver dúvidas sobre estes Termos e Condições, entre em contato conosco através do email eu@marquinhusgoncalves.com.',
+
+      // Privacy Policy
+      'pages.privacy.title': 'Política de Privacidade',
+      'pages.privacy.description':
+        'Política de privacidade e proteção de dados',
+      'pages.privacy.lastUpdated': 'Última atualização',
+      'pages.privacy.date': '14 de setembro de 2025',
+      'pages.privacy.section1.title': '1. Informações Coletadas',
+      'pages.privacy.section1.content':
+        'Coletamos apenas o endereço de email fornecido voluntariamente por você ao se inscrever na newsletter. Também coletamos informações técnicas básicas como endereço IP e user agent para fins de segurança e análise.',
+      'pages.privacy.section2.title': '2. Uso das Informações',
+      'pages.privacy.section2.content':
+        'Seu email será usado exclusivamente para enviar a newsletter e comunicações relacionadas ao serviço. Não compartilhamos, vendemos ou alugamos suas informações pessoais para terceiros.',
+      'pages.privacy.section3.title': '3. Armazenamento de Dados',
+      'pages.privacy.section3.content':
+        'Seus dados são armazenados de forma segura usando serviços confiáveis (Supabase e MailerLite) que implementam medidas de segurança adequadas para proteger suas informações.',
+      'pages.privacy.section4.title': '4. Cookies e Tecnologias Similares',
+      'pages.privacy.section4.content':
+        'Este site pode usar cookies para melhorar sua experiência. Você pode configurar seu navegador para recusar cookies, mas isso pode afetar a funcionalidade do site.',
+      'pages.privacy.section5.title': '5. Seus Direitos',
+      'pages.privacy.section5.content':
+        'Você tem o direito de acessar, corrigir, atualizar ou excluir suas informações pessoais a qualquer momento. Você também pode cancelar sua inscrição na newsletter usando o link fornecido nos emails.',
+      'pages.privacy.section6.title': '6. Alterações na Política',
+      'pages.privacy.section6.content':
+        'Podemos atualizar esta Política de Privacidade periodicamente. Notificaremos sobre mudanças significativas através da newsletter ou por email.',
+      'pages.privacy.contact.title': 'Contato',
+      'pages.privacy.contact.content':
+        'Para questões sobre privacidade ou para exercer seus direitos, entre em contato conosco através do email eu@marquinhusgoncalves.com.',
     },
   },
   en: {
@@ -409,6 +470,65 @@ const resources = {
       'seo.newsletter.title': 'Newsletter - Marquinhus Gonçalves',
       'seo.newsletter.description':
         'Subscribe to the newsletter and get the best tips about technology, development and travels.',
+      'seo.terms.title': 'Terms and Conditions - Marquinhus Gonçalves',
+      'seo.terms.description':
+        'Terms and conditions for newsletter and website services.',
+      'seo.privacy.title': 'Privacy Policy - Marquinhus Gonçalves',
+      'seo.privacy.description': 'Privacy policy and personal data protection.',
+
+      // Terms and Conditions
+      'pages.terms.title': 'Terms and Conditions',
+      'pages.terms.description': 'Terms and conditions for newsletter use',
+      'pages.terms.lastUpdated': 'Last updated',
+      'pages.terms.date': 'September 14, 2025',
+      'pages.terms.section1.title': '1. Acceptance of Terms',
+      'pages.terms.section1.content':
+        'By subscribing to Marquinhus Gonçalves newsletter, you agree to comply with and be bound by these Terms and Conditions. If you do not agree to any part of these terms, you should not subscribe to the newsletter.',
+      'pages.terms.section2.title': '2. Service Description',
+      'pages.terms.section2.content':
+        'The newsletter is a free service that provides content about web development, technology, travel, and personal experiences. Content is provided "as is" and may be changed or discontinued at any time.',
+      'pages.terms.section3.title': '3. Acceptable Use',
+      'pages.terms.section3.content':
+        'You agree to use the newsletter only for lawful purposes and in accordance with these terms. It is prohibited to use the service for any illegal, abusive activity or that violates third-party rights.',
+      'pages.terms.section4.title': '4. Cancellation',
+      'pages.terms.section4.content':
+        'You may cancel your newsletter subscription at any time using the cancellation link provided in emails or by contacting us. Cancellation will be effective immediately.',
+      'pages.terms.section5.title': '5. Modifications',
+      'pages.terms.section5.content':
+        'We reserve the right to modify these terms at any time. Modifications will take effect immediately upon publication. Continued use of the newsletter after modifications constitutes acceptance of the new terms.',
+      'pages.terms.section6.title': '6. Limitation of Liability',
+      'pages.terms.section6.content':
+        'Marquinhus Gonçalves will not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the newsletter.',
+      'pages.terms.contact.title': 'Contact',
+      'pages.terms.contact.content':
+        'If you have questions about these Terms and Conditions, contact us at eu@marquinhusgoncalves.com.',
+
+      // Privacy Policy
+      'pages.privacy.title': 'Privacy Policy',
+      'pages.privacy.description': 'Privacy policy and data protection',
+      'pages.privacy.lastUpdated': 'Last updated',
+      'pages.privacy.date': 'September 14, 2025',
+      'pages.privacy.section1.title': '1. Information Collected',
+      'pages.privacy.section1.content':
+        'We only collect the email address voluntarily provided by you when subscribing to the newsletter. We also collect basic technical information such as IP address and user agent for security and analysis purposes.',
+      'pages.privacy.section2.title': '2. Use of Information',
+      'pages.privacy.section2.content':
+        'Your email will be used exclusively to send the newsletter and service-related communications. We do not share, sell, or rent your personal information to third parties.',
+      'pages.privacy.section3.title': '3. Data Storage',
+      'pages.privacy.section3.content':
+        'Your data is stored securely using trusted services (Supabase and MailerLite) that implement adequate security measures to protect your information.',
+      'pages.privacy.section4.title': '4. Cookies and Similar Technologies',
+      'pages.privacy.section4.content':
+        'This site may use cookies to improve your experience. You can configure your browser to refuse cookies, but this may affect site functionality.',
+      'pages.privacy.section5.title': '5. Your Rights',
+      'pages.privacy.section5.content':
+        'You have the right to access, correct, update, or delete your personal information at any time. You can also cancel your newsletter subscription using the link provided in emails.',
+      'pages.privacy.section6.title': '6. Policy Changes',
+      'pages.privacy.section6.content':
+        'We may update this Privacy Policy periodically. We will notify about significant changes through the newsletter or by email.',
+      'pages.privacy.contact.title': 'Contact',
+      'pages.privacy.contact.content':
+        'For privacy questions or to exercise your rights, contact us at eu@marquinhusgoncalves.com.',
     },
   },
 };
