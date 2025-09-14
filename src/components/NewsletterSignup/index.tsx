@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { newsletterService, NewsletterError } from '../../services/newsletter';
 import * as S from './styled';
 
 interface NewsletterSignupProps {
@@ -15,37 +16,39 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
   description,
   className,
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const [acceptedTerms, setAcceptedTerms] = useState(false);
 
-  // Títulos e descrições padrão baseados na variante
   const getDefaultContent = () => {
-    switch (variant) {
-      case 'compact':
-        return {
-          title: t('components.newsletter.variants.compact.title'),
-          description: t('components.newsletter.variants.compact.description'),
-        };
-      case 'post-end':
-        return {
-          title: t('components.newsletter.variants.postEnd.title'),
-          description: t('components.newsletter.variants.postEnd.description'),
-        };
-      case 'list-end':
-        return {
-          title: t('components.newsletter.variants.listEnd.title'),
-          description: t('components.newsletter.variants.listEnd.description'),
-        };
-      default:
-        return {
-          title: t('components.newsletter.variants.home.title'),
-          description: t('components.newsletter.variants.home.description'),
-        };
+    if (variant === 'compact') {
+      return {
+        title: t('components.newsletter.variants.compact.title'),
+        description: t('components.newsletter.variants.compact.description'),
+      };
     }
+
+    if (variant === 'post-end') {
+      return {
+        title: t('components.newsletter.variants.postEnd.title'),
+        description: t('components.newsletter.variants.postEnd.description'),
+      };
+    }
+
+    if (variant === 'list-end') {
+      return {
+        title: t('components.newsletter.variants.listEnd.title'),
+        description: t('components.newsletter.variants.listEnd.description'),
+      };
+    }
+
+    return {
+      title: t('components.newsletter.variants.home.title'),
+      description: t('components.newsletter.variants.home.description'),
+    };
   };
 
   const { title: defaultTitle, description: defaultDescription } =
@@ -58,24 +61,57 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
     return emailRegex.test(email);
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
+  const validateForm = (): string | null => {
     if (!email.trim()) {
-      setStatus('error');
-      setErrorMessage(t('components.newsletter.messages.emailRequired'));
-      return;
+      return t('components.newsletter.messages.emailRequired');
     }
 
     if (!validateEmail(email)) {
-      setStatus('error');
-      setErrorMessage(t('components.newsletter.messages.emailInvalid'));
-      return;
+      return t('components.newsletter.messages.emailInvalid');
     }
 
     if (!acceptedTerms) {
+      return t('components.newsletter.messages.termsRequired');
+    }
+
+    return null;
+  };
+
+  const getErrorMessage = (error: NewsletterError): string => {
+    switch (error.code) {
+      case 'TIMEOUT_ERROR':
+        return t('components.newsletter.messages.timeoutError');
+      case 'NETWORK_ERROR':
+        return t('components.newsletter.messages.networkError');
+      case 'RATE_LIMITED':
+        return t('components.newsletter.messages.rateLimited');
+      case 'SERVER_ERROR':
+      case 'BAD_GATEWAY':
+      case 'SERVICE_UNAVAILABLE':
+      case 'GATEWAY_TIMEOUT':
+        return t('components.newsletter.messages.serverError');
+      case 'INVALID_RESPONSE':
+        return t('components.newsletter.messages.invalidResponse');
+      case 'SUBSCRIPTION_ERROR':
+        if (error.message.includes('invalid_email')) {
+          return t('components.newsletter.messages.emailInvalid');
+        }
+        if (error.message.includes('already')) {
+          return t('components.newsletter.messages.alreadySubscribed');
+        }
+        return t('components.newsletter.messages.error');
+      default:
+        return t('components.newsletter.messages.error');
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const validationError = validateForm();
+    if (validationError) {
       setStatus('error');
-      setErrorMessage(t('components.newsletter.messages.termsRequired'));
+      setErrorMessage(validationError);
       return;
     }
 
@@ -84,19 +120,36 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
     setErrorMessage('');
 
     try {
-      // TODO: Implementar integração com Supabase
-      // Simulando envio
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const currentPath =
+        typeof window !== 'undefined' ? window.location.pathname : '';
+      const source = newsletterService.getSourceFromPath(currentPath);
+      const tags = newsletterService.getTagsFromContext(currentPath, variant);
+      const locale = i18n.language || 'pt';
 
-      setStatus('success');
-      setEmail('');
-      setAcceptedTerms(false);
+      const response = await newsletterService.subscribe({
+        email: email.trim().toLowerCase(),
+        source,
+        variant,
+        locale,
+        tags,
+      });
 
-      // Reset status após 5 segundos
-      setTimeout(() => setStatus('idle'), 5000);
+      if (response.ok) {
+        setStatus('success');
+        setEmail('');
+        setAcceptedTerms(false);
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        throw new Error(response.error || 'Subscription failed');
+      }
     } catch (error) {
       setStatus('error');
-      setErrorMessage(t('components.newsletter.messages.error'));
+
+      if (error instanceof NewsletterError) {
+        setErrorMessage(getErrorMessage(error));
+      } else {
+        setErrorMessage(t('components.newsletter.messages.error'));
+      }
     } finally {
       setIsLoading(false);
     }

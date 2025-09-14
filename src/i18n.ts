@@ -192,6 +192,18 @@ const resources = {
         'Você deve aceitar os termos e condições',
       'components.newsletter.messages.error':
         'Erro ao inscrever. Tente novamente.',
+      'components.newsletter.messages.alreadySubscribed':
+        'Este email já está inscrito na newsletter.',
+      'components.newsletter.messages.timeoutError':
+        'Tempo limite excedido. Verifique sua conexão e tente novamente.',
+      'components.newsletter.messages.networkError':
+        'Erro de conexão. Verifique sua internet e tente novamente.',
+      'components.newsletter.messages.rateLimited':
+        'Muitas tentativas. Aguarde alguns minutos antes de tentar novamente.',
+      'components.newsletter.messages.serverError':
+        'Servidor temporariamente indisponível. Tente novamente em alguns minutos.',
+      'components.newsletter.messages.invalidResponse':
+        'Resposta inválida do servidor. Tente novamente.',
       'components.newsletter.messages.success':
         '✅ Inscrição realizada com sucesso! Verifique seu email para confirmar.',
 
@@ -454,6 +466,18 @@ const resources = {
         'You must accept the terms and conditions',
       'components.newsletter.messages.error':
         'Error subscribing. Please try again.',
+      'components.newsletter.messages.alreadySubscribed':
+        'This email is already subscribed to the newsletter.',
+      'components.newsletter.messages.timeoutError':
+        'Request timeout. Please check your connection and try again.',
+      'components.newsletter.messages.networkError':
+        'Network error. Please check your internet connection and try again.',
+      'components.newsletter.messages.rateLimited':
+        'Too many attempts. Please wait a few minutes before trying again.',
+      'components.newsletter.messages.serverError':
+        'Server temporarily unavailable. Please try again in a few minutes.',
+      'components.newsletter.messages.invalidResponse':
+        'Invalid server response. Please try again.',
       'components.newsletter.messages.success':
         '✅ Successfully subscribed! Check your email to confirm.',
 
