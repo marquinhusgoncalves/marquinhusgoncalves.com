@@ -78,8 +78,8 @@ export const Head: HeadFC = ({ pageContext }: any) => {
 
   return (
     <SEO
-      title={`Tag: ${tag} - ${collectionConfig.name} - Marquinhus Gonçalves`}
-      description={`${collectionConfig.name} sobre ${tag} no site de Marquinhus Gonçalves. Conteúdo sobre desenvolvimento web, tecnologia e experiências pessoais.`}
+      title={`Tag: ${tag} - ${collectionConfig.name} - Marcus Gonçalves`}
+      description={`${collectionConfig.name} sobre ${tag} no site de Marcus Gonçalves. Conteúdo sobre desenvolvimento web, tecnologia e experiências pessoais.`}
       type="website"
       url={`https://www.marquinhusgoncalves.com${collectionConfig.path}/tags/${tag}`}
     />

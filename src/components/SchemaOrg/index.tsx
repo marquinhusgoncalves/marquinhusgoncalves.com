@@ -40,7 +40,7 @@ const SchemaOrg: React.FC<SchemaOrgProps> = ({
           '@type': 'WebSite',
           publisher: {
             '@type': 'Person',
-            name: 'Marquinhus Gonçalves',
+            name: 'Marcus Gonçalves',
             jobTitle: 'Software Engineer',
             url: 'https://www.marquinhusgoncalves.com',
             sameAs: [
@@ -56,12 +56,12 @@ const SchemaOrg: React.FC<SchemaOrgProps> = ({
           '@type': 'Article',
           author: {
             '@type': 'Person',
-            name: author || 'Marquinhus Gonçalves',
+            name: author || 'Marcus Gonçalves',
             url: 'https://www.marquinhusgoncalves.com',
           },
           publisher: {
             '@type': 'Organization',
-            name: 'Marquinhus Gonçalves',
+            name: 'Marcus Gonçalves',
             url: 'https://www.marquinhusgoncalves.com',
             logo: {
               '@type': 'ImageObject',
@@ -84,7 +84,7 @@ const SchemaOrg: React.FC<SchemaOrgProps> = ({
           jobTitle: 'Software Engineer',
           worksFor: {
             '@type': 'Organization',
-            name: 'Marquinhus Gonçalves',
+            name: 'Marcus Gonçalves',
           },
           knowsAbout: [
             'Web Development',
@@ -105,7 +105,7 @@ const SchemaOrg: React.FC<SchemaOrgProps> = ({
           '@type': 'Organization',
           founder: {
             '@type': 'Person',
-            name: 'Marquinhus Gonçalves',
+            name: 'Marcus Gonçalves',
           },
           url: 'https://www.marquinhusgoncalves.com',
           logo: {

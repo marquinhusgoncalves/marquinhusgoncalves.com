@@ -57,7 +57,7 @@ function SEO({
       <title>{title}</title>
 
       {/* Basic Meta Tags */}
-      <meta name="application-name" content="Marquinhus Gonçalves Website" />
+      <meta name="application-name" content="Marcus Gonçalves Website" />
       <meta name="description" content={metaDescription} />
       <meta name="author" content={site.siteMetadata.author} />
 

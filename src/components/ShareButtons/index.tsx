@@ -87,7 +87,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
           url={fullUrl}
           title={title}
           summary={description}
-          source="Marquinhus Gonçalves"
+          source="Marcus Gonçalves"
         >
           <S.ShareButton linkedin>
             <S.LinkedinIcon />

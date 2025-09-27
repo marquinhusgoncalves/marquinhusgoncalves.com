@@ -2,13 +2,14 @@
   "name": "marquinhus-goncalves",
   "version": "4.0.0",
   "private": true,
-  "description": "Marquinhus Gonçalves - Personal Marquinhus Gonçalves Website",
-  "author": "Marquinhus Gonçalves <eu@marquinhusgoncalves.com>",
+  "description": "Marcus Gonçalves - Personal Website",
+  "author": "Marcus Gonçalves <eu@marquinhusgoncalves.com>",
   "keywords": [
     "gatsby",
     "typescript",
     "react",
     "netlify-cms",
+    "marcus gonçalves",
     "marquinhus gonçalves",
     "marquinhusgoncalves"
   ],

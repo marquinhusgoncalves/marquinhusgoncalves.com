@@ -5,8 +5,8 @@ import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: 'Marquinhus Gonçalves',
-    description: 'Marquinhus Gonçalves Website',
+    title: 'Marcus Gonçalves',
+    description: 'Marcus Gonçalves Website',
     author: '@marquinhusgonc',
     siteUrl: 'https://www.marquinhusgoncalves.com',
   },
@@ -27,8 +27,8 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Marquinhus Gonçalves',
-        short_name: 'Marquinhus Gonçalves',
+        name: 'Marcus Gonçalves',
+        short_name: 'Marcus Gonçalves',
         start_url: '/',
         background_color: '#25AAE1',
         theme_color: '#25AAE1',
@@ -137,7 +137,7 @@ const config: GatsbyConfig = {
               }
             `,
             output: '/rss.xml',
-            title: 'Marquinhus Gonçalves - RSS Feed',
+            title: 'Marcus Gonçalves - RSS Feed',
             description:
               'Blog pessoal sobre desenvolvimento web, tecnologia e experiências.',
           },

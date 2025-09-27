@@ -23,13 +23,11 @@ const resources = {
       'pages.newsletter.name': 'Newsletter',
 
       // Páginas
-      'pages.home.title': 'Marquinhus Gonçalves - Software Engineer',
+      'pages.home.title': 'Marcus Gonçalves - Software Engineer',
       'pages.home.description':
-        'Oi! Sou o Marquinhus Gonçalves, engenheiro de software.',
-      'pages.home.profile.text1':
-        'Oi !!! sou o Marquinhus Gonçalves, engenheiro de software, curto viajar, escutar música, estudar, praticar esportes, tocar guitarra e violão.',
-      'pages.home.profile.text2':
-        'Apaixonado por tecnologia, gosto de solucionar problemas e para me manter atualizado na área leio artigos, vou a eventos, conferências e meetups sobre temas relacionados.',
+        'Engenheiro de software sênior com mais de 10 anos transformando ideias em soluções tecnológicas para gerar impacto significativo. Especialista em desenvolvimento full-stack, liderança técnica e gestão de projetos, com domínio de diversas tecnologias para criar sistemas robustos e escaláveis.',
+      'pages.home.profile.text1': '',
+      'pages.home.profile.text2': '',
 
       'pages.about.title': 'Sobre Mim',
       'pages.about.content':
@@ -41,7 +39,7 @@ const resources = {
 
       'pages.projects.title': 'Projetos',
       'pages.projects.description':
-        'Portfólio de projetos desenvolvidos por Marquinhus Gonçalves.',
+        'Portfólio de projetos desenvolvidos por Marcus Gonçalves.',
 
       'pages.tips.title': 'Dicas',
       'pages.tips.content': 'Aqui você encontrará dicas valiosas gerais.',
@@ -145,7 +143,7 @@ const resources = {
       'components.socialLinks.rssFeed': 'RSS Feed',
 
       // Componente Avatar
-      'components.avatar.alt': 'Marquinhus Gonçalves',
+      'components.avatar.alt': 'Marcus Gonçalves',
 
       // Template de tag
       'components.tag.foundWithTag': 'encontrado com a tag',
@@ -208,22 +206,22 @@ const resources = {
         '✅ Inscrição realizada com sucesso! Verifique seu email para confirmar.',
 
       // SEO
-      'seo.about.title': 'Sobre - Marquinhus Gonçalves',
+      'seo.about.title': 'Sobre - Marcus Gonçalves',
       'seo.about.description':
-        'Conheça mais sobre Marquinhus Gonçalves, engenheiro de software.',
-      'seo.blog.title': 'Blog - Marquinhus Gonçalves',
+        'Conheça mais sobre Marcus Gonçalves, engenheiro de software.',
+      'seo.blog.title': 'Blog - Marcus Gonçalves',
       'seo.blog.description':
         'Artigos sobre desenvolvimento web, tecnologia e experiências pessoais. Compartilhando conhecimento e aprendizado na área de software.',
-      'seo.projects.title': 'Projetos - Marquinhus Gonçalves',
+      'seo.projects.title': 'Projetos - Marcus Gonçalves',
       'seo.projects.description':
-        'Portfólio de projetos desenvolvidos por Marquinhus Gonçalves.',
-      'seo.newsletter.title': 'Newsletter - Marquinhus Gonçalves',
+        'Portfólio de projetos desenvolvidos por Marcus Gonçalves.',
+      'seo.newsletter.title': 'Newsletter - Marcus Gonçalves',
       'seo.newsletter.description':
         'Inscreva-se na newsletter e receba as melhores dicas sobre tecnologia, desenvolvimento e viagens.',
-      'seo.terms.title': 'Termos e Condições - Marquinhus Gonçalves',
+      'seo.terms.title': 'Termos e Condições - Marcus Gonçalves',
       'seo.terms.description':
         'Termos e condições para uso da newsletter e serviços do site.',
-      'seo.privacy.title': 'Política de Privacidade - Marquinhus Gonçalves',
+      'seo.privacy.title': 'Política de Privacidade - Marcus Gonçalves',
       'seo.privacy.description':
         'Política de privacidade e proteção de dados pessoais.',
 
@@ -234,7 +232,7 @@ const resources = {
       'pages.terms.date': '14 de setembro de 2025',
       'pages.terms.section1.title': '1. Aceitação dos Termos',
       'pages.terms.section1.content':
-        'Ao se inscrever na newsletter do Marquinhus Gonçalves, você concorda em cumprir e estar vinculado a estes Termos e Condições. Se você não concordar com qualquer parte destes termos, não deve se inscrever na newsletter.',
+        'Ao se inscrever na newsletter do Marcus Gonçalves, você concorda em cumprir e estar vinculado a estes Termos e Condições. Se você não concordar com qualquer parte destes termos, não deve se inscrever na newsletter.',
       'pages.terms.section2.title': '2. Descrição do Serviço',
       'pages.terms.section2.content':
         'A newsletter é um serviço gratuito que fornece conteúdo sobre desenvolvimento web, tecnologia, viagens e experiências pessoais. O conteúdo é fornecido "como está" e pode ser alterado ou descontinuado a qualquer momento.',
@@ -249,7 +247,7 @@ const resources = {
         'Reservamo-nos o direito de modificar estes termos a qualquer momento. As modificações entrarão em vigor imediatamente após a publicação. O uso continuado da newsletter após as modificações constitui aceitação dos novos termos.',
       'pages.terms.section6.title': '6. Limitação de Responsabilidade',
       'pages.terms.section6.content':
-        'O Marquinhus Gonçalves não será responsável por quaisquer danos diretos, indiretos, incidentais ou consequenciais resultantes do uso ou incapacidade de usar a newsletter.',
+        'O Marcus Gonçalves não será responsável por quaisquer danos diretos, indiretos, incidentais ou consequenciais resultantes do uso ou incapacidade de usar a newsletter.',
       'pages.terms.contact.title': 'Contato',
       'pages.terms.contact.content':
         'Se você tiver dúvidas sobre estes Termos e Condições, entre em contato conosco através do email eu@marquinhusgoncalves.com.',
@@ -304,13 +302,11 @@ const resources = {
       'pages.newsletter.name': 'Newsletter',
 
       // Páginas
-      'pages.home.title': 'Marquinhus Gonçalves - Software Engineer',
+      'pages.home.title': 'Marcus Gonçalves - Software Engineer',
       'pages.home.description':
-        "Hi! I'm Marquinhus Gonçalves, a software engineer.",
-      'pages.home.profile.text1':
-        "Hi!!! I'm Marquinhus Gonçalves, a software engineer, I love traveling, listening to music, studying, practicing sports, playing guitar and acoustic guitar .",
-      'pages.home.profile.text2':
-        'Passionate about technology, I like solving problems and to keep myself updated in the area I read articles, go to events, conferences and meetups on related topics.',
+        'Senior software engineer with over 10 years transforming ideas into technological solutions to generate significant impact. Expert in full-stack development, technical leadership and project management, with mastery of various technologies to create robust and scalable systems.',
+      'pages.home.profile.text1': '',
+      'pages.home.profile.text2': '',
 
       'pages.about.title': 'About Me',
       'pages.about.content':
@@ -322,7 +318,7 @@ const resources = {
 
       'pages.projects.title': 'Projects',
       'pages.projects.description':
-        'Portfolio of projects developed by Marquinhus Gonçalves.',
+        'Portfolio of projects developed by Marcus Gonçalves.',
 
       'pages.tips.title': 'Tips',
       'pages.tips.content': 'Here you will find valuable general tips.',
@@ -422,7 +418,7 @@ const resources = {
       'components.socialLinks.rssFeed': 'RSS Feed',
 
       // Componente Avatar
-      'components.avatar.alt': 'Marquinhus Gonçalves',
+      'components.avatar.alt': 'Marcus Gonçalves',
 
       // Template de tag
       'components.tag.foundWithTag': 'found with tag',
@@ -482,22 +478,22 @@ const resources = {
         '✅ Successfully subscribed! Check your email to confirm.',
 
       // SEO
-      'seo.about.title': 'About - Marquinhus Gonçalves',
+      'seo.about.title': 'About - Marcus Gonçalves',
       'seo.about.description':
-        'Learn more about Marquinhus Gonçalves, software engineer.',
-      'seo.blog.title': 'Blog - Marquinhus Gonçalves',
+        'Learn more about Marcus Gonçalves, software engineer.',
+      'seo.blog.title': 'Blog - Marcus Gonçalves',
       'seo.blog.description':
         'Articles about web development, technology and personal experiences. Sharing knowledge and learning in the software area.',
-      'seo.projects.title': 'Projects - Marquinhus Gonçalves',
+      'seo.projects.title': 'Projects - Marcus Gonçalves',
       'seo.projects.description':
-        'Portfolio of projects developed by Marquinhus Gonçalves.',
-      'seo.newsletter.title': 'Newsletter - Marquinhus Gonçalves',
+        'Portfolio of projects developed by Marcus Gonçalves.',
+      'seo.newsletter.title': 'Newsletter - Marcus Gonçalves',
       'seo.newsletter.description':
         'Subscribe to the newsletter and get the best tips about technology, development and travels.',
-      'seo.terms.title': 'Terms and Conditions - Marquinhus Gonçalves',
+      'seo.terms.title': 'Terms and Conditions - Marcus Gonçalves',
       'seo.terms.description':
         'Terms and conditions for newsletter and website services.',
-      'seo.privacy.title': 'Privacy Policy - Marquinhus Gonçalves',
+      'seo.privacy.title': 'Privacy Policy - Marcus Gonçalves',
       'seo.privacy.description': 'Privacy policy and personal data protection.',
 
       // Terms and Conditions
@@ -507,7 +503,7 @@ const resources = {
       'pages.terms.date': 'September 14, 2025',
       'pages.terms.section1.title': '1. Acceptance of Terms',
       'pages.terms.section1.content':
-        'By subscribing to Marquinhus Gonçalves newsletter, you agree to comply with and be bound by these Terms and Conditions. If you do not agree to any part of these terms, you should not subscribe to the newsletter.',
+        'By subscribing to Marcus Gonçalves newsletter, you agree to comply with and be bound by these Terms and Conditions. If you do not agree to any part of these terms, you should not subscribe to the newsletter.',
       'pages.terms.section2.title': '2. Service Description',
       'pages.terms.section2.content':
         'The newsletter is a free service that provides content about web development, technology, travel, and personal experiences. Content is provided "as is" and may be changed or discontinued at any time.',
@@ -522,7 +518,7 @@ const resources = {
         'We reserve the right to modify these terms at any time. Modifications will take effect immediately upon publication. Continued use of the newsletter after modifications constitutes acceptance of the new terms.',
       'pages.terms.section6.title': '6. Limitation of Liability',
       'pages.terms.section6.content':
-        'Marquinhus Gonçalves will not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the newsletter.',
+        'Marcus Gonçalves will not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the newsletter.',
       'pages.terms.contact.title': 'Contact',
       'pages.terms.contact.content':
         'If you have questions about these Terms and Conditions, contact us at eu@marquinhusgoncalves.com.',

@@ -34,11 +34,10 @@ export const ProfileTextWrapper = styled.div`
 `;
 
 export const ProfileText = styled.p`
-  font-family: 'Gloria Hallelujah', cursive;
-  font-size: 1.1rem;
-  line-height: 1.5;
-  letter-spacing: 0.003em;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.069rem;
   margin-bottom: 1rem;
 
   &:last-child {
@@ -46,12 +45,12 @@ export const ProfileText = styled.p`
   }
 
   @media (max-width: 768px) {
-    font-size: 1rem;
-    line-height: 1.4;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   @media (max-width: 450px) {
-    font-size: 0.95rem;
-    line-height: 1.3;
+    font-size: 0.85rem;
+    line-height: 1.4;
   }
 `;

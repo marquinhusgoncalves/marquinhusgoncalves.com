@@ -84,7 +84,7 @@ const Post: React.FC<PageProps<PostData, PostContext>> = (props) => {
         <ShareButtons
           url={`${language === 'en' ? '/en' : ''}/blog${slug}`}
           title={title}
-          description={`Post sobre ${title} - Blog de Marquinhus Gonçalves`}
+          description={`Post sobre ${title} - Blog de Marcus Gonçalves`}
           hashtags={[]}
           via="marquinhusgonc"
         />
@@ -128,7 +128,7 @@ export const Head: HeadFC<PostData, PostContext> = ({ data, pageContext }) => {
       title={title}
       type="article"
       url={`https://www.marquinhusgoncalves.com${language === 'en' ? '/en' : ''}/blog${slug}`}
-      author="Marquinhus Gonçalves"
+      author="Marcus Gonçalves"
       datePublished={date}
       dateModified={date}
       tags={['blog', 'desenvolvimento', 'tecnologia']}
