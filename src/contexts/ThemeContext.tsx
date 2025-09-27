@@ -33,7 +33,7 @@ interface ThemeProviderProps {
  * @returns {JSX.Element} Provider do contexto
  */
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useState<Theme>('dark');
   const [isClient, setIsClient] = useState(false);
 
   const applyTheme = (selectedTheme: Theme) => {
