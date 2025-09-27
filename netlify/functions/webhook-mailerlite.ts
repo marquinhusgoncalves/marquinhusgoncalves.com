@@ -7,48 +7,61 @@ const supabase = createClient(
 );
 
 export const handler: Handler = async (event) => {
-  if (event.httpMethod !== 'POST')
+  if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method not allowed' };
+  }
 
   try {
     const body = JSON.parse(event.body || '{}');
-    const type: string = body?.event || body?.type;
-    const email: string | undefined =
-      body?.data?.email || body?.subscriber?.email;
 
-    if (!type || !email) return { statusCode: 200, body: 'ignored' };
+    const type: string = body?.event || '';
+    const email: string | undefined = body?.email;
 
-    const lower = email.toLowerCase();
-    if (type.includes('confirmed')) {
-      await supabase
+    if (!type || !email) {
+      return { statusCode: 200, body: 'ignored' };
+    }
+
+    const mail = email.toLowerCase();
+
+    if (type === 'subscriber.active') {
+      const { error } = await supabase
         .from('subscribers')
         .update({ status: 'confirmed', confirmed_at: new Date().toISOString() })
-        .eq('email', lower);
-    } else if (type.includes('unsubscribed')) {
-      await supabase
+        .eq('email', mail);
+      if (error) {
+        console.error('update_confirmed_error', error);
+      }
+      return { statusCode: 200, body: 'confirmed' };
+    }
+
+    if (type === 'subscriber.unsubscribed') {
+      const { error } = await supabase
         .from('subscribers')
         .update({
           status: 'unsubscribed',
           unsubscribed_at: new Date().toISOString(),
         })
-        .eq('email', lower);
-    } else if (type.includes('bounced')) {
-      await supabase
-        .from('subscribers')
-        .update({ status: 'bounced' })
-        .eq('email', lower);
-    } else if (type.includes('deleted')) {
-      await supabase
-        .from('subscribers')
-        .update({ status: 'deleted', deleted_at: new Date().toISOString() })
-        .eq('email', lower);
-    } else {
-      console.log('Unhandled MailerLite event:', type, 'for email:', lower);
+        .eq('email', mail);
+      if (error) {
+        console.error('update_unsubscribed_error', error);
+      }
+      return { statusCode: 200, body: 'unsubscribed' };
     }
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true }) };
-  } catch (e: any) {
-    console.error(e);
+    if (type === 'subscriber.bounced') {
+      const { error } = await supabase
+        .from('subscribers')
+        .update({ status: 'bounced' })
+        .eq('email', mail);
+      if (error) {
+        console.error('update_bounced_error', error);
+      }
+      return { statusCode: 200, body: 'bounced' };
+    }
+
     return { statusCode: 200, body: 'noop' };
+  } catch (e: any) {
+    console.error('webhook_error', e);
+    return { statusCode: 200, body: 'error' };
   }
 };
