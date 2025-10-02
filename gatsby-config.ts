@@ -3,6 +3,13 @@ require('dotenv').config();
 
 import type { GatsbyConfig } from 'gatsby';
 
+// Sentry configuration
+const sentryConfig = {
+  dsn: process.env.GATSBY_SENTRY_DSN,
+  org: process.env.GATSBY_SENTRY_ORG,
+  project: process.env.GATSBY_SENTRY_PROJECT,
+};
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: 'Marcus Gonçalves',
@@ -13,6 +20,10 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     'gatsby-plugin-netlify-cms',
+    {
+      resolve: '@sentry/gatsby',
+      options: sentryConfig,
+    },
     'gatsby-plugin-image',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-styled-components',

@@ -25,6 +25,9 @@
   "dependencies": {
     "@mdx-js/react": "^3.1.1",
     "@netlify/functions": "^4.2.7",
+    "@sentry/gatsby": "^10.17.0",
+    "@sentry/react": "^10.17.0",
+    "@sentry/tracing": "^7.120.4",
     "@supabase/supabase-js": "^2.58.0",
     "babel-plugin-styled-components": "^2.1.4",
     "fuse.js": "^7.1.0",
