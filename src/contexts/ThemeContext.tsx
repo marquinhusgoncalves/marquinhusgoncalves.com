@@ -50,10 +50,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
   useEffect(() => {
     setIsClient(true);
-  }, []);
-
-  useEffect(() => {
-    if (!isClient) return;
 
     const savedTheme = localStorage.getItem('theme') as Theme;
     let initialTheme: Theme;
@@ -69,7 +65,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
     setTheme(initialTheme);
     applyTheme(initialTheme);
-  }, [isClient]);
+  }, []);
 
   useEffect(() => {
     if (isClient) {

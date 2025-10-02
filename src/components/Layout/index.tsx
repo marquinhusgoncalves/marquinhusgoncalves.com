@@ -21,7 +21,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     return () => {
       window.removeEventListener('scroll', listener);
     };
-  });
+  }, []);
 
   return (
     <ThemeProvider>

@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import AdSense from 'react-adsense';
 
 const AdBlock = () => {
-  if (process.env.NODE_ENV === 'development') {
+  const [isProduction, setIsProduction] = useState(false);
+
+  useEffect(() => {
+    setIsProduction(process.env.NODE_ENV === 'production');
+  }, []);
+
+  if (!isProduction) {
     return (
       <div
         style={{
