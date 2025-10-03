@@ -28,3 +28,25 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'description', name: 'description', widget: 'string' }
       - { label: 'href', name: 'href', widget: 'string' }
+
+  - name: 'dicas'
+    label: 'dicas'
+    folder: 'dicas'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'viagens'
+    label: 'viagens'
+    folder: 'viagens'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
