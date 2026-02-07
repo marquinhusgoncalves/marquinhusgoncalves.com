@@ -12,7 +12,7 @@ interface IndexPageContext {
   language: string;
 }
 
-const IndexPage: React.FC<PageProps<{}, IndexPageContext>> = ({
+const IndexPage: React.FC<PageProps<object, IndexPageContext>> = ({
   pageContext,
 }) => {
   const { i18n } = useTranslation();
@@ -37,7 +37,7 @@ const IndexPage: React.FC<PageProps<{}, IndexPageContext>> = ({
 
 export default IndexPage;
 
-export const Head: HeadFC<{}, IndexPageContext> = ({ pageContext }) => {
+export const Head: HeadFC<object, IndexPageContext> = ({ pageContext }) => {
   const { t, i18n } = useTranslation();
 
   React.useEffect(() => {

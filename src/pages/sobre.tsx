@@ -12,7 +12,9 @@ interface SobrePageContext {
   language: string;
 }
 
-const Sobre: React.FC<PageProps<{}, SobrePageContext>> = ({ pageContext }) => {
+const Sobre: React.FC<PageProps<object, SobrePageContext>> = ({
+  pageContext,
+}) => {
   const { t, i18n } = useTranslation();
 
   React.useEffect(() => {
@@ -34,7 +36,7 @@ const Sobre: React.FC<PageProps<{}, SobrePageContext>> = ({ pageContext }) => {
 
 export default Sobre;
 
-export const Head: HeadFC<{}, SobrePageContext> = ({ pageContext }) => {
+export const Head: HeadFC<object, SobrePageContext> = ({ pageContext }) => {
   const { t, i18n } = useTranslation();
 
   React.useEffect(() => {

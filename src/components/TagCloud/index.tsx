@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'react-i18next';
 import * as S from './styled';
 
@@ -28,16 +28,25 @@ const TagCloud: React.FC<TagCloudProps> = ({ collection = 'all' }) => {
 
   const tagCounts = new Map<string, number>();
 
-  allMarkdownRemark.edges.forEach(({ node }: any) => {
-    if (collection !== 'all' && node.fields?.collection !== collection) {
-      return;
-    }
+  allMarkdownRemark.edges.forEach(
+    ({
+      node,
+    }: {
+      node: {
+        fields?: { collection?: string };
+        frontmatter?: { tags?: string[] };
+      };
+    }) => {
+      if (collection !== 'all' && node.fields?.collection !== collection) {
+        return;
+      }
 
-    const tags = node.frontmatter?.tags || [];
-    tags.forEach((tag: string) => {
-      tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
-    });
-  });
+      const tags = node.frontmatter?.tags || [];
+      tags.forEach((tag: string) => {
+        tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+      });
+    },
+  );
 
   const sortedTags = Array.from(tagCounts.entries())
     .sort(([, a], [, b]) => b - a)

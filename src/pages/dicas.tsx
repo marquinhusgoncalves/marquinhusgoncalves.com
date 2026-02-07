@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { HeadFC, PageProps, graphql } from 'gatsby';
 import { useTranslation } from 'react-i18next';

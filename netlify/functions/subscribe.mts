@@ -1,4 +1,4 @@
-import type { Handler } from '@netlify/functions';
+import type { Config, Context } from '@netlify/functions';
 import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(
@@ -18,60 +18,33 @@ type Body = {
   tags?: string[];
 };
 
-function simpleClientIp(
-  headers: Record<string, string | string[] | undefined>,
-) {
-  const lower = (k: string) => headers[k.toLowerCase()];
-  const asStr = (v: string | string[] | undefined) =>
-    Array.isArray(v) ? v.join(',') : v || '';
-  const raw =
-    asStr(lower('x-forwarded-for')) ||
-    asStr(lower('cf-connecting-ip')) ||
-    asStr(lower('x-real-ip')) ||
-    '';
-  if (!raw) return null;
-
-  let ip = raw.split(',')[0].trim();
-
-  if (ip.startsWith('[')) {
-    const end = ip.indexOf(']');
-    if (end > 0) ip = ip.slice(1, end);
-  } else if (ip.includes(':') && ip.includes('.')) {
-    ip = ip.split(':')[0];
-  }
-
-  if (ip === '::1' || ip === '127.0.0.1') return null;
-
-  const isIPv4 = /^\d{1,3}(\.\d{1,3}){3}$/.test(ip);
-  const isIPv6 = /^[A-Fa-f0-9:]+$/.test(ip) && ip.includes(':');
-  return isIPv4 || isIPv6 ? ip : null;
-}
+const JSON_HEADERS = {
+  'Content-Type': 'application/json',
+  'Cache-Control': 'no-store',
+} as const;
 
 function ok(payload: Record<string, unknown> = {}) {
-  return {
-    statusCode: 200,
-    headers: {
-      'Content-Type': 'application/json',
-      'Cache-Control': 'no-store',
-    },
-    body: JSON.stringify({ ok: true, ...payload }),
-  };
+  return new Response(JSON.stringify({ ok: true, ...payload }), {
+    status: 200,
+    headers: JSON_HEADERS,
+  });
 }
 
 function bad(statusCode = 400, message = 'bad_request') {
-  return {
-    statusCode,
-    headers: {
-      'Content-Type': 'application/json',
-      'Cache-Control': 'no-store',
-    },
-    body: JSON.stringify({ ok: false, error: message }),
-  };
+  return new Response(JSON.stringify({ ok: false, error: message }), {
+    status: statusCode,
+    headers: JSON_HEADERS,
+  });
 }
 
-export const handler: Handler = async (event) => {
-  if (event.httpMethod !== 'POST') return bad(405, 'method_not_allowed');
+export const config: Config = {
+  method: 'POST',
+};
 
+export default async function handler(
+  request: Request,
+  context: Context,
+): Promise<Response> {
   if (!process.env.SUPABASE_URL || !process.env.SUPABASE_KEY) {
     console.error('Missing Supabase configuration');
     return bad(500, 'configuration_error');
@@ -85,11 +58,13 @@ export const handler: Handler = async (event) => {
   try {
     let body: Body;
     try {
-      body = event.body ? JSON.parse(event.body) : {};
+      const text = await request.text();
+      body = text ? JSON.parse(text) : {};
     } catch (parseError) {
       console.error('JSON parse error:', parseError);
       return bad(400, 'invalid_json');
     }
+
     const norm = String(body.email || '')
       .trim()
       .toLowerCase();
@@ -102,8 +77,8 @@ export const handler: Handler = async (event) => {
 
     if (!/^\S+@\S+\.\S+$/.test(norm)) return bad(400, 'invalid_email');
 
-    const ip = simpleClientIp(event.headers);
-    const ua = event.headers['user-agent'] || null;
+    const ip = context.ip ?? null;
+    const ua = request.headers.get('user-agent') ?? null;
 
     const { data: existing, error: selErr } = await supabase
       .from('subscribers')
@@ -168,7 +143,7 @@ export const handler: Handler = async (event) => {
       }
     }
 
-    const payload: any = {
+    const payload: Record<string, unknown> = {
       email: norm,
       fields: { source, locale },
       status: 'unconfirmed',
@@ -220,8 +195,8 @@ export const handler: Handler = async (event) => {
     }
 
     return ok({ created: !existing, status: 'pending' });
-  } catch (e: any) {
+  } catch (e: unknown) {
     console.error('subscribe error', e);
     return bad(500, 'server_error');
   }
-};
+}

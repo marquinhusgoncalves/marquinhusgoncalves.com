@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-// eslint-disable-next-line import/prefer-default-export
 export const MainContent = styled.section`
   p,
   h1,
@@ -125,5 +124,11 @@ export const MainContent = styled.section`
     @media (max-width: 1170px) {
       padding: 0;
     }
+  }
+
+  img {
+    max-width: min(800px, 100%);
+    width: auto;
+    height: auto;
   }
 `;

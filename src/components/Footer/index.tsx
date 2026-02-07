@@ -1,11 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'gatsby';
 
 import * as S from './styled';
 
 const Footer = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   const getLocalizedUrl = (url: string) => {
     if (i18n.language === 'en' && url !== '/') {

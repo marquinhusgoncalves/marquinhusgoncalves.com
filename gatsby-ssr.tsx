@@ -1,3 +1,4 @@
+import './src/i18n';
 import { GatsbySSR } from 'gatsby';
 import React from 'react';
 

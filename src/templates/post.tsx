@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { HeadFC, PageProps, graphql } from 'gatsby';
 import { useTranslation } from 'react-i18next';
@@ -35,7 +34,7 @@ interface PostData {
 }
 
 const Post: React.FC<PageProps<PostData, PostContext>> = (props) => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const {
     data: { markdownRemark },
     pageContext: { slug, next, previous, language },
@@ -77,7 +76,6 @@ const Post: React.FC<PageProps<PostData, PostContext>> = (props) => {
         <Titles title={title} />
         <PostInfo date={date} timeToRead={timeToRead.toString()} />
         <MainContent>
-          {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </MainContent>
 
