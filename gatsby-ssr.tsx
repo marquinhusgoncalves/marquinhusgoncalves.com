@@ -1,6 +1,24 @@
-import './src/i18n';
+import i18n from './src/i18n';
+import GlobalStyles from './src/styles/global';
 import { GatsbySSR } from 'gatsby';
 import React from 'react';
+
+export const wrapPageElement: GatsbySSR['wrapPageElement'] = ({
+  element,
+  props,
+}) => {
+  const path = props.location?.pathname || '';
+  const lang = path.startsWith('/en') ? 'en' : 'pt';
+  if (i18n.language !== lang) {
+    (i18n as { language: string }).language = lang;
+  }
+  return (
+    <>
+      <GlobalStyles />
+      {element}
+    </>
+  );
+};
 
 export const onRenderBody: GatsbySSR['onRenderBody'] = ({
   setHeadComponents,

@@ -11,6 +11,7 @@ interface SEOProps {
   image?: string;
   type?: 'website' | 'article' | 'person' | 'organization';
   url?: string;
+  path?: string;
   author?: string;
   datePublished?: string;
   dateModified?: string;
@@ -24,6 +25,7 @@ function SEO({
   image,
   type = 'website',
   url,
+  path,
   author,
   datePublished,
   dateModified,
@@ -43,9 +45,7 @@ function SEO({
   `);
 
   const metaDescription = description || site.siteMetadata.description;
-  const currentUrl =
-    url ||
-    `${site.siteMetadata.siteUrl}${typeof window !== 'undefined' ? window.location.pathname : ''}`;
+  const currentUrl = url || `${site.siteMetadata.siteUrl}${path || ''}`;
 
   const ogImage =
     image || `${site.siteMetadata.siteUrl}/assets/img/blog-image.jpg`;
@@ -114,6 +114,7 @@ SEO.propTypes = {
   image: PropTypes.string,
   type: PropTypes.oneOf(['website', 'article', 'person', 'organization']),
   url: PropTypes.string,
+  path: PropTypes.string,
   author: PropTypes.string,
   datePublished: PropTypes.string,
   dateModified: PropTypes.string,

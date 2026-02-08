@@ -20,8 +20,15 @@ const NotFoundPage = () => {
 
 export default NotFoundPage;
 
-export const Head: HeadFC = () => {
+export const Head: HeadFC<{ location?: { pathname: string } }> = ({
+  location,
+}) => {
   const { t } = useTranslation();
 
-  return <SEO title={t('pages.notFound.seoTitle')} />;
+  return (
+    <SEO
+      title={t('pages.notFound.seoTitle')}
+      path={location?.pathname || '/404'}
+    />
+  );
 };

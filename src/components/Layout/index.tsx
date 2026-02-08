@@ -5,15 +5,14 @@ import Header from '../Header';
 import Footer from '../Footer';
 import { ThemeProvider } from '../../contexts/ThemeContext';
 
-import GlobalStyles from '../../styles/global';
 import * as S from './styled';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isShowButtonScrollToTop, setIsShowButtonScrollToTop] = useState(false);
 
   useEffect(() => {
-    const listener = (e: any) => {
-      const showButton = e.target.documentElement.scrollTop >= 100;
+    const listener = () => {
+      const showButton = window.scrollY >= 100;
       setIsShowButtonScrollToTop(showButton);
     };
     window.addEventListener('scroll', listener);
@@ -25,7 +24,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <ThemeProvider>
       <S.LayoutWrapped>
-        <GlobalStyles />
         <Header />
         <S.LayoutMainWrapped>{children}</S.LayoutMainWrapped>
         <S.UpArrowCircleWraped
