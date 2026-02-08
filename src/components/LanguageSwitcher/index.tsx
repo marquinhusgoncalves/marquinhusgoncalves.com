@@ -53,6 +53,7 @@ const LanguageSwitcher: React.FC = () => {
       onClick={toggleLanguage}
       aria-label={`Change language to ${getNextLanguage()}`}
       title={`Current: ${currentLanguage.toUpperCase()}. Click to change to ${getNextLanguage()}`}
+      suppressHydrationWarning
     >
       {getFlag()}
     </S.LanguageButton>

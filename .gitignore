@@ -54,6 +54,9 @@ typings/
 # dotenv environment variable files
 .env
 
+# Cursor MCP
+.cursor/mcp.json
+
 # gatsby files
 .cache/
 public

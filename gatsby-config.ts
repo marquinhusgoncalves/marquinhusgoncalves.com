@@ -18,6 +18,7 @@ const config: GatsbyConfig = {
   },
   graphqlTypegen: true,
   plugins: [
+    'gatsby-plugin-fix-fouc',
     'gatsby-plugin-netlify-cms',
     {
       resolve: '@sentry/gatsby',

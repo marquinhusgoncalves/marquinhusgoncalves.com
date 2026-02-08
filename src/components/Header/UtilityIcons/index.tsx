@@ -13,6 +13,7 @@ const UtilityIcons: React.FC = () => {
         onClick={toggleTheme}
         aria-label={`Alternar para tema ${theme === 'light' ? 'escuro' : 'claro'}`}
         title={`Alternar para tema ${theme === 'light' ? 'escuro' : 'claro'}`}
+        suppressHydrationWarning
       >
         {theme === 'light' ? <S.MoonIcon /> : <S.SunIcon />}
       </S.UtilityButton>
