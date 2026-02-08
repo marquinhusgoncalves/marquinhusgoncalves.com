@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 require('dotenv').config();
 
 import type { GatsbyConfig } from 'gatsby';
@@ -54,7 +53,12 @@ const config: GatsbyConfig = {
         plugins: ['gatsby-remark-prismjs'],
       },
     },
-    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        failOn: 'none',
+      },
+    },
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
@@ -113,8 +117,23 @@ const config: GatsbyConfig = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }: any) => {
-              return allMarkdownRemark.edges.map((edge: any) => {
+            serialize: ({
+              query: { site, allMarkdownRemark },
+            }: {
+              query: {
+                site: { siteMetadata: { siteUrl: string } };
+                allMarkdownRemark: {
+                  edges: Array<{
+                    node: {
+                      excerpt?: string;
+                      fields: { slug: string };
+                      frontmatter: { title: string; date: string };
+                    };
+                  }>;
+                };
+              };
+            }) => {
+              return allMarkdownRemark.edges.map((edge) => {
                 const url =
                   site.siteMetadata.siteUrl + '/blog' + edge.node.fields.slug;
                 return Object.assign({}, edge.node.frontmatter, {

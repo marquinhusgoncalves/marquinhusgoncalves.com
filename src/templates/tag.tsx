@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeadFC, graphql, PageProps } from 'gatsby';
+import { HeadFC, PageProps } from 'gatsby';
 import { useTranslation } from 'react-i18next';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
@@ -45,7 +45,7 @@ const TagPage: React.FC<TagPageProps> = ({ pageContext }) => {
           {posts.length !== 1
             ? t('components.tag.foundWithTagPlural')
             : t('components.tag.foundWithTag')}{' '}
-          "{tag}"
+          &quot;{tag}&quot;
         </S.TagTitle>
 
         <S.TagGrid>
@@ -72,7 +72,9 @@ const TagPage: React.FC<TagPageProps> = ({ pageContext }) => {
 
 export default TagPage;
 
-export const Head: HeadFC = ({ pageContext }: any) => {
+export const Head: HeadFC<object, TagPageProps['pageContext']> = ({
+  pageContext,
+}) => {
   const { tag, collection } = pageContext;
   const collectionConfig = getCollectionConfig(collection);
 

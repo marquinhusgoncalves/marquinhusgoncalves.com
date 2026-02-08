@@ -10,7 +10,7 @@ interface TermsPageContext {
   language: string;
 }
 
-interface TermsData {}
+type TermsData = Record<string, never>;
 
 const Terms: React.FC<PageProps<TermsData, TermsPageContext>> = ({
   pageContext,

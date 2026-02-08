@@ -10,7 +10,7 @@ interface PrivacyPageContext {
   language: string;
 }
 
-interface PrivacyData {}
+type PrivacyData = Record<string, never>;
 
 const Privacy: React.FC<PageProps<PrivacyData, PrivacyPageContext>> = ({
   pageContext,

@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-var-requires */
 import type { GatsbyNode } from 'gatsby';
 const path = require('path');
 const { createFilePath } = require(`gatsby-source-filesystem`);

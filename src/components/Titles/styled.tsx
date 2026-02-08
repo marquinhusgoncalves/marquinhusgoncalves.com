@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-// eslint-disable-next-line import/prefer-default-export
 export const Titles = styled.h1`
   font-size: 2.5rem;
   margin-bottom: 1.25rem;

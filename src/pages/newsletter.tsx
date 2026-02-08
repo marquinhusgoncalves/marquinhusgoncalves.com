@@ -11,7 +11,7 @@ interface NewsletterPageContext {
   language: string;
 }
 
-interface NewsletterData {}
+type NewsletterData = Record<string, never>;
 
 const Newsletter: React.FC<
   PageProps<NewsletterData, NewsletterPageContext>

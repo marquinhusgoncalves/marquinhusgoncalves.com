@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import propTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';

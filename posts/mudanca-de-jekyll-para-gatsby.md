@@ -2,13 +2,25 @@
 title: Mudança de Jekyll para Gatsby
 date: 2020-07-05 20:00:00
 slug: mudanca-de-jekyll-para-gatsby
-tags: [gatsby, jekyll, gatsbyjs, static-site-generator, react, javascript, web-development, blog, netlify, netlify-cms]
+tags:
+  [
+    gatsby,
+    jekyll,
+    gatsbyjs,
+    static-site-generator,
+    react,
+    javascript,
+    web-development,
+    blog,
+    netlify,
+    netlify-cms,
+  ]
 ---
 
-![Mudanças](/assets/img/jekyllparagatsby/change.jpg) Photo by
-[Ross Findon](https://unsplash.com/@rossf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-on
-[Unsplash](https://unsplash.com/s/photos/change?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+<figure>
+  <img src="/assets/img/jekyllparagatsby/change.jpg" alt="Mudanças" />
+  <figcaption>Photo by <a href="https://unsplash.com/@rossf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ross Findon</a> on <a href="https://unsplash.com/s/photos/change?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
+</figure>
 
 Bom a alguns anos atrás queria ter um blog para tentar escrever sobre coisas que
 estava estudando, aprendendo e trabalhando e também queria publicar projetos que

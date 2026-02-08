@@ -45,17 +45,29 @@ const Search: React.FC = () => {
   `);
 
   const searchData = useMemo(() => {
-    return allMarkdownRemark.nodes.map((node: any) => ({
-      id: node.id,
-      title: node.frontmatter.title,
-      description: node.frontmatter.description || '',
-      tags: node.frontmatter.tags || [],
-      date: node.frontmatter.date,
-      slug: node.fields.slug,
-      collection: node.fields.collection,
-      excerpt: node.excerpt,
-      url: `/${node.fields.collection === 'posts' ? 'blog' : node.fields.collection}${node.fields.slug}`,
-    }));
+    return allMarkdownRemark.nodes.map(
+      (node: {
+        id: string;
+        frontmatter: {
+          title: string;
+          description?: string;
+          tags?: string[];
+          date?: string;
+        };
+        fields: { slug: string; collection: string };
+        excerpt?: string;
+      }) => ({
+        id: node.id,
+        title: node.frontmatter.title,
+        description: node.frontmatter.description || '',
+        tags: node.frontmatter.tags || [],
+        date: node.frontmatter.date,
+        slug: node.fields.slug,
+        collection: node.fields.collection,
+        excerpt: node.excerpt,
+        url: `/${node.fields.collection === 'posts' ? 'blog' : node.fields.collection}${node.fields.slug}`,
+      }),
+    );
   }, [allMarkdownRemark.nodes]);
 
   const fuse = useMemo(() => {
@@ -228,7 +240,8 @@ const Search: React.FC = () => {
               </S.EmptyState>
             ) : results.length === 0 ? (
               <S.EmptyState>
-                {t('components.search.emptyState.noResults')} "{query}"
+                {t('components.search.emptyState.noResults')} &quot;{query}
+                &quot;
               </S.EmptyState>
             ) : (
               <>

@@ -1,17 +1,8 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 import { Menu } from '@styled-icons/entypo/Menu';
 import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline';
-
-const fadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-`;
 
 interface CustomStyleProps {
   $isMenuOpen: boolean;
