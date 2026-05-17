@@ -31,7 +31,6 @@
     "@netlify/functions": "^5.1.2",
     "@sentry/gatsby": "^10.38.0",
     "@sentry/react": "^10.38.0",
-    "@sentry/tracing": "^7.120.4",
     "@supabase/supabase-js": "^2.95.3",
     "babel-plugin-styled-components": "^2.1.4",
     "fuse.js": "^7.1.0",
@@ -62,7 +61,8 @@
     "react-i18next": "^16.5.4",
     "react-share": "^5.2.2",
     "styled-components": "^6.3.8",
-    "styled-icons": "^10.47.1"
+    "styled-icons": "^10.47.1",
+    "web-vitals": "^5.2.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { newsletterService, NewsletterError } from '../../services/newsletter';
+import { trackEvent } from '../../utils/analytics';
 import * as S from './styled';
 
 interface NewsletterSignupProps {
@@ -135,6 +136,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
       });
 
       if (response.ok) {
+        trackEvent('newsletter_signup', { source, variant, locale });
         setStatus('success');
         setEmail('');
         setAcceptedTerms(false);

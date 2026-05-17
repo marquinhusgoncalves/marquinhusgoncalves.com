@@ -4,6 +4,7 @@ import i18n from './src/i18n';
 import GlobalStyles from './src/styles/global';
 import { GatsbyBrowser } from 'gatsby';
 import 'prismjs/themes/prism.css';
+import { reportWebVitals } from './src/utils/analytics';
 
 const LanguageSync: React.FC<{
   path: string;
@@ -17,6 +18,10 @@ const LanguageSync: React.FC<{
   }, [path]);
 
   return <>{children}</>;
+};
+
+export const onClientEntry: GatsbyBrowser['onClientEntry'] = () => {
+  reportWebVitals();
 };
 
 export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({
