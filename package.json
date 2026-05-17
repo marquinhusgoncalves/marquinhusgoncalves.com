@@ -24,7 +24,7 @@
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "format": "npx prettier . --write",
+    "format": "prettier . --write",
     "test": "jest"
   },
   "dependencies": {
@@ -106,5 +106,6 @@
   },
   "lint-staged": {
     "**/*": "npm run format"
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }

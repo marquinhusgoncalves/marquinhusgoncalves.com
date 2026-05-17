@@ -27,8 +27,9 @@ Site pessoal e blog — [marquinhusgoncalves.com](https://www.marquinhusgoncalve
 ## Pré-requisitos
 
 - **Node.js 24.x** — use `.nvmrc` com `nvm use`
-- **Gatsby CLI** — `npm install -g gatsby-cli`
-- **Netlify CLI** (para testar functions localmente) — `npm install -g netlify-cli`
+- **Yarn 1.x** — `npm install -g yarn` (apenas para instalação inicial)
+- **Gatsby CLI** — `yarn global add gatsby-cli`
+- **Netlify CLI** (para testar functions localmente) — `yarn global add netlify-cli`
 
 ---
 
@@ -40,7 +41,7 @@ git clone https://github.com/marquinhusgoncalves/marquinhusgoncalves.com.git
 cd marquinhusgoncalves.com
 
 # 2. Instale as dependências
-npm install
+yarn
 
 # 3. Configure as variáveis de ambiente
 cp .env.example .env
@@ -84,8 +85,9 @@ Copie `.env.example` para `.env` e preencha:
 | `gatsby build` | Build de produção (output em `public/`) |
 | `gatsby serve` | Serve o build de produção localmente |
 | `gatsby clean` | Limpa cache (`.cache/` e `public/`) — use quando algo estiver estranho |
-| `npm run typecheck` | Verifica tipos TypeScript |
-| `npm run format` | Formata o código com Prettier |
+| `yarn typecheck` | Verifica tipos TypeScript |
+| `yarn format` | Formata o código com Prettier |
+| `yarn test` | Roda a suite de testes (Jest + React Testing Library) |
 
 ---
 
@@ -183,7 +185,14 @@ Após deploy, submeta o sitemap no [Google Search Console](https://search.google
 
 ## Internacionalização
 
-O site tem suporte a PT-BR e EN. As traduções ficam em `src/i18n.ts`.
+O site tem suporte a PT-BR e EN. As traduções ficam em arquivos JSON por idioma:
+
+| Arquivo | Idioma |
+|---|---|
+| `src/locales/pt/translation.json` | Português (PT-BR) |
+| `src/locales/en/translation.json` | Inglês (EN) |
+
+O arquivo `src/i18n.ts` carrega esses JSONs e inicializa o `react-i18next`. Para adicionar ou editar uma string, edite o JSON do idioma correspondente — não é necessário mexer em código TypeScript.
 
 - Rotas PT: `/blog/`, `/projetos/`, `/sobre/`, etc.
 - Rotas EN: `/en/blog/`, `/en/projetos/`, `/en/sobre/`, etc.
