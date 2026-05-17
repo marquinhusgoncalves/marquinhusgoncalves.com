@@ -5,7 +5,21 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   actions,
   getConfig,
+  stage,
 }) => {
+  if (stage === 'build-html' || stage === 'develop-html') {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /react-share/,
+            use: 'null-loader',
+          },
+        ],
+      },
+    });
+  }
+
   const config = getConfig();
   // Remove Gatsby's built-in ESLint webpack plugin — conflicts with eslint@10
   // Linting is handled by husky + lint-staged on commit

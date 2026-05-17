@@ -45,32 +45,38 @@ const Search: React.FC = () => {
   `);
 
   const searchData = useMemo(() => {
-    return allMarkdownRemark.nodes.map(
-      (node: {
-        id: string;
-        frontmatter: {
-          title: string;
-          description?: string;
-          tags?: string[];
-          date?: string;
-        };
-        fields: { slug: string; collection: string };
-        excerpt?: string;
-      }) => ({
-        id: node.id,
-        title: node.frontmatter.title,
-        description: node.frontmatter.description || '',
-        tags: node.frontmatter.tags || [],
-        date: node.frontmatter.date,
-        slug: node.fields.slug,
-        collection: node.fields.collection,
-        excerpt: node.excerpt,
-        url: `/${node.fields.collection === 'posts' ? 'blog' : node.fields.collection}${node.fields.slug}`,
-      }),
-    );
-  }, [allMarkdownRemark.nodes]);
+    return (allMarkdownRemark?.nodes ?? [])
+      .filter(
+        (node: { fields?: { slug?: string; collection?: string } | null }) =>
+          node?.fields?.slug && node?.fields?.collection,
+      )
+      .map(
+        (node: {
+          id: string;
+          frontmatter: {
+            title: string;
+            description?: string;
+            tags?: string[];
+            date?: string;
+          };
+          fields: { slug: string; collection: string };
+          excerpt?: string;
+        }) => ({
+          id: node.id,
+          title: node.frontmatter.title,
+          description: node.frontmatter.description || '',
+          tags: node.frontmatter.tags || [],
+          date: node.frontmatter.date,
+          slug: node.fields.slug,
+          collection: node.fields.collection,
+          excerpt: node.excerpt,
+          url: `/${node.fields.collection === 'posts' ? 'blog' : node.fields.collection}${node.fields.slug}`,
+        }),
+      );
+  }, [allMarkdownRemark?.nodes]);
 
   const fuse = useMemo(() => {
+    if (typeof window === 'undefined') return null;
     return new Fuse(searchData, {
       keys: ['title', 'description', 'tags', 'excerpt'],
       threshold: 0.3,
@@ -115,6 +121,10 @@ const Search: React.FC = () => {
       return;
     }
 
+    if (!fuse) {
+      setResults([]);
+      return;
+    }
     const searchResults = fuse.search(searchQuery);
     let filteredResults = searchResults.map(
       (result) => result.item,

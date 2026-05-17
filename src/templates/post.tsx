@@ -42,7 +42,7 @@ const Post: React.FC<PageProps<PostData, PostContext>> = (props) => {
   const { i18n } = useTranslation();
   const {
     data: { markdownRemark },
-    pageContext: { slug, relatedPosts, language, collectionBase = '/blog' },
+    pageContext: { slug, relatedPosts = [], language, collectionBase = '/blog' },
   } = props;
 
   React.useEffect(() => {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -6,7 +6,6 @@ import {
   TelegramShareButton,
 } from 'react-share';
 import CopyToClipboard from 'react-copy-to-clipboard';
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import * as S from './styled';
@@ -29,7 +28,14 @@ const ShareButton: React.FC<ShareButtonProps> = ({
   size = 'medium',
 }) => {
   const { t } = useTranslation();
+  const [mounted, setMounted] = useState(false);
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   const fullUrl = url.startsWith('http')
     ? url
