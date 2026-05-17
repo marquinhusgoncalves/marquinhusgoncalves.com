@@ -2,6 +2,20 @@ import type { GatsbyNode } from 'gatsby';
 const path = require('path');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
+  actions,
+  getConfig,
+}) => {
+  const config = getConfig();
+  // Remove Gatsby's built-in ESLint webpack plugin — conflicts with eslint@10
+  // Linting is handled by husky + lint-staged on commit
+  config.plugins = (config.plugins ?? []).filter(
+    (plugin: { constructor: { name: string } }) =>
+      plugin.constructor.name !== 'ESLintWebpackPlugin',
+  );
+  actions.replaceWebpackConfig(config);
+};
+
 export const onCreateNode: GatsbyNode['onCreateNode'] = ({
   node,
   getNode,

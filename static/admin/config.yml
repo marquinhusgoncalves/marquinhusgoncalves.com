@@ -1,52 +1,59 @@
+local_backend: true
+
 backend:
   name: github
   repo: marquinhusgoncalves/marquinhusgoncalves.com
   branch: master
   site_domain: marquinhusgoncalves.com
 
-publish_mode: editorial_workflow
 media_folder: static/assets/img
 public_folder: /assets/img
 
 collections:
-  - name: 'posts'
-    label: 'posts'
-    folder: 'posts'
+  - name: posts
+    label: Posts
+    folder: posts
     create: true
     slug: '{{slug}}'
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Date', name: 'date', widget: 'datetime' }
-      - { label: 'Slug', name: 'slug', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: Título, name: title, widget: string }
+      - { label: Data, name: date, widget: datetime, format: 'YYYY-MM-DD HH:mm:ss', date_format: DD/MM/YYYY, time_format: HH:mm }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Tags, name: tags, widget: list, required: false }
+      - { label: 'Descrição (SEO)', name: description, widget: text, required: false }
+      - { label: Conteúdo, name: body, widget: markdown }
 
-  - name: 'projects'
-    label: 'projects'
-    folder: 'projects'
-    create: true
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'description', name: 'description', widget: 'string' }
-      - { label: 'href', name: 'href', widget: 'string' }
-
-  - name: 'dicas'
-    label: 'dicas'
-    folder: 'dicas'
+  - name: projects
+    label: Projetos
+    folder: projects
     create: true
     slug: '{{slug}}'
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Date', name: 'date', widget: 'datetime' }
-      - { label: 'Slug', name: 'slug', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: Título, name: title, widget: string }
+      - { label: Descrição, name: description, widget: text, required: false }
+      - { label: URL, name: href, widget: string, required: false }
+      - { label: Tags, name: tags, widget: list, required: false }
 
-  - name: 'viagens'
-    label: 'viagens'
-    folder: 'viagens'
+  - name: dicas
+    label: Dicas
+    folder: dicas
     create: true
     slug: '{{slug}}'
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Date', name: 'date', widget: 'datetime' }
-      - { label: 'Slug', name: 'slug', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: Título, name: title, widget: string }
+      - { label: Data, name: date, widget: datetime, format: 'YYYY-MM-DD HH:mm:ss', date_format: DD/MM/YYYY, time_format: HH:mm }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Tags, name: tags, widget: list, required: false }
+      - { label: Conteúdo, name: body, widget: markdown }
+
+  - name: viagens
+    label: Viagens
+    folder: viagens
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Título, name: title, widget: string }
+      - { label: Data, name: date, widget: datetime, format: 'YYYY-MM-DD HH:mm:ss', date_format: DD/MM/YYYY, time_format: HH:mm }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Tags, name: tags, widget: list, required: false }
+      - { label: Conteúdo, name: body, widget: markdown }

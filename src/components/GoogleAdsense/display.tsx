@@ -1,11 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import AdSense from 'react-adsense';
+import React, { useEffect, useRef, useState } from 'react';
 
-const AdBlock = () => {
+declare global {
+  interface Window {
+    adsbygoogle: object[];
+  }
+}
+
+const AdBlock: React.FC = () => {
   const [isProduction, setIsProduction] = useState(false);
+  const ref = useRef<HTMLModElement>(null);
 
   useEffect(() => {
-    setIsProduction(process.env.NODE_ENV === 'production');
+    if (process.env.NODE_ENV !== 'production') return;
+    setIsProduction(true);
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch {
+      // AdSense script not loaded
+    }
   }, []);
 
   if (!isProduction) {
@@ -25,13 +37,15 @@ const AdBlock = () => {
   }
 
   return (
-    <AdSense.Google
-      client="ca-pub-8901672052848512"
-      slot="3615186036"
+    <ins
+      ref={ref}
+      className="adsbygoogle"
       style={{ display: 'block' }}
-      layout="in-article"
-      format="auto"
-      responsive="true"
+      data-ad-client="ca-pub-8901672052848512"
+      data-ad-slot="3615186036"
+      data-ad-layout="in-article"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
     />
   );
 };

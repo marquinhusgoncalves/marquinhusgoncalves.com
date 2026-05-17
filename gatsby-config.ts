@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+import path from 'path';
 import type { GatsbyConfig } from 'gatsby';
 
 // Sentry configuration
@@ -10,6 +11,29 @@ const sentryConfig = {
 };
 
 const config: GatsbyConfig = {
+  developMiddleware: (app: import('express').Application) => {
+    // Regex casa apenas /admin sem barra — evita loop infinito com strict:false
+    app.get(
+      /^\/admin$/,
+      (_req: import('express').Request, res: import('express').Response) => {
+        res.redirect(301, '/admin/');
+      },
+    );
+    // Montado em /admin/ (com barra) — só casa rotas que já têm trailing slash
+    app.use(
+      '/admin/',
+      (req: import('express').Request, res: import('express').Response) => {
+        const file =
+          req.path === '/' || req.path === ''
+            ? 'index.html'
+            : req.path.replace(/^\//, '');
+        const filePath = path.resolve('./static/admin', file);
+        res.sendFile(filePath, (err) => {
+          if (err) res.sendFile(path.resolve('./static/admin/index.html'));
+        });
+      },
+    );
+  },
   siteMetadata: {
     title: 'Marcus Gonçalves',
     description:
@@ -20,7 +44,6 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     'gatsby-plugin-fix-fouc',
-    'gatsby-plugin-netlify-cms',
     {
       resolve: '@sentry/gatsby',
       options: sentryConfig,
