@@ -1,5 +1,4 @@
 import React from 'react';
-import propTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import ReactDisqusComments from 'react-disqus-comments';
 
@@ -7,7 +6,12 @@ import Titles from '../Titles';
 
 import * as S from './styled';
 
-const Comments = ({ url, title }: { url: string; title: string }) => {
+interface CommentsProps {
+  url: string;
+  title: string;
+}
+
+const Comments = ({ url, title }: Readonly<CommentsProps>) => {
   const { t } = useTranslation();
   const completeURL = `https://marquinhusgoncalves.com${url}`;
   return (
@@ -21,11 +25,6 @@ const Comments = ({ url, title }: { url: string; title: string }) => {
       />
     </S.CommentsWrapper>
   );
-};
-
-Comments.propTypes = {
-  url: propTypes.string.isRequired,
-  title: propTypes.string.isRequired,
 };
 
 export default Comments;

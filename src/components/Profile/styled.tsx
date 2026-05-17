@@ -33,6 +33,26 @@ export const ProfileTextWrapper = styled.div`
   }
 `;
 
+export const ProfileTitle = styled.h2`
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-text);
+  margin-bottom: 0.35rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+`;
+
+export const ProfileSubtitle = styled.p`
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-primary);
+  letter-spacing: 0.02rem;
+  margin-bottom: 1rem;
+`;
+
 export const ProfileText = styled.p`
   font-size: 1rem;
   font-weight: 300;

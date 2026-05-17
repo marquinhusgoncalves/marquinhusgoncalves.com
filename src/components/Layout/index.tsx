@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 
 import Header from '../Header';
 import Footer from '../Footer';
@@ -7,7 +6,11 @@ import { ThemeProvider } from '../../contexts/ThemeContext';
 
 import * as S from './styled';
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const Layout = ({ children }: Readonly<LayoutProps>) => {
   const [isShowButtonScrollToTop, setIsShowButtonScrollToTop] = useState(false);
 
   useEffect(() => {
@@ -38,10 +41,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       </S.LayoutWrapped>
     </ThemeProvider>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

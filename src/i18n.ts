@@ -23,15 +23,18 @@ const resources = {
       'pages.newsletter.name': 'Newsletter',
 
       // Páginas
-      'pages.home.title': 'Marcus Gonçalves - Software Engineer',
+      'pages.home.title':
+        'Marcus Gonçalves | Engenheiro Software Sênior · Lisboa',
       'pages.home.description':
-        'Engenheiro de software sênior com mais de 10 anos transformando ideias em soluções tecnológicas para gerar impacto significativo. Especialista em desenvolvimento full-stack, liderança técnica e gestão de projetos, com domínio de diversas tecnologias para criar sistemas robustos e escaláveis.',
-      'pages.home.profile.text1': '',
-      'pages.home.profile.text2': '',
+        'Construo produtos digitais robustos e os times que os entregam. Especialista em front-end com raízes em full-stack, hoje atuo na interseção entre engenharia de alto nível e liderança técnica, definindo arquitetura, elevando padrões e ajudando times a crescer.',
+      'pages.home.profile.text1':
+        'Engenheiro de software sênior especialista em front-end, com visão de produto e liderança técnica',
+      'pages.home.profile.text2':
+        'Lisboa · 15+ anos transformando produtos digitais do código ao time',
 
       'pages.about.title': 'Sobre Mim',
       'pages.about.content':
-        'Bom meu nome é Marcus Vinicius Gonçalves sou nascido e criado em São Bernardo do Campo / SP. Com 14 anos ganhei meu primeiro computador, um 486, com o na época recente Windows 3.11, que ainda não era um sistema operacional e rodava no DOS. A tela preta e a linha de comando linha de comando faziam eu ficar horas no computador, nem desligava. A internet ainda não tinha chego porém tinha <a href="https://pt.wikipedia.org/wiki/Bulletin_board_system" rel="noreferrer" target="_blank">BBS</a> e o acesso era discado como seria a internet. Alguns meses depois comecei o curso de informática na <a href="http://www.sos.com.br" rel="noreferrer" target="_blank">S.O.S Computadores</a> onde tirei nota máxima em todos os cursos e ainda recebi o convite de dar aulas, a paixão só aumentou e meu conhecimento também. Junto ao ensino médio estudei técnico em Informática no <a href="http://www.portalanchieta.com.br" rel="noreferrer" target="_blank">Colégio Anchieta</a> fui bolsista integral, onde tive bastante contato com Hardware e Programação, então nem tive dúvidas do que estudar na faculdade, Ciência da Computação na <a href="http://portal.metodista.br" rel="noreferrer" target="_blank">Universidade Metodista</a> passei entre os 20 primeiros e fui bolsista. E como a vida são cheias de surpresas, minha minha vida mudou totalmente mesmo amando o que estudava tive difuldades com algumas matérias acabei pegando DP´s, perdendo a bolsa e nesse tempo já procurava emprego mas a dificuldade de conseguir emprego na área e os salários de estágio eram baixos e não pagavam a mensalidade, acabei indo para o comércio e trancando meus estudos. Foram mais de 10 anos totalmente fora da área. Nesse período trabalhei na <a href="http://www.tentbeach.com.br" rel="noreferrer" target="_blank">Tent Beach</a> (não vou comentar toda história porque seria muito longa), mas resumindo fui muito feliz tive diversas promoções, premiações, fiz muitas amizades e cresci muito como pessoa, mas chegou uma hora que eu queria crescer mais profissionalmente, foi então que resolvi voltar para área porém estava totalmente desatualizado. Primeira coisa que fiz foi, matricular na faculdade, dessa vez na <a href="http://www.anhembi.br" rel="noreferrer" target="_blank">Anhembi Morumbi</a> no curso de Análise e Desenvolvimento de Sistemas. Hoje sou formado e atuando como engenheiro de software, estudando muito, fazendo muitos cursos e participando de vários eventos da área, inclusive esse blog é um motivo para eu estudar mais e sempre estar buscando as novas tecnologias, novos métodos, testando o que há de novo no mercado ampliando meu network e me divertindo. Curto música pra c... toco violão, guitarra e percurssão. Curto muito praticar esportes correr, nadar, pedalar, bate uma bola, academia, surf, skate, patins e sou fascinado por esportes radicais. Leitura, filmes e séries sempre que sobra um tempo.',
+        '<p>Engenheiro de software sênior baseado em Lisboa, com mais de 15 anos construindo produtos digitais de alta qualidade. Minha especialidade é front-end, Javascript, Typescript, React, Flutter, performance web, design systems, mas minha formação é full-stack, com experiência em Node, Python e Kotlin, o que me dá uma visão de sistema que vai além do browser.</p><p>Hoje atuo na interseção entre engenharia sênior e liderança técnica: defino arquitetura de projetos back e front-end, estabeleço boas práticas, faço mentoria de times e tomo decisões técnicas com impacto real no produto.</p><p>Fora do código, sou movido por desafios físicos e novas perspectivas. Esportes radicais, viagens e música são parte de quem eu sou. Essa mentalidade de explorar e superar limites se aplica ao trabalho também.</p>',
 
       'pages.blog.title': 'Blog',
       'pages.blog.description':
@@ -208,7 +211,7 @@ const resources = {
       // SEO
       'seo.about.title': 'Sobre - Marcus Gonçalves',
       'seo.about.description':
-        'Conheça mais sobre Marcus Gonçalves, engenheiro de software.',
+        'Engenheiro de software sênior baseado em Lisboa, especialista em front-end (React, TypeScript, Flutter) com visão de produto e liderança técnica. 15+ anos de experiência.',
       'seo.blog.title': 'Blog - Marcus Gonçalves',
       'seo.blog.description':
         'Artigos sobre desenvolvimento web, tecnologia e experiências pessoais. Compartilhando conhecimento e aprendizado na área de software.',
@@ -302,15 +305,18 @@ const resources = {
       'pages.newsletter.name': 'Newsletter',
 
       // Páginas
-      'pages.home.title': 'Marcus Gonçalves - Software Engineer',
+      'pages.home.title':
+        'Marcus Gonçalves | Senior Software Engineer · Lisbon',
       'pages.home.description':
-        'Senior software engineer with over 10 years transforming ideas into technological solutions to generate significant impact. Expert in full-stack development, technical leadership and project management, with mastery of various technologies to create robust and scalable systems.',
-      'pages.home.profile.text1': '',
-      'pages.home.profile.text2': '',
+        'I build robust digital products and the teams that deliver them. Front-end specialist with full-stack roots, I work at the intersection of high-level engineering and technical leadership, defining architecture, raising standards and helping teams grow.',
+      'pages.home.profile.text1':
+        'Senior software engineer specializing in front-end, with product vision and technical leadership',
+      'pages.home.profile.text2':
+        'Lisbon · 15+ years transforming digital products from code to team',
 
       'pages.about.title': 'About Me',
       'pages.about.content':
-        'Hello! My name is Marcus Vinicius Gonçalves, I was born and raised in São Bernardo do Campo / SP. At 14 years old I got my first computer, a 486, with the then recent Windows 3.11, which was not yet an operating system and ran on DOS. The black screen and command line made me spend hours on the computer, I wouldn\'t even turn it off. The internet hadn\'t arrived yet but there were <a href="https://pt.wikipedia.org/wiki/Bulletin_board_system" rel="noreferrer" target="_blank">BBS</a> and access was dial-up like the internet would be. A few months later I started the computer course at <a href="http://www.sos.com.br" rel="noreferrer" target="_blank">S.O.S Computadores</a> where I got top grades in all courses and even received an invitation to teach, the passion only increased and so did my knowledge. Along with high school I studied Computer Technician at <a href="http://www.portalanchieta.com.br" rel="noreferrer" target="_blank">Colégio Anchieta</a> where I was a full scholarship student, where I had a lot of contact with Hardware and Programming, so I had no doubts about what to study in college, Computer Science at <a href="http://portal.metodista.br" rel="noreferrer" target="_blank">Universidade Metodista</a> where I was among the top 20 and was a scholarship student. And as life is full of surprises, my life changed completely even though I loved what I was studying I had difficulties with some subjects and ended up getting failing grades, losing the scholarship and at that time I was already looking for a job but the difficulty of getting a job in the area and the internship salaries were low and didn\'t pay the tuition, I ended up going into commerce and putting my studies on hold. It was more than 10 years completely out of the field. During this period I worked at <a href="http://www.tentbeach.com.br" rel="noreferrer" target="_blank">Tent Beach</a> (I won\'t comment on the whole story because it would be too long), but in summary I was very happy, had several promotions, awards, made many friends and grew a lot as a person, but there came a time when I wanted to grow more professionally, so I decided to return to the field but I was completely outdated. The first thing I did was enroll in college, this time at <a href="http://www.anhembi.br" rel="noreferrer" target="_blank">Anhembi Morumbi</a> in the Systems Analysis and Development course. Today I am graduated and working as a software engineer, studying a lot, taking many courses and participating in several events in the area, including this blog is a reason for me to study more and always be seeking new technologies, new methods, testing what\'s new in the market expanding my network and having fun. I love music, I play guitar, guitar and percussion. I really like practicing sports running, swimming, cycling, playing ball, gym, surfing, skating, rollerblading and I\'m fascinated by extreme sports. Reading, movies and series whenever there\'s time left.',
+        "<p>Senior software engineer based in Lisbon, with over 15 years building high-quality digital products. My specialty is front-end, Javascript, Typescript, React, Flutter, web performance, design systems, but my background is full-stack, with experience in Node, Python and Kotlin, giving me a system-level perspective that goes beyond the browser.</p><p>Today I work at the intersection of senior engineering and technical leadership: I define front-end and back-end architecture, establish best practices, mentor teams and make technical decisions with real product impact.</p><p>Outside of code, I'm driven by physical challenges and new perspectives. Extreme sports, travel and music are part of who I am. That mindset of exploring and pushing limits applies to my work too.</p>",
 
       'pages.blog.title': 'Blog',
       'pages.blog.description':
@@ -480,7 +486,7 @@ const resources = {
       // SEO
       'seo.about.title': 'About - Marcus Gonçalves',
       'seo.about.description':
-        'Learn more about Marcus Gonçalves, software engineer.',
+        'Senior software engineer based in Lisbon, specializing in front-end (React, TypeScript, Flutter) with product vision and technical leadership. 15+ years of experience.',
       'seo.blog.title': 'Blog - Marcus Gonçalves',
       'seo.blog.description':
         'Articles about web development, technology and personal experiences. Sharing knowledge and learning in the software area.',

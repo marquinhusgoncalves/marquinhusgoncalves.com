@@ -1,35 +1,36 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import * as S from './styled';
 import ShareButton from '../ShareButton';
 
-const CardLink = (props: {
+interface CardLinkProps {
   slug: string;
   children: React.ReactNode;
   href: string;
-}) => {
-  const { slug, children, href } = props;
-  return slug ? (
+}
+
+const CardLink = ({ slug, children, href }: Readonly<CardLinkProps>) =>
+  slug ? (
     <S.CardLink to={`${slug}`}>{children}</S.CardLink>
   ) : (
     <S.CardLinkOut href={`${href}`} target="_blank">
       {children}
     </S.CardLinkOut>
   );
-};
+
+interface CardProps {
+  title: string;
+  slug?: string;
+  description?: string;
+  href?: string;
+}
 
 const Card = ({
   title,
-  slug,
-  description,
-  href,
-}: {
-  title: string;
-  slug: string;
-  description: string;
-  href: string;
-}) => (
+  slug = '',
+  description = '',
+  href = '',
+}: Readonly<CardProps>) => (
   <S.CardWrapper>
     <CardLink slug={slug} href={href}>
       <S.CardTitle>{title}</S.CardTitle>
@@ -45,18 +46,5 @@ const Card = ({
     />
   </S.CardWrapper>
 );
-
-Card.defaultProps = {
-  slug: '',
-  description: '',
-  href: '',
-};
-
-Card.propTypes = {
-  title: PropTypes.string.isRequired,
-  slug: PropTypes.string,
-  description: PropTypes.string,
-  href: PropTypes.string,
-};
 
 export default Card;

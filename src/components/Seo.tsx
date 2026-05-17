@@ -1,12 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import SchemaOrg from './SchemaOrg';
 
 interface SEOProps {
   description?: string;
-  lang?: string;
   title: string;
   image?: string;
   type?: 'website' | 'article' | 'person' | 'organization';
@@ -20,7 +18,6 @@ interface SEOProps {
 
 function SEO({
   description,
-  lang = 'pt-br',
   title,
   image,
   type = 'website',
@@ -30,7 +27,7 @@ function SEO({
   datePublished,
   dateModified,
   tags,
-}: SEOProps) {
+}: Readonly<SEOProps>) {
   const { site } = useStaticQuery(graphql`
     query SeoQuery {
       site {
@@ -44,15 +41,31 @@ function SEO({
     }
   `);
 
+  const siteUrl: string = site.siteMetadata.siteUrl;
   const metaDescription = description || site.siteMetadata.description;
-  const currentUrl = url || `${site.siteMetadata.siteUrl}${path || ''}`;
+  const currentUrl = url || `${siteUrl}${path || ''}`;
 
-  const ogImage =
-    image || `${site.siteMetadata.siteUrl}/assets/img/blog-image.jpg`;
+  const ogImage = image || `${siteUrl}/assets/img/blog-image.jpg`;
+
+  // Derive language from URL to correctly set html[lang] and og:locale
+  const isEnglish = currentUrl.startsWith(`${siteUrl}/en`);
+  const htmlLang = isEnglish ? 'en' : 'pt-BR';
+  const ogLocale = isEnglish ? 'en_US' : 'pt_BR';
+
+  // hreflang alternate URLs
+  const ptUrl = isEnglish
+    ? currentUrl.replace(`${siteUrl}/en`, siteUrl) || `${siteUrl}/`
+    : currentUrl;
+  const enUrl = isEnglish
+    ? currentUrl
+    : (() => {
+        const pathPart = currentUrl.replace(siteUrl, '');
+        return `${siteUrl}/en${pathPart === '/' ? '' : pathPart}`;
+      })();
 
   return (
     <>
-      <html lang={lang} />
+      <html lang={htmlLang} />
       <title>{title}</title>
 
       {/* Basic Meta Tags */}
@@ -70,7 +83,7 @@ function SEO({
       <meta property="og:url" content={currentUrl} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:site_name" content={site.siteMetadata.title} />
-      <meta property="og:locale" content={lang} />
+      <meta property="og:locale" content={ogLocale} />
 
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -84,6 +97,11 @@ function SEO({
       <meta name="robots" content="index, follow" />
       <meta name="googlebot" content="index, follow" />
       <link rel="canonical" href={currentUrl} />
+
+      {/* hreflang for bilingual content */}
+      <link rel="alternate" hrefLang="pt-BR" href={ptUrl} />
+      <link rel="alternate" hrefLang="en" href={enUrl} />
+      <link rel="alternate" hrefLang="x-default" href={ptUrl} />
 
       {/* Schema.org Structured Data */}
       <SchemaOrg
@@ -100,25 +118,5 @@ function SEO({
     </>
   );
 }
-
-SEO.defaultProps = {
-  lang: 'pt-br',
-  description: '',
-  type: 'website',
-};
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  image: PropTypes.string,
-  type: PropTypes.oneOf(['website', 'article', 'person', 'organization']),
-  url: PropTypes.string,
-  path: PropTypes.string,
-  author: PropTypes.string,
-  datePublished: PropTypes.string,
-  dateModified: PropTypes.string,
-  tags: PropTypes.arrayOf(PropTypes.string),
-};
 
 export default SEO;

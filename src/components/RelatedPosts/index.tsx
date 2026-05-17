@@ -1,11 +1,20 @@
 import React from 'react';
-import propTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 
 import Titles from '../Titles';
 import Card from '../Card';
 
-const RelatedPosts = ({ next, previous }: any) => {
+interface RelatedPostNode {
+  fields: { slug: string };
+  frontmatter: { title: string };
+}
+
+interface RelatedPostsProps {
+  next?: RelatedPostNode | null;
+  previous?: RelatedPostNode | null;
+}
+
+const RelatedPosts = ({ next, previous }: Readonly<RelatedPostsProps>) => {
   const { t } = useTranslation();
   return (
     <>
@@ -16,25 +25,6 @@ const RelatedPosts = ({ next, previous }: any) => {
       )}
     </>
   );
-};
-
-RelatedPosts.propTypes = {
-  next: propTypes.shape({
-    Fields: propTypes.shape({
-      slug: propTypes.string.isRequired,
-    }),
-    frontmatter: propTypes.shape({
-      title: propTypes.string.isRequired,
-    }),
-  }),
-  previous: propTypes.shape({
-    Fields: propTypes.shape({
-      slug: propTypes.string.isRequired,
-    }),
-    frontmatter: propTypes.shape({
-      title: propTypes.string.isRequired,
-    }),
-  }),
 };
 
 export default RelatedPosts;

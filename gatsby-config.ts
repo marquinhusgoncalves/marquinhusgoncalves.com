@@ -12,7 +12,8 @@ const sentryConfig = {
 const config: GatsbyConfig = {
   siteMetadata: {
     title: 'Marcus Gonçalves',
-    description: 'Marcus Gonçalves Website',
+    description:
+      'Engenheiro de software sênior, especialista front-end em Lisboa. Artigos sobre Javascript, TypeScript, React, Flutter, liderança técnica e carreira em tech.',
     author: '@marquinhusgonc',
     siteUrl: 'https://www.marquinhusgoncalves.com',
   },
