@@ -126,6 +126,22 @@ const config: GatsbyConfig = {
       __key: 'projects',
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'dicas',
+        path: `${__dirname}/dicas`,
+      },
+      __key: 'dicas',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'viagens',
+        path: `${__dirname}/viagens`,
+      },
+      __key: 'viagens',
+    },
+    {
       resolve: 'gatsby-plugin-feed',
       options: {
         query: `

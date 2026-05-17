@@ -18,9 +18,10 @@ interface ViagensData {
   allMarkdownRemark: {
     edges: Array<{
       node: {
+        timeToRead: number;
+        fields: { slug: string };
         frontmatter: {
           title: string;
-          slug: string;
         };
       };
     }>;
@@ -47,12 +48,18 @@ const Viagens: React.FC<PageProps<ViagensData, ViagensPageContext>> = ({
         {viagensList.map(
           ({
             node: {
-              frontmatter: { title, slug },
+              timeToRead,
+              fields: { slug },
+              frontmatter: { title },
             },
           }: {
-            node: { frontmatter: { title: string; slug: string } };
+            node: {
+              timeToRead: number;
+              fields: { slug: string };
+              frontmatter: { title: string };
+            };
           }) => (
-            <Card key={title} title={title} slug={slug} />
+            <Card key={title} title={title} slug={`/viagens${slug}`} timeToRead={timeToRead} />
           ),
         )}
         {viagensList.length > 0 && <AdsenseDisplay />}
@@ -70,9 +77,12 @@ export const query = graphql`
     ) {
       edges {
         node {
+          timeToRead
+          fields {
+            slug
+          }
           frontmatter {
             title
-            slug
           }
         }
       }

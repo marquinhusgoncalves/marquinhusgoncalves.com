@@ -23,6 +23,7 @@ interface PostContext {
   slug: string;
   relatedPosts: RelatedPost[];
   language: string;
+  collectionBase?: string;
 }
 
 interface PostData {
@@ -41,7 +42,7 @@ const Post: React.FC<PageProps<PostData, PostContext>> = (props) => {
   const { i18n } = useTranslation();
   const {
     data: { markdownRemark },
-    pageContext: { slug, relatedPosts, language },
+    pageContext: { slug, relatedPosts, language, collectionBase = '/blog' },
   } = props;
 
   React.useEffect(() => {
@@ -56,10 +57,11 @@ const Post: React.FC<PageProps<PostData, PostContext>> = (props) => {
     html,
   } = markdownRemark;
 
-  const blogBase = language === 'en' ? '/en/blog' : '/blog';
+  const base =
+    language === 'en' ? `/en${collectionBase}` : collectionBase;
   const localizedRelatedPosts = relatedPosts.map((post) => ({
     title: post.title,
-    slug: `${blogBase}${post.slug}`,
+    slug: `${base}${post.slug}`,
   }));
 
   return (

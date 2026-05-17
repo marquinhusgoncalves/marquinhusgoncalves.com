@@ -18,6 +18,7 @@ interface DicasData {
   allMarkdownRemark: {
     edges: Array<{
       node: {
+        timeToRead: number;
         frontmatter: {
           title: string;
           slug: string;
@@ -47,12 +48,16 @@ const Dicas: React.FC<PageProps<DicasData, DicasPageContext>> = ({
         {dicasList.map(
           ({
             node: {
+              timeToRead,
               frontmatter: { title, slug },
             },
           }: {
-            node: { frontmatter: { title: string; slug: string } };
+            node: {
+              timeToRead: number;
+              frontmatter: { title: string; slug: string };
+            };
           }) => (
-            <Card key={title} title={title} slug={slug} />
+            <Card key={title} title={title} slug={slug} timeToRead={timeToRead} />
           ),
         )}
         {dicasList.length > 0 && <AdsenseDisplay />}
@@ -70,6 +75,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          timeToRead
           frontmatter {
             title
             slug

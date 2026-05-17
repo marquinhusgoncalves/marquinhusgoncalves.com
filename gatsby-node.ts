@@ -210,6 +210,79 @@ export const createPages: GatsbyNode['createPages'] = async ({
     });
   });
 
+  const viagensRequest = await graphql<Queries.Query>(`
+    query GetAllViagens {
+      allMarkdownRemark(
+        filter: { fields: { collection: { eq: "viagens" } } }
+        sort: { frontmatter: { date: DESC } }
+      ) {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              tags
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const viagensTemplate = path.resolve('./src/templates/post.tsx');
+  const viagensPosts = viagensRequest?.data?.allMarkdownRemark.edges || [];
+
+  viagensPosts.forEach(({ node }) => {
+    const slug = (node?.fields as any)?.slug;
+    const currentTags: string[] = (node?.frontmatter as any)?.tags || [];
+
+    const relatedPosts = viagensPosts
+      .filter(({ node: other }) => other.id !== node.id)
+      .map(({ node: other }) => {
+        const otherTags: string[] = (other?.frontmatter as any)?.tags || [];
+        const sharedCount = currentTags.filter((t) =>
+          otherTags.includes(t),
+        ).length;
+        return {
+          slug: (other?.fields as any)?.slug as string,
+          title: (other?.frontmatter as any)?.title as string,
+          sharedCount,
+        };
+      })
+      .sort((a, b) => b.sharedCount - a.sharedCount)
+      .slice(0, 3)
+      .map(({ slug: s, title }) => ({ slug: s, title }));
+
+    createPage({
+      path: `/viagens${slug}`,
+      component: viagensTemplate,
+      ownerNodeId: node.id,
+      context: {
+        id: node.id,
+        slug,
+        language: 'pt',
+        relatedPosts,
+        collectionBase: '/viagens',
+      },
+    });
+
+    createPage({
+      path: `/en/viagens${slug}`,
+      component: viagensTemplate,
+      ownerNodeId: node.id,
+      context: {
+        id: node.id,
+        slug,
+        language: 'en',
+        relatedPosts,
+        collectionBase: '/viagens',
+      },
+    });
+  });
+
   const tagTemplate = path.resolve('./src/templates/tag.tsx');
 
   const createTagPagesForCollection = (
@@ -247,4 +320,6 @@ export const createPages: GatsbyNode['createPages'] = async ({
     projectsRequest?.data?.allMarkdownRemark.edges || [],
     'projetos',
   );
+
+  createTagPagesForCollection(viagensPosts, 'viagens');
 };
