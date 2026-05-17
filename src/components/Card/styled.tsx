@@ -76,3 +76,13 @@ export const CardDescription = styled.p`
     font-size: 0.85rem;
   }
 `;
+
+export const CardReadingTime = styled.span`
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.25rem;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+`;

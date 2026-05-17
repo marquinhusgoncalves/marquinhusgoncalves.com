@@ -19,6 +19,7 @@ interface BlogData {
   allMarkdownRemark: {
     edges: Array<{
       node: {
+        timeToRead: number;
         frontmatter: {
           title: string;
           slug: string;
@@ -45,17 +46,14 @@ const Blog: React.FC<PageProps<BlogData, BlogPageContext>> = ({
     <Layout>
       <S.BlogContainer>
         <Titles title={t('pages.blog.title')} />
-        {postList.map(
-          ({
-            node: {
-              frontmatter: { title, slug },
-            },
-          }: {
-            node: { frontmatter: { title: string; slug: string } };
-          }) => (
-            <Card key={title} title={title} slug={`/blog/${slug}`} />
-          ),
-        )}
+        {postList.map(({ node: { frontmatter: { title, slug }, timeToRead } }) => (
+          <Card
+            key={title}
+            title={title}
+            slug={`/blog/${slug}`}
+            timeToRead={timeToRead}
+          />
+        ))}
         {postList.length > 0 && <AdsenseDisplay />}
         <NewsletterSignup variant="list-end" />
         <TagCloud collection="posts" />
@@ -72,6 +70,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          timeToRead
           frontmatter {
             title
             slug

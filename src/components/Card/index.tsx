@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import * as S from './styled';
 import ShareButton from '../ShareButton';
@@ -23,6 +24,7 @@ interface CardProps {
   slug?: string;
   description?: string;
   href?: string;
+  timeToRead?: number;
 }
 
 const Card = ({
@@ -30,21 +32,30 @@ const Card = ({
   slug = '',
   description = '',
   href = '',
-}: Readonly<CardProps>) => (
-  <S.CardWrapper>
-    <CardLink slug={slug} href={href}>
-      <S.CardTitle>{title}</S.CardTitle>
-      {description && <S.CardDescription>{description}</S.CardDescription>}
-    </CardLink>
+  timeToRead,
+}: Readonly<CardProps>) => {
+  const { t } = useTranslation();
+  return (
+    <S.CardWrapper>
+      <CardLink slug={slug} href={href}>
+        <S.CardTitle>{title}</S.CardTitle>
+        {description && <S.CardDescription>{description}</S.CardDescription>}
+        {timeToRead && (
+          <S.CardReadingTime>
+            {timeToRead} {t('components.postInfo.readingTime')}
+          </S.CardReadingTime>
+        )}
+      </CardLink>
 
-    <ShareButton
-      url={slug || href}
-      title={title}
-      description={description}
-      hashtags={[]}
-      size="small"
-    />
-  </S.CardWrapper>
-);
+      <ShareButton
+        url={slug || href}
+        title={title}
+        description={description}
+        hashtags={[]}
+        size="small"
+      />
+    </S.CardWrapper>
+  );
+};
 
 export default Card;
