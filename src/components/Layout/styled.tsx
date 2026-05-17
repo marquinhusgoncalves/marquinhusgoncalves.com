@@ -1,6 +1,23 @@
 import styled from 'styled-components';
 import { UpArrowCircle } from '@styled-icons/boxicons-regular/UpArrowCircle';
 
+export const SkipLink = styled.a`
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 9999;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+
+  &:focus {
+    top: 0;
+  }
+`;
+
 export const LayoutWrapped = styled.section`
   flex-direction: column;
   display: flex;

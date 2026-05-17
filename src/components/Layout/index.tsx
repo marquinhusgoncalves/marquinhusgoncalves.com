@@ -24,14 +24,24 @@ const Layout = ({ children }: Readonly<LayoutProps>) => {
     };
   }, []);
 
+  const scrollToTop = () => window.scroll({ top: 0, behavior: 'smooth' });
+
   return (
     <ThemeProvider>
       <S.LayoutWrapped>
+        <S.SkipLink href="#main-content">Pular para o conteúdo</S.SkipLink>
         <Header />
-        <S.LayoutMainWrapped>{children}</S.LayoutMainWrapped>
+        <S.LayoutMainWrapped id="main-content">{children}</S.LayoutMainWrapped>
         <S.UpArrowCircleWraped
-          onClick={() => {
-            window.scroll({ top: 0, behavior: 'smooth' });
+          role="button"
+          tabIndex={isShowButtonScrollToTop ? 0 : -1}
+          aria-label="Voltar ao topo da página"
+          onClick={scrollToTop}
+          onKeyDown={(e: React.KeyboardEvent) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              scrollToTop();
+            }
           }}
           className={isShowButtonScrollToTop ? 'visible' : ''}
         >

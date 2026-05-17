@@ -49,9 +49,17 @@ const MenuBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openMenu();
+    }
+  };
+
   return (
     <>
       <S.MenuWrapped
+        id="nav-menu"
         $isMenuOpen={isMenuOpen}
         className={isMenuOpen ? 'open-menu' : ''}
       >
@@ -64,11 +72,26 @@ const MenuBar = () => {
             </S.MenuLinks>
           );
         })}
-        <S.CloseIconWrapped onClick={openMenu}>
+        <S.CloseIconWrapped
+          role="button"
+          tabIndex={0}
+          aria-label="Fechar menu de navegação"
+          onClick={openMenu}
+          onKeyDown={handleKeyDown}
+        >
           <S.CloseOutlineIcon />
         </S.CloseIconWrapped>
       </S.MenuWrapped>
-      <S.MenuIconWrapped $isMenuOpen={isMenuOpen} onClick={openMenu}>
+      <S.MenuIconWrapped
+        $isMenuOpen={isMenuOpen}
+        role="button"
+        tabIndex={0}
+        aria-expanded={isMenuOpen}
+        aria-controls="nav-menu"
+        aria-label={isMenuOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação'}
+        onClick={openMenu}
+        onKeyDown={handleKeyDown}
+      >
         <S.MenuIcon />
       </S.MenuIconWrapped>
     </>
