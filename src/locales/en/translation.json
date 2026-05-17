@@ -1,0 +1,298 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "projects": "Projects",
+    "tips": "Tips",
+    "travels": "Travels",
+    "newsletter": "Newsletter"
+  },
+  "pages": {
+    "home": {
+      "name": "Home",
+      "title": "Marcus Gonçalves | Senior Software Engineer · Lisbon",
+      "description": "I build robust digital products and the teams that deliver them. Front-end specialist with full-stack roots, I work at the intersection of high-level engineering and technical leadership, defining architecture, raising standards and helping teams grow.",
+      "profile": {
+        "text1": "Senior software engineer specializing in front-end, with product vision and technical leadership",
+        "text2": "Lisbon · 15+ years transforming digital products from code to team"
+      }
+    },
+    "about": {
+      "name": "About",
+      "title": "About Me",
+      "content": "<p>Senior software engineer based in Lisbon, with over 15 years building high-quality digital products. My specialty is front-end, Javascript, Typescript, React, Flutter, web performance, design systems, but my background is full-stack, with experience in Node, Python and Kotlin, giving me a system-level perspective that goes beyond the browser.</p><p>Today I work at the intersection of senior engineering and technical leadership: I define front-end and back-end architecture, establish best practices, mentor teams and make technical decisions with real product impact.</p><p>Outside of code, I'm driven by physical challenges and new perspectives. Extreme sports, travel and music are part of who I am. That mindset of exploring and pushing limits applies to my work too.</p>"
+    },
+    "blog": {
+      "name": "Blog",
+      "title": "Blog",
+      "description": "Articles about web development, technology and personal experiences. Sharing knowledge and learning in the software area."
+    },
+    "projects": {
+      "name": "Projects",
+      "title": "Projects",
+      "description": "Portfolio of projects developed by Marcus Gonçalves."
+    },
+    "tips": {
+      "name": "Tips",
+      "title": "Tips",
+      "content": "Here you will find valuable general tips."
+    },
+    "travels": {
+      "name": "Travels",
+      "title": "Travels and Experiences",
+      "content": "I share here my travel experiences and the lessons I learned along the way."
+    },
+    "newsletter": {
+      "name": "Newsletter",
+      "title": "Newsletter",
+      "description": "Subscribe to my newsletter and receive the best tips about technology, development and travels directly in your email.",
+      "content": {
+        "intro": "Hi! 👋 Want to stay up to date with the latest news about technology, web development and my adventures around the world?",
+        "benefits": "What you will receive:",
+        "benefit1": "📚 Exclusive articles about development",
+        "benefit2": "🛠️ Practical tips and useful tools",
+        "benefit3": "🌍 Travel stories and experiences",
+        "benefit4": "🎯 Curated content and no spam",
+        "frequency": "Frequency: Biweekly sends (or when I have something really interesting to share)",
+        "privacy": "Your data is safe and you can unsubscribe at any time."
+      }
+    },
+    "notFound": {
+      "title": "404 - Page not found",
+      "seoTitle": "Page not found",
+      "photoBy": "Photo by",
+      "on": "on"
+    },
+    "terms": {
+      "title": "Terms and Conditions",
+      "description": "Terms and conditions for newsletter use",
+      "lastUpdated": "Last updated",
+      "date": "September 14, 2025",
+      "section1": {
+        "title": "1. Acceptance of Terms",
+        "content": "By subscribing to Marcus Gonçalves newsletter, you agree to comply with and be bound by these Terms and Conditions. If you do not agree to any part of these terms, you should not subscribe to the newsletter."
+      },
+      "section2": {
+        "title": "2. Service Description",
+        "content": "The newsletter is a free service that provides content about web development, technology, travel, and personal experiences. Content is provided \"as is\" and may be changed or discontinued at any time."
+      },
+      "section3": {
+        "title": "3. Acceptable Use",
+        "content": "You agree to use the newsletter only for lawful purposes and in accordance with these terms. It is prohibited to use the service for any illegal, abusive activity or that violates third-party rights."
+      },
+      "section4": {
+        "title": "4. Cancellation",
+        "content": "You may cancel your newsletter subscription at any time using the cancellation link provided in emails or by contacting us. Cancellation will be effective immediately."
+      },
+      "section5": {
+        "title": "5. Modifications",
+        "content": "We reserve the right to modify these terms at any time. Modifications will take effect immediately upon publication. Continued use of the newsletter after modifications constitutes acceptance of the new terms."
+      },
+      "section6": {
+        "title": "6. Limitation of Liability",
+        "content": "Marcus Gonçalves will not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the newsletter."
+      },
+      "contact": {
+        "title": "Contact",
+        "content": "If you have questions about these Terms and Conditions, contact us at eu@marquinhusgoncalves.com."
+      }
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "Privacy policy and data protection",
+      "lastUpdated": "Last updated",
+      "date": "September 14, 2025",
+      "section1": {
+        "title": "1. Information Collected",
+        "content": "We only collect the email address voluntarily provided by you when subscribing to the newsletter. We also collect basic technical information such as IP address and user agent for security and analysis purposes."
+      },
+      "section2": {
+        "title": "2. Use of Information",
+        "content": "Your email will be used exclusively to send the newsletter and service-related communications. We do not share, sell, or rent your personal information to third parties."
+      },
+      "section3": {
+        "title": "3. Data Storage",
+        "content": "Your data is stored securely using trusted services (Supabase and MailerLite) that implement adequate security measures to protect your information."
+      },
+      "section4": {
+        "title": "4. Cookies and Similar Technologies",
+        "content": "This site may use cookies to improve your experience. You can configure your browser to refuse cookies, but this may affect site functionality."
+      },
+      "section5": {
+        "title": "5. Your Rights",
+        "content": "You have the right to access, correct, update, or delete your personal information at any time. You can also cancel your newsletter subscription using the link provided in emails."
+      },
+      "section6": {
+        "title": "6. Policy Changes",
+        "content": "We may update this Privacy Policy periodically. We will notify about significant changes through the newsletter or by email."
+      },
+      "contact": {
+        "title": "Contact",
+        "content": "For privacy questions or to exercise your rights, contact us at eu@marquinhusgoncalves.com."
+      }
+    }
+  },
+  "components": {
+    "comments": {
+      "title": "Comments"
+    },
+    "relatedPosts": {
+      "title": "Related Posts"
+    },
+    "postInfo": {
+      "readingTime": "min read",
+      "publishedOn": "Published on",
+      "updatedOn": "Updated on",
+      "author": "By",
+      "readMore": "Read more",
+      "backToList": "Back to list"
+    },
+    "shareButton": {
+      "linkCopied": "Link copied!",
+      "shareOnFacebook": "Share on Facebook",
+      "shareOnTwitter": "Share on Twitter",
+      "shareOnLinkedIn": "Share on LinkedIn",
+      "shareOnReddit": "Share on Reddit",
+      "shareOnTelegram": "Share on Telegram",
+      "copyLink": "Copy link"
+    },
+    "shareButtons": {
+      "title": "Share this content:",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "reddit": "Reddit",
+      "telegram": "Telegram",
+      "copyLink": "Copy Link",
+      "copied": "Copied!",
+      "linkCopiedMessage": "Link copied to clipboard!",
+      "emailSubject": "Check out:",
+      "emailBody": "Read more at:"
+    },
+    "search": {
+      "openSearch": "Open search",
+      "closeSearch": "Close search",
+      "placeholder": "Search posts, projects, tips...",
+      "filters": {
+        "all": "All",
+        "blog": "Blog",
+        "projects": "Projects",
+        "tips": "Tips",
+        "travels": "Travels"
+      },
+      "emptyState": {
+        "minChars": "Type at least 2 characters to search...",
+        "noResults": "No results found for"
+      },
+      "resultsCount": {
+        "singular": "result found",
+        "plural": "results found"
+      }
+    },
+    "socialLinks": {
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "github": "GitHub",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "rssFeed": "RSS Feed"
+    },
+    "avatar": {
+      "alt": "Marcus Gonçalves"
+    },
+    "tag": {
+      "foundWithTag": "found with tag",
+      "foundWithTagPlural": "found with tag",
+      "noPostsFound": "No posts found with this tag."
+    },
+    "tagCloud": {
+      "popularTags": "Popular tags",
+      "popularBlogTags": "Popular blog tags",
+      "popularProjectTags": "Popular project tags"
+    },
+    "postNavigation": {
+      "previous": "Previous post",
+      "next": "Next post",
+      "backToBlog": "Back to blog",
+      "backToProjects": "Back to projects"
+    },
+    "newsletter": {
+      "variants": {
+        "home": {
+          "title": "Stay in the loop!",
+          "description": "Get the best tips about technology and travels"
+        },
+        "compact": {
+          "title": "Newsletter",
+          "description": "Get email updates"
+        },
+        "postEnd": {
+          "title": "Liked the content?",
+          "description": "Subscribe to receive more posts like this"
+        },
+        "listEnd": {
+          "title": "Don't miss any updates!",
+          "description": "Get the latest posts and projects in your email"
+        }
+      },
+      "form": {
+        "emailPlaceholder": "Your best email",
+        "submitButton": "Subscribe",
+        "submittingButton": "Subscribing...",
+        "termsText": "I accept the",
+        "termsLink": "terms and conditions",
+        "and": "and",
+        "privacyLink": "privacy policy"
+      },
+      "messages": {
+        "emailRequired": "Please enter an email",
+        "emailInvalid": "Please enter a valid email",
+        "termsRequired": "You must accept the terms and conditions",
+        "error": "Error subscribing. Please try again.",
+        "alreadySubscribed": "This email is already subscribed to the newsletter.",
+        "timeoutError": "Request timeout. Please check your connection and try again.",
+        "networkError": "Network error. Please check your internet connection and try again.",
+        "rateLimited": "Too many attempts. Please wait a few minutes before trying again.",
+        "serverError": "Server temporarily unavailable. Please try again in a few minutes.",
+        "invalidResponse": "Invalid server response. Please try again.",
+        "success": "✅ Successfully subscribed! Check your email to confirm."
+      }
+    }
+  },
+  "collections": {
+    "blog": "Blog",
+    "projects": "Projects",
+    "tips": "Tips",
+    "travels": "Travels"
+  },
+  "seo": {
+    "about": {
+      "title": "About - Marcus Gonçalves",
+      "description": "Senior software engineer based in Lisbon, specializing in front-end (React, TypeScript, Flutter) with product vision and technical leadership. 15+ years of experience."
+    },
+    "blog": {
+      "title": "Blog - Marcus Gonçalves",
+      "description": "Articles about web development, technology and personal experiences. Sharing knowledge and learning in the software area."
+    },
+    "projects": {
+      "title": "Projects - Marcus Gonçalves",
+      "description": "Portfolio of projects developed by Marcus Gonçalves."
+    },
+    "newsletter": {
+      "title": "Newsletter - Marcus Gonçalves",
+      "description": "Subscribe to the newsletter and get the best tips about technology, development and travels."
+    },
+    "terms": {
+      "title": "Terms and Conditions - Marcus Gonçalves",
+      "description": "Terms and conditions for newsletter and website services."
+    },
+    "privacy": {
+      "title": "Privacy Policy - Marcus Gonçalves",
+      "description": "Privacy policy and personal data protection."
+    }
+  }
+}
