@@ -2871,7 +2871,7 @@ type WebPOptions = {
 type BlogQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type BlogQueryQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly frontmatter: { readonly title: string | null, readonly slug: string | null } | null } }> } };
+type BlogQueryQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly timeToRead: number | null, readonly frontmatter: { readonly title: string | null, readonly slug: string | null } | null } }> } };
 
 type DicasQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -2944,7 +2944,7 @@ type ViagensQueryQuery = { readonly allMarkdownRemark: { readonly edges: Readonl
 type GetAllPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type GetAllPostsQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null, readonly tags: ReadonlyArray<string | null> | null } | null }, readonly next: { readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null } | null } | null, readonly previous: { readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null } | null } | null }> } };
+type GetAllPostsQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null, readonly tags: ReadonlyArray<string | null> | null } | null } }> } };
 
 type GetAllProjectsQueryVariables = Exact<{ [key: string]: never; }>;
 

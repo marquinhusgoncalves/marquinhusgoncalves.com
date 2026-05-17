@@ -4,25 +4,24 @@ import { useTranslation } from 'react-i18next';
 import Titles from '../Titles';
 import Card from '../Card';
 
-interface RelatedPostNode {
-  fields: { slug: string };
-  frontmatter: { title: string };
+interface RelatedPost {
+  slug: string;
+  title: string;
 }
 
 interface RelatedPostsProps {
-  next?: RelatedPostNode | null;
-  previous?: RelatedPostNode | null;
+  posts: RelatedPost[];
 }
 
-const RelatedPosts = ({ next, previous }: Readonly<RelatedPostsProps>) => {
+const RelatedPosts = ({ posts }: Readonly<RelatedPostsProps>) => {
   const { t } = useTranslation();
+  if (!posts || posts.length === 0) return null;
   return (
     <>
       <Titles title={t('components.relatedPosts.title')} />
-      {next && <Card title={next.frontmatter.title} slug={next.fields.slug} />}
-      {previous && (
-        <Card title={previous.frontmatter.title} slug={previous.fields.slug} />
-      )}
+      {posts.map((post) => (
+        <Card key={post.slug} title={post.title} slug={post.slug} />
+      ))}
     </>
   );
 };

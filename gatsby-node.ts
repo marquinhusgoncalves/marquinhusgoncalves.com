@@ -91,7 +91,10 @@ export const createPages: GatsbyNode['createPages'] = async ({
 
   const postsRequest = await graphql<Queries.Query>(`
     query GetAllPosts {
-      allMarkdownRemark(filter: { fields: { collection: { eq: "posts" } } }) {
+      allMarkdownRemark(
+        filter: { fields: { collection: { eq: "posts" } } }
+        sort: { frontmatter: { date: DESC } }
+      ) {
         edges {
           node {
             id
@@ -101,22 +104,6 @@ export const createPages: GatsbyNode['createPages'] = async ({
             frontmatter {
               title
               tags
-            }
-          }
-          next {
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-            }
-          }
-          previous {
-            fields {
-              slug
-            }
-            frontmatter {
-              title
             }
           }
         }
@@ -175,8 +162,28 @@ export const createPages: GatsbyNode['createPages'] = async ({
 
   const blogTemplate = path.resolve('./src/templates/post.tsx');
   const posts = postsRequest?.data?.allMarkdownRemark.edges;
-  posts?.forEach(({ node, next, previous }) => {
+  const allPosts = posts || [];
+
+  posts?.forEach(({ node }) => {
     const slug = (node?.fields as any)?.slug;
+    const currentTags: string[] = (node?.frontmatter as any)?.tags || [];
+
+    const relatedPosts = allPosts
+      .filter(({ node: other }) => other.id !== node.id)
+      .map(({ node: other }) => {
+        const otherTags: string[] = (other?.frontmatter as any)?.tags || [];
+        const sharedCount = currentTags.filter((t) =>
+          otherTags.includes(t),
+        ).length;
+        return {
+          slug: (other?.fields as any)?.slug as string,
+          title: (other?.frontmatter as any)?.title as string,
+          sharedCount,
+        };
+      })
+      .sort((a, b) => b.sharedCount - a.sharedCount)
+      .slice(0, 3)
+      .map(({ slug: s, title }) => ({ slug: s, title }));
 
     createPage({
       path: `/blog${slug}`,
@@ -185,8 +192,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
       context: {
         id: node.id,
         slug,
-        previous: next,
-        next: previous,
+        relatedPosts,
         language: 'pt',
       },
     });
@@ -198,8 +204,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
       context: {
         id: node.id,
         slug,
-        previous: next,
-        next: previous,
+        relatedPosts,
         language: 'en',
       },
     });

@@ -14,10 +14,14 @@ import NewsletterSignup from '../components/NewsletterSignup';
 import { MainContent } from '../styles/base';
 import * as S from './post.styled';
 
+interface RelatedPost {
+  slug: string;
+  title: string;
+}
+
 interface PostContext {
   slug: string;
-  next: any;
-  previous: any;
+  relatedPosts: RelatedPost[];
   language: string;
 }
 
@@ -37,7 +41,7 @@ const Post: React.FC<PageProps<PostData, PostContext>> = (props) => {
   const { i18n } = useTranslation();
   const {
     data: { markdownRemark },
-    pageContext: { slug, next, previous, language },
+    pageContext: { slug, relatedPosts, language },
   } = props;
 
   React.useEffect(() => {
@@ -52,23 +56,11 @@ const Post: React.FC<PageProps<PostData, PostContext>> = (props) => {
     html,
   } = markdownRemark;
 
-  const nextPost = next && {
-    fields: {
-      slug: `${language === 'en' ? '/en' : ''}/blog${next.fields.slug}`,
-    },
-    frontmatter: {
-      title: next.frontmatter.title,
-    },
-  };
-
-  const previousPost = previous && {
-    fields: {
-      slug: `${language === 'en' ? '/en' : ''}/blog${previous.fields.slug}`,
-    },
-    frontmatter: {
-      title: previous.frontmatter.title,
-    },
-  };
+  const blogBase = language === 'en' ? '/en/blog' : '/blog';
+  const localizedRelatedPosts = relatedPosts.map((post) => ({
+    title: post.title,
+    slug: `${blogBase}${post.slug}`,
+  }));
 
   return (
     <Layout>
@@ -89,7 +81,7 @@ const Post: React.FC<PageProps<PostData, PostContext>> = (props) => {
 
         <NewsletterSignup variant="post-end" />
         <AdsenseArticle />
-        <RelatedPosts next={nextPost} previous={previousPost} />
+        <RelatedPosts posts={localizedRelatedPosts} />
         <Comments
           url={`${language === 'en' ? '/en' : ''}/blog${slug}`}
           title={title}
