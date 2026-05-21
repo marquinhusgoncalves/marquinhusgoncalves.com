@@ -49,7 +49,32 @@ const config: GatsbyConfig = {
       options: sentryConfig,
     },
     'gatsby-plugin-image',
-    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        serialize: ({ path }: { path: string }) => {
+          if (path === '/') {
+            return { url: path, priority: 1.0, changefreq: 'weekly' };
+          }
+          if (
+            path.match(/^\/(blog|projetos|dicas|viagens|sobre|newsletter)\/?$/)
+          ) {
+            return { url: path, priority: 0.8, changefreq: 'weekly' };
+          }
+          if (
+            path.startsWith('/blog/') ||
+            path.startsWith('/dicas/') ||
+            path.startsWith('/viagens/')
+          ) {
+            return { url: path, priority: 0.7, changefreq: 'monthly' };
+          }
+          if (path.startsWith('/tags/')) {
+            return { url: path, priority: 0.4, changefreq: 'monthly' };
+          }
+          return { url: path, priority: 0.5, changefreq: 'monthly' };
+        },
+      },
+    },
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-google-gtag',

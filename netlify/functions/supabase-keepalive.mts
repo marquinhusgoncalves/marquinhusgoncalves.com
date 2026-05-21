@@ -10,7 +10,9 @@ export default async function handler(_request: Request): Promise<void> {
   const key = process.env.SUPABASE_KEY;
 
   if (!url || !key) {
-    console.warn('[supabase-keepalive] SUPABASE_URL ou SUPABASE_KEY não configurados');
+    console.warn(
+      '[supabase-keepalive] SUPABASE_URL ou SUPABASE_KEY não configurados',
+    );
     return;
   }
 

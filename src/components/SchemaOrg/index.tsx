@@ -121,11 +121,52 @@ const SchemaOrg: React.FC<SchemaOrgProps> = ({
 
   const schemaData = getSchemaData();
 
+  const getBreadcrumbData = () => {
+    if (type !== 'article') return null;
+
+    const siteUrl = 'https://www.marquinhusgoncalves.com';
+    let sectionName = 'Blog';
+    let sectionUrl = `${siteUrl}/blog`;
+
+    if (url.includes('/dicas/')) {
+      sectionName = 'Dicas';
+      sectionUrl = `${siteUrl}/dicas`;
+    } else if (url.includes('/viagens/')) {
+      sectionName = 'Viagens';
+      sectionUrl = `${siteUrl}/viagens`;
+    }
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: sectionName,
+          item: sectionUrl,
+        },
+        { '@type': 'ListItem', position: 3, name: title, item: url },
+      ],
+    };
+  };
+
+  const breadcrumbData = getBreadcrumbData();
+
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+      {breadcrumbData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+        />
+      )}
+    </>
   );
 };
 

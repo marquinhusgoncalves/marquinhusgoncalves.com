@@ -46,14 +46,21 @@ const Blog: React.FC<PageProps<BlogData, BlogPageContext>> = ({
     <Layout>
       <S.BlogContainer>
         <Titles title={t('pages.blog.title')} />
-        {postList.map(({ node: { frontmatter: { title, slug }, timeToRead } }) => (
-          <Card
-            key={title}
-            title={title}
-            slug={`/blog/${slug}`}
-            timeToRead={timeToRead}
-          />
-        ))}
+        {postList.map(
+          ({
+            node: {
+              frontmatter: { title, slug },
+              timeToRead,
+            },
+          }) => (
+            <Card
+              key={title}
+              title={title}
+              slug={`/blog/${slug}`}
+              timeToRead={timeToRead}
+            />
+          ),
+        )}
         {postList.length > 0 && <AdsenseDisplay />}
         <NewsletterSignup variant="list-end" />
         <TagCloud collection="posts" />

@@ -59,7 +59,12 @@ const Viagens: React.FC<PageProps<ViagensData, ViagensPageContext>> = ({
               frontmatter: { title: string };
             };
           }) => (
-            <Card key={title} title={title} slug={`/viagens${slug}`} timeToRead={timeToRead} />
+            <Card
+              key={title}
+              title={title}
+              slug={`/viagens${slug}`}
+              timeToRead={timeToRead}
+            />
           ),
         )}
         {viagensList.length > 0 && <AdsenseDisplay />}

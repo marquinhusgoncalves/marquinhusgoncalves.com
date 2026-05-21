@@ -57,7 +57,12 @@ const Dicas: React.FC<PageProps<DicasData, DicasPageContext>> = ({
               frontmatter: { title: string; slug: string };
             };
           }) => (
-            <Card key={title} title={title} slug={slug} timeToRead={timeToRead} />
+            <Card
+              key={title}
+              title={title}
+              slug={slug}
+              timeToRead={timeToRead}
+            />
           ),
         )}
         {dicasList.length > 0 && <AdsenseDisplay />}

@@ -17,10 +17,22 @@ collections:
     slug: '{{slug}}'
     fields:
       - { label: Título, name: title, widget: string }
-      - { label: Data, name: date, widget: datetime, format: 'YYYY-MM-DD HH:mm:ss', date_format: DD/MM/YYYY, time_format: HH:mm }
+      - {
+          label: Data,
+          name: date,
+          widget: datetime,
+          format: 'YYYY-MM-DD HH:mm:ss',
+          date_format: DD/MM/YYYY,
+          time_format: HH:mm,
+        }
       - { label: Slug, name: slug, widget: string }
       - { label: Tags, name: tags, widget: list, required: false }
-      - { label: 'Descrição (SEO)', name: description, widget: text, required: false }
+      - {
+          label: 'Descrição (SEO)',
+          name: description,
+          widget: text,
+          required: false,
+        }
       - { label: Conteúdo, name: body, widget: markdown }
 
   - name: projects
@@ -41,7 +53,14 @@ collections:
     slug: '{{slug}}'
     fields:
       - { label: Título, name: title, widget: string }
-      - { label: Data, name: date, widget: datetime, format: 'YYYY-MM-DD HH:mm:ss', date_format: DD/MM/YYYY, time_format: HH:mm }
+      - {
+          label: Data,
+          name: date,
+          widget: datetime,
+          format: 'YYYY-MM-DD HH:mm:ss',
+          date_format: DD/MM/YYYY,
+          time_format: HH:mm,
+        }
       - { label: Slug, name: slug, widget: string }
       - { label: Tags, name: tags, widget: list, required: false }
       - { label: Conteúdo, name: body, widget: markdown }
@@ -53,7 +72,14 @@ collections:
     slug: '{{slug}}'
     fields:
       - { label: Título, name: title, widget: string }
-      - { label: Data, name: date, widget: datetime, format: 'YYYY-MM-DD HH:mm:ss', date_format: DD/MM/YYYY, time_format: HH:mm }
+      - {
+          label: Data,
+          name: date,
+          widget: datetime,
+          format: 'YYYY-MM-DD HH:mm:ss',
+          date_format: DD/MM/YYYY,
+          time_format: HH:mm,
+        }
       - { label: Slug, name: slug, widget: string }
       - { label: Tags, name: tags, widget: list, required: false }
       - { label: Conteúdo, name: body, widget: markdown }

@@ -2,6 +2,8 @@
 title: Mudança de Jekyll para Gatsby
 date: 2020-07-05 20:00:00
 slug: mudanca-de-jekyll-para-gatsby
+image: /assets/og/mudanca-de-jekyll-para-gatsby.png
+featured: true
 tags:
   [
     gatsby,

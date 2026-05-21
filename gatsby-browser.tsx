@@ -1,4 +1,3 @@
-import 'lazysizes';
 import React, { useEffect } from 'react';
 import i18n from './src/i18n';
 import GlobalStyles from './src/styles/global';

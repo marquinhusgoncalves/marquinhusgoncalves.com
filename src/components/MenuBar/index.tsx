@@ -88,7 +88,9 @@ const MenuBar = () => {
         tabIndex={0}
         aria-expanded={isMenuOpen}
         aria-controls="nav-menu"
-        aria-label={isMenuOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação'}
+        aria-label={
+          isMenuOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação'
+        }
         onClick={openMenu}
         onKeyDown={handleKeyDown}
       >

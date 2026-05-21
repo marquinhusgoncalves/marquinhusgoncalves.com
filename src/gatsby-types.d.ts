@@ -1443,7 +1443,9 @@ type MarkdownRemarkFilterListInput = {
 type MarkdownRemarkFrontmatter = {
   readonly date: Maybe<Scalars['Date']>;
   readonly description: Maybe<Scalars['String']>;
+  readonly featured: Maybe<Scalars['Boolean']>;
   readonly href: Maybe<Scalars['String']>;
+  readonly image: Maybe<Scalars['String']>;
   readonly slug: Maybe<Scalars['String']>;
   readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly title: Maybe<Scalars['String']>;
@@ -1460,7 +1462,9 @@ type MarkdownRemarkFrontmatter_dateArgs = {
 type MarkdownRemarkFrontmatterFieldSelector = {
   readonly date: InputMaybe<FieldSelectorEnum>;
   readonly description: InputMaybe<FieldSelectorEnum>;
+  readonly featured: InputMaybe<FieldSelectorEnum>;
   readonly href: InputMaybe<FieldSelectorEnum>;
+  readonly image: InputMaybe<FieldSelectorEnum>;
   readonly slug: InputMaybe<FieldSelectorEnum>;
   readonly tags: InputMaybe<FieldSelectorEnum>;
   readonly title: InputMaybe<FieldSelectorEnum>;
@@ -1469,7 +1473,9 @@ type MarkdownRemarkFrontmatterFieldSelector = {
 type MarkdownRemarkFrontmatterFilterInput = {
   readonly date: InputMaybe<DateQueryOperatorInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
+  readonly featured: InputMaybe<BooleanQueryOperatorInput>;
   readonly href: InputMaybe<StringQueryOperatorInput>;
+  readonly image: InputMaybe<StringQueryOperatorInput>;
   readonly slug: InputMaybe<StringQueryOperatorInput>;
   readonly tags: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
@@ -1478,7 +1484,9 @@ type MarkdownRemarkFrontmatterFilterInput = {
 type MarkdownRemarkFrontmatterSortInput = {
   readonly date: InputMaybe<SortOrderEnum>;
   readonly description: InputMaybe<SortOrderEnum>;
+  readonly featured: InputMaybe<SortOrderEnum>;
   readonly href: InputMaybe<SortOrderEnum>;
+  readonly image: InputMaybe<SortOrderEnum>;
   readonly slug: InputMaybe<SortOrderEnum>;
   readonly tags: InputMaybe<SortOrderEnum>;
   readonly title: InputMaybe<SortOrderEnum>;
@@ -3234,6 +3242,11 @@ type DicasQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 type DicasQueryQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly timeToRead: number | null, readonly frontmatter: { readonly title: string | null, readonly slug: string | null } | null } }> } };
 
+type FeaturedPostsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type FeaturedPostsQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly timeToRead: number | null, readonly frontmatter: { readonly title: string | null, readonly slug: string | null } | null, readonly fields: { readonly collection: string | null } | null } }> } };
+
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 
 type GatsbyImageSharpFixed_noBase64Fragment = { readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
@@ -3270,7 +3283,7 @@ type PostQueryVariables = Exact<{
 }>;
 
 
-type PostQuery = { readonly markdownRemark: { readonly timeToRead: number | null, readonly html: string | null, readonly frontmatter: { readonly title: string | null, readonly slug: string | null, readonly date: string | null } | null } | null };
+type PostQuery = { readonly markdownRemark: { readonly timeToRead: number | null, readonly html: string | null, readonly frontmatter: { readonly title: string | null, readonly slug: string | null, readonly date: string | null, readonly image: string | null } | null } | null };
 
 type ProjetosQueryQueryVariables = Exact<{ [key: string]: never; }>;
 

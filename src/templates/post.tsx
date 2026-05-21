@@ -32,6 +32,7 @@ interface PostData {
       title: string;
       date: string;
       slug: string;
+      image?: string;
     };
     timeToRead: number;
     html: string;
@@ -42,7 +43,12 @@ const Post: React.FC<PageProps<PostData, PostContext>> = (props) => {
   const { i18n } = useTranslation();
   const {
     data: { markdownRemark },
-    pageContext: { slug, relatedPosts = [], language, collectionBase = '/blog' },
+    pageContext: {
+      slug,
+      relatedPosts = [],
+      language,
+      collectionBase = '/blog',
+    },
   } = props;
 
   React.useEffect(() => {
@@ -57,8 +63,7 @@ const Post: React.FC<PageProps<PostData, PostContext>> = (props) => {
     html,
   } = markdownRemark;
 
-  const base =
-    language === 'en' ? `/en${collectionBase}` : collectionBase;
+  const base = language === 'en' ? `/en${collectionBase}` : collectionBase;
   const localizedRelatedPosts = relatedPosts.map((post) => ({
     title: post.title,
     slug: `${base}${post.slug}`,
@@ -100,6 +105,7 @@ export const query = graphql`
         title
         slug
         date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+        image
       }
       timeToRead
       html
@@ -113,13 +119,19 @@ export const Head: HeadFC<PostData, PostContext> = ({ data, pageContext }) => {
   const title = data?.markdownRemark?.frontmatter?.title || 'Post';
   const date = data?.markdownRemark?.frontmatter?.date;
   const slug = data?.markdownRemark?.frontmatter?.slug;
+  const image = data?.markdownRemark?.frontmatter?.image;
   const { language } = pageContext;
+
+  const ogImage = image
+    ? `https://www.marquinhusgoncalves.com${image}`
+    : undefined;
 
   return (
     <SEO
       title={title}
       type="article"
       url={`https://www.marquinhusgoncalves.com${language === 'en' ? '/en' : ''}/blog${slug}`}
+      image={ogImage}
       author="Marcus Gonçalves"
       datePublished={date}
       dateModified={date}

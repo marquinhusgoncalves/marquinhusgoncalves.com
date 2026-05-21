@@ -3,6 +3,18 @@ import type { Config } from 'jest';
 const config: Config = {
   testEnvironment: 'jsdom',
   transform: {
+    '^.+\\.mts$': [
+      'babel-jest',
+      {
+        presets: [
+          [
+            '@babel/preset-env',
+            { targets: { node: 'current' }, modules: 'commonjs' },
+          ],
+          '@babel/preset-typescript',
+        ],
+      },
+    ],
     '^.+\\.(ts|tsx)$': ['ts-jest', { tsconfig: './tsconfig.test.json' }],
     '^.+\\.(js|jsx)$': 'babel-jest',
   },

@@ -2,6 +2,7 @@
 title: Escreva HTML com mais agilidade usando Emmet
 date: 2017-08-31 20:00:00
 slug: escreva-html-com-mais-agilidade-usando-emmet
+image: /assets/og/escreva-html-com-mais-agilidade-usando-emmet.png
 tags:
   [
     emmet,

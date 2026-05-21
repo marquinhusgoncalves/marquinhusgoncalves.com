@@ -3,10 +3,28 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Layout from '../components/Layout';
 
-jest.mock('../components/Header', () => () => <header />);
-jest.mock('../components/Footer', () => () => <footer />);
+jest.mock(
+  '../components/Header',
+  () =>
+    function MockHeader() {
+      return <header />;
+    },
+);
+jest.mock(
+  '../components/Footer',
+  () =>
+    function MockFooter() {
+      return <footer />;
+    },
+);
 jest.mock('../contexts/ThemeContext', () => ({
-  ThemeProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+  ThemeProvider: function MockThemeProvider({
+    children,
+  }: {
+    children: React.ReactNode;
+  }) {
+    return <>{children}</>;
+  },
 }));
 
 describe('Layout', () => {
