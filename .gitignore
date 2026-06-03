@@ -73,3 +73,6 @@ yarn-error.log
 
 # Local Netlify folder
 .netlify
+
+# Sentry CLI
+.sentryclirc
