@@ -55,8 +55,15 @@
         "benefit2": "🛠️ Dicas práticas e ferramentas úteis",
         "benefit3": "🌍 Histórias de viagens e experiências",
         "benefit4": "🎯 Conteúdo selecionado e sem spam",
-        "frequency": "Frequência: Envios quinzenais (ou quando tiver algo realmente interessante para compartilhar)",
+        "frequency": "Frequência: Envios mensais (ou quando tiver algo realmente interessante para compartilhar)",
         "privacy": "Seus dados estão seguros e você pode cancelar a inscrição a qualquer momento."
+      },
+      "editions": {
+        "title": "Edições anteriores",
+        "empty": "Nenhuma edição publicada ainda."
+      },
+      "edition": {
+        "shareDescription": "Newsletter de Marcus Gonçalves — {{title}}"
       }
     },
     "notFound": {

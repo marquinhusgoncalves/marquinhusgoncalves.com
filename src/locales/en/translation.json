@@ -55,8 +55,15 @@
         "benefit2": "🛠️ Practical tips and useful tools",
         "benefit3": "🌍 Travel stories and experiences",
         "benefit4": "🎯 Curated content and no spam",
-        "frequency": "Frequency: Biweekly sends (or when I have something really interesting to share)",
+        "frequency": "Frequency: Monthly sends (or when I have something really interesting to share)",
         "privacy": "Your data is safe and you can unsubscribe at any time."
+      },
+      "editions": {
+        "title": "Previous editions",
+        "empty": "No editions published yet."
+      },
+      "edition": {
+        "shareDescription": "Marcus Gonçalves' Newsletter — {{title}}"
       }
     },
     "notFound": {

@@ -172,6 +172,24 @@ export const InfoText = styled.p`
   }
 `;
 
+export const EditionsSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+
+export const EditionsTitle = styled.h2`
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.069rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+  }
+`;
+
 export const PrivacyText = styled.p`
   font-size: 0.9rem;
   font-weight: 300;

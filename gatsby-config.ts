@@ -53,22 +53,30 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-sitemap',
       options: {
         serialize: ({ path }: { path: string }) => {
-          if (path === '/') {
+          // Strip the /en prefix so PT and EN pages get identical priority.
+          const normalizedPath = path.replace(/^\/en(?=\/|$)/, '') || '/';
+
+          if (normalizedPath === '/') {
             return { url: path, priority: 1.0, changefreq: 'weekly' };
           }
           if (
-            path.match(/^\/(blog|projetos|dicas|viagens|sobre|newsletter)\/?$/)
+            normalizedPath.match(
+              /^\/(blog|projetos|dicas|viagens|sobre|newsletter)\/?$/,
+            )
           ) {
             return { url: path, priority: 0.8, changefreq: 'weekly' };
           }
           if (
-            path.startsWith('/blog/') ||
-            path.startsWith('/dicas/') ||
-            path.startsWith('/viagens/')
+            normalizedPath.startsWith('/blog/') ||
+            normalizedPath.startsWith('/dicas/') ||
+            normalizedPath.startsWith('/viagens/')
           ) {
             return { url: path, priority: 0.7, changefreq: 'monthly' };
           }
-          if (path.startsWith('/tags/')) {
+          if (normalizedPath.startsWith('/newsletter/')) {
+            return { url: path, priority: 0.6, changefreq: 'monthly' };
+          }
+          if (normalizedPath.startsWith('/tags/')) {
             return { url: path, priority: 0.4, changefreq: 'monthly' };
           }
           return { url: path, priority: 0.5, changefreq: 'monthly' };
@@ -165,6 +173,14 @@ const config: GatsbyConfig = {
         path: `${__dirname}/viagens`,
       },
       __key: 'viagens',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'newsletter',
+        path: `${__dirname}/newsletter`,
+      },
+      __key: 'newsletter',
     },
     {
       resolve: 'gatsby-plugin-feed',

@@ -62,7 +62,7 @@ const Viagens: React.FC<PageProps<ViagensData, ViagensPageContext>> = ({
             <Card
               key={title}
               title={title}
-              slug={`/viagens${slug}`}
+              slug={`${pageContext.language === 'en' ? '/en' : ''}/viagens${slug}`}
               timeToRead={timeToRead}
             />
           ),

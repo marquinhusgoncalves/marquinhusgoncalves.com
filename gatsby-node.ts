@@ -30,6 +30,19 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   actions.replaceWebpackConfig(config);
 };
 
+export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] =
+  ({ actions }) => {
+    const { createTypes } = actions;
+
+    // Explicit so the build doesn't depend on a newsletter edition existing
+    // to infer this frontmatter field (e.g. when newsletter/ is empty).
+    createTypes(`
+      type MarkdownRemarkFrontmatter {
+        subject: String
+      }
+    `);
+  };
+
 export const onCreateNode: GatsbyNode['onCreateNode'] = ({
   node,
   getNode,
@@ -103,7 +116,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
     }
   });
 
-  const postsRequest = await graphql<Queries.Query>(`
+  const postsRequest = await graphql<Queries.GetAllPostsQuery>(`
     query GetAllPosts {
       allMarkdownRemark(
         filter: { fields: { collection: { eq: "posts" } } }
@@ -125,7 +138,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
     }
   `);
 
-  const projectsRequest = await graphql<Queries.Query>(`
+  const projectsRequest = await graphql<Queries.GetAllProjectsQuery>(`
     query GetAllProjects {
       allMarkdownRemark(
         filter: { fields: { collection: { eq: "projects" } } }
@@ -149,7 +162,8 @@ export const createPages: GatsbyNode['createPages'] = async ({
   const projectTemplate = path.resolve('./src/templates/post.tsx');
   const projects = projectsRequest?.data?.allMarkdownRemark.edges;
   projects?.forEach(({ node }) => {
-    const slug = (node?.fields as any)?.slug;
+    const slug = node.fields?.slug;
+    if (!slug) return;
 
     createPage({
       path: `/projetos${slug}`,
@@ -179,19 +193,25 @@ export const createPages: GatsbyNode['createPages'] = async ({
   const allPosts = posts || [];
 
   posts?.forEach(({ node }) => {
-    const slug = (node?.fields as any)?.slug;
-    const currentTags: string[] = (node?.frontmatter as any)?.tags || [];
+    const slug = node.fields?.slug;
+    if (!slug) return;
+
+    const currentTags = (node.frontmatter?.tags ?? []).filter(
+      (tag): tag is string => Boolean(tag),
+    );
 
     const relatedPosts = allPosts
       .filter(({ node: other }) => other.id !== node.id)
       .map(({ node: other }) => {
-        const otherTags: string[] = (other?.frontmatter as any)?.tags || [];
+        const otherTags = (other.frontmatter?.tags ?? []).filter(
+          (tag): tag is string => Boolean(tag),
+        );
         const sharedCount = currentTags.filter((t) =>
           otherTags.includes(t),
         ).length;
         return {
-          slug: (other?.fields as any)?.slug as string,
-          title: (other?.frontmatter as any)?.title as string,
+          slug: other.fields?.slug ?? '',
+          title: other.frontmatter?.title ?? '',
           sharedCount,
         };
       })
@@ -224,7 +244,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
     });
   });
 
-  const viagensRequest = await graphql<Queries.Query>(`
+  const viagensRequest = await graphql<Queries.GetAllViagensQuery>(`
     query GetAllViagens {
       allMarkdownRemark(
         filter: { fields: { collection: { eq: "viagens" } } }
@@ -250,19 +270,25 @@ export const createPages: GatsbyNode['createPages'] = async ({
   const viagensPosts = viagensRequest?.data?.allMarkdownRemark.edges || [];
 
   viagensPosts.forEach(({ node }) => {
-    const slug = (node?.fields as any)?.slug;
-    const currentTags: string[] = (node?.frontmatter as any)?.tags || [];
+    const slug = node.fields?.slug;
+    if (!slug) return;
+
+    const currentTags = (node.frontmatter?.tags ?? []).filter(
+      (tag): tag is string => Boolean(tag),
+    );
 
     const relatedPosts = viagensPosts
       .filter(({ node: other }) => other.id !== node.id)
       .map(({ node: other }) => {
-        const otherTags: string[] = (other?.frontmatter as any)?.tags || [];
+        const otherTags = (other.frontmatter?.tags ?? []).filter(
+          (tag): tag is string => Boolean(tag),
+        );
         const sharedCount = currentTags.filter((t) =>
           otherTags.includes(t),
         ).length;
         return {
-          slug: (other?.fields as any)?.slug as string,
-          title: (other?.frontmatter as any)?.title as string,
+          slug: other.fields?.slug ?? '',
+          title: other.frontmatter?.title ?? '',
           sharedCount,
         };
       })
@@ -293,6 +319,60 @@ export const createPages: GatsbyNode['createPages'] = async ({
         language: 'en',
         relatedPosts,
         collectionBase: '/viagens',
+      },
+    });
+  });
+
+  const newsletterRequest = await graphql<Queries.GetAllNewsletterQuery>(`
+    query GetAllNewsletter {
+      allMarkdownRemark(
+        filter: { fields: { collection: { eq: "newsletter" } } }
+        sort: { frontmatter: { date: DESC } }
+      ) {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const newsletterTemplate = path.resolve('./src/templates/newsletter.tsx');
+  const newsletterEditions =
+    newsletterRequest?.data?.allMarkdownRemark.edges || [];
+
+  newsletterEditions.forEach(({ node }) => {
+    const slug = node.fields?.slug;
+    if (!slug) return;
+
+    createPage({
+      path: `/newsletter${slug}`,
+      component: newsletterTemplate,
+      ownerNodeId: node.id,
+      context: {
+        id: node.id,
+        slug,
+        language: 'pt',
+        collectionBase: '/newsletter',
+      },
+    });
+
+    createPage({
+      path: `/en/newsletter${slug}`,
+      component: newsletterTemplate,
+      ownerNodeId: node.id,
+      context: {
+        id: node.id,
+        slug,
+        language: 'en',
+        collectionBase: '/newsletter',
       },
     });
   });
