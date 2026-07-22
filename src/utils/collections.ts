@@ -30,6 +30,12 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
     singular: 'viagem',
     plural: 'viagens',
   },
+  newsletter: {
+    path: '/newsletter',
+    name: 'Newsletter',
+    singular: 'edição',
+    plural: 'edições',
+  },
 };
 
 export const getCollectionConfig = (collection: string): CollectionConfig => {
