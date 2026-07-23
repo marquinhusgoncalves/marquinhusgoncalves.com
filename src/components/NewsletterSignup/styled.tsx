@@ -5,11 +5,11 @@ interface NewsletterContainerProps {
 }
 
 interface EmailInputProps {
-  hasError: boolean;
+  $hasError: boolean;
 }
 
 interface SubmitButtonProps {
-  isLoading: boolean;
+  $isLoading: boolean;
 }
 
 export const NewsletterContainer = styled.div<NewsletterContainerProps>`
@@ -164,7 +164,7 @@ export const EmailInput = styled.input<EmailInputProps>`
   flex: 1;
   padding: 0.75rem 1rem;
   border: 1px solid
-    ${({ hasError }) => (hasError ? '#e74c3c' : 'var(--color-border)')};
+    ${({ $hasError }) => ($hasError ? '#e74c3c' : 'var(--color-border)')};
   border-radius: 6px;
   background: var(--color-background);
   color: var(--color-text);
@@ -207,7 +207,7 @@ export const SubmitButton = styled.button<SubmitButtonProps>`
   transition: 0.3s ease;
   white-space: nowrap;
   min-width: 120px;
-  opacity: ${({ isLoading }) => (isLoading ? 0.7 : 1)};
+  opacity: ${({ $isLoading }) => ($isLoading ? 0.7 : 1)};
 
   &:hover:not(:disabled) {
     background: var(--color-blue-dark);

@@ -68,14 +68,14 @@ export const ShareButtonsList = styled.div`
 `;
 
 interface ShareButtonProps {
-  facebook?: boolean;
-  twitter?: boolean;
-  linkedin?: boolean;
-  whatsapp?: boolean;
-  email?: boolean;
-  reddit?: boolean;
-  telegram?: boolean;
-  copy?: boolean;
+  $facebook?: boolean;
+  $twitter?: boolean;
+  $linkedin?: boolean;
+  $whatsapp?: boolean;
+  $email?: boolean;
+  $reddit?: boolean;
+  $telegram?: boolean;
+  $copy?: boolean;
 }
 
 export const ShareButton = styled.button<ShareButtonProps>`
@@ -97,23 +97,23 @@ export const ShareButton = styled.button<ShareButtonProps>`
 
   /* Cores específicas para cada rede social */
   background: ${({
-    facebook,
-    twitter,
-    linkedin,
-    whatsapp,
-    email,
-    reddit,
-    telegram,
-    copy,
+    $facebook,
+    $twitter,
+    $linkedin,
+    $whatsapp,
+    $email,
+    $reddit,
+    $telegram,
+    $copy,
   }) => {
-    if (facebook) return '#1877f2';
-    if (twitter) return '#1da1f2';
-    if (linkedin) return '#0077b5';
-    if (whatsapp) return '#25d366';
-    if (email) return '#ea4335';
-    if (reddit) return '#ff4500';
-    if (telegram) return '#0088cc';
-    if (copy) return '#6c757d';
+    if ($facebook) return '#1877f2';
+    if ($twitter) return '#1da1f2';
+    if ($linkedin) return '#0077b5';
+    if ($whatsapp) return '#25d366';
+    if ($email) return '#ea4335';
+    if ($reddit) return '#ff4500';
+    if ($telegram) return '#0088cc';
+    if ($copy) return '#6c757d';
     return '#6c757d';
   }};
 
@@ -241,19 +241,20 @@ export const TelegramIcon = styled(Telegram)`
   }
 `;
 
-export const CopyMessage = styled.div<{ copied: boolean }>`
+export const CopyMessage = styled.div<{ $copied: boolean }>`
   margin-top: 1rem;
   padding: 0.75rem;
   border-radius: 6px;
   font-size: 0.9rem;
   font-weight: 500;
-  background: ${({ copied }) =>
-    copied ? 'var(--color-success)' : 'var(--color-background-tertiary)'};
-  color: ${({ copied }) =>
-    copied ? 'var(--color-white)' : 'var(--color-text)'};
+  background: ${({ $copied }) =>
+    $copied ? 'var(--color-success)' : 'var(--color-background-tertiary)'};
+  color: ${({ $copied }) =>
+    $copied ? 'var(--color-white)' : 'var(--color-text)'};
   border: 1px solid
-    ${({ copied }) => (copied ? 'var(--color-success)' : 'var(--color-border)')};
-  opacity: ${({ copied }) => (copied ? 1 : 0.8)};
+    ${({ $copied }) =>
+      $copied ? 'var(--color-success)' : 'var(--color-border)'};
+  opacity: ${({ $copied }) => ($copied ? 1 : 0.8)};
   transition: all 0.3s ease;
 
   @media (max-width: 768px) {

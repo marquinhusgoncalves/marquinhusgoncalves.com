@@ -174,7 +174,7 @@ O encontro, resultado da união entre [Felipe Fialho](https://medium.com/@lfeh) 
 [Alê Borba](https://medium.com/@ale_borba),
 [Google](https://twitter.com/googlebrasil), foi aberto para mais de 150 pessoas!
 
-Tivemos 2 talks! A primeira foi do [Afonso Pacifer]() sobre **‘Desenhos com
+Tivemos 2 talks! A primeira foi do [Afonso Pacifer](<>) sobre **‘Desenhos com
 CSS’**. Além da parte técnica, ele encorajou as pessoas a fazerem e brincarem
 mais com CSS.
 
