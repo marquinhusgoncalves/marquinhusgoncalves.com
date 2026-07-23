@@ -56,7 +56,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({
   return (
     <S.ShareButtonContainer size={size}>
       <FacebookShareButton url={fullUrl} hashtag="#desenvolvimento">
-        <S.IconButton facebook size={size}>
+        <S.IconButton as="span" $facebook size={size}>
           <S.FacebookIcon />
         </S.IconButton>
       </FacebookShareButton>
@@ -67,7 +67,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({
         via={via}
         hashtags={hashtags}
       >
-        <S.IconButton twitter size={size}>
+        <S.IconButton as="span" $twitter size={size}>
           <S.TwitterIcon />
         </S.IconButton>
       </TwitterShareButton>
@@ -78,23 +78,23 @@ const ShareButton: React.FC<ShareButtonProps> = ({
         summary={description}
         source="Marcus Gonçalves"
       >
-        <S.IconButton linkedin size={size}>
+        <S.IconButton as="span" $linkedin size={size}>
           <S.LinkedinIcon />
         </S.IconButton>
       </LinkedinShareButton>
 
-      <S.IconButton reddit size={size} onClick={handleRedditShare}>
+      <S.IconButton $reddit size={size} onClick={handleRedditShare}>
         <S.RedditIcon />
       </S.IconButton>
 
       <TelegramShareButton url={fullUrl} title={title}>
-        <S.IconButton telegram size={size}>
+        <S.IconButton as="span" $telegram size={size}>
           <S.TelegramIcon />
         </S.IconButton>
       </TelegramShareButton>
 
       <CopyToClipboard text={fullUrl} onCopy={handleCopy}>
-        <S.IconButton copy size={size} onClick={handleCopy}>
+        <S.IconButton $copy size={size} onClick={handleCopy}>
           <S.CopyIcon />
         </S.IconButton>
       </CopyToClipboard>

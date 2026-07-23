@@ -193,13 +193,13 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
               value={email}
               onChange={handleEmailChange}
               disabled={isLoading}
-              hasError={status === 'error'}
+              $hasError={status === 'error'}
               aria-label={t('components.newsletter.form.emailPlaceholder')}
             />
             <S.SubmitButton
               type="submit"
               disabled={isLoading || !email.trim() || !acceptedTerms}
-              isLoading={isLoading}
+              $isLoading={isLoading}
             >
               {isLoading
                 ? t('components.newsletter.form.submittingButton')

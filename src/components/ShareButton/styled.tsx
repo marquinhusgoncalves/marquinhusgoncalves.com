@@ -4,12 +4,12 @@ import { Reddit, Telegram } from '@styled-icons/fa-brands';
 import { Copy } from '@styled-icons/boxicons-solid';
 
 interface IconButtonProps {
-  facebook?: boolean;
-  twitter?: boolean;
-  linkedin?: boolean;
-  reddit?: boolean;
-  telegram?: boolean;
-  copy?: boolean;
+  $facebook?: boolean;
+  $twitter?: boolean;
+  $linkedin?: boolean;
+  $reddit?: boolean;
+  $telegram?: boolean;
+  $copy?: boolean;
   size: 'small' | 'medium';
 }
 
@@ -46,25 +46,32 @@ export const IconButton = styled.button<IconButtonProps>`
   padding: ${({ size }) => (size === 'small' ? '4px' : '6px')};
 
   /* Cores específicas para cada rede social */
-  color: ${({ facebook, twitter, linkedin, reddit, telegram, copy }) => {
-    if (facebook) return '#1877f2';
-    if (twitter) return '#1da1f2';
-    if (linkedin) return '#0077b5';
-    if (reddit) return '#ff4500';
-    if (telegram) return '#0088cc';
-    if (copy) return '#6c757d';
+  color: ${({ $facebook, $twitter, $linkedin, $reddit, $telegram, $copy }) => {
+    if ($facebook) return '#1877f2';
+    if ($twitter) return '#1da1f2';
+    if ($linkedin) return '#0077b5';
+    if ($reddit) return '#ff4500';
+    if ($telegram) return '#0088cc';
+    if ($copy) return '#6c757d';
     return '#6c757d';
   }};
 
   &:hover {
     transform: scale(1.1);
-    background: ${({ facebook, twitter, linkedin, reddit, telegram, copy }) => {
-      if (facebook) return 'rgba(24, 119, 242, 0.1)';
-      if (twitter) return 'rgba(29, 161, 242, 0.1)';
-      if (linkedin) return 'rgba(0, 119, 181, 0.1)';
-      if (reddit) return 'rgba(255, 69, 0, 0.1)';
-      if (telegram) return 'rgba(0, 136, 204, 0.1)';
-      if (copy) return 'rgba(108, 117, 125, 0.1)';
+    background: ${({
+      $facebook,
+      $twitter,
+      $linkedin,
+      $reddit,
+      $telegram,
+      $copy,
+    }) => {
+      if ($facebook) return 'rgba(24, 119, 242, 0.1)';
+      if ($twitter) return 'rgba(29, 161, 242, 0.1)';
+      if ($linkedin) return 'rgba(0, 119, 181, 0.1)';
+      if ($reddit) return 'rgba(255, 69, 0, 0.1)';
+      if ($telegram) return 'rgba(0, 136, 204, 0.1)';
+      if ($copy) return 'rgba(108, 117, 125, 0.1)';
       return 'rgba(108, 117, 125, 0.1)';
     }};
   }

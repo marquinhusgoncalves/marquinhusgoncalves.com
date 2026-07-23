@@ -67,7 +67,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
 
       <S.ShareButtonsList>
         <FacebookShareButton url={fullUrl} hashtag="#desenvolvimento">
-          <S.ShareButton facebook>
+          <S.ShareButton as="span" $facebook>
             <S.FacebookIcon />
             <S.ShareButtonText>
               {t('components.shareButtons.facebook')}
@@ -81,7 +81,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
           via={via}
           hashtags={hashtags}
         >
-          <S.ShareButton twitter>
+          <S.ShareButton as="span" $twitter>
             <S.TwitterIcon />
             <S.ShareButtonText>
               {t('components.shareButtons.twitter')}
@@ -95,7 +95,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
           summary={description}
           source="Marcus Gonçalves"
         >
-          <S.ShareButton linkedin>
+          <S.ShareButton as="span" $linkedin>
             <S.LinkedinIcon />
             <S.ShareButtonText>
               {t('components.shareButtons.linkedin')}
@@ -104,7 +104,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
         </LinkedinShareButton>
 
         <WhatsappShareButton url={fullUrl} title={title}>
-          <S.ShareButton whatsapp>
+          <S.ShareButton as="span" $whatsapp>
             <S.WhatsappIcon />
             <S.ShareButtonText>
               {t('components.shareButtons.whatsapp')}
@@ -113,7 +113,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
         </WhatsappShareButton>
 
         <EmailShareButton url={fullUrl} subject={emailSubject} body={emailBody}>
-          <S.ShareButton email>
+          <S.ShareButton as="span" $email>
             <S.EmailIcon />
             <S.ShareButtonText>
               {t('components.shareButtons.email')}
@@ -121,7 +121,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
           </S.ShareButton>
         </EmailShareButton>
 
-        <S.ShareButton reddit onClick={handleRedditShare}>
+        <S.ShareButton $reddit onClick={handleRedditShare}>
           <S.RedditIcon />
           <S.ShareButtonText>
             {t('components.shareButtons.reddit')}
@@ -129,7 +129,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
         </S.ShareButton>
 
         <TelegramShareButton url={fullUrl} title={title}>
-          <S.ShareButton telegram>
+          <S.ShareButton as="span" $telegram>
             <S.TelegramIcon />
             <S.ShareButtonText>
               {t('components.shareButtons.telegram')}
@@ -138,7 +138,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
         </TelegramShareButton>
 
         <CopyToClipboard text={fullUrl} onCopy={handleCopy}>
-          <S.ShareButton copy onClick={handleCopy}>
+          <S.ShareButton $copy onClick={handleCopy}>
             <S.CopyIcon />
             <S.ShareButtonText>
               {t('components.shareButtons.copyLink')}
@@ -148,10 +148,10 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
       </S.ShareButtonsList>
 
       {showMessage && (
-        <S.CopyMessage copied={copied}>
+        <S.CopyMessage $copied={copied}>
           {copied
-            ? t('components.shareButtons.copiedMessage')
-            : t('components.shareButtons.copyMessage')}
+            ? t('components.shareButtons.linkCopiedMessage')
+            : t('components.shareButtons.copied')}
         </S.CopyMessage>
       )}
     </S.ShareButtonsContainer>
